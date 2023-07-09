@@ -1,0 +1,52 @@
+<br>
+<div align="center"><b><font size="4" color="#000000"><a href="javascript:function voi(){};voi()" onClick="winOpen('win1','help.cgi?key=osusume',380,380)"><img src="img/help.gif" border="0"></a>おすすめ商品欄掲載</font></b></div>
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="80"> </td>
+    <td>
+		<form action="./osusume_create.cgi" method="post">
+		<br>
+<div align="center">	
+		<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=0 BORDER=0>
+<TR bgcolor="333333">
+	<TD ALIGN="center">
+<TABLE CELLPADDING=2 CELLSPACING=1 width="400" BORDER=0>
+	<TR class="main2" align="center">
+		<TD bgcolor="#CAED54">商品番号</TD>
+		<TD BGCOLOR="FFFFCC" class="main2" align="left">
+		<input type="text" size="25" name="tpnum1" value="$in{'tpnum1'}">
+		</TD>
+	</TR>
+	<TR class="main2" align="center">
+		<TD bgcolor="#CAED54">商品番号</TD>
+		<TD BGCOLOR="FFFFCC" class="main2" align="left">
+		<input type="text" size="25" name="tpnum2" value="$in{'tpnum2'}">
+		</TD>
+	</TR>
+	<TR class="main2" align="center">
+		<TD bgcolor="#CAED54">商品番号</TD>
+		<TD BGCOLOR="FFFFCC" class="main2" align="left">
+		<input type="text" size="25" name="tpnum3" value="$in{'tpnum3'}">
+		</TD>
+	</TR>
+	<TR class="main2" align="center">
+		<TD bgcolor="#CAED54">商品番号</TD>
+		<TD BGCOLOR="FFFFCC" class="main2" align="left">
+		<input type="text" size="25" name="tpnum4" value="$in{'tpnum4'}">
+		</TD>
+	</TR>
+</table></TD>
+</TR>
+</TABLE>
+</div>
+		<input type="hidden" name="crdy" value="$in{crdy}"><input type="hidden" name="irno" value="$in{irno}"><input type="hidden" name="kjno" value="$in{kjno}">
+		<br><input type="hidden" name="fnamer" value="$in{fnamer}"><input type="hidden" name="pass" value="$in{pass}">
+		<input type="hidden" name="mode" value="w">
+		<div align="center">
+			<input type="submit" value="　　送　信　　">　　　　<input type="reset" value="　　取　消　　">
+		</div>  
+		<br>
+		</form> 
+	</td>
+  </tr>
+</table>

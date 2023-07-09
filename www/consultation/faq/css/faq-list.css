@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+/* =======================================
+
+ kigusuri.com/faq/faq-list.html 専用CSS
+
+-----------------------------------------
+faq-list index
+-----------------------------------------
+1.faq-kampo
+
+2.move-page
+
+========================================== */
+
+/* 1.faq-kampo
+========================================== */
+
+div#container div#main div#contentsArea div#faq-box div#faq-list div#faq-kampo{
+	margin:0 16px 0 10px;}
+
+div#container div#main div#contentsArea div#faq-box div#faq-list div#faq-kampo h4{
+	margin:6px 0 0 0;
+	}
+
+div#container div#main div#contentsArea div#faq-box div#faq-list div#faq-kampo div.list{
+	margin:20px 0 0 0;
+	width:650px;
+	height:78px;
+	border-bottom:#999 1px solid;
+	background-image:url(img/question-mark.gif);
+	background-position:lef topt;
+	background-repeat:no-repeat;}
+
+div#container div#main div#contentsArea div#faq-box div#faq-list div#faq-kampo div.list img{
+	float:left;
+	margin:0;
+	padding:0;
+	border:3px #F08300 double;}
+
+div#container div#main div#contentsArea div#faq-box div#faq-list div#faq-kampo div.list p{
+	/*background-image:url(img/menu-btn.gif);
+	background-repeat:no-repeat;
+	background-position:left top;*/
+	margin:0 70px;
+	padding:26px 0 0 0;} 
+
+div#container div#main div#contentsArea div#faq-box div#faq-list div#faq-kampo div.list span{
+	display:block;
+	background-color:#ddd;
+	text-align:right;
+	margin:3px 0 0 72px;
+	padding:3px 0;
+	}
+

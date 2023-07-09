@@ -1,0 +1,68 @@
+<?php
+	//共通
+	require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+	//メタディスクリプション
+	$description = '';
+
+	//メタキーワード
+	$keywords = '@メタキーワード@';
+
+	//Facebook　全ページ共通の場合は空白にしてください
+	$fbimage = '';
+
+	//タイトル
+	$title = '@ページタイトル@ | 漢方 よくある質問（Q&amp;A） | 漢方相談（Q&amp;A）';
+
+	//css追加
+	$ex_tag_css = '<link rel="stylesheet" href="/common/css/shift.css">
+<link rel="stylesheet" href="css/faq.css">
+<link rel="stylesheet" href="css/faq-list.css">
+<link rel="stylesheet" href="css/faq-kampo.css">
+<link rel="stylesheet" href="css/shift_faq.css">
+<link rel="stylesheet" href="css/shift_faq-list.css">
+<link rel="stylesheet" href="css/shift_faq-kampo.css">
+<link rel="stylesheet" href="/consultation/css/style.css">';
+
+	//js追加
+	$ex_tag_js = '<script src="/common/js/shift_common.js"></script>';
+
+	//bodyID
+	$bodyID = 'consultation';
+
+?>
+<?php include 'header.php'; ?>
+
+	<div class="contents-header">
+		<ul class="topicpath fbox">
+			<li><a href="/">トップページ</a></li>
+			<li><a href="/consultation/">漢方相談（Q&amp;A）</a></li>
+			<li><a href="/consultation/faq/">漢方 よくある質問（Q&amp;A）</a></li>
+			<li>@ページタイトル@</li>
+		</ul>
+		<p class="header-ttl">漢方相談Q&amp;A</p>
+	</div>
+
+
+	<article id="main" class="inner fbox shift-contents">
+
+		<section class="fbox kampo-sct">
+			<p class="main-head-description">きぐすり.com は、<strong>漢方薬、女性の健康、サプリメント、ハーブ</strong>の情報を専門家がやさしく解説しています。</p>
+			<h1 class="ttl01">病気の悩みを漢方で</h1>
+
+
+			<!--//////////////////// 移行コンテンツ start-->
+
+
+			@コンテンツエリア@
+
+
+			<!--//////////////////// 移行コンテンツ end-->
+
+
+		</section>
+
+
+	</article>
+
+<?php include 'footer.php'; ?>

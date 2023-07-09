@@ -1,0 +1,18 @@
+【きぐすり.com】削除依頼を受け付けました。
+
+{{ c.member.nickname }} 様
+
+いつも漢方薬のきぐすり.comをご利用いただき、ありがとうございます。
+いただいた理由を利用規約に基づいて審査させていただきます。
+
+━━━━━━━━━━━━━━━
+削除依頼のあったURL
+━━━━━━━━━━━━━━━
+{{ c.app.request.getUrl() }}{{ c.app.urlFor('qa_detail', {'id': question.id})  }}
+
+━━━━━━━━━━━━━━━
+削除理由
+━━━━━━━━━━━━━━━
+{{ reason }}
+
+{% include '/Mail/signature.twig' %}

@@ -1,0 +1,49 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center">
+		<b><font size="4" color="#000000">トピック画面　記事登録 $disp{'no'}</font></b>
+	</td>
+  </tr>
+</table>
+<br>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100"> </td>
+    <td align="left">
+		<font size="3" color="#000000">$msg</font>
+	</td>
+  </tr>
+</table>
+<br>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center">
+		<form action="./topic_write.cgi" method="post">
+
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=0 BORDER=0>
+<TR bgcolor="#333333">
+	<TD ALIGN="center">
+		<table border="0" cellspacing="1" cellpadding="3">
+			<tr> 
+				<td bgcolor="#caed54" width="120" align="center">表示タイトル</td> 
+				<td bgcolor="#ffffcc"><input type="text" size="70" name="tpname" value="$in{'tpname'}"></td> 
+			</tr>
+			<tr valign="middle">  
+				<td bgcolor="#caed54" align="center">本　文</td>  
+				<td bgcolor="#ffffcc"><textarea name="tptext" rows="15" cols="74">$in{'tptext'}</textarea></td>  
+			</tr>
+		</table>
+	</td></tr>
+</table>
+		<br>
+		<input type="hidden" name="crdy" value="$in{crdy}"><input type="hidden" name="irno" value="$in{irno}"><input type="hidden" name="kjno" value="$in{kjno}">
+		<input type="hidden" name="fnamer" value="$in{fnamer}"><input type="hidden" name="authe_id" value="$in{authe_id}"><input type="hidden" name="authe_pwd" value="$in{authe_pwd}"><input type="hidden" name="mode" value="w">
+		<div align="center">
+			<input type="submit" value="　　送　信　　">　　　　<input type="reset" value="　　取　消　　">
+		</div>  
+		<br>
+		</form> 
+	</td>
+  </tr>
+</table>

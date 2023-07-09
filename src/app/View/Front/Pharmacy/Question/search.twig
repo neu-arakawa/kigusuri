@@ -1,0 +1,100 @@
+<?php
+  //共通
+  require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+  //メタディスクリプション
+  $description = '';
+
+  //メタキーワード
+  $keywords = '';
+
+  //Facebook　全ページ共通の場合は空白にしてください
+  $fbimage = '';
+
+  //タイトル
+  $title = '';
+
+  //css追加
+  $ex_tag_css = '<link rel="stylesheet" href="/member.shop/css/style.css"><link rel="stylesheet" href="/member.shop/css/template.css">';
+
+  //js追加
+  $ex_tag_js = '<script src="/consultation/js/script.js"></script>';
+
+  //bodyID
+  $bodyID = 'mypage';
+
+?>
+<?php include 'header.php'; ?>
+
+
+	<div class="contents-header">
+		<ul class="topicpath fbox">
+			<li><a href="{{ c.app.urlFor('pharmacy_mypage') }}">マイページ</a></li>
+			<li>「{{ c.params.q }}」の検索結果</li>
+		</ul>
+		<h1 class="header-ttl">「{{ c.params.q }}」の検索結果</h1>
+	</div>
+    <!-- /.contents-header -->
+
+
+  <div class="inner">
+
+
+    <div class="component-area">
+      <div class="m-tabarea01">
+
+        <div class="m-tabarea01__tab">
+          <div class="m-tab01">
+            <ul class="m-tab01__tabs clearfix">
+              <li {% if c.params['search_type'] == 'no_answer'  %}class='m-tab01__tab--active'{% endif %}><a href="{{ c.app.urlFor('pharmacy_qa_search', {search_type:'no_answer' , q: c.params['q']}) }}"><span class="u-font-small">回答</span>なし</a></li>
+              <li {% if c.params['search_type'] == 'has_answer' %}class='m-tab01__tab--active'{% endif %}><a href="{{ c.app.urlFor('pharmacy_qa_search', {search_type:'has_answer', q: c.params['q']}) }}"><span class="u-font-small">回答</span>あり</a></li>
+              <li {% if c.params['search_type'] == 'all'  %}class='m-tab01__tab--active'{% endif %}><a href="{{ c.app.urlFor('pharmacy_qa_search', {search_type:'all', q: c.params['q']}) }}">すべて</a></li>
+            </ul>
+
+            <!-- /.m-tab01__tabs -->
+            <div class="m-tab01__contents">
+              <div class="" id="">
+                <div class="m-tabcont01">
+                  {% if list|length %}
+                  <div class="m-tabcont01__count">
+                    <span class="m-tabcont01__smallnum">{{ pager.total_count }}</span>件中 / <span class="m-tabcont01__bignum">{{ pager.start_cnt }}〜{{ pager.end_cnt }}</span> 件表示
+                  </div>
+                  <!-- /.m-tabcont01__count -->
+                  <ul class="m-tabcont01__bal-list">
+                    {% include '/Front/Parts/question_list.twig' %}
+                  </ul>
+                  <!-- /.m-tabcont01__bal-list -->
+                  <ul class="m-tabcont01__btn-list">
+
+                    {% if pager.prev %}
+                    <li><a href="{{ url }}?page={{ pager.prev }}" class="m-arrow-btn02 m-arrow-btn02--prev m-arrow-btn02--gray">前へ</a></li>
+                    {% endif %}
+                    
+                    {% if pager.next %}
+                    <li><a href="{{ url }}?page={{ pager.next }}" class="m-arrow-btn02 m-arrow-btn02--next m-arrow-btn02--green">次へ</a></li>
+                    {% endif %}
+                  </ul>
+                  <!-- /.m-tabcont01__btn-list -->
+                    
+                  {% else %}
+                    投稿された質問はありません。
+                  {% endif %}
+                </div>
+                <!-- /.m-tabcont01 -->
+              </div>
+              <!-- /.m-tab01__content -->
+            </div>
+            <!-- /.m-tab01__contents -->
+          </div>
+          <!-- /.m-tab01 -->
+        </div>
+        <!-- /.m-tabarea01__tab -->
+      </div>
+      <!-- /.m-tabarea01 -->
+    </div>
+    <!-- /.component-area -->
+    
+  </div>
+  <!-- /.inner -->
+
+<?php include 'footer.php'; ?>

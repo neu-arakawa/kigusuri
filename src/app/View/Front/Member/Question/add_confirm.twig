@@ -1,0 +1,106 @@
+<?php
+  //共通
+  require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+  //メタディスクリプション
+  $description = '';
+
+  //メタキーワード
+  $keywords = '';
+
+  //Facebook　全ページ共通の場合は空白にしてください
+  $fbimage = '';
+
+  //タイトル
+  $title = '新規相談フォーム';
+
+  //css追加
+  $ex_tag_css = '<link rel="stylesheet" href="/member/css/style.css"><link rel="stylesheet" href="/member/css/template.css">';
+
+  //js追加
+  $ex_tag_js = '<script src="/member/js/script.js"></script>';
+
+  //bodyID
+  $bodyID = 'member';
+
+?>
+<?php include 'header.php'; ?>
+	<div class="contents-header">
+		<ul class="topicpath fbox">
+			<li><a href="/">トップページ</a></li>
+			<li><a href="/consultation/">みんなの漢方相談Q&amp;A</a></li>
+      <li>新規相談フォーム</li>
+		</ul>
+		<h1 class="header-ttl">新規相談フォーム</h1>
+	</div>
+    <!-- /.contents-header -->
+
+
+
+  <div class="inner">
+        <div class="m-panel01 m-panel01">
+     	 <div class="l-sp-inner">
+          <div class="m-panel01__panel">
+            <p class="m-panel01__heading">入力内容をお確かめください。</p>
+          </div>
+          <!-- /.m-panel01__panel -->
+          </div>
+          <!-- /.l-sp-inner -->
+        </div>
+        <!-- /.m-panel01 -->
+        
+        <!--/////////////////確認画面 start ///////////////////-->
+    <div class="component-area">
+      <div class="l-sp-inner">
+        <div class="m-tablearea01">
+        <form method="post" loading>
+        <input type="hidden" name="{{csrf_key}}" value="{{csrf_token}}">
+        <input type="hidden" name="_REF" id="_REF" value="confirm"/>
+        <input type="hidden" name="_METHOD" id="_METHOD" value="PUT"/>
+        {% for key, data in c.request.post %}
+        {% if key != 'csrf_token' and key != 'next' and key != 'access' %}
+        <input type="hidden" name="{{ key }}">
+        {% endif %}
+        {% endfor %}
+            <div class="m-tablearea01__table">
+              <table class="m-table01">
+                <tr>
+                  <th><span class="m-table01__heading">部位・症状</span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                      <p>{{ c.config('question_categories')[ query['category_id'] ] | nl2br }}</p>
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                  </td>
+                </tr>
+                <tr>
+                  <th><span class="m-table01__heading">ご相談内容</span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                    <p class='autolink'>{{ query['content'] | nl2br }}</p>
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                  </td>
+                </tr>
+              </table>
+              <!-- /.m-table01 -->
+            </div>
+            <!-- /.m-tablearea01__table -->
+            <p class="m-tablearea01__note">この内容でよろしければ、『この内容で登録する』ボタンを押してください。</p>
+            <div class="m-tablearea01__btn">
+              <button class="m-arrow-btn02 m-arrow-btn02--prev m-arrow-btn02--gray" onclick="document.getElementById('_METHOD').value = '';">戻る<span class="m-arrow-btn01__icn"></span></button>
+              <button class="m-arrow-btn01">この内容で質問する<span class="m-arrow-btn01__icn"></span></button>
+            </div>
+          </form>
+        </div>
+        <!-- /.m-tablearea01 -->
+      </div>
+      <!-- /.l-sp-inner -->
+    </div>
+    <!-- /.component-area -->
+    <!--/////////////////確認画面 end ///////////////////-->
+    
+  </div>
+  <!-- /.inner -->
+
+<?php include 'footer.php'; ?>

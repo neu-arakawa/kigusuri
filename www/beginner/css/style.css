@@ -1,0 +1,174 @@
+@charset "UTF-8";
+/* %icomoon
+----------------------------------------------------------*/
+/* %icomoon02
+----------------------------------------------------------*/
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'icomoon02';
+  src: url("fonts/icomoon.eot?ctabv3");
+  src: url("fonts/icomoon.eot?ctabv3#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?ctabv3") format("truetype"), url("fonts/icomoon.woff?ctabv3") format("woff"), url("fonts/icomoon.svg?ctabv3#icomoon") format("svg"); }
+/* ==========================================================================
+   はじめての方へ
+   ========================================================================== */
+.lead {
+  text-align: center;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 180%;
+  margin-bottom: 40px; }
+  .lead span {
+    font-size: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px; }
+
+.sec-box-wrap {
+  width: 1000px;
+  display: table;
+  table-layout: fixed; }
+
+.sec-box {
+  width: 280px;
+  padding: 20px;
+  display: table-cell;
+  background-color: #F4F785;
+  height: 380px;
+  position: relative; }
+
+.sec-tit-wrap {
+  display: table;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  width: 100%;
+  border-bottom: 2px solid #fff; }
+  .sec-tit-wrap .sec-img {
+    display: table-cell; }
+  .sec-tit-wrap .sec-tit {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 18px;
+    font-size: 1.8rem; }
+
+.sec-list {
+  margin: 20px 0; }
+  .sec-list li {
+    margin: 4px;
+    padding-left: 1em;
+    text-indent: -1em;
+    font-size: 12px;
+    font-size: 1.2rem;
+    color: #868686; }
+
+.top-cont-btn {
+  font-size: 18px;
+  font-size: 1.8rem;
+  width: 280px;
+  position: absolute;
+  bottom: 20px; }
+
+.top-cont-btn-in {
+  border-radius: 3px;
+  display: block;
+  letter-spacing: .05em;
+  padding: 10px 32px;
+  -webkit-transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease;
+  text-align: center;
+  text-decoration: none; }
+
+.consultation-box {
+  background-color: #f6fdef; }
+  .consultation-box .sec-tit-wrap {
+    border-color: #cae0b4; }
+
+.srch-box {
+  position: relative;
+  background-color: #edf4f5; }
+  .srch-box .sec-tit-wrap {
+    border-color: #c7e6ea; }
+
+.kampo-box {
+  background-color: #fcf3f6;
+  position: relative; }
+  .kampo-box .sec-tit-wrap {
+    border-color: #f3dde4; }
+
+.sec-att-wrap {
+  margin-top: 40px;
+  background-color: #fbfbfb;
+  padding: 40px;
+  border: 1px solid #e6e6e6; }
+  .sec-att-wrap h3 {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e6e6e6;
+    font-size: 16px;
+    font-size: 1.6rem; }
+  .sec-att-wrap p {
+    margin-bottom: 20px;
+    line-height: 180%; }
+  .sec-att-wrap .sec-att-list {
+    margin: 0 0 20px 30px; }
+    .sec-att-wrap .sec-att-list li {
+      margin: 4px;
+      padding-left: 1em;
+      text-indent: -1em;
+      font-size: 12px;
+      font-size: 1.2rem;
+      color: #757575; }
+
+@media screen and (max-width: 767px) {
+  .lead {
+    font-size: 16px;
+    font-size: 1.6rem;
+    width: 92%;
+    padding: 0 4%;
+    text-align: left; }
+    .lead span {
+      text-align: center;
+      font-size: 24px;
+      font-size: 2.4rem;
+      line-height: 140%; }
+
+  .sec-box-wrap {
+    width: 92%;
+    padding: 0 4%;
+    display: block; }
+
+  .sec-box {
+    position: static;
+    width: 92%;
+    height: auto;
+    padding: 4%;
+    display: block;
+    margin-bottom: 10px; }
+    .sec-box .sec-tit {
+      font-size: 20px;
+      font-size: 2rem;
+      padding-left: 10px; }
+    .sec-box p {
+      font-size: 16px;
+      font-size: 1.6rem; }
+    .sec-box .top-cont-btn {
+      width: 100%;
+      position: static;
+      bottom: 40px; }
+
+  .sec-list li {
+    font-size: 14px;
+    font-size: 1.4rem; }
+
+  .sec-att-wrap {
+    padding: 10px; }
+    .sec-att-wrap p {
+      font-size: 14px;
+      font-size: 1.4rem; }
+
+  .sec-att-list {
+    margin-left: 0 !important; }
+    .sec-att-list li {
+      font-size: 14px;
+      font-size: 1.4rem; } }

@@ -1,0 +1,1180 @@
+/* contentesArea */
+
+div.sectionH3 a:link {
+	color: #f00;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+div.sectionH3 a:visited {
+	color: #f00;
+	text-decoration: underline;
+}
+
+div#contents-kampocare a:link {
+	color: #00f;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+div#contents-kampocare a:active {
+	color: #f00;
+	text-decoration: underline;
+}
+
+div#contents-kampocare a:hover {
+	color: #f00;
+	text-decoration: underline;
+}
+
+div#contents-kampocare a:visited {
+	color: #551a8b;
+	text-decoration: underline;
+}
+
+#contentsArea {width: 582px;margin-left: 10px; font-size:14px; line-height:20px;}
+#contentsArea #pankuzu{ margin:18px 0 0 0; font-size:80%; color:#333; line-height:100%;}
+#contentsArea #pankuzu strong{ color:#666; }
+
+#contentsArea #description{ color:#333; font-family: "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3"; font-size:90%;}
+
+#categoryName{ margin:15px 0;}
+.pagetop{ font-size:80%; text-align:right; margin:-20px 0 -5px 0;}
+.pagetop2{ font-size:80%; text-align:right; margin:-12px 0 -5px 0;}
+.pagetop a{ background-image: url(../images/bt_top.gif); background-position: left; background-repeat:no-repeat; padding:0 0 0 20px;}
+
+/* common */
+.imgR{ float:right; margin:0 0 0 10px;}
+.imgL{ float:left; margin:0 10px 0 ;}
+
+.imgL_004{ float:left; margin:0 0 0 70 ;}
+
+#span_right{display:block; text-align:right}
+
+.imgR_pad{ float:right; margin:0 0 0 10px; padding:0 0 50 0;}
+
+.galleryR{ margin:0 0 0 10px; float:right;}
+.galleryR dl{ margin:0; padding:0;}
+.galleryR dl dt{ margin:0; padding:0;}
+.galleryR dl dd{ margin:0; padding:0; font-size:90%; color:#666;}
+
+.move{ height:70px; margin:10px 0 10px 0; border-top:1px dotted #CCCCCC;}
+.move ul{ margin:5; padding:0;}
+.move ul li{ margin:0; padding:0; display:inline; list-style-type:none;}
+.move ul .next{ float:right;}
+.move ul .back{ float:left;}
+
+
+
+/* boxCaption */
+#boxCaption {padding: 0 0 2px 10px; border-left:5px solid #999; margin:0;}
+#boxCaption h2{ margin:0 0 20px 0;}
+#boxCaption p{ font-weight:bold; color:#f60; font-size:110%;}
+
+/* sectionH3 */
+.sectionH3{ margin:30px 20px 30px; padding:0; clear:both; font-size: 14px; font-family: "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3";}
+.sectionH3 h3{ margin:10px 0; padding: 0 0 0 7px; border-left:5px solid #fc0; color:#333; font-size:110%; line-height:160%; background-color:#f2f2f2;}
+.sectionH3 strong{ font-size:100%; color:#333; margin:0 3px;}
+
+.secd{margin:0 30 0 0}
+.tora{margin:10 0 0 6;}
+
+/* sectionH7 */
+#sectionP7{margin:0 0 3 0; color:#C03; font-size:14px;}
+#sectionBORDER7  { border: 1px #CCCCFF solid;}
+#sectionUL7{line-height:24px;}
+
+
+/* table style */
+.style01 { border-collapse: collapse; border:1px solid #999; font-size:90%;}
+.style01 caption{ font-weight:bold; color:#960; font-size:120%;}
+.style01 th{ padding:5px; background-color:#ff9; color:#333; border:1px solid #999; white-space: nowrap;}
+.style01 td{ padding:5px; background-color:#fff; color:#333; border:1px solid #999; text-align:center;}
+
+/* table style */
+.style02 { border-collapse: collapse; border:1px solid #FFCC00; font-size:100%; margin:10px 50px}
+.style02 th{ padding:5px; background-color:#FFFFCC; color:#333; border:1px solid #FFCC00;}
+.style02_01{ padding:5px; background-color:#FFFFCC;  color:#333; border-top:1px solid #FFCC00;  border-right:1px solid #FFCC00;  border-bottom:1px dashed #FFCC00;  border-left:1px solid #FFCC00; text-align:center;}
+.style02_02{ padding:5px; background-color:#fff;  color:#333; border-top:1px solid #FFCC00;  border-right:1px solid #FFCC00;  border-bottom:1px dashed #FFCC00;  border-left:1px solid #FFCC00; text-align:center;}
+/* example */
+.example{ margin:10px 20px; padding:10px; background-color:#f5f5f5; font-size:100%;}
+
+/* point */
+.point{ margin:30px 10px; padding:0 0 0 90px; background-image:url(../images/common/point.gif); background-position: left top; background-repeat:no-repeat;}
+.point p{ display:inline; border-bottom:1px dotted #666; font-weight:bold; color:#300;}
+
+/* kampo */
+.kampo { margin:20px; padding:5px; border:1px double #999;}
+.kampo h4{ background-color:#960; color:#fff;padding:0 5px; margin:0 0 14px 0; padding:0 0 0 6px;}
+.kampo table{ margin:10px 0; border-collapse: collapse; border:1px solid #ccc;}
+.kampo table caption { font-size:90%; color:#333; font-weight:bold;}
+.kampo table th{ padding:3px;}
+.kampo table td{ padding:3px; color:#666; font-size:80%; text-align:center; vertical-align:top;}
+
+/* summary */ 
+.summary{ background-color: #FDF9C7; border-top: 1px solid #960; border-bottom: 1px solid #960; margin:20px 0; padding:0 140px 0 10px; color:#630; font-size:110%; background-image: url("../kampo-care/img/tani.gif"); background-repeat:no-repeat; background-position: right bottom;}
+.summary h3{ margin:10px 0;}
+.summary p{ margin:10px 0;}
+
+/* column */
+.column{ margin:40px 20px 20px; padding:10px 0 10px 100px; background-image:url(../images/img_column.gif); background-repeat:no-repeat; background-position: left 10px; border-top:2px dotted #666; font-family: "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3";}
+.column h3{ font-size:120%;}
+
+.column_2{ margin:40px 20px 20px; padding:0px 0 10px 100px; background-image:url(../images/img_column.gif); background-repeat:no-repeat; background-position: left 10px; border-top:2px dotted #666; font-family: "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3";}
+.column_2 h4{ font-size:14px; padding:0 0 0 12px; background-image:url(../images/common/arrowR03.gif); background-repeat:no-repeat; background-position: left;}
+.column_2 p{
+font-size:12px;
+color:#000000;
+background-color:#ffffff;
+border-top:1px solid #ccccff;
+border-right:1px solid #ccccff;
+border-left:1px solid #ccccff;
+border-bottom:1px solid #ccccff;
+padding:10px;
+clear:both;}
+
+.column_2 dl{
+font-size:12px;
+color:#000000;
+background-color:#ffffff;
+border-top:1px solid #ccccff;
+border-right:1px solid #ccccff;
+border-left:1px solid #ccccff;
+border-bottom:1px solid #ccccff;
+padding:10px;
+margin:0;
+clear:both;}
+
+.column_2 dd{
+	margin:0 0 0 16px;
+	padding:0;}
+
+.column_2 dl ul{
+	margin:0;
+	padding:0;}
+
+.005-t {font-size: 14px; font-family: "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3"; line-height: 20px;}
+.005-o{margin:0px 95px; padding:0; clear:both; font-size: 14px; font-family: "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3"; float: none; border: 1px solid #CCCCCC;}
+.005-p {text-align: center; margin: 20px 0px 0px;}
+
+/* style */
+.style1 {color: #990033}
+
+/*div float */
+.div_img{float:left;  margin:0 10px 0 ;}
+.div_p{margin:0 0 0 110; color:#666;}
+
+#hyou{margin:0; padding:0;}
+
+.span_block{
+	 display:block;
+	 text-align:center;
+}
+
+.div_center{
+	text-align:center;
+	width:530px;
+}
+
+.div_center02{
+	text-align:center;
+	width:530px;
+	margin:10 0
+}
+
+.green02{
+	color:#197210;
+}
+
+.span_gin{
+	 margin:0px 238px 0px 120px;
+}
+
+/* 004-5 original */
+.style03 { border-collapse: collapse; border:1px solid #669900; margin:0px 20px; background-color: #FFC;}
+.style03 th { text-align:left; width:100px; padding:5px; margin:0; font-weight:normal;}
+.style03 td{ padding:5px; color:#333;}
+
+.center{
+	text-align:center;
+}
+
+.center_006-1{
+	text-align:center;
+	margin:0 0 16px 0;
+	padding:0;
+}
+
+.center_006-1 img{
+	border:1px #ccccff solid;
+}
+
+.center160{
+	 text-align:center;
+	 font-size:160%
+}
+
+.color_red{
+	color:#f03;
+	font-weight:bold;
+}
+
+.color_blue{
+	color:#06c;
+	font-weight:bold;
+}
+
+.color_green{
+	color:#060;
+	font-weight:bold;
+}
+
+#ninjin{
+	display:block;
+	margin-bottom:6px;
+	text-align:center;
+}
+
+/* 005-1 original */
+
+#img_botn16{
+	margin-bottom:16px;
+}
+
+#img_right12{
+	float:right;
+	margin:18px 12px 0px 12px;
+}
+
+#center_img{
+	clear:right;
+	text-align:center;
+}
+
+#center_img img{
+	margin-right:6px;
+}
+
+.img_right16{
+	float:right;
+	margin-top:16px;
+	margin-left:6px;
+}
+
+
+#div_right{
+	text-align:right;
+	margin-right:116px;
+	}
+
+.margin_R{
+	margin:0px 30px 14px 0px; padding:0px;
+}
+
+#ul_M{
+	margin:0px 0px 0px 20px; padding:0px; list-style:none;
+}
+
+.inline_li{
+	display:inline;
+}
+
+.li_R{
+	display:inline; margin:0px 30px 0px 0px; padding:0px;}
+
+/* 005-2めまい */
+
+
+.sectionH3 dl#dl_005-2{
+	margin:0;
+	padding:0;}
+
+.sectionH3 dl#dl_005-2 dd{ margin:0; padding:0;}
+
+.sectionH3 dl#dl_005-2 dd ul{ margin:0 0 0 16px; padding:0;}
+
+.sectionH3 p#right{
+	text-align:right; margin:0; padding:0;}
+
+.style03_dl { border:1px solid #669900; margin:0px 20px; padding:10px; background-color: #FFC; width:500px;}
+.style03_dl dt{ float:left; margin:0; padding:0; width:96px; line-height:24px; zoom:1}
+.style03_dl:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+.style03_dl dd{ margin:0 0 0 96px; padding:0; width:374px; line-height:24px;}
+
+.sectionH3 #content-box { border: 1px #CCCCFF solid; width:480px; margin:0 30px; padding:6px 10px; }
+
+.sectionH3 #content-box h4{border-bottom: 1px #ccccff dotted; margin:0; padding:0;}
+
+.sectionH3 #content-box p{margin:6px 0 0 0; padding: 0 10px;}
+
+.sectionH3 .content-box2 { border: 1px #CCCCFF solid; width:500px; margin:0 20px; padding:6px 10px; }
+
+.sectionH3 .content-box2 h4{border-bottom: 1px #ccccff dotted; margin:0; padding:0;}
+
+.sectionH3 .content-box2 dl{margin:14px 0 0 0; padding:0;} 
+
+.sectionH3 .content-box2 dd{margin:0 20px; padding:0;} 
+
+.sectionH3 .content-box2 dd span{font-weight:bold;}
+
+.sectionH3 .content-box2 dt#dt_kohtei{float:left; margin:0 ; padding:0 0 36px 0;}
+.sectionH3 .content-box2 dt#dt_kohtei span{font-weight:bold;}
+
+.sectionH3 .tree_tr{width:548px; margin:14px 0; padding:0;}
+
+.sectionH3 div#dl_five{border:#690 1px solid; background-color:#ffc; margin:0 20px; padding:10px 16px 10px 8px; width:460px;}
+
+.sectionH3 div#dl_five dl{margin:0; padding:0;}
+
+.sectionH3 div#dl_five dl dt{float:left; margin:0 3px 0 0; padding:0 3px 0 0; width:96px;}
+
+.sectionH3 div#dl_five dl dt img{margin:20px 36px 20px 36px ; padding:0;}
+
+.sectionH3 div#dl_five dl dd#dd_first{ margin:0px; padding:0;}
+
+.sectionH3 div#dl_five dl span{ font-weight:bold;}
+
+.sectionH3 div#dl_five dl dd.dd_clear{margin:0; padding:0;}
+
+.sectionH3 div#dl_five dl dd#dd_last{margin:0px 0 6px 0;}
+.sectionH3 .content-box2 p{margin:6px 0 0 0; padding: 0 10px;}
+
+.sectionH3 #content-ps dl{ margin:0; padding:0; margin:0; padding:0}
+.sectionH3 #content-ps dl dt{font-weight:bold;}
+.sectionH3 #content-ps dd{ margin:0 ; padding:0;}
+
+
+.sectionH3 .fumin{ border-top:1px #CCC dotted; margin:10px 0 0 0; padding:10px 0 0 0;}
+
+.column_3{ margin:40px 20px 20px; padding:10px 0 10px 100px; background-image:url(../images/img_column.gif); background-repeat:no-repeat; background-position: left 10px; border-top:2px dotted #666; font-family: "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3";}
+
+.column_3 div{
+font-size:12px;
+color:#000000;
+background-color:#ffffff;
+border:1px solid #ccccff;
+padding:10px 0;
+margin:10px 0}
+
+.column_3 div ol{margin:10px 36px; padding:0;}
+
+.column_3 div p{ margin:0 0 0 12px; padding:0;}
+
+.column_3 div font{color:#C33; font-size:1em;}
+
+/* 目次 */
+
+#cont_box{
+	margin:0;
+	padding:0 0 14px 0;}
+
+#cont_box table{
+	float:left;
+	margin:0 3px 6px;
+	padding:0;}
+
+#cont_box table td.table_ul{
+	background-image:url(../kampo-care/img/table/ul.gif);
+	background-repeat:no-repeat;
+	padding:0 0 0 20px;
+	margin:0;
+	font-weight:bold;
+	font-size:14px;
+	color:#f63;}
+
+#cont_box table td.table_a{
+	background-image:url(../kampo-care/img/table/ul.gif);
+	background-repeat:no-repeat;
+	padding:0 0 0 20px;
+	margin:0;
+	font-weight:bold;
+	font-size:14px;
+	color:#00f;}
+
+#cont_box table td.table_a a{
+	text-decoration:none;
+	color:#999;
+	}
+
+#img_kaisetsu01{
+	width:540px;
+	margin:10px 0 0 0 0;}
+
+#img_kaisetsu01 dl{
+	margin:0;  padding:260px 0 0 0;}
+
+#img_kaisetsu01 dl dt{
+	font-weight: bold;}
+
+#img_kaisetsu02{
+	width:540px;
+	margin:10px 0 0 0 0;}
+
+#img_kaisetsu02 dl{
+	margin:0;  padding:146px 0 0 0;}
+
+#img_kaisetsu02 dl dt{
+	font-weight: bold;}
+
+#img_kaisetsu03{
+	width:540px;
+	margin:10px 0 0 0 0;}
+
+#img_kaisetsu03 dl{
+	margin:0;  padding:166px 0 0 0;}
+
+#img_kaisetsu03 dl dt{
+	font-weight: bold;}
+	
+#img_kaisetsu04{
+	width:540px;
+	margin:10px 0 0 0 0;}
+
+#img_kaisetsu04 dl{
+	margin:0;  padding:208px 0 0 0;}
+
+#img_kaisetsu04 dl dt{
+	font-weight: bold;}
+	
+#content-box h4#fumin{
+	background-image: url(../kampo-care/img/kampo/disc.gif);
+	background-repeat:no-repeat;
+	background-position:center left;
+	margin:0;
+	padding:0 0 0 10px;}
+
+.div-R{
+	 margin:16px 0 10px 0;
+	 padding:0;}
+
+.div-R p.p-0{
+	margin:0; padding:0;}
+	
+	
+table#kampo-list{
+	width:580px;
+	font-size:14px;
+	line-height:1.4}
+
+table#kampo-list a{
+	display:block;}
+
+table#kampo-list th{
+	width:140px;
+	text-align:left;}
+
+table#kampo-list th img{
+	margin:2px 0 0 0 0;
+	padding:0;}
+	
+div.sectionH3 span.center-span{
+	margin: 3px 0;
+	display:block;
+	text-align:center;
+	line-height:1.3;
+	font-weight:bold;
+	color:#333;
+}
+
+/* イライラ(３) */
+
+div.sectionH3 span.font-bold{	
+	 font-weight:bold;}
+
+div.sectionH3 div#div-1L{
+	float:left;
+	margin: 0 8px 0 0;
+	padding: 0;}
+		
+div.sectionH3 div#div-1R dl{
+	 margin:0; padding:0; }
+	 
+div.sectionH3 div#div-1R dl dt{
+	 margin:0; padding:0;}
+
+div.sectionH3 div#div-1R dl dd{
+	 margin:0; padding:0;}
+
+div.sectionH3 div#div-1R dl dd ol{
+	padding: 0;
+	margin: 0 0 0 185px;
+	list-style:none;}
+
+div.sectionH3 ol li#div-1-li01{
+	margin:0;
+	padding:0 0 0 24px;
+	list-style:none;
+	background-image: url(../kampo-care/img/kampo/num01.gif);
+	background-repeat: no-repeat;
+	background-position: top left;}
+
+div.sectionH3 ol li#div-1-li02{
+	margin:0;
+	padding:0 0 0 24px;
+	list-style:none;
+	background-image:url(../kampo-care/img/kampo/num02.gif);
+	background-repeat: no-repeat;
+	background-position: top left;}
+ 
+div.sectionH3 p#p_bottom{
+	margin: 12px 0 0 0;
+	padding:0;}
+
+div.sectionH3 div#div-1B{
+	border: 1px #999 dashed;
+	padding: 8px;
+	margin: 0 0 6px 180px;}
+
+div.sectionH3 div#div-1B p{
+	margin:0;
+	padding:0;}
+
+div.sectionH3 div#div-2L{
+	float:left;
+	margin: 0 8px 0 0;
+	padding: 0 3px 0 0;}	
+
+div.sectionH3 div#div-3L{
+	float:left;
+	margin: 0;
+	padding: 0 3px 0 0;}
+
+div.sectionH3 div#div-3R dl#dl01{
+	 margin: 0 0 0 170px;
+	 padding: 5px;}
+
+div.sectionH3 div#div-3R dl#dl02{
+	margin: 6px 0 0 170px;
+	padding: 5px;}
+
+div.sectionH3 div#div-3R dt{
+	font-weight:bold;;}
+
+div.sectionH3 div#div-3R dd{
+	margin:0 0 0 16px; padding:0;}
+
+div.sectionH3 div#div-3{
+	margin: 0;
+	padding: 0;}
+	
+div.sectionH3 div#div-3{
+	border: 1px #999 dashed;
+	padding:5px 10px;
+	margin:0;}
+
+div.sectionH3 div#div-3 ol{
+	margin:3px 0px;
+	padding:0px;
+	list-style:none;}
+
+div.sectionH3 div#div-3 p{
+	margin:0;}
+
+div.sectionH3 div#div-3 ol li{
+	list-style:none;
+	margin:0;
+	padding:3px 0 3px 24px;
+	display:inline;}
+
+div.sectionH3 div#div-3 ol li#div-3-li01{
+	background-image:url(../kampo-care/img/kampo/num01.gif);
+	background-repeat: no-repeat;
+	background-position: top left;}
+	
+div.sectionH3 div#div-3 ol li#div-3-li02{
+	background-image:url(../kampo-care/img/kampo/num02.gif);
+	background-repeat: no-repeat;
+	background-position: top left;}
+	
+div.sectionH3 div#div-3 ol li#div-3-li03{
+	background-image:url(../kampo-care/img/kampo/num03.gif);
+	background-repeat: no-repeat;
+	background-position: top left;}
+
+div.sectionH3 div#div-4{
+	width:540px;}
+	
+div.sectionH3 div#div-4 div#div-4L{
+	margin:0;
+	padding:5px;}
+	
+div.sectionH3 div#div-4 div#div-4L p{
+	padding:5px;
+	margin:0;}
+
+div.sectionH3 div#div-4 div#div-4L div#div-4L2{
+	float:left;
+	width:90px;}
+	
+div.sectionH3 div#div-4 div#div-4L div#div-4L2 span{
+	display:block;
+	width:90px;
+	font-weight:bold;}
+
+div.sectionH3 div#div-4 div#div-4L span#ks{
+	display:block; margin:0 0 0 95px; font-weight:bold;}
+
+div.sectionH3 div#div-4 div#div-4L3{
+	float:left;
+	width:100px;
+	margin:24px 0 0 0;
+	padding:0;}
+
+div.sectionH3 div#div-4 div#div-4L3 span{
+	display:block; font-weight:bold;}
+
+div.sectionH3 div#div-4 div#div-4R1{
+	float:right;
+	width:100px;
+	margin:0;
+	padding:0;}
+
+div.sectionH3 div#div-4 div#div-4R1 span{
+	display:block; font-weight:bold;}
+
+div.sectionH3 div#div-4 div#div-4R2{
+	float:right;
+	width:124px;
+	margin:0 3px ;
+	padding:0;}
+
+div.sectionH3 div#div-4 div#div-4R2 span#R2-span01{
+	display:block;
+	padding:0 2px;
+	margin:0 0 24px 0;
+	font-weight:bold;}
+
+div.sectionH3 div#div-4 div#div-4R2 span{
+	display:block;
+	padding:0 2px;
+	font-weight:bold;}
+
+div.sectionH3 table.008-table{
+	font-size:1em;
+	line-height:1.4;}
+
+
+/* PMS */
+
+div.sectionH3 table#table_09-02 {
+	font-size:14px;}
+
+div.sectionH3 table#table_09-02 th{
+	text-align:left;
+	padding: 5px;
+	margin:0;}
+
+div.sectionH3 table#table_09-02 td {
+	padding: 5px;
+	margin:0;}	
+
+div.sectionH3 table#table_09-02 td.border-waku{
+	border: 1px #999 dashed;}
+
+div.sectionH3 table#table_09-02 td ul{
+	list-style:none;
+	margin:0;
+	padding:0;}
+	
+div.sectionH3 table#table_09-02 td ul li{
+	line-height:1.5;}
+	
+div.sectionH3 table#table_09-02 td.font-bold{
+	font-weight:bold;}
+
+div.sectionH3 ol.ol-imgnum{
+	margin:0;
+	padding:0;}
+
+div.sectionH3 ol li#li-imgnum01{
+	margin:0;
+	padding:0 0 0 24px;
+	list-style:none;
+	background-image: url(../kampo-care/img/kampo/num01.gif);
+	background-repeat: no-repeat;
+	background-position: top left;}
+
+div.sectionH3 ol li#li-imgnum02{
+	margin:0;
+	padding:0 0 0 24px;
+	list-style:none;
+	background-image: url(../kampo-care/img/kampo/num02.gif);
+	background-repeat: no-repeat;
+	background-position: top left;}
+
+div.sectionH3 ul.ul-none{
+	list-style:none;
+	margin:0;
+	padding:0;}
+
+div.sectionH3 dl#dl-9 dt{
+	float:left;
+	margin:0;
+	padding:0;}
+
+div.sectionH3 dl#dl-9 dd{
+	margin: 0 0 0 280px;}
+
+div.sectionH3 dl#dl-9 ul li{
+	margin: 0 0 0 34px;}
+
+div.sectionH3 dl#dl-9 dd p{
+	margin-top: 0 0 12px 0;}
+
+div.sectionH3 table#table009-5 {
+	font-size:14px;
+	line-height:1.5;}
+
+div.sectionH3 table#table009-5 th{
+	border: 1px #f03 dashed;
+	border-right:none;
+	padding:3px 6px;
+	text-align:left;}
+
+div.sectionH3 table#table009-5 td{
+	padding:3px 6px;
+	width:130px;}
+
+div.sectionH3 table#table009-5 th#th009-last{
+	border:none;}
+
+div.sectionH3 table#table009-5 td#td01-img{
+	border: 1px #06c dashed;
+	border-bottom: none;}
+
+div.sectionH3 table#table009-5 td#td02-img{
+	border: 1px #333 solid;
+	border-bottom: none;}
+
+div.sectionH3 table#table009-5 td#td03-img{
+	border: 1px #f03 solid;
+	border-bottom: none;}
+
+div.sectionH3 table#table009-5 td.td01-01{
+	border-top: 1px #f03 dashed;
+	border-right: 1px #06c dashed;
+	border-bottom: 1px #f03 dashed;
+	border-left: 1px #06c dashed;}
+
+div.sectionH3 table#table009-5 td.td01-03{
+	border-top: 1px #f03 dashed;
+	border-right: 1px #06c dashed;
+	border-bottom: 1px #f03 dashed;
+	border-left: 1px #06c dashed;}
+
+div.sectionH3 table#table009-5 td.td02-01{
+	border-top: 1px #f03 dashed;
+	border-right: 1px #333 solid;
+	border-bottom: 1px #f03 dashed;
+	border-left: 1px #333 solid;}
+
+div.sectionH3 table#table009-5 td.td02-03{
+	border-top: 1px #f03 dashed;
+	border-right: 1px #333 solid;
+	border-bottom: 1px #f03 dashed;
+	border-left: 1px #333 solid;}
+
+div.sectionH3 table#table009-5 td.td03-01{
+	border-top: 1px #f03 dashed;
+	border-right: 1px #f03 solid;
+	border-bottom: 1px #f03 dashed;
+	border-left: 1px #f03 solid;}
+
+div.sectionH3 table#table009-5 td.td03-03{
+	border-top: 1px #f03 dashed;
+	border-right: 1px #f03 solid;
+	border-bottom: 1px #f03 dashed;
+	border-left: 1px #f03 solid;}
+	
+div.sectionH3 table#table009-5 td.td04-01{
+	border-top: 1px #06c dashed;}
+
+div.sectionH3 table#table009-5 td.td04-02{
+	border-top: 1px #333 solid;}
+
+div.sectionH3 table#table009-5 td.td04-03{
+	border-top: 1px #f03 solid;}
+
+div.sectionH3  table#table009-6{
+	font-size:14px;
+	text-align:center;
+	width:540px;}
+
+div.sectionH3 dl#dl-back{
+	background-image:url(../kampo-care/img/kampo/009-1-07.gif);
+	background-repeat:no-repeat; 
+	background-position:top left;
+	margin:0;
+	height:125px;}
+
+div.sectionH3 dl#dl-back dt{
+	margin:0 0 0 32px;
+	padding:0;}
+	
+div.sectionH3 dl#dl-back dd{
+	margin:0 0 0 44px;
+	padding:0;}
+
+div.sectionH3 dl#pms-yobo01{
+	border:3px #8AB846 solid;
+	padding: 6px;}
+	
+div.sectionH3 dl#pms-yobo01 dt{
+	border-bottom:3px #8AB846 dotted;
+	padding-bottom:6px;
+	margin-bottom:6px;
+	font-weight:bold;
+	color:#333;}
+
+div.sectionH3 dl#pms-yobo01 dd span.red{
+	color:#F03;}
+
+div.sectionH3 dl#pms-yobo01 ul{
+	margin:0 16px;
+	padding:0;}
+
+div.sectionH3 dl#pms-yobo01 ul li{
+	padding: 0;
+	line-height:1.5;}
+
+div.sectionH3 dl#pms-yobo01 dd{
+	margin:0;
+	padding:0;}
+
+div.sectionH3 dl#pms-yobo02{
+	border:3px #FF3030 solid;
+	padding: 6px;}
+	
+div.sectionH3 dl#pms-yobo02 dt{
+	border-bottom:3px #FF3030 dotted;
+	padding-bottom:6px;
+	margin-bottom:6px;
+	font-weight:bold;
+	color:#333;}
+
+div.sectionH3 dl#pms-yobo02 dd span.red{
+	color:#F03;}
+
+div.sectionH3 dl#pms-yobo02 ul{
+	margin:0 16px;
+	padding:0;}
+
+div.sectionH3 dl#pms-yobo02 ul li{
+	padding: 0;
+	line-height:1.5;}
+
+div.sectionH3 dl#pms-yobo02 dd{
+	margin:0;
+	padding:0;}
+
+div.sectionH3 div#div009-3 p{
+	margin:0;
+	padding:0;}
+
+div.sectionH3 div#div009-3 ul{
+	margin:0 0 0 20px;
+	padding:0;}
+
+div.sectionH3 dl#dl-004{
+	margin:0;
+	padding:0;}
+
+div.sectionH3 dl#dl-004 dt{
+	margin:10px 0 0 0;
+	padding:0;}
+
+div.sectionH3 dl#dl-004 dd {
+	margin:0;
+	padding:0;}
+
+div.sectionH3 dl#dl-004 dd ul{
+	margin:10px 0 0 30px;
+	padding:0 0 0 0;}
+
+div.sectionH3 dl#dl-004 dd ul li{
+	margin: 0 0 0 0;
+	padding:0;}
+
+div.sectionH3 img.num-kampo{
+	margin: 0;
+	padding:0;}
+
+div.sectionH3 ul.ul_margin{
+	margin:0;
+	padding:0;}
+
+div.sectionH3 ul.ul_margin li{
+	margin:0 0 0 20px;}
+
+/* 高血圧 */
+
+div.sectionH3 p.ketsuatu-p{
+	margin:0;
+	padding:0;}
+
+div.sectionH3 ul.ketsuatu-ul li{
+	margin:0;
+	padding:0;}
+
+/* 総論 */
+
+span.bold-p{
+	font-weight:bold;}
+
+span.bold-under{
+	font-weight:bold;
+	text-decoration:underline;}
+
+/* 認知症 */
+
+div.blue-box{
+	border: 2px #003399 solid;
+	background-color: #e7ffff;
+	padding: 0 8px;
+}
+
+/* 目次 */
+/* 共通 */
+#contents-kampocare{
+	margin:10px 20px 30px;
+	padding:0; clear:both;
+	font-size: 14px; font-family: "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3";}
+	
+#contents-kampocare h3{
+	margin:10px 0;
+	padding: 0 0 0 7px;
+	border-left:5px solid #fc0;
+	color:#333; font-size:110%;
+	line-height:160%;
+	background-color:#f2f2f2;}
+
+div#contents-kampocare div{
+	margin:0 0 20px 0;
+	line-height:1.6;}
+	
+div#contents-kampocare div h4{
+	padding:4px 14px;
+	margin: 0 0 14px 0;
+	border-bottom:1px #ccc solid;
+	border-top:1px #ccc solid;
+	clear:both;
+	background-color:#f2f2f2;}
+
+div#contents-kampocare div h5{
+	font-weight: normal;
+	margin: 0 14px;
+	clear:both;}
+
+div#contents-kampocare div ul li{
+	list-style:none;}
+	
+/* 総論・各論 */
+
+div#contents-kampocare div#souron ul{
+	margin:0 0 0 16px;
+	padding:0;}
+
+div#contents-kampocare div#hozai ul{
+	margin:0 0 0 16px;
+	padding:0;}
+
+div#contents-kampocare div#kakuron{
+	width:100%;}
+
+div#contents-kampocare div#kakuron ul{
+	clear: both;}
+
+div#contents-kampocare div#kakuron ul li{
+	display:block;
+	margin:4px 0;
+	padding: 0 6px;
+	float:left;
+	border-right:1px #CCC solid;}
+
+div#contents-kampocare div#kakuron ul li.kakuron-first{
+	border-left:1px #CCC solid;}
+
+div#contents-kampocare div#kakuron dl{
+	margin:0 0 0 16px;
+	padding:0;}
+
+div#contents-kampocare div#kakuron dl dt{
+	clear: both;
+}
+
+div#contents-kampocare div#kakuron dl dd{
+	display:block;
+	margin:4px 0;
+	padding: 0 6px;
+	*padding: 0 8px;
+	float:left;
+	border-right:1px #CCC solid;}
+	
+/* 総論（２） */
+
+div.sectionH3 span#under-line{
+	text-decoration:underline;}
+
+div.sectionH3 span.red-kampo{
+	color:#F00;
+	font-weight:bold;}
+
+div.sectionH3 span.blue-kampo{
+	color:#00F;
+	font-weight:bold;}
+
+/* 総論（３） */
+
+div.sectionH3 p.margin_TB{
+	margin-top:0;
+	margin-bottom:0;}
+
+div.sectionH3 p.margin_B{
+	margin-bottom:0;}
+
+div.sectionH3 ul.ul_num{
+	list-style:none;
+	margin:0 0 0 48px;
+	padding:0;}
+
+div.sectionH3 ul.ul_num li#num01{
+	list-style-image:url(../kampo-care/img/kampo/num01-010.gif);}
+
+div.sectionH3 ul.ul_num li#num02{
+	list-style-image:url(../kampo-care/img/kampo/num02-010.gif);}
+
+div#rikiyaku{
+	margin:30px 10px 0 10px;}
+
+div.sectionH3 p#p1104a{
+	margin:0 0 4px 0;
+	font-weight:bold;}
+
+div.sectionH3 p#p1104b{
+	margin: 15px 0 0 0;
+	font-weight:bold;}
+
+span.blue{
+	color:#00F;
+	font-weight: bold;}
+
+span.red{
+	color:#f00;
+	font-weight: bold;}
+
+span.brown {
+	color:#800000;
+	font-weight: bold;}
+
+div.column_3 span.blue-h{
+	color:#00F;
+	font-weight: bold;}
+
+div.sectionH3 span.red{
+	color:#F00;
+	font-weight: bold;}
+
+div.sectionH3 a.kampocare-a{
+	color:#F00;
+	text-decoration:underline;}
+
+span.s-bold{
+	font-weight:bold;}
+
+span.green-b{
+	color: #060;
+	font-weight: bold;}
+
+span.under{
+	text-decoration:underline;}
+
+div.sectionH3 span.brown{
+	color:#800000;
+	font-weight: bold;}
+
+div.sectionH3 span.brown2{
+	color:#663300;
+	font-weight: bold;}
+
+div.sectionH3 div.kampo-img-center{
+	text-align: center;
+}
+
+
+div.sectionH3 div.kampo-img-center div{
+	margin-right: auto;
+	margin-left: auto;
+}
+
+dl.dl-margin-none dd {
+	margin:0 ;
+}
+
+/* common */
+.imgR-zero{ float:right; margin:0 0 0 0px;}
+
+ol.ol-list-none {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+ol.ol-list-none li {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+#style-0 {
+	margin:0 0 0 20px;
+	padding:0;
+}
+
+ul.margin-circle {
+	margin: 0 0 0 24px;
+	padding:0;
+}
+
+ul#hitokoto_check {
+	margin: 0;
+	padding:0;
+}
+
+ul#hitokoto_check li {
+	list-style: none;
+	background-image:url(../kampo-care/img/kampo/hitokoto_check.gif);
+	background-repeat: no-repeat;
+	background-position: 0 2;
+	padding-left: 16px;
+}
+
+dl#flow_dl dt {
+	float: left;
+}
+
+ol li#hitokoto01 {
+	list-style-image: url(../kampo-care/img/kampo/num01-010.gif);}
+
+ol li#hitokoto02 {
+	list-style-image: url(../kampo-care/img/kampo/num02-010.gif);}
+
+ol li#hitokoto03 {
+	list-style-image: url(../kampo-care/img/kampo/num03-010.gif);}
+
+ol li#hitokoto04 {
+	list-style-image: url(../kampo-care/img/kampo/num04.gif);}
+
+ol li#hitokoto05 {
+	list-style-image: url(../kampo-care/img/kampo/num05-010.gif);}
+	
+div.blue-back {
+	background-color: #e7ffff;
+	border: 2px #00f solid;
+	padding: 0 20px;
+	margin: 8px 20px;
+}

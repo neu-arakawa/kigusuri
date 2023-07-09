@@ -1,0 +1,28 @@
+#main {margin:0 22px 0 10px;}
+#main #categoryName{margin:20px 0;}
+
+#main #description{ font-size: 80%; line-height: 160%; color: #666;}
+
+.pagetop {font-size: 10px;text-align: right;margin: 5px 0 30px;clear:both;}
+.pagetop a{background: url(../images/bt_top.gif) no-repeat left center;padding: 0 0 0 20px;}
+
+#contentsArea { margin:20px 15px; font-size:90%; line-height:150%;}
+
+/* intro
+-----------------------------------------*/
+#intro{ padding:10px 150px 5px 5px; background-image:url(../hs/img/bg_qa.jpg); background-position:right bottom; background-repeat:no-repeat;}
+#intro h3{ font-size:140%; color:#f60; line-height:120%;}
+
+
+/* qlist
+-----------------------------------------*/
+.qlist{ margin:20px 0; padding:5px 10px; background-color:#f3f3f3; border-bottom:1px solid #ccc; border-top:1px solid #ccc; font-size:90%;}
+.qlist ul{ margin:0 0 0 20px; padding:0; line-height:100%;}
+.qlist ul li{ margin:5px 0; padding:0;}
+
+/* qa
+-----------------------------------------*/
+.qa{ margin:20px 0 0 0; padding:5px; border:1px solid #ccc;}
+.qa h3{ font-size:110%; color:#f60; padding:0 0 0 35px; background-image:url(../hs/img/img_q.gif); background-position: 5px 2px; background-repeat:no-repeat;}
+.qa .answer{ margin:10px 0 0 0; padding:5px 5px 5px 60px; background-color:#f3f3f3; background-image:url(../hs/img/img_a.gif); background-repeat:no-repeat; background-position:25px 20px; font-size:90%;}
+.qa .answer p{ margin:10px 0;}

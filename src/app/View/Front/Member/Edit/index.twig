@@ -1,0 +1,216 @@
+<?php
+  //共通
+  require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+  //メタディスクリプション
+  $description = '';
+
+  //メタキーワード
+  $keywords = '';
+
+  //Facebook　全ページ共通の場合は空白にしてください
+  $fbimage = '';
+
+  //タイトル
+  $title = '会員情報編集';
+
+  //css追加
+  $ex_tag_css = '<link rel="stylesheet" href="/member/css/style.css"><link rel="stylesheet" href="/member/css/template.css">';
+
+  //js追加
+  $ex_tag_js = '<script src="/member/js/script.js"></script>';
+
+  //bodyID
+  $bodyID = 'member';
+
+?>
+<?php include 'header.php'; ?>
+
+
+	<div class="contents-header">
+	    <ul class="topicpath fbox">
+			<li><a href="/">トップページ</a></li>
+            <li>会員情報編集</li>
+		</ul>		
+        <h1 class="header-ttl">会員情報編集</h1>
+	</div>
+    <!-- /.contents-header -->
+
+
+  <div class="inner">
+    
+    {% set msg = c.app_session('member_msg') %}
+    {% if msg %}
+    <!--/////////////////汎用メッセージ start ///////////////////-->
+        <div class="m-panel01 m-panel01--blue">
+        <div class="l-sp-inner">
+          <div class="m-panel01__panel">
+            <p class="m-panel01__heading">{{ msg }}</p>
+            <p class="m-panel01__txt">ご登録された内容を反映しました。</p>
+          </div>
+          <!-- /.m-panel01__panel -->
+          </div>
+          <!-- /.l-sp-inner -->
+        </div>
+        <!-- /.m-panel01 -->
+    <!--/////////////////汎用メッセージ end ///////////////////-->
+    {{ c.app_session_clear('member_msg') }}
+    {% endif %}
+
+    {% if errors %}
+    <!--/////////////////エラーメッセージ start ///////////////////-->
+        <div class="m-panel01 m-panel01--red">
+     	 <div class="l-sp-inner">
+          <div class="m-panel01__panel">
+            <p class="m-panel01__heading">登録内容が正しく入力されていません。</p>
+            <p class="m-panel01__txt">もう一度ご確認のうえ、ご入力してください。</p>
+          </div>
+          <!-- /.m-panel01__panel -->
+          </div>
+          <!-- /.l-sp-inner -->
+        </div>
+        <!-- /.m-panel01 -->
+    <!--/////////////////エラーメッセージ end ///////////////////-->
+    {% endif %}
+    
+    <!--/////////////////入力画面 start ///////////////////-->
+    <div class="component-area">
+      <div class="l-sp-inner">
+        <div class="m-tablearea01">
+            <form method="post">
+            <input type="hidden" name="_METHOD" id="_METHOD" value="PUT"/>
+            <input type="hidden" name="{{csrf_key}}" value="{{csrf_token}}">
+
+            <div class="m-tablearea01__table">
+              <table class="m-table01">
+                <tr>
+                  <th><span class="m-table01__heading">ニックネーム</span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                        {{ c.member['nickname']}}
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                  </td>
+                </tr>
+                <tr>
+                  <th><span class="m-table01__heading">生年（西暦） </span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                        {{ c.member['birthday']}} 年
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                    {% if errors.birthday %}
+                    <p class="m-table01__error">{{ errors.birthday }}</p>
+                    {% endif %}
+                  </td>
+                </tr>
+                <tr>
+                  <th><span class="m-table01__heading">性別 </span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                        {{ c.member['sex']}}
+                      <!-- /.m-table01__radiolist -->
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                    {% if errors.sex %}
+                    <p class="m-table01__error">{{ errors.sex }}</p>
+                    {% endif %}
+                  </td>
+                </tr>
+                <tr>
+                  <th><span class="m-table01__heading">都道府県 </span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                        <select name="pref" >
+                            <option value=''></option>
+                            {% for pref in c.config('prefectures')%}
+                            <option value='{{ pref }}'>{{ pref }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                    {% if errors.pref %}
+                    <p class="m-table01__error">{{ errors.pref }}</p>
+                    {% endif %}
+                  </td>
+                </tr>
+                <tr>
+                  <th><span class="m-table01__heading">DM 受け取り</span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                      <ul class="m-table01__radiolist clearfix">
+                        <li><label><input type="radio" name="dm_flg" value='1'>受け取る</label></li>
+                        <li><label><input type="radio" name="dm_flg" value='0' checked="checked">受け取らない</label></li>
+                      </ul>
+                      <!-- /.m-table01__radiolist -->
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                    {% if errors.dm_flg %}
+                    <p class="m-table01__error">{{ errors.dm_flg }}</p>
+                    {% endif %}
+                  </td>
+                </tr>
+              </table>
+              <!-- /.m-table01 -->
+            </div>
+            <!-- /.m-tablearea01__table -->
+            <div class="m-tablearea01__btn">
+              <button class="m-arrow-btn01">登録内容を変更する<span class="m-arrow-btn01__icn"></span></button>
+            </div>
+          </form>
+        </div>
+        <!-- /.m-tablearea01 -->
+      </div>
+      <!-- /.l-sp-inner -->
+    </div>
+    <!-- /.component-area -->
+    <!--/////////////////入力画面 end ///////////////////-->
+
+
+    <!--/////////////////メールアドレス・パワスワード start ///////////////////-->
+    <div class="component-area">
+      <div class="l-sp-inner">
+        <div class="m-tablearea02">
+          <p class="m-tablearea02__intro">メールアドレス、パスワードを変更される場合は以下の「変更する」ボタンからおこなってください。
+          <br><span class="m-table01__required">変更すると、次回ログイン時はそれまでのメールアドレス、パスワードではログインできなくなります。</span></p>
+          <div class="m-tablearea02__table">
+            <table class="m-table01">
+              <tr>
+                <th><span class="m-table01__heading">メールアドレス</span></th>
+                <td>
+                  <div class="m-btnrow01">
+                    <p class="m-btnrow01__txt">{{ c.member['email']}}</p>
+                    <div class="m-btnrow01__btn"><a href="{{ c.app.urlFor('member_edit_email') }}" class="m-edit-btn">変更する</a></div>
+                  </div>
+                  <!-- /.m-btnrow01 -->
+                </td>
+              </tr>
+              <tr>
+                <th><span class="m-table01__heading">パスワード</span></th>
+                <td>
+                  <div class="m-btnrow01">
+                    <p class="m-btnrow01__txt">（セキュリティのため表示していません）</p>
+                    <div class="m-btnrow01__btn"><a href="{{ c.app.urlFor('member_edit_password') }}" class="m-edit-btn">変更する</a></div>
+                  </div>
+                  <!-- /.m-btnrow01 -->
+                </td>
+              </tr>
+            </table>
+            <!-- /.m-table01 -->
+          </div>
+          <!-- /.m-tablearea02__table -->
+          <p class="m-tablearea02__taikai"><a href="{{ c.app.urlFor('member_withdrawal') }}">退会をご希望の方</a></p>
+        </div>
+        <!-- /.m-tablearea02 -->
+      </div>
+      <!-- /.l-sp-inner -->
+    </div>
+    <!-- /.component-area -->
+    <!--/////////////////メールアドレス・パワスワード end ///////////////////-->
+
+    
+    
+  </div>
+  <!-- /.inner -->
+
+<?php include 'footer.php'; ?>

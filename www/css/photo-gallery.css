@@ -1,0 +1,71 @@
+/* CSS Document */
+#boxMain {
+	width: 582px;
+	margin: 15px 0 15px 10px;
+	font-size: 14px;
+	line-height: 160%;
+}
+#boxMain .sectionH2{
+	clear:both;
+	width: 582px;
+}
+#boxMain .sectionH2 h2{
+margin:0 0 15px 0;
+}
+#boxMain .sectionH3{
+width: 582px;
+height:auto;
+margin-bottom: 15px;
+padding-bottom: 10px;
+clear: both;
+}
+
+#boxMain .sectionH3 h3{
+font-size: 14px;
+line-height: 160%;
+border-bottom: 1px solid #99cc33;
+padding-left: 5px;
+background-image: url(../images/sitemap/bg_header.gif);
+background-repeat: repeat-x;
+}
+
+#boxMain .sectionH3 ul{
+margin:0 10px;
+}
+#boxMain .sectionH3 li{
+margin:5px 10px 5px 5px;
+list-style-type:none;
+text-align:center;
+float: left;
+font-size:90%;
+color:#666666;
+}
+#boxMain .sectionH3 a{
+color:#0066FF;}
+#boxMain .sectionH3 a:hover{
+color:#FF6600;}
+.photo{clear:both;
+margin:0px;
+padding:0px;
+}
+
+#info{margin:5px 20px;
+font-size:90%;
+line-height: 1.5em; 
+color:#333333;}
+
+#kitei{margin:5px 10px;
+padding:0 10px;
+font-size:90%;
+line-height: 1.5em; 
+color:#333333;
+border: 1px solid #FFCC66;}
+#kitei h3{
+width:auto;
+font-size:110%;
+margin:5px 0 0 0;
+padding:0px;
+border-bottom: 1px dotted #FFCC66;
+color:#ff6600;}
+
+.clear{clear:both;}

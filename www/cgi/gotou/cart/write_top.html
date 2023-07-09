@@ -1,0 +1,74 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=shift_jis">
+<title>きぐすりショッピングカート</title>
+<meta http-equiv="content-style-type" content="text/css">
+<style type="text/css">
+<!-- 
+	a { text-decoration: none; }
+	a:hover { text-decoration: underline; }
+	input, textarea {font-size: 12px; line-height: 14px; }
+	.main { font-size: 14px; line-height: 18px; }
+	.main2 { font-size: 14px; line-height: 26px; }
+-->
+</style>
+<meta http-equiv="content-script-type" content="text/javascript">
+<script language="javascript">
+<!--
+	function winOpen(winName,url,W,H){
+		//サブウインドウオープン
+  		var WinD11=window.open(url,winName,'scrollbars=1,width='+W+',height='+H+'');
+  		WinD11.document.close()
+	}
+//-->
+</script>
+</head>
+
+<body bgcolor="#ffffff" topmargin="0" marginheight="0">
+<table border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto;">
+	<tr>
+		<td background="./img/logo-kigusuri-bgbar.gif">
+			<table border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td><img src="img/logo-kigusuri.gif" border="0"></td><td width="30"></td>
+		<td><br><font size="2"><a href="http://www.kigusuri.com/shop/abeno/topic/admin.php"><img src="img/icon_t.gif" border="0">健康トピックス管理画面</a></font></td>
+				<td width="20"></td>
+				<td><br><font size="2"><a href="set.cgi?menu=m1&pass=$pass"><img src="img/icon_s.gif" border="0">ショッピングカート設定</a></font>
+				</td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td><a href="set.cgi?menu=m1&pass=$pass"><img border="0" src="./img/menu_1_green3.gif"></a><img src="./img/sp.gif"><a href="set.cgi?menu=m2&pass=$pass"><img border="0" src="./img/menu_2_green3.gif"></a><img src="./img/sp.gif"><a href="set.cgi?menu=m3&pass=$pass"><img border="0" src="./img/menu_3_green3.gif"></a><img src="./img/sp.gif"><a href="disp.cgi?pass=$pass"><img border="0" src="./img/menu_4_green3.gif"></a><img src="./img/sp.gif"><a href="write.cgi?pass=$pass"><img border="0" src="./img/menu_6_green3.gif"></a><img src="./img/sp.gif"><a href="set.cgi?menu=m4&pass=$pass"><img border="0" src="./img/menu_5_green3.gif" alt="管理画面に入室するためのパスワードを設定します。"></a></td>
+	</tr>
+	<tr>
+		<td><img border="0" src="./img/bar1.gif" width="100%" height="10"></td>
+	</tr>
+	<tr>
+		<td style="text-align: right;padding-top:8px;"><a href="cart_list.cgi" target="_blank"><b>&gt;&gt; 商品案内ページを表示</b></a><span style="font-size: 0.8em;color:#666;">（別ウインドウで開きます）</font></td>
+	</tr>
+</table>
+<center>
+<br>
+<table border="0" cellspacing="0" cellpadding="4">
+  <tr>
+  	<td><a href="write.cgi?pass=$pass"><img src="img/wr_menu01.gif" border="0"></a></td>
+	<td><a href="write.cgi?open_file=$open_file&edit=new&pass=$pass"><img src="img/wr_menu02.gif" border="0"></a></td>
+	<td><a href="write.cgi?delete=file&pass=$pass"><img src="img/wr_menu04.gif" border="0"></a></td>
+	<td><a href="write.cgi?edit=img&pass=$pass"><img src="img/wr_menu03.gif" border="0"></a></td>
+	<!--<td><a href="osusume_create.cgi?mode=input&pass=$pass"><img src="img/wr_menu05.gif" border="0"></a></td>-->
+  </tr>
+</table>
+<img src="./common/line_500.gif" width="500" height="11" border="0">
+<br>
+$msg
+</center>
+
+$DispTopData
+
+
+<br><br>
+
+</body>
+</html>

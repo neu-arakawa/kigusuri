@@ -1,0 +1,8 @@
+AuthType Basic
+AuthName administrator
+AuthUserFile /home/1906354514/kigusuri-com/public_html/admin/.htpasswd
+Require valid-user
+# Satisfy any
+# Order deny,allow
+# Allow from 61.194.56.47
+# Deny from all

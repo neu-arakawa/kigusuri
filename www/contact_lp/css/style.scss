@@ -1,0 +1,242 @@
+@charset "UTF-8";
+@import "../../common/css/_settings/_setting";
+
+/* ==========================================================================
+   はじめての方へ
+   ========================================================================== */
+
+.lead{
+  text-align:center;
+	@include fontsize(16);
+  line-height:180%;
+  margin-bottom:40px;
+  span{
+	  @include fontsize(20);
+    font-weight:bold;
+    display:block;
+    margin-bottom:10px;
+     }
+  }
+  
+
+.sec-box-wrap{
+  width:1000px;
+  display:table;
+  table-layout:fixed;
+  
+  }   
+.sec-box{
+  width:280px;
+  padding:20px;
+  display:table-cell;
+  background-color:#F4F785;
+  height:380px;
+  position:relative;
+  }
+.sec-tit-wrap{
+  display:table;
+  margin-bottom:20px;
+  padding-bottom:15px;
+  width:100%;
+  border-bottom:2px solid #fff;
+  
+  .sec-img{
+    display:table-cell;
+    }
+  .sec-tit{
+    display:table-cell;
+    vertical-align:middle;
+	  @include fontsize(18);
+    }
+  }
+  
+.sec-list{
+  margin:20px 0;
+     li{
+      margin:4px;
+      padding-left:1em;
+      text-indent:-1em;
+	    @include fontsize(12);
+      color:#868686;
+      }
+}
+
+.top-cont-btn{
+    font-size: 18px;
+    font-size: 1.8rem;
+    width: 280px;
+  position:absolute;
+  bottom: 20px;
+}
+.top-cont-btn-in{
+    border-radius: 3px;
+    display: block;
+    letter-spacing: .05em;
+    padding: 10px 32px;
+    -webkit-transition: background-color 0.25s ease;
+    transition: background-color 0.25s ease;
+    text-align: center;
+    text-decoration: none;
+}
+
+//住所エリアの調整
+.adress{
+  .m-table01__inputbox{
+    margin-bottom:20px!important;    
+    }
+   .m-table01__error{
+     margin-top:5px;
+     }
+   .label{
+     display:inline-block;
+     width:90px;
+     }
+  }
+
+//ボックスのカラー
+.consultation-box{
+  background-color:#f6fdef;
+  .sec-tit-wrap{
+    border-color:#cae0b4;
+    }
+  }
+  
+  .srch-box{
+    position:relative;
+  background-color:#edf4f5;
+  .sec-tit-wrap{
+    border-color:#c7e6ea;
+    }
+  }
+  .kampo-box{
+    background-color:#fcf3f6;
+    position:relative;
+    .sec-tit-wrap{
+      border-color:#f3dde4;
+    }
+    }
+
+ 
+ .sec-att-wrap{
+    background-color: #fbfbfb;
+    border: 1px solid #e6e6e6;
+   overflow:hidden;
+   margin:40px 0 40px;
+   padding:40px 40px 20px 40px;
+  .sec-in-detail{
+    float:left;
+    width:650px;
+    h2{
+      margin-bottom:20px;
+      }
+    }
+  .sec-in-photo{
+    float:right;
+    width:220px;
+    p{
+      text-align:center;
+      margin:5px 0 0;
+	    @include fontsize(10);
+      }
+    img{
+      width: 100%;
+    border: 1px solid #e6e6e6;
+      }
+    }
+   h3{
+     margin-top:20px;
+     padding-bottom:5px;
+	    @include fontsize(16);
+     }
+   p{
+     margin-bottom:20px;
+     line-height:180%;
+     }
+   .sec-att-list{
+     margin:0 0 20px 30px;
+     li{
+      margin:4px;
+      padding-left:1em;
+      text-indent:-1em;
+	    @include fontsize(12);
+      color:#757575;
+      }
+     
+     }
+   }
+    
+@include mq-sp {
+.lead{
+	@include fontsize(16);
+  width:92%;
+  padding:0 4%;
+  text-align:left;
+  span{
+  text-align:center;
+	@include fontsize(24);
+  line-height:140%;
+    }
+  }
+.sec-box-wrap {
+  width:92%;
+  padding:0 4%;
+  display:block;
+  }
+ .sec-box {
+   position: static;
+   width:92%;
+   height:auto;
+   padding:4%;
+   display:block;
+   margin-bottom:10px;
+   .sec-tit{
+	  @include fontsize(20);
+    padding-left:10px;
+     }
+  p{
+	  @include fontsize(16);
+    }
+
+  .top-cont-btn{
+    width:100%;
+    position: static;
+    bottom:40px;
+    }
+
+   }
+  .sec-list{
+    li{
+	  @include fontsize(14);
+      }
+    
+    }
+.sec-att-wrap{
+  padding:20px;
+  .sec-in-detail{
+    float:none;
+    width:100%;
+    h2{
+      margin-bottom:56px;
+      }
+    }
+  .sec-in-photo{
+    float:none;
+    width:50%;
+    margin:0 auto;
+    p{
+     @include fontsize(12);
+
+      }
+    }
+
+  p{
+	  @include fontsize(14);
+    }
+  }
+  .sec-att-list{
+    margin-left:0!important;
+    li{
+	    @include fontsize(14);
+      }
+    }
+}

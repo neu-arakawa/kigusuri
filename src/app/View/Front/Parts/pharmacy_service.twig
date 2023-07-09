@@ -1,0 +1,49 @@
+{% if pharmacy.insurance_flg %}
+<li><span class="shop-icons icon-chozai">保険調剤可</span></li>
+{% endif %}
+
+{% if pharmacy.parking_flg %}
+<li><span class="shop-icons icon-parking">駐車場あり</span></li>
+{% endif %}
+
+{% if pharmacy.herb_flg %}
+<li><span class="shop-icons icon-herb">ハーブ取扱いあり</span></li>
+{% endif %}
+
+{% if pharmacy.decoction_flg %}
+<li><span class="shop-icons icon-senji">煎じ薬取扱いあり</span></li>
+{% endif %}
+
+{% if pharmacy.girlstaff_flg %}
+<li><span class="shop-icons icon-female">女性スタッフ常駐</span></li>
+{% endif %}
+
+{% if pharmacy.internetorder_flg %}
+<li><span class="shop-icons icon-order">通信販売あり</span></li>
+{% endif %}
+
+{% if pharmacy.goodinfo_flg %}
+<li><span class="shop-icons icon-otoku">お得情報あり</span></li>
+{% endif %}
+
+{% if pharmacy.night_open_flg %}
+<li><span class="shop-icons icon-night">18時以降も対応</span></li>
+{% endif %}
+
+{% if pharmacy.saturday_open_flg %}
+<li><span class="shop-icons icon-sat">土曜営業あり</span></li>
+{% endif %}
+
+{% if pharmacy.holiday_open_flg %}
+<li><span class="shop-icons icon-holiday">日曜営業あり</span></li>
+{% endif %}
+
+{% if pharmacy.email_counseling_flg %}
+<li><span class="shop-icons icon-mail">メール相談受付可</span></li>
+{% endif %}
+
+{% if pharmacy.reserve_shop_flg == 1 %}
+<li><span class="shop-icons icon-reserve">来店予約受付可</span></li>
+{% elseif pharmacy.reserve_shop_flg == 2 %}
+<li><span class="shop-icons icon-reserve">完全予約</span></li>
+{% endif %}

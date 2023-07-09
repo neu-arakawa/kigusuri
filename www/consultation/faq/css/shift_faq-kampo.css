@@ -1,0 +1,453 @@
+@charset "UTF-8";
+/* %icomoon
+----------------------------------------------------------*/
+/* %icomoon02
+----------------------------------------------------------*/
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'icomoon02';
+  src: url("fonts/icomoon.eot?ctabv3");
+  src: url("fonts/icomoon.eot?ctabv3#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?ctabv3") format("truetype"), url("fonts/icomoon.woff?ctabv3") format("woff"), url("fonts/icomoon.svg?ctabv3#icomoon") format("svg"); }
+/**
+ * 漢方 よくある質問（Q&A）
+ *
+ * 01. faq-kampo.css移行
+ * 02. 画像パス
+ * 03. コメント
+ *
+ */
+/* ==========================================================================
+   01. faq-kampo.css移行
+   ========================================================================== */
+#main .inner .read {
+  margin: 5px 0 16px; }
+
+div#faq-box div#faq-list div#faq-kampo h4#kaito {
+  font-weight: bold;
+  background-image: url(../img/faq-midashi.gif);
+  width: 650px;
+  height: 38px;
+  background-repeat: no-repeat; }
+
+div#faq-box div#faq-list div#faq-kampo h4#kaito span {
+  display: block;
+  margin: 0;
+  padding: 7px 0 0 20px;
+  font-size: 16px; }
+
+@media screen and (max-width: 767px) {
+  div#faq-box div#faq-list div#faq-kampo h4#kaito {
+    border-right: 1px solid #d6d6d6;
+    height: 36px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box; } }
+/* 1.answer
+========================================== */
+div#faq-box div#faq-list div#answer {
+  margin: 0;
+  padding: 0; }
+
+/* 1-1.answer-h
+--------------------------------------------- */
+div#faq-box div#faq-list div {
+  background-image: none; }
+
+div#faq-box div#faq-list div#answer div {
+  background-image: none; }
+
+div#faq-box div#faq-list div#answer div#answer-h {
+  border-bottom: 1px #999 solid;
+  margin: 0 0 6px;
+  padding: 14px 0; }
+
+div#faq-box div#faq-list div#answer div#answer-h h4 {
+  background-image: url(../img/question-mark.gif);
+  background-repeat: no-repeat;
+  background-position: left;
+  margin: 6px 0 0 8px;
+  padding: 22px 0 22px 78px;
+  font-weight: bold;
+  font-size: 1.2em; }
+
+div#faq-box div#faq-list div#answer div#answer-h h4 span {
+  color: #06C;
+  margin: 0 2px 0 2px;
+  font-size: 18px; }
+
+div#faq-box div#faq-list div#answer div#answer-txt {
+  width: 650px;
+  margin: 20px 0 0 0; }
+
+div#faq-box div#faq-list div#answer div#answer-txt div#answer-01 {
+  background-image: url(../img/answer-01.gif);
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding: 0 0 12px 74px;
+  margin: 0 6px 6px 10px;
+  /*border-bottom:1px #999 dashed;
+  width:536px;*/ }
+
+div#faq-box div#faq-list div#answer div#answer-txt p.line {
+  border-bottom: 1px #999 dashed;
+  margin: 0;
+  padding: 0;
+  line-height: 0.2; }
+
+div#faq-box div#faq-list div#answer div#answer-txt div#answer-02 {
+  background-image: url(../img/answer-02.gif);
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding: 0px 0 12px 74px;
+  margin: 20px 6px 6px 10px;
+  /*border-bottom:1px #999 dashed;
+  width:536px;*/ }
+
+div#faq-box div#faq-list div#answer div#answer-txt div#answer-03 {
+  background-image: url(../img/answer-03.gif);
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding: 0px 0 12px 74px;
+  margin: 20px 6px 6px 10px;
+  /*border-bottom:1px #999 dashed;
+  width:536px;*/ }
+
+div#faq-box div#faq-list div#answer div#answer-txt div#answer-04 {
+  background-image: url(../img/answer-04.gif);
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding: 0px 0 12px 74px;
+  margin: 20px 6px 6px 10px;
+  /*border-bottom:1px #999 dashed;
+  width:536px;*/ }
+
+div#faq-box div#faq-list div#answer div#answer-txt div#answer-05 {
+  background-image: url(../img/answer-05.gif);
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding: 0px 0 12px 74px;
+  margin: 20px 6px 6px 10px;
+  /*border-bottom:1px #999 dashed;
+  width:536px;*/ }
+
+div#faq-box div#faq-list div#answer div#answer-txt div#answer-06 {
+  background-image: url(../img/answer-06.gif);
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding: 0px 0 12px 74px;
+  margin: 20px 6px 6px 10px;
+  /*border-bottom:1px #999 dashed;
+  width:536px;*/ }
+
+div#faq-box div#faq-list div#answer div#answer-txt div#answer-07 {
+  background-image: url(../img/answer-07.gif);
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding: 0px 0 12px 74px;
+  margin: 20px 6px 6px 10px;
+  /*border-bottom:1px #999 dashed;
+  width:536px;*/ }
+
+div#faq-box div#faq-list div#answer div#answer-txt div#answer-08 {
+  background-image: url(../img/answer-08.gif);
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding: 0px 0 12px 74px;
+  margin: 20px 6px 6px 10px;
+  /*border-bottom:1px #999 dashed;
+  width:536px;*/ }
+
+div#faq-box div#faq-list div#answer div#answer-txt div#answer-09 {
+  background-image: url(../img/answer-09.gif);
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding: 0px 0 12px 74px;
+  margin: 20px 6px 6px 10px;
+  /*border-bottom:1px #999 dashed;
+  width:536px;*/ }
+
+div#faq-box div#faq-list div#answer div#answer-txt div#answer-10 {
+  background-image: url(../img/answer-10.gif);
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding: 0px 0 12px 74px;
+  margin: 20px 6px 6px 10px;
+  /*border-bottom:1px #999 dashed;
+  width:536px;*/ }
+
+div#faq-box div#faq-list div#answer div#answer-txt div#answer-11 {
+  background-image: url(../img/answer-11.gif);
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding: 0px 0 12px 74px;
+  margin: 20px 6px 6px 10px;
+  /*border-bottom:1px #999 dashed;
+  width:536px;*/ }
+
+div#faq-box div#faq-list div#answer div#answer-txt div#answer-12 {
+  background-image: url(../img/answer-12.gif);
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding: 0px 0 12px 74px;
+  margin: 20px 6px 6px 10px;
+  /*border-bottom:1px #999 dashed;
+  width:536px;*/ }
+
+div#faq-box div#faq-list div#answer div#answer-txt div#answer-13 {
+  background-image: url(../img/answer-13.gif);
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding: 0px 0 12px 74px;
+  margin: 20px 6px 6px 10px;
+  /*border-bottom:1px #999 dashed;
+  width:536px;*/ }
+
+div#faq-box div#faq-list div#answer div#answer-txt div#answer-14 {
+  background-image: url(../img/answer-14.gif);
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding: 0px 0 12px 74px;
+  margin: 20px 6px 6px 10px;
+  /*border-bottom:1px #999 dashed;
+  width:536px;*/ }
+
+div#faq-box div#faq-list div#answer div#answer-txt div#answer-15 {
+  background-image: url(../img/answer-15.gif);
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding: 0px 0 12px 74px;
+  margin: 20px 6px 6px 10px;
+  /*border-bottom:1px #999 dashed;
+  width:536px;*/ }
+
+div#faq-box div#faq-list div#answer div#answer-txt div#answer-16 {
+  background-image: url(../img/answer-16.gif);
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding: 0px 0 12px 74px;
+  margin: 20px 6px 6px 10px;
+  /*border-bottom:1px #999 dashed;
+  width:536px;*/ }
+
+div#faq-box div#faq-list div#answer div#answer-txt p.pharmacy {
+  text-align: right;
+  margin: 12px 0 0 0;
+  padding: 10px 0 10px 48px;
+  font-weight: bold;
+  font-size: 1.2;
+  background-repeat: no-repeat; }
+
+div#faq-box div#faq-list div#answer div#answer-txt p.pharmacy-m {
+  margin: 12px 0 0 0;
+  padding: 10px 0 10px 48px;
+  font-weight: bold;
+  font-size: 1.2;
+  background-image: url(../img/th-m.gif);
+  background-repeat: no-repeat; }
+
+div#faq-box div#faq-list div#answer div#answer-txt p.pharmacy-w {
+  margin: 12px 0 0 0;
+  padding: 10px 0 10px 48px;
+  font-weight: bold;
+  font-size: 1.2;
+  background-image: url(../img/th-w.gif);
+  background-repeat: no-repeat; }
+
+div#faq-box div#faq-list div#answer div#answer-txt dl dt {
+  font-weight: bold; }
+
+div#faq-box div#faq-list div#answer div#answer-txt dl dd {
+  margin: 0 18px 14px; }
+
+@media screen and (max-width: 767px) {
+  div#faq-box div#faq-list div#answer div#answer-txt {
+    width: 100%; }
+
+  div#faq-box div#faq-list div#answer div#answer-h h4 {
+    background-size: 40px auto;
+    background-position: left top;
+    padding: 0 0 12px 50px !important;
+    font-size: 14px;
+    font-size: 1.4rem; }
+
+  div#faq-box div#faq-list div#answer div#answer-txt div {
+    background-size: 40px auto;
+    padding: 50px 0 12px 0 !important;
+    font-size: 12px;
+    font-size: 1.2rem; } }
+/* 1-2.intro
+--------------------------------------------- */
+div#faq-box div#faq-list div#answer div#intro {
+  margin: 6px 0 0;
+  padding: 0; }
+
+div#faq-box div#faq-list div#answer div#intro div#intro-ph {
+  border-top: #999 dashed 1px;
+  border-bottom: #999 dashed 1px;
+  margin: 0;
+  padding: 0; }
+
+div#faq-box div#faq-list div#answer div#intro div#intro-ph h4 {
+  background-image: url(../img/menu-btn.gif);
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding: 10px 0 10px 10px; }
+
+div#faq-box div#faq-list div#answer div#intro div#intro-ph h4 span {
+  font-weight: bold;
+  color: #F08300; }
+
+div#faq-box div#faq-list div#answer div#intro div#intro-img img {
+  border: 3px #F08300 double;
+  margin: 6px;
+  padding: 10px 0;
+  float: left; }
+
+div#faq-box div#faq-list div#answer div#intro div#intro-txt {
+  margin: 6px 0 0 160px;
+  width: 310px; }
+
+div#faq-box div#faq-list div#answer div#intro div#intro-txt li {
+  background-color: #DDD;
+  padding: 13px 0 13px 6px;
+  border-left: 6px #F08300 solid;
+  border-bottom: 1px #999 dashed;
+  margin: 0 0 2px 0; }
+
+div#faq-box div#faq-list div#answer div#intro div#intro-txt li#address-ph {
+  padding: 3px 0 3px 6px; }
+
+/* 1-4.next-faq
+--------------------------------------------- */
+div#faq-box div#faq-list div#answer div#next-faq {
+  margin: 10px 0;
+  padding: 10px 0;
+  border-top: 1px #999 dashed;
+  font-size: 14px; }
+
+div#faq-box div#faq-list div#answer div#next-faq p#front-move {
+  float: left;
+  text-align: left;
+  margin: 3px 0 0 0;
+  width: 325px; }
+
+div#faq-box div#faq-list div#answer div#next-faq p#back-move {
+  float: right;
+  text-align: right;
+  margin: 3px 0 0 0;
+  width: 325px; }
+
+div#faq-box div#faq-list div#answer div#next-faq span {
+  font-weight: bold;
+  color: #F53C68;
+  display: block; }
+
+@media screen and (max-width: 767px) {
+  div#faq-box div#faq-list div#answer div#next-faq {
+    display: block; }
+
+  div#faq-box div#faq-list div#answer div#next-faq p#front-move,
+  div#faq-box div#faq-list div#answer div#next-faq p#back-move {
+    float: none;
+    width: 100%; } }
+/* 2.answer
+========================================== */
+/* 2-1.pharmacy-01
+--------------------------------------------- */
+div#faq-box div#faq-list div#answer div#answer-txt div#txt-R span.drug {
+  display: block;
+  width: 290px;
+  border-bottom: 1px #999 dashed; }
+
+div#faq-box div#faq-list div#answer div#answer-txt div#txt-R span.drug img {
+  float: none;
+  margin: 3px 0 3px 0;
+  padding: 0; }
+
+div#faq-box div#faq-list div#answer div#answer-txt p.kyo-orange {
+  font-weight: bold;
+  color: #F93; }
+
+/* 2-2.pharmacy-03
+--------------------------------------------- */
+div#faq-box div#faq-list div#answer div#answer-txt div#txt-R div#example {
+  margin: 6px 10px 6px 3px;
+  padding: 3px 3px 0;
+  border-bottom: 1px #999 dashed; }
+
+div#faq-box div#faq-list div#answer div#answer-txt div#txt-R div#example h5 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #F08300;
+  border-bottom: 1px dashed #999;
+  margin: 0;
+  padding: 0; }
+
+div#faq-box div#faq-list div#answer div#answer-txt div#txt-R div#example ul {
+  margin: 3px;
+  list-style-type: decimal;
+  padding: 3px 0 3px 28px; }
+
+/* 2-2.faq34
+--------------------------------------------- */
+div#answer div#answer-02 dl#faq34 dt {
+  border-bottom: 1px #CCC dotted;
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+  font-weight: bold; }
+
+/* 2-2.faq26
+--------------------------------------------- */
+div#answer div#answer-03 h5#nikibi {
+  font-weight: bold;
+  margin: 0 0 12px 0; }
+
+/* 2-2.faq27
+--------------------------------------------- */
+div#answer p.p-bold {
+  font-weight: bold; }
+
+div#answer ul.num {
+  margin: 0 0 24px 0; }
+
+div#answer ul.num li {
+  list-style: decimal;
+  margin: 0 0 0 20px;
+  padding: 0; }
+
+/* 3.関連記事
+========================================== */
+div#kanren h3 {
+  width: 650px;
+  border-top: #6DD0F5 solid 6px;
+  border-bottom: #999 solid 1px;
+  padding: 6px 10px;
+  font-size: 16px;
+  font-weight: bold; }
+
+div#kanren ul {
+  padding: 6px 0; }
+
+div#kanren ul li {
+  padding: 0;
+  list-style: disc;
+  margin: 0 0 0 28px; }
+
+div#kanren ul li.nest {
+  list-style-type: none; }
+
+div#kanren ul li.nest ul {
+  padding-top: 0; }
+
+div#kanren ul li.nest ul li {
+  padding: 0;
+  list-style: circle;
+  margin: 0 0 0 28px; }
+
+/* ==========================================================================
+   02. 画像パス
+   ========================================================================== */

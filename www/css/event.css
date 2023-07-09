@@ -1,0 +1,382 @@
+/* CSS Document */
+#main{margin:0 0 0 10px; padding:0; width:582px;}
+#categoryName{margin:20px 0;}
+#eventName{ text-align:center; font-size:80%;}
+.point{color:#ff3366;}
+.author{text-align:right; background:#eee; padding-right:5px; font-size:100%;}
+.pagetop{clear:both;font-size:70%;text-align:right;margin:15px 0 0;}
+.pagetop a{background:url(../images/bt_top.gif) no-repeat left;padding-left:20px;}
+.clear { clear:both; height:0%;}
+.note { margin:0; color:#c00; font-size:12px;}
+.gray{ color:#333;}
+.relation{ margin:20px 0; padding:0 0 0 100px; background-image:url(../images/relation.gif); background-position:left 3px; background-repeat:no-repeat;}
+.relation h3{ display:none;}
+.relation ul {margin:0; padding:0;}
+.relation ul li{ padding:0; list-style-type:none;}
+.relation a{ font-weight:bold; padding:0 0 0 15px;background-image:url(../images/illust/article.gif); background-position:left; background-repeat:no-repeat;}
+.layoutT td{ font-size:90%; vertical-align:top; padding:0 0 0 10px; line-height:140%;}
+.inline ul{ margin:0; padding:0;}
+.inline ul li{ margin:0 5px 0 0; padding:0; display:inline;}
+
+
+/* boxCaption
+----------------------------------------------------------*/
+#boxCaption{ margin:30px 0; padding:0 0 0 10px; border-left:5px solid #999;}
+
+/* boxIntro
+----------------------------------------------------------*/
+#boxIntro{ margin:30px; padding:5px 10px; color:#363; font-size:90%; line-height:160%; border-bottom:1px dotted #666;}
+
+
+/* contentsArea
+----------------------------------------------------------*/
+#contentsArea{margin:20px 15px;font-size:90%;line-height:160%;clear:both;}
+#contentsArea h3{text-indent: 5px;color: #333333;background-color:#e9e9e9;border-left:5px solid #c6ec4c;}
+#contentsArea .eventSummary h4{ margin:20px 0 0 0; padding:0 0 0 15px; text-align:left; font-weight:bold; font-size:120%; color:#6c3; background-image:url(../images/bt_right.gif); background-position:left center; background-repeat:no-repeat;}
+
+
+#contentsArea .galleryL{margin:10px 0;}
+#contentsArea .galleryL dl{margin:0 10px 0 0;padding:0;float:left;}
+#contentsArea .galleryL dt{margin:0;padding:0;text-align:center;}
+#contentsArea .galleryL dd{text-align:center;margin:0;padding:0;font-size:80%; color:#666;}
+
+#contentsArea .galleryR{margin:10px 0;}
+#contentsArea .galleryR dl{margin:0 0 0 10px;padding:0;float:right;}
+#contentsArea .galleryR dt{margin:0;padding:0;text-align:center;}
+#contentsArea .galleryR dd{text-align:center;margin:0;padding:0;font-size:80%; color:#666;}
+
+#contentsArea .galleryC{margin:10px auto;}
+#contentsArea .galleryC dl{margin:0;padding:0;}
+#contentsArea .galleryC dt{margin:5px 0;padding:0;text-align:center;}
+#contentsArea .galleryC dd{margin:0;padding:0;text-align:center;font-size:80%;}
+
+#contentsArea .eventSummary table{ margin:10px 0 30px 0; font-size:90%;}
+#contentsArea .eventSummary table th { padding:5px 10px 5px 15px; background-image:url(../event/img/img_marker.gif); background-repeat:no-repeat; background-position: left 5px; font-weight:normal; text-align:left; vertical-align:top;}
+#contentsArea .eventSummary table td { line-height:160%;}
+
+/* entry
+----------------------------------------------------------*/
+.boxEntry {	border: 1px solid #CCC;	margin: 10px 0;	padding: 10px;	font-size:90%;}
+.boxEntry h4{text-align:center;}
+.boxEntry dl{padding:10px;background:#F8FFF4;margin:10px 0;}
+.boxEntry dl dt{font-weight:bold;color:#339900;line-height:100%;border-left:5px solid #339900;padding-left:10px;margin:8px 0;}
+.boxEntry dl dd{margin-left:0;color:#390;}
+.boxEntry .inside{padding:10px;background:#F8FFF4;margin:10px 0;color:#390;}
+.boxEntry .inside h5{font-weight:bold;color:#339900;line-height:100%;border-left:5px solid #339900;padding-left:10px;margin:8px 0;}
+.boxEntry .inside p{margin:0 0 5px; line-height:120%;}
+.boxEntry .inside p strong{ margin:0 5px; color:#f60; font-size:110%;}
+.boxEntry .inside ul{ margin:0 0 0 30px; padding:0;}
+.boxEntry .inside ul li{ margin:0; padding:0; line-height:120%;}
+
+.boxEntry-b {border: 1px solid #CCC; margin: 10px 0; padding: 5px;}
+.boxEntry-b .inside{padding:5px;background:#F8FFF4;margin:5px 0;color:#390;}
+.boxEntry-b .inside p{margin:0 0 5px; line-height:130%;}
+.boxEntry-b .inside a{margin:0 0 5px; line-height:130%; font-size:110%;}
+
+/* repo
+----------------------------------------------------------*/
+#repo{margin:20px 15px;font-size:90%;line-height:160%;clear:both;}
+#repo h2{ text-align:center;}
+#repo .sectionH3 h3{margin:0; padding:5px 10px; font-weight:bold; color:#fff; letter-spacing:1px; background-color:#6c6; display:inline;}
+#repo h4{ margin:10px 0; padding:0 0 0 7px; color:#666; line-height:100%; border-left:5px solid #6c6; clear:both;}
+
+#repo .sectionH3{ margin:40px 0; padding:0 0 0 10px; border-left:5px solid #999;}
+
+#repo .galleryL{margin:10px 0;}
+#repo .galleryL dl{margin:0 10px 0 0;padding:0;float:left;}
+#repo .galleryL dt{margin:0;padding:0;text-align:center;}
+#repo .galleryL dd{text-align:center;margin:0;padding:0;font-size:80%;}
+
+#repo .galleryR{margin:10px 0;}
+#repo .galleryR dl{margin:0 0 0 10px;padding:0;float:right;}
+#repo .galleryR dt{margin:0;padding:0;text-align:center;}
+#repo .galleryR dd{text-align:center;margin:0;padding:0;font-size:80%;}
+
+#repo .galleryC{margin:10px auto;}
+#repo .galleryC dl{margin:0;padding:0;}
+#repo .galleryC dt{margin:5px 0;padding:0;text-align:center;}
+#repo .galleryC dd{margin:0;padding:0;text-align:center;font-size:80%;}
+
+#repo .galleryY{clear:both;width:100%;}
+#repo .galleryY dl{ margin:8px 5px; padding:5px 0; float:left; width:500px;}
+#repo .galleryY dl dt{ margin:0; padding:0; float:left;}
+#repo .galleryY dl dd{ margin-left:220px; padding-top:10px; font-size:80%; color:#666; line-height:120%;}
+
+#repo .galleryBousou{float:right; margin:0 10px 0 20px;}
+#repo .capBousou{margin:0; color:#666666; font-size:80%; width:240px;}
+#repo .capBousouL{margin:0; color:#666666; font-size:80%;}
+
+#repo .gallerykanbutue{float:right; margin:10px 0px 10px 10px; text-align:center;}
+#repo .capkanbutue{margin:5px 0px; padding:5px 7px; border:1px solid #999999; color:#666666; font-size:80%; width:230px; line-height:1.2em; text-align:left;}
+#repo .gallerykanbutue1{margin:0 5px 0 0; text-align:center;}
+#repo .capkanbutue1{margin:5px 0; padding:2px; border:1px solid #999999; color:#666666; font-size:80%; width:175px; line-height:1.2em; text-align:center;}
+#repo .capkanbutue2{margin:5px 0; padding:2px 15px; border:1px solid #999999; color:#666666; font-size:80%; width:175px; line-height:1.2em; text-align:left;}
+
+#repo .gallery{clear:both;width:100%;}
+#repo .gallery dl{ margin:0 5px; padding:0; float:left; width:200px;}
+#repo .gallery dl dt{ margin:0; padding:0;}
+#repo .gallery dl dd{ margin:0; padding:0; font-size:80%; color:#666; line-height:120%;}
+
+.g150 table th{ text-align:left;}
+.g150 table td{ margin:0;padding:0 10px 0 0; font-size:80%; color:#666; line-height:120%; width:150px; vertical-align:top;}
+
+.introRepo{ margin:20px; padding:0 10px; background:#ffc; font-size:80%;}
+#repo .summary h3{ margin:15px 0; font-size:110%;}
+#repo .summary .answer{ margin:10px; padding:10px; background:#FFFFE8; color:#960; border:1px dotted #960; text-align:center;}
+
+.dfn { padding:10px; border:1px solid #6c6; font-size:90%; line-height:140%;}
+.dfn ol{ margin:0; padding:0;}
+.dfn ol li{ margin:0 0 0 25px;}
+
+.dfn2 { margin:20px 0; padding:0;}
+.dfn2 dl{ margin:20px 0; padding:0 0 0 10px; border-left:3px dotted #6c6; line-height:100%;}
+.dfn2 dl dt{ margin:0; padding:0; color:#393; font-weight:bold; font-size:90%;}
+.dfn2 dl dd{ margin:0; padding:0 0 0 15px; font-size:90%;}
+
+.flow { padding:10px; border:1px solid #6c6;}
+.flow ol { margin:0;padding:0 0 0 15px; font-size:90%;}
+.flow ol li {margin:0 0 0 15px; padding:0 0 0 20px; list-style-type:none; background-image:url(../images/arrow2.gif); background-position:left; background-repeat:no-repeat;}
+.flow ol .first{margin:0;padding:0; background:none;}
+
+/* table style
+----------------------------------------------------------*/
+.tb1{ border-collapse:separate; border:1px solid #6c6; font-size:90%; line-height:140%;}
+.tb1 th { padding:5px 15px; background-color:#DBFBDB; font-weight:normal; text-align:center;}
+.tb1 td { padding:5px;}
+
+.tb2 table { border-collapse:separate; border:1px solid #cc6;}
+.tb2 table th{ background-color:#E7E7C8; padding:2px 5px; font-size:90%; border-bottom:1px solid #cc6; border-right:1px solid #cc6; color:#663;}
+.tb2 table td{ font-size:80%; padding:2px 5px; text-align:center; border-bottom:1px solid #cc6; border-right:1px solid #cc6;}
+
+/* timeSchedule */
+.timeSchedule h4{ margin:20px 0 0 0; padding:0 0 0 15px; text-align:left; font-weight:bold; font-size:120%; color:#6c3; background-image:url(../images/bt_right.gif); background-position:left center; background-repeat:no-repeat;}
+.timeSchedule table { border-collapse: collapse; font-size: 90%; border:1px solid #9c6; line-height:140%;}
+.timeSchedule table th { padding:3px; text-align:left; vertical-align:top; font-weight: normal; color:#330; background-color:#cf9; border:1px solid #9c6;}
+.timeSchedule table td { padding:3px; vertical-align:top; background-color:#fff; border:1px solid #9c6;}
+.timeSchedule table td h5{ color:#360; font-size:110%;}
+
+/* program */
+.program{ border-collapse:collapse; border:1px solid #9c0; background-color:#fff; color:#333; font-size:85%; line-height:140%;}
+.program th{ padding:3px 5px; background-color:#F0FFC4; text-align:left; font-weight:normal; white-space:nowrap; border:1px solid #9c0;}
+.program td{ padding:3px 5px; background-color:#fff; border:1px solid #9c0;}
+.program h4{ margin:0 0 10px 0; color:#333; line-height:160%; font-size:120%;}
+.program hr{ margin:5px 0;}
+.program p{ margin:0;}
+.program .lecturer{ text-align:right;}
+
+
+/* summary
+----------------------------------------------------------*/
+#contentsArea .summary {margin:10px 0;padding: 0px 10px;background: #FFECEC;border-top: 1px solid #FF9999;border-bottom: 1px solid #FF9999;color: #990000;font-size:90%; line-height:120%; clear:both;}
+#contentsArea .summary p{margin:10px 0;}
+#contentsArea .summary dl{ margin:0; padding:0;}
+#contentsArea .summary dl dt{ margin:0; padding:0;}
+#contentsArea .summary dl dd{ margin:0; padding:0 0 0 20px;}
+
+#repo .summary {margin:10px 0;padding: 0px 10px;background: #FFECEC;border-top: 1px solid #FF9999;border-bottom: 1px solid #FF9999;color: #990000;font-size:90%; line-height:120%;clear:both;}
+#repo .summary p{margin:10px 0;}
+#repo .summary dl{ margin:0; padding:0;}
+#repo .summary dl dt{ margin:0; padding:0;}
+#repo .summary dl dd{ margin:0; padding:0 0 0 20px;}
+
+.eventSummary03 {
+
+	background-color: #FFECEC;
+	border-top:1px solid #FF9999;
+	border-bottom:1px solid #FF9999;
+	margin:20px 0px 20px;
+	padding: 10px 10px 10px 85px;
+	color: #990000;
+	background-image: url(../event/img/illust-woman.gif);
+	background-repeat: no-repeat;
+	background-position: 7px;
+}
+
+
+
+/* categoryList
+----------------------------------------------------------*/
+#main .categoryList{
+font-size:80%;
+line-height:160%;
+background: url(../images/supplement/line_spacer.gif) no-repeat left top;
+margin-top: 15px;
+padding-top: 15px;}
+#main .categoryList div{width:291px;float:left;}
+#main .categoryList dl{margin:0;padding:0}
+#main .categoryList dl dt{margin:0;padding:0;}
+#main .categoryList dl dd{margin:0;;padding:0;}
+#main .categoryList ul{margin:0;padding:0;}
+#main .categoryList ul li{margin:0 0 0 20px;padding:0;}
+
+
+
+/* expo2007 */
+.expo2007 { border-collapse:collapse; border:1px solid #69f;}
+.expo2007 caption{ padding:5px 0; font-weight:bold; background-color:#69f; color:#fff; font-size:100%;}
+.expo2007 th{ color:#369; font-size:70%; border:1px solid #69f; background-color:#D7F9FB;}
+.expo2007 td{ font-size:80%; border:1px solid #69f;}
+.stageno{ text-align:center; color:#f60; font-weight:bold;}
+
+
+
+/* expo2008 */
+.img_right{ float:right;}
+.font_small{font-size:80%;}
+
+/* google-map */
+.g-map ul{list-style-type: square; font-size: 12px; line-height: 130%;}
+
+/* 2010koubepharma-u */
+
+#contentsArea .eventSummary table#kobe{ margin:10px 0; padding:0;}
+
+.tbl_cap-kobe {
+	font-weight:bold;
+	text-align: left;
+	font-size: 14px;
+	padding-left: 15px;
+	color: #669900;
+	margin:0 0 5px 0;
+	padding-bottom: 10px;
+	padding-top: 8px;
+	background-image: url(../images/bt_right.gif);
+	background-repeat: no-repeat;
+	background-position: left 13px;
+}
+
+#table-kobe{
+	background-color: #FFFFFF;
+	font-size: 12px;
+	color: #000000;
+	line-height: 160%;
+	border-collapse:collapse
+}
+
+#table-kobe dl dd{
+	margin:0 32px;
+	padding:0;}
+
+#table-kobe th {
+	font-weight: normal;
+	background-color: #F0FFC4;
+	border: 1px solid #99cc00;
+	padding: 3px;
+}
+
+#table-kobe td h4{
+	margin:0 ;
+	padding:0;}
+
+#table-kobe td dl{
+	margin:0 ;
+	padding:0;}
+
+#table-kobe td {
+	border: 1px solid #99CC00;
+	padding: 8px 10px;
+}
+
+/* 薬草ガーデンのおさんぽ */
+#osanpo-gaiyo {
+	margin:0;
+}
+
+#osanpo-gaiyo dt {
+	font-weight: bold;
+}
+
+#osanpo-gaiyo dd {
+	margin:6px 0 6px 20px;
+}
+
+div#osanpo-shosai {
+	border: 1px solid #999;
+	padding: 10px;
+	margin-top: 14px;
+}
+
+div#osanpo-shosai h4 {
+	margin:0 0 6px 0;
+	font-size: 18px;
+}
+
+div#osanpo-shosai ul {
+	margin:0;
+	padding:0;
+}
+
+div#osanpo-shosai li {
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+
+ul.sanpo-ul {
+	margin:0 0 0 14px;
+	list-style:none;
+}
+
+ul#osanpo-access {
+	margin:0 0 0 14px;
+	padding:0;
+}
+
+ul#osanpo-access li {
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+
+div#sanpo-tohyo h3 {
+	font-size: 21px;
+	line-height: 1;
+	margin: 0;
+}
+
+div#sanpo-tohyo p {
+	margin:6px 0;
+}
+
+div h2#sanpo-kekka {
+	font-size: 21px;
+	line-height: 1;
+	margin: 0;
+}
+
+div.imgC {
+	margin:0;
+}
+
+p span#hasu {
+	font-size:21px;
+	font-weight: bold;
+	margin:0;
+	line-height: 1.4;
+}
+
+p#sanpo-tohy-midashi {
+	font-weight: bold;
+	margin:0;
+}
+
+table#sanpo-juni {
+	width:550px;
+	border: 1px solid #999;
+	border-bottom: none;
+	border-right: none;
+}
+
+table#sanpo-juni th {
+	padding: 10px 0;
+	border-bottom: 1px solid #999;
+	border-right: 1px solid #999;
+	background-color: #e9e9e9;
+}
+
+table#sanpo-juni td {
+	padding: 10px 0;
+	text-align: center;
+	border-bottom: 1px solid #999;
+	border-right: 1px solid #999;
+}

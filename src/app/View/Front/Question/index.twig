@@ -1,0 +1,153 @@
+<?php
+
+  //共通
+  require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+  //メタディスクリプション
+  $description = '';
+
+  //メタキーワード
+  $keywords = '';
+
+  //Facebook　全ページ共通の場合は空白にしてください
+  $fbimage = '';
+
+  //タイトル
+  $title = 'みんなの漢方相談Q&A';
+
+  //css追加
+  $ex_tag_css = '<link rel="stylesheet" href="/consultation/css/style.css">';
+
+  //js追加
+  $ex_tag_js = '<script src="/consultation/js/script.js"></script>';
+
+  //bodyID
+  $bodyID = 'consultation';
+
+?>
+<?php include 'header.php'; ?>
+<div class="contents-header">
+		<ul class="topicpath fbox">
+			<li><a href="/">トップページ</a></li>
+			<li>みんなの漢方相談Q&amp;A</li>
+		</ul>
+		<h1 class="header-ttl">みんなの漢方相談Q&amp;A</h1>
+	</div>
+  <div class="inner top-wrapper">
+  
+  
+    {% set msg = c.app_session('member_join') %}
+    {% if msg %}
+    <!--/////////////////登録完了メッセージ start ///////////////////-->
+        <div class="m-panel01 m-panel01--blue">
+     	 <div class="l-sp-inner">
+          <div class="m-panel01__panel">
+            <p class="m-panel01__heading">ご登録ありがとうございます。</p>
+            <p class="m-panel01__txt">きぐすり.comにご登録いただきありがとうございます。「<a href="{{ c.app.urlFor('qa_request') }}">新規相談フォーム</a>」からご相談いただけます。</p>
+          </div>
+          <!-- /.m-panel01__panel -->
+          </div>
+          <!-- /.l-sp-inner -->
+        </div>
+        <!-- /.m-panel01 -->
+    <!--/////////////////登録完了メッセージ end ///////////////////-->
+    {{ c.app_session_clear('member_join') }}
+    {% endif %}
+
+    {% set msg = c.app_session('login') %}
+    {% if msg %}
+    <!--/////////////////登録完了メッセージ start ///////////////////-->
+        <div class="m-panel01 m-panel01">
+     	 <div class="l-sp-inner">
+          <div class="m-panel01__panel">
+            <p class="m-panel01__heading">ログインしました</p>
+            <p class="m-panel01__txt">きぐすり.comをご利用いただきありがとうございます。「<a href="{{ c.app.urlFor('qa_request') }}">新規相談フォーム</a>」からご相談いただけます。</p>
+          </div>
+          <!-- /.m-panel01__panel -->
+          </div>
+          <!-- /.l-sp-inner -->
+        </div>
+        <!-- /.m-panel01 -->
+    <!--/////////////////登録完了メッセージ end ///////////////////-->
+    {{ c.app_session_clear('login') }}
+    {% endif %}
+
+    {% set msg = c.app_session('logout') %}
+    {% if msg %}
+    <!--/////////////////登録完了メッセージ start ///////////////////-->
+        <div class="m-panel01 m-panel01">
+     	 <div class="l-sp-inner">
+          <div class="m-panel01__panel">
+            <p class="m-panel01__heading">ログアウトしました</p>
+            <p class="m-panel01__txt">再度、ログインする場合は、<a href="{{ c.app.urlFor('member_login') }}">こちら</a>からお進みください。</p>
+          </div>
+          <!-- /.m-panel01__panel -->
+          </div>
+          <!-- /.l-sp-inner -->
+        </div>
+        <!-- /.m-panel01 -->
+    <!--/////////////////登録完了メッセージ end ///////////////////-->
+    {{ c.app_session_clear('logout') }}
+    {% endif %}
+    <!-- /.main-tit -->
+    <div class="intro-block">
+      <p class="block-tit"><img src="./img/intro_tit_pc.png" alt="【ご利用無料】全国の漢方相談薬局・薬店が、あなたのお悩みにお答えします。" width="623" height=="119" class="pc-item"><img src="./img/intro_tit_sp.png" alt="【ご利用無料】全国の漢方相談薬局・薬店が、あなたのお悩みにお答えします。" class="sp-item" width="320" height="69"></p>
+
+      <!-- /.block-main -->
+      <div class="block-main l-sp-inner">
+        <p class="detail pc-item"><img src="./img/qa_flow.gif"></p>
+        <p class="detail sp-item"><img src="./img/qa_flow_sp.gif"></p>
+      <div class="block-main l-sp-inner">
+        
+      {% if c.is_member %}
+      {# ログインしている #}
+      <div class="block-main__btnarea">
+      <ul>
+        <li class="btnwrap"><a href='{{ c.app.urlFor('qa_request') }}' class="m-arrow-btn-qatop01">新規相談フォーム<span class="m-arrow-btn-qatop01__icn"></span></a></li>
+        <li class="btnwrap"><a href='{{ c.app.urlFor('qa_history') }}' class="m-arrow-btn-qatop02 m-arrow-btn-qatop02--next m-arrow-btn-qatop02--green">相談履歴<span class="m-arrow-btn01__icn"></span></a></li>
+      </ul>
+      </div>
+      {% else %}
+      {# ログインしていない #}
+      <div class="block-main__btnarea">
+      <p class="tx-login">薬局から回答を受けるには<br class="sp-item">会員登録が必要です。</p>
+      <div>
+      <dl class="btnbox btnbox_02">
+        <dt>会員登録がまだの方</dt>
+        <dd class="btnwrap"><a class="m-arrow-btn-qatop03" href="{{ c.app.urlFor('member_regist') }}">新規会員登録(無料)<span class="m-arrow-btn-qatop03__icn"></span></a></dd>
+      </dl>
+      <dl class="btnbox btnbox_01">
+        <dt>会員登録がお済みの方</dt>
+        <dd class="btnwrap"><a class="m-arrow-btn-qatop01" href="{{ c.app.urlFor('member_login') }}">ログイン<span class="m-arrow-btn-qatop01__icn"></span></a></dd>
+      </dl>
+      </div>
+      </div>
+      {% endif %}
+
+      </div>
+
+      </div>
+      <!-- /.block-main -->
+    </div>
+    <!-- /.intro-block -->
+    {% include '/Front/Parts/search_form.twig' %}
+    
+    {% if list|length %}
+    <div class="component-area">
+      <div class="m-newly01">
+        <p class="m-newly01__tit"><img src="./img/newly01_tit.png" alt="最近の漢方相談"></p>
+        <ul class="m-newly01__bal-list">
+        {% include '/Front/Parts/question_list.twig' %}
+        </ul>
+        <!-- /.m-newly01__bal-list -->
+        <div class="m-tablearea01__btn mt40"><a class="m-arrow-btn01" href='{{ c.app.urlFor('qa_list')}}'>新着相談一覧<span class="m-arrow-btn01__icn"></span></a></div>
+      </div>
+      <!-- /.m-newly01 -->
+      
+    </div>
+    <!-- /.component-area -->
+    {% endif %}
+
+  </div>
+  <!-- /.inner -->
+
+<?php include 'footer.php'; ?>

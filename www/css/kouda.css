@@ -1,0 +1,124 @@
+/* common
+----------------------------------------------------*/
+#main {margin:0 22px 0 10px;}
+#main #categoryName img{margin:20px 0;}
+
+#boxCaption{border-left:5px solid #999;padding-left:10px;height:80px;}
+
+#main #contentsArea{margin:20px 10px; font-size:90%;line-height:160%;}
+#main #contentsArea .sectionH3{margin:40px 0;padding:0;}
+#main #contentsArea .sectionH3 h3{border-left:5px solid #C6EC4C;padding-left:5px;background:#f6f6f6;clear:both;}
+.clear{clear:both;}
+.serif{color:#690;}
+
+
+.bq{
+width:542px;
+margin:0 10px; 
+padding:0; 
+background-color:#FDECDC;
+background-image:url(../kouda/img/bg_bqt.gif);
+background-repeat:no-repeat;
+background-position: left top;
+}
+.bq blockquote{
+margin:0;
+padding:35px 20px 35px 35px;
+background-image:url(../kouda/img/bg_bqb.gif);
+background-repeat:no-repeat;
+background-position: left bottom;
+}
+.bq ul{ margin:0; padding:0;}
+.bq ul li{ margin:0; padding:0; list-style-type:none; color:#B4804D; font-weight:bold;}
+.bq .doc{  font-size:90%; font-weight:normal;}
+
+/* nanakusa style
+------------------------------------------------*/
+.nanakusa h4 { margin:5px 0; padding:4px 0 4px 10px; font-size:110%; color:#fff; background:#B4B356;line-height:100%;}
+.nanakusa dl{ margin:0; padding:0; width:160px; float:left;}
+.nanakusa dl dt{ margin:0; padding:0;}
+.nanakusa dl dt img{ margin:0; padding:3px; border:1px solid #ccc;}
+.nanakusa dl dd{ margin:0; padding:0; font-size:80%; color:#666;}
+.nanakusa .explain{ padding:5px; float:right; width:392px; font-size:90%; line-height:120%; color:#666600; background:#FFFBDD;}
+.nanakusa .explain p{ margin:0 0 10px;}
+.nanakusa .explain ul{ margin:5px 0; padding:0;}
+.nanakusa .explain ul li{ margin:0 0 0 20px; padding:0;}
+.nanakusa .explain .kmp{ padding:5px; background:#fff; color:#9B9A47; font-weight:bold; border:1px solid #B4B356; clear:both;}
+.nanakusa .explain img{ float:right;}
+.nanakusa hr{ clear:both; margin:15px 0; visibility:hidden;}
+
+
+/* gallery style
+------------------------------------------------*/
+.tGallery th{font-weight:normal;font-size:12px;line-height:160%;}
+.tGallery td{text-align:center;}
+
+#contentsArea .process table{width:500px;}
+#contentsArea .process table th{width:240px;}
+#contentsArea .process table td{width:240px;}
+#contentsArea .process .tGallery .process1{background:url(../images/num1.gif) no-repeat top left;padding:0 0 0 20px;text-align:left;}
+#contentsArea .process .tGallery .process2{background:url(../images/num2.gif) no-repeat top left;padding:0 0 0 20px;text-align:left;}
+#contentsArea .process .tGallery .process3{background:url(../images/num3.gif) no-repeat top left;padding:0 0 0 20px;text-align:left;}
+#contentsArea .process .tGallery .process4{background:url(../images/num4.gif) no-repeat top left;padding:0 0 0 20px;text-align:left;}
+#contentsArea .process .tGallery .process5{background:url(../images/num5.gif) no-repeat top left;padding:0 0 0 20px;text-align:left;}
+#contentsArea .process .tGallery .process6{background:url(../images/num6.gif) no-repeat top left;padding:0 0 0 20px;text-align:left;}
+
+#contentsArea .galleryL{margin:10px 0;}
+#contentsArea .galleryL dl{margin:0 10px 0 0;padding:0;float:left;}
+#contentsArea .galleryL dt{margin:0;padding:0;text-align:center;}
+#contentsArea .galleryL dd{text-align:center;margin:0;padding:0;font-size:0.8em;}
+
+#contentsArea .galleryR{margin:10px 0;}
+#contentsArea .galleryR dl{margin:0 0 0 10px;padding:0;float:right;}
+#contentsArea .galleryR dt{margin:0;padding:0;text-align:center;}
+#contentsArea .galleryR dd{text-align:center;margin:0;padding:0;font-size:0.8em;}
+
+#contentsArea .galleryPlane{margin:20px 10px 0 10px; float:right;}
+
+
+
+/* summary style
+------------------------------------------------*/
+#contentsArea .summary {
+background-color: #FFECEC;
+border-top: 1px solid #FF9999;
+border-bottom: 1px solid #FF9999;
+margin:10px 0;
+padding: 0px 80px 0 10px;
+color: #990000;
+background-image:url(../images/illust-man6.gif);
+background-repeat:no-repeat;
+background-position:right;
+}
+
+
+/* pagetop style
+------------------------------------------------*/
+.pagetop {
+font-size: 10px;
+text-align: right;
+margin: 30px 0 5px;
+clear:both;
+}
+.pagetop a{
+background: url(../images/bt_top.gif) no-repeat left center;
+padding: 0 0 0 20px;
+}
+
+
+/* .pageList style
+------------------------------------------------*/
+#main .pageList{
+clear:both;
+margin:10px 0 0 0;
+background:url(../images/supplement/line_spacer.gif) no-repeat top;
+padding:20px 0 0 0;}
+#main .pagelist h3{ margin:10px 0;}
+#main .pageList ul{ margin:0; padding:0; font-size:90%;}
+#main .pageList ul li{ margin:5px 0 5px 40px;}
+
+/* talk 
+--------------------------------------------------------*/
+.talk{ margin:10px; color:#390; font-weight:bold;}
+.talk img {float:left; margin:0 0 10px 0;}
+.talk p{margin-left:150px; margin-top:50px;}

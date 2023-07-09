@@ -1,0 +1,28 @@
+<a name="$kjno"><br><br></a>
+<table bgcolor="#333333" cellpadding="0" cellspacing="0" border="0" width="560">
+<tr>
+<td>
+<table cellpadding="1" cellspacing="1" border="0" width="100%">
+<tr class="main2" bgcolor="#caed54">
+<td style="padding:0.5em;"><b>$tpname</b></td></tr>
+<tr class="main2" bgcolor="#ffffcc">
+<td>
+<table border="0" style="line-height:1.4;width:100%;">
+<tr>
+<td style="padding:0.5em;">
+$tptext
+
+<div style="border-top: dotted 1px #666666; margin-top:10px; padding-top:12px; text-align:center;clear:both;">お問い合わせ・ご相談は、<b><a href="http://www.kigusuri.com/shop/futaba/">二葉薬局</a></b>　まで<br>
+　<small> 長野県諏訪市大手1-3-2</small>　電話： 0120-521-242<small>（フリーダイヤル）</small></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr class="main2" bgcolor="#ffffcc">
+<td align="right">更新日：$crdy</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>

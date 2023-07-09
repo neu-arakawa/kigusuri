@@ -1,0 +1,7 @@
+【きぐすり.com】{{ member.nickname }} 様からの質問が解決されました
+
+{{ member.nickname }} 様（会員番号：{{ member.id }} ）から質問解決の報告が寄せられました。
+
+【相談内容の詳細はこちら】
+{{ c.app.request.getUrl() }}{{ c.app.urlFor('qa_detail', {'id': question.id})  }}
+

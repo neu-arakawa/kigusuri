@@ -1,0 +1,229 @@
+<?php
+  //共通
+  require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+  //メタディスクリプション
+  $description = '';
+
+  //メタキーワード
+  $keywords = '';
+
+  //Facebook　全ページ共通の場合は空白にしてください
+  $fbimage = '';
+
+  //タイトル
+  $title = '新規会員登録';
+
+  //css追加
+  $ex_tag_css = '<link rel="stylesheet" href="/member/css/style.css"><link rel="stylesheet" href="/member/css/template.css">';
+
+  //js追加
+  $ex_tag_js = '<script src="/member/js/script.js"></script>';
+
+  //bodyID
+  $bodyID = 'member';
+
+?>
+<?php include 'header.php'; ?>
+
+
+	<div class="contents-header">
+		<ul class="topicpath fbox">
+			<li><a href="/">トップページ</a></li>
+            <li>新規会員登録</li>
+		</ul>
+		<h1 class="header-ttl">新規会員登録</h1>
+	</div>
+    <!-- /.contents-header -->
+
+
+  <div class="inner">
+
+    {% if errors %}
+    <!--/////////////////エラーメッセージ start ///////////////////-->
+        <div class="m-panel01 m-panel01--red">
+     	 <div class="l-sp-inner">
+          <div class="m-panel01__panel">
+            <p class="m-panel01__heading">登録内容が正しく入力されていません。</p>
+            <p class="m-panel01__txt">もう一度ご確認のうえ、ご入力してください。</p>
+          </div>
+          <!-- /.m-panel01__panel -->
+          </div>
+          <!-- /.l-sp-inner -->
+        </div>
+        <!-- /.m-panel01 -->
+    <!--/////////////////エラーメッセージ end ///////////////////-->
+    {% endif %}
+    
+    <!--/////////////////入力画面 start ///////////////////-->
+    <div class="component-area">
+      <div class="l-sp-inner">
+        <div class="m-tablearea01">
+            <form method="post" loading>
+            <input type="hidden" name="{{csrf_key}}" value="{{csrf_token}}">
+            <div class="m-tablearea01__regfree">
+              <div class="m-regfree">
+                <div class="m-regfree__titbox">
+                  <p class="m-regfree__tit">
+                    登録<br class="pc-item">無料!
+                  </p>
+                </div>
+                <!-- /.m-regfree__titbox -->
+                <div class="m-regfree__txtbox">
+                  <p class="m-regfree__txt">きぐすり.comに会員登録いただくと、全国の漢方薬に精通した薬剤師に相談することができます。<br />経験豊富な薬剤師があなたの心と身体のお悩みをサポートします。</p>
+                </div>
+                <!-- /.m-regfree__txtbox -->
+              </div>
+              <!-- /.m-regfree -->
+            </div>
+            <!-- /.m-tablearea01__regfree -->
+            <div class="m-tablearea01__table">
+            <p class="mb10"><span class="m-table01__required">※入力項目はすべて必須です</span></p>
+              <table class="m-table01">
+                <tr>
+                  <th><span class="m-table01__heading">ニックネーム</span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                      <input type="text" name='nickname' placeholder="20文字以内で入力してください">
+                      <span class="m-table01__note">※一度登録すると変更できません。</span>
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                    {% if errors.nickname %}
+                    <p class="m-table01__error">{{ errors.nickname }}</p>
+                    {% endif %}
+                  </td>
+                </tr>
+                <tr>
+                  <th><span class="m-table01__heading">メールアドレス</span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                      <input type="text" name='email'>
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                    {% if errors.email %}
+                    <p class="m-table01__error">{{ errors.email }}</p>
+                    {% endif %}
+                  </td>
+                </tr>
+                <tr>
+                  <th><span class="m-table01__heading">メールアドレス（再入力）</span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                      <input type="text" name='email_confirm'>
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                  </td>
+                </tr>
+                <tr>
+                  <th><span class="m-table01__heading">パスワード </span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                      <input type="password" name='password' placeholder="6文字以上を入力してください">
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                    {% if errors.password %}
+                    <p class="m-table01__error">{{ errors.password }}</p>
+                    {% endif %}
+                  </td>
+                </tr>
+                <tr>
+                  <th><span class="m-table01__heading">パスワード（再入力） </span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                      <input type="password" name='password_confirm'>
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                  </td>
+                </tr>
+                <tr>
+                  <th><span class="m-table01__heading">生年（西暦） </span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                        <select name="birthday" >
+                            <option value=''></option>
+                            {% for y in 1900..'now' | date('Y') %}
+                            <option value='{{ y }}'>{{ y }}</option>
+                            {% endfor %}
+                        </select>
+                        <span class="m-table01__note">※一度登録すると変更できません。</span>
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                    {% if errors.birthday %}
+                    <p class="m-table01__error">{{ errors.birthday }}</p>
+                    {% endif %}
+                  </td>
+                </tr>
+                <tr>
+                  <th><span class="m-table01__heading">性別 </span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                      <ul class="m-table01__radiolist clearfix">
+                        <li><label><input type="radio" name="sex" value='男性' checked="checked">男性</label></li>
+                        <li><label><input type="radio" name="sex" value='女性'>女性</label></li>
+                        <li><span class="m-table01__note">※一度登録すると変更できません。</span></li>
+                      </ul>
+                      <!-- /.m-table01__radiolist -->
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                    {% if errors.sex %}
+                    <p class="m-table01__error">{{ errors.sex }}</p>
+                    {% endif %}
+                  </td>
+                </tr>
+                <tr>
+                  <th><span class="m-table01__heading">都道府県 </span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                        <select name="pref" >
+                            <option value=''></option>
+                            {% for pref in c.config('prefectures')%}
+                            <option value='{{ pref }}'>{{ pref }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                    {% if errors.pref %}
+                    <p class="m-table01__error">{{ errors.pref }}</p>
+                    {% endif %}
+                  </td>
+                </tr>
+                <tr>
+                  <th><span class="m-table01__heading">DM 受け取り</span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                      <ul class="m-table01__radiolist clearfix">
+                        <li><label><input type="radio" name="dm_flg" value='1'>受け取る</label></li>
+                        <li><label><input type="radio" name="dm_flg" value='0' checked="checked">受け取らない</label></li>
+                      </ul>
+                      <!-- /.m-table01__radiolist -->
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                    {% if errors.dm_flg %}
+                    <p class="m-table01__error">{{ errors.dm_flg }}</p>
+                    {% endif %}
+                  </td>
+                </tr>
+              </table>
+              <!-- /.m-table01 -->
+            </div>
+            <!-- /.m-tablearea01__table -->
+            <p class="m-tablearea01__note">ご登録に際しては、<a href="/terms/">利用規約</a>に同意の上、『確認画面に進む』ボタンを押してください。</p>
+            <div class="m-tablearea01__btn">
+              <button class="m-arrow-btn01">確認画面に進む<span class="m-arrow-btn01__icn"></span></button>
+            </div>
+          </form>
+        </div>
+        <!-- /.m-tablearea01 -->
+      </div>
+      <!-- /.l-sp-inner -->
+    </div>
+    <!-- /.component-area -->
+    <!--/////////////////入力画面 end ///////////////////-->
+    
+    
+  </div>
+  <!-- /.inner -->
+
+<?php include 'footer.php'; ?>
+
+

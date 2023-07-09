@@ -1,0 +1,310 @@
+@charset "utf-8";
+
+/* CSS Document */
+#main{margin:0 22px 0 10px; padding:0; border:0;}
+#categoryName{margin:20px 0;padding:0;}
+
+#boxCaption {
+border-left: 5px solid #999999;
+padding-left: 10px;
+height: 80px;
+}
+#boxCaption p{font-weight:bold;color:#ff9933;font-size:80%;}
+.point{color:#ff3366;}
+.author{text-align:right;background:#eee;font-size:80%;}
+.captionHead {
+margin: 20px 0;
+padding: 0 0 0 17px;
+background-image: url(../herbal/img/img_square.gif);
+background-repeat: no-repeat;
+background-position: left center;
+font-weight: bold;
+color: #666666;
+}
+.clear{ clear:both;}
+.imgR{ margin:10px 0 0 10px; float:right;}
+.imgL{ margin:10px 10px 0 0; float:left;}
+.imgC { margin:0 auto; text-align:center;}
+.emOrange{ color:#f93;}
+.emGreen{ color:#690;}
+
+/* choice */
+.choice{ margin:0; padding:0;}
+.choice ul{ margin:0; padding:0;}
+.choice ul li{ margin:0; padding:0; list-style-type:none;}
+
+/* note */
+.note01{ margin:20px 10px; padding:0 0 0 30px; font-size:80%; background-image:url(../images/common/icon_note.gif); background-repeat:no-repeat; background-position: left 5px;}
+.note01 p{ margin:0 0 10px 0;}
+.note01 p span{ padding-bottom:2px; border-bottom:1px dotted #999;}
+
+
+
+/* contentsArea
+----------------------------------------------------------*/
+#contentsArea{margin:20px 15px;font-size:90%;line-height:160%; width:552px;}
+#contentsArea hr{display:none;}
+
+#contentsArea .gallery{margin:10px 0;}
+#contentsArea .gallery dl{margin:0 5px 0 0 ;padding:0; float:left;}
+#contentsArea .gallery dt{margin:0 ;padding:0;}
+#contentsArea .gallery dd{margin:0 ;padding:0; color:#666; font-size:80%;}
+
+#contentsArea .galleryL{margin:10px 0;}
+#contentsArea .galleryL dl{margin:0 10px 0 0;padding:0;float:left;}
+#contentsArea .galleryL dt{
+	margin:0;
+	padding:0;
+	text-align:center;
+	font-size: 110%;
+}
+#contentsArea .galleryL dd{text-align:center;margin:0;padding:0;font-size:80%;}
+
+#contentsArea .galleryR{margin:10px 0;}
+#contentsArea .galleryR dl{margin:0 0 0 10px;padding:0;float:right;}
+#contentsArea .galleryR dt{margin:0;padding:0;text-align:center;}
+#contentsArea .galleryR dd{text-align:center;margin:0;padding:0;font-size:80%;}
+
+#contentsArea .galleryC{margin:10px auto;}
+#contentsArea .galleryC dl{margin:0;padding:0;}
+#contentsArea .galleryC dt{margin:5px 0;padding:0;text-align:center;}
+#contentsArea .galleryC dd{margin:0;padding:0;text-align:center;font-size:80%;}
+
+#contentsArea .galleryHowto{margin:15px 0;}
+#contentsArea .galleryHowto table th{ width:180px;text-align:left;}
+#contentsArea .galleryHowto table td{ padding-right:20px;width:160px;font-size:80%; color:#666;vertical-align:top;line-height:140%;}
+
+#contentsArea .galleryHowto .notes{color:#669900;background:#ffffff;border:1px solid #99cc33;font-size:80%;line-height:160%;padding:2px 10px;}
+
+#contentsArea .def{ margin:10px 20px;padding:5px;background-color:#FAFEEB;border:1px dotted #BBCF76; color:#360;}
+#contentsArea .def h3{ margin:0 0 10px 0;padding:7px 0 7px 50px;background-image:url(../images/question.gif); background-repeat:no-repeat; background-position:5px top;}
+#contentsArea .def p{ margin:5px 0; padding:0 5px; font-size:90%; line-height:120%;}
+#contentsArea .def ul{font-size:90%; line-height:120%;}
+
+
+/* sectionH3
+----------------------------------------------------------*/
+.sectionH3{ margin:20px 0; padding:0; clear:both;}
+.sectionH3 h3{ padding: 0 0 0 7px; border-left:5px solid #caed52; color:#333; background-color:#eee;}
+
+
+/* guide
+----------------------------------------------------------*/
+.guide{
+	margin:20px 0 50px 0;
+	padding:5px 10px 5px 90px;
+	color:#690;
+	background-color:#F7FCEF;
+	border:4px double #9c3;
+}
+.guide span { margin:0 5px; font-size:140%; font-weight:bold; color:#f93;}
+.t5min{ background-image:url(../herbal/img/time5min.gif); background-repeat:no-repeat; background-position:20px 10px;}
+.t10min{ background-image:url(../herbal/img/time10min.gif); background-repeat:no-repeat; background-position:20px 10px;}
+.t15min{ background-image:url(../herbal/img/time15min.gif); background-repeat:no-repeat; background-position:20px 10px;}
+.t20min{ background-image:url(../herbal/img/time20min.gif); background-repeat:no-repeat; background-position:20px 10px;}
+.t30min{ background-image:url(../herbal/img/time30min.gif); background-repeat:no-repeat; background-position:20px 10px;}
+.t45min{ background-image:url(../herbal/img/time45min.gif); background-repeat:no-repeat; background-position:20px 10px;}
+.t50min{ background-image:url(../herbal/img/time50min.gif); background-repeat:no-repeat; background-position:20px 10px;}
+.t60min{ background-image:url(../herbal/img/time60min.gif); background-repeat:no-repeat; background-position:20px 10px;}
+.guide h3{ margin:10px 0 0 0;}
+.guide dl { margin:10px 10px 0 0; float:left;}
+.guide dl dt{ margin:0;}
+.guide dl dd{ margin:0; font-size:80%; color:#666;}
+.guide dl img{ border:1px solid #ccc;}
+.guide p{ margin:0;}
+.guide .note{ font-size:80%;}
+
+/* image
+----------------------------------------------------------*/
+#contentsArea .image{
+padding:0 0 10px 100px;
+margin: 20px 0;
+background-image:url(../herbal/img/icon_06.gif);
+background-repeat:no-repeat;
+background-position:left top;
+border-bottom:1px dotted #99cc33;
+}
+#contentsArea .image h3{display:none;}
+
+
+/* prepare
+----------------------------------------------------------*/
+#contentsArea .prepare{
+	padding:0 0 10px 100px;
+	margin-top: 20px;
+	background-image:url(../herbal/img/icon_01.gif);
+	background-repeat:no-repeat;
+	background-position:left top;
+	border-bottom:1px dotted #99cc33;
+	zoom:1; /* for IE6 */
+}
+/* #contentsArea .prepare h3{display:none;} */
+ .prepare .list h4 {
+	color:#333;
+	text-decoration:underline;
+}
+
+.prepare .list ul{margin:0;padding:0;}
+.prepare .list ul li{margin:0; padding:0 0 0 15px; list-style-type:none;background-image: url(../herbal/img/list_image01.gif);background-repeat: no-repeat;background-position: left 3px;}
+.prepare .listL ul{margin:0 10px 0 0;padding:0;float:left;}
+.prepare .listL ul li{margin:0; padding:0 0 0 15px; list-style-type:none;background-image: url(../herbal/img/list_image01.gif);background-repeat: no-repeat;background-position: left 3px;}
+
+.prepare .subList{margin:3px 10px; padding:5px; color:#060; font-size:90%; line-height:120%; background-color:#E8FFC8;}
+.prepare .subList p{ margin:0 5px;}
+
+/* howto
+----------------------------------------------------------*/
+#contentsArea .howto{
+padding:0 0 10px 100px;
+margin-top: 20px;
+background-image:url(../herbal/img/icon_02.gif);
+background-repeat:no-repeat;
+background-position:left top;
+border-bottom:1px dotted #99cc33;
+}
+#contentsArea .howto h3{display:none;}
+#contentsArea .howto h4{margin:40px 0 0;clear:both;}
+#contentsArea .howto h5{margin:5px 0;clear:both;}
+.num1{padding:0 0 0 20px;background:url(../herbal/img/num1.gif) no-repeat top left;}
+.num2{padding:0 0 0 20px;background:url(../herbal/img/num2.gif) no-repeat top left;}
+.num3{padding:0 0 0 20px;background:url(../herbal/img/num3.gif) no-repeat top left;}
+.num4{padding:0 0 0 20px;background:url(../herbal/img/num4.gif) no-repeat top left;}
+#contentsArea .howto span{ color:#fff; margin:0 5px; background-color:#6c0; padding: 0 4px;}
+
+.howto .caution{ clear:both; font-size:90%; color:#690;}
+.howto .caution h5{ margin:15px 0 0 0; padding:1px 5px; color:#f30; border:1px solid #f30; display:inline;}
+.howto .caution p{ margin:0;}
+
+.howtoR table th{ vertical-align:top; text-align:left; font-size:90%;}
+
+
+/* comment
+----------------------------------------------------------*/
+#contentsArea .comment{
+padding:0 0 0 100px;
+margin-top: 20px;
+background-image:url(../herbal/img/icon_03.gif);
+background-repeat:no-repeat;
+background-position:left top;
+clear:both;
+}
+#contentsArea .comment h3{display:none;}
+#contentsArea .comment .girl{
+background-image: url(../herbal/img/illust-woman4.gif);
+background-repeat: no-repeat;
+background-position: right top;
+padding-right: 80px;
+}
+#contentsArea .comment .girl span{ color:#fff; margin:0 5px; background-color:#6c0; padding: 0 4px;}
+
+.markRed{ margin:0 3px; padding:0 0 0 20px; background-image: url(../images/heart_r.gif);background-repeat: no-repeat;}
+.markGre{ margin:0 3px; padding:0 0 0 20px; background-image: url(../images/heart_g.gif);background-repeat: no-repeat;}
+.markWhi{ margin:0 3px; padding:0 0 0 20px; background-image: url(../images/heart_w.gif);background-repeat: no-repeat;}
+
+.comment .caution { margin:15px 10px; padding:5px 10px; border:1px solid #f93; background-color:#FEFBF1; font-size:80%; line-height:140%;}
+.comment .caution h4{ margin:0; color:#f93;}
+.comment .caution p{ margin:0;}
+
+
+
+/* hosoku
+----------------------------------------------------------*/
+#contentsArea .howto .hosoku { margin:15px 0; padding:5px 8px; background:url(../herbal/img/bg_hosoku.gif); clear:both; border:1px solid #9c0;}
+.hosoku h5 { padding:0 5px; color:#fff; font-weight:bold; background-color:#9c0;}
+.hosoku h6 { padding:0 0 0 18px;font-size:100%; color:#690; line-height:100%; background-image:url(../images/bt_right.gif); background-repeat:no-repeat; }
+
+
+/* tea-04
+----------------------------------------------------------*/
+.tea{ margin:20px 0 20px 0; padding: 10px 0 0 10px; border-left:5px solid #9c0; clear:both; background-color:#F9FFEC;}
+.tea h3{ margin:5px 0; padding:0; }
+
+
+
+/* pagetop
+----------------------------------------------------------*/
+.pagetop{
+clear:both;
+font-size:70%;
+text-align:right;
+margin:15px 0 0;}
+.pagetop a{background:url(../images/bt_top.gif) no-repeat left;padding-left:20px;}
+
+
+/* summary
+----------------------------------------------------------*/
+.summary {
+	border-top: 1px solid #FF9999;
+	border-bottom: 1px solid #FF9999;
+	margin: 20px 0;
+	padding: 0 120px 0 10px;
+	color: #990000;
+	background-color:#FFECEC;
+	background-position:right center;
+	background-repeat:no-repeat;
+	background-image: url(../images/illust-woman3.gif);
+}
+
+
+
+/* categoryList
+----------------------------------------------------------*/
+#main .categoryList{
+font-size:80%;
+line-height:160%;
+background: url(../images/supplement/line_spacer.gif) no-repeat left top;
+margin-top: 15px;
+padding-top: 15px;}
+#main .categoryList div{width:291px;float:left;}
+#main .categoryList dl{margin:0;padding:0}
+#main .categoryList dl dt{margin:0;padding:0;}
+#main .categoryList dl dd{margin:0;padding:0;}
+#main .categoryList ul{margin:0;padding:0;}
+#main .categoryList ul li{margin:0 0 0 20px;padding:0;}
+
+.gotoshop {
+	background-color:#F8FFDF;
+	border-bottom:1px solid #99CC00;
+	border-top:1px solid #99CC00;
+	color:#009900;
+	margin:20px auto;
+	padding:5px 20px;
+}
+.linkFwd {
+	padding-left:20px;
+	float:right;
+	background-image:url(../herbal/img/img_marker.gif);
+	background-position:left center;
+	background-repeat:no-repeat;
+}
+
+/* ハーブ取扱店舗情報 */
+.shopSummary{ margin:20px 0;}
+.shopSummary h3{ margin:0 0 10px 0; padding:0 0 0 15px; font-size:120%; color:#690; background-image:url(../images/common/listMark04.gif); background-repeat:no-repeat; background-position:left;}
+.shopSummary table{ border-collapse:collapse; border:1px solid #9c3; margin:0 0 20px 0; width:550px; font-size:90%;}
+.shopSummary table caption{ margin:0; padding:3px 5px; font-weight:bold; text-align:left; font-size:110%; color:#333;}
+.shopSummary table th{ padding:2px 5px; width:50px; text-align:left; font-weight:normal; color:#693; background-color:#EBFFEB; border:1px solid #9c3; white-space:nowrap;}
+.shopSummary table td{ padding:2px 5px; border:1px solid #9c3; background-color:#fff;}
+.shopSummary .btn{ width:120px; text-align:center;}
+
+	/* link */
+.shopSummary .link{clear:both;font-size:70%;text-align:right;margin:15px 0 0;}
+.shopSummary .link ul{ margin:0; padding:0;}
+.shopSummary .link ul li{ margin:0; padding:0; display:inline;}
+.shopSummary .link .h{background:url(../images/bt_right.gif) no-repeat left;padding-left:17px; margin-right:15px;}
+.shopSummary .link .t{background:url(../images/bt_top.gif) no-repeat left;padding-left:17px;}
+	
+	/* introShop */
+#introShop{ margin:10px 0; padding:0 0 0 0; background-image:url(../herbal/img/shop/bg_intro.jpg); background-position:right top; background-repeat:no-repeat; border-bottom:1px solid #ddd;}
+#introShop h3{ margin:0 0 20px 0; }
+#introShop p{ margin:10px 220px 10px 0; font-size:90%; line-height:120%; color:#333;}
+#introShop strong{ font-size:110%; color:#009900;}
+#introShop .caution{ color:#c03;}
+
+	/* pref */
+.pref{ margin:20px 0 0 0; padding:10px;  background-color:#EBFFEB; border:1px solid #ccc; font-size:90%;}
+.pref h3{font-size:110%; line-height:160%; color:#693;}
+.pref ul{ margin:0; padding:0;}
+.pref ul li{ margin:0 5px 0 0; padding:0; list-style-type:none; display:inline; color:#999; line-height:120%;}
+.pref ul li a{ font-weight:bold;}
+

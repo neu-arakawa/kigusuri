@@ -1,0 +1,227 @@
+<?php
+  //共通
+  require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+  //メタディスクリプション
+  $description = '';
+
+  //メタキーワード
+  $keywords = '';
+
+  //Facebook　全ページ共通の場合は空白にしてください
+  $fbimage = '';
+
+  //タイトル
+  $title = '加盟店募集';
+
+  //css追加
+  $ex_tag_css = '<link rel="stylesheet" href="/member/css/style.css"><link rel="stylesheet" href="/member/css/template.css">
+  <link rel="stylesheet" href="/contact_shop/css/style.css"><link rel="stylesheet" href="/member/css/template.css">';
+
+  //js追加
+  $ex_tag_js = '<script type="text/javascript" src="https://ajaxzip3.github.io/ajaxzip3.js" charset="utf-8"></script>';
+
+  //bodyID
+  $bodyID = 'member';
+
+?>
+<?php include 'header.php'; ?>
+
+<div class="contents-header">
+  <ul class="topicpath fbox">
+    <li><a href="/">トップページ</a></li>
+    <li>加盟店募集　お問い合わせフォーム</li>
+  </ul>
+  <h1 class="header-ttl">加盟店募集　お問い合わせフォーム</h1>
+</div>
+<!-- /.contents-header -->
+
+<div class="inner"> 
+  
+
+<div class="sec-att-wrap">
+<div class="sec-in-detail">
+
+
+
+<h2 class="pc-item"><img src="/contact_shop/img/tit.png" alt="加盟店様を募集しております。ホームページでの集客に「きぐすり.com」を活用しませんか。" ></h2>
+<h2 class="sp-item"><img src="/contact_shop/img/tit_sp.png" alt="加盟店様を募集しております。ホームページでの集客に「きぐすり.com」を活用しませんか。" ></h2>
+
+
+<p>きぐすり.comに加盟いただくと・・・</p>
+<h3>加盟店様専用ページを開設します</h3>
+<p>Yahooやgoogleなどの検索結果にも相性が良いので、集客効果が期待できます。</p>
+
+<h3>漢方相談Q&amp;Aでお客様との接点が身近になります</h3>
+<p>お客様から質問や相談内容がきぐすり.com上に日々寄せられ、加盟店様から回答することができます。お客様のお悩みをインターネット上で解決できます。</p>
+
+
+
+
+</div>
+<div class="sec-in-photo">
+<img src="/contact_shop/img/img01.jpg" alt="薬局詳細ページ" class="pc-item">
+<img src="/contact_shop/img/img01_sp.jpg" alt="薬局詳細ページ" class="sp-item">
+<p class="pc-item">加盟店様専用ページ イメージ</p>
+<p class="sp-item">加盟店様専用ページ イメージ<br>※こちらはPCサイトのイメージです</p>
+</div>
+
+</div>
+  
+  
+  <!--/////////////////入力画面 start ///////////////////-->
+  <div class="component-area">
+    <div class="l-sp-inner">
+  <p class="clear mb20">きぐすり.comでは、漢方相談経験豊かな薬局・薬店様を募集しております。加盟をご検討の方は以下のフォームよりお問い合わせください。</p>
+      <div class="m-tablearea01">
+        <form method="post" loading='none'>
+          <input type="hidden" name="{{csrf_key}}" value="{{csrf_token}}">
+          
+          <div class="m-tablearea01__table">
+            <table class="m-table01">
+              <tr>
+                <th><span class="m-table01__heading">薬局・薬店名<span class="m-table01__required">※必須</span></span></th>
+                <td><div class="m-table01__inputbox">
+                    <input type="text"  name='pharmacy_name'>
+                  </div>
+                  
+                  <!-- /.m-table01__inputbox -->
+                  
+                  {% if errors.pharmacy_name %}
+                  <p class="m-table01__error">{{ errors.pharmacy_name }}</p>
+                  {% endif %}
+                  </td>
+              </tr>
+              <tr>
+                <th><span class="m-table01__heading">ご担当者様 氏名<span class="m-table01__required">※必須</span></span></th>
+                <td><div class="m-table01__inputbox">
+                    <input type="text" name='name'>
+                  </div>
+                  
+                  <!-- /.m-table01__inputbox -->
+                  
+                  {% if errors.name %}
+                  <p class="m-table01__error">{{ errors.name }}</p>
+                  {% endif %}
+              </tr>
+              <tr class="adress">
+                <th><span class="m-table01__heading">ご住所<span class="m-table01__required">※必須</span></span></th>
+                <td><div class="m-table01__inputbox"> <span class="label">郵便番号</span>
+                    <input type="text" name='zip' class="post-number"> <button type='button' onclick="AjaxZip3.zip2addr('zip','','pref','addr1');" class="m-btn-postnumber">郵便番号から住所を入力</button>
+                    {% if errors.zip %}
+                  <p class="m-table01__error">{{ errors.zip }}</p>
+                    {% endif %}
+                  </div>
+                  <div class="m-table01__inputbox"><span class="label">都道府県</span>
+                    <select name='pref'>
+                      <option></option>
+                      {% for pref in c.config('prefectures')%}
+                      <option value='{{ pref }}'>{{ pref }}</option>
+                      {% endfor %}
+                    </select>
+                    {% if errors.pref %}
+                    <p class="m-table01__error">{{ errors.pref }}</p>
+                    {% endif %}
+                  </div>
+                  <div class="m-table01__inputbox"><span class="label">市区町村番地</span>
+                    <input type="text" name='addr1'>
+                    {% if errors.addr1 %}
+                    <p class="m-table01__error">{{ errors.addr1 }}</p>
+                    {% endif %}
+                  </div>
+                  <div class="m-table01__inputbox"><span class="label">ビル・建物名</span>
+                    <input type="text" name='addr2'>
+                    <p class="m-table01__note">※ビル・建物名がある場合は入力してください。</p>
+                  </div>
+                  
+                  <!-- /.m-table01__inputbox -->
+                  
+              </tr>
+              <tr>
+                <th><span class="m-table01__heading">メールアドレス<span class="m-table01__required">※必須</span></span></span></th>
+                <td><div class="m-table01__inputbox">
+                    <input type="text" name='email'>
+                  </div>
+                  
+                  <!-- /.m-table01__inputbox -->
+                  
+                    {% if errors.email %}
+                    <p class="m-table01__error">{{ errors.email }}</p>
+                    {% endif %}
+              </tr>
+              <tr>
+                <th><span class="m-table01__heading">メールアドレス（確認用）<br><span class="m-table01__required">※必須</span></span></span></th>
+                <td><div class="m-table01__inputbox">
+                    <input type="text" name='email_confirm'>
+                  </div>
+                  
+                  <!-- /.m-table01__inputbox -->
+                    {% if errors.email_confirm %}
+                    <p class="m-table01__error">{{ errors.email_confirm }}</p>
+                    {% endif %}
+              </tr>
+              <tr>
+                <th><span class="m-table01__heading">電話番号<span class="m-table01__required">※必須</span></span></span></th>
+                <td><div class="m-table01__inputbox">
+                    <input type="text" name='tel'>
+                  </div>
+                  
+                  <!-- /.m-table01__inputbox -->
+                  
+                    {% if errors.tel %}
+                    <p class="m-table01__error">{{ errors.tel }}</p>
+                    {% endif %}
+              </tr>
+              <tr>
+                <th><span class="m-table01__heading">漢方相談歴<span class="m-table01__required">※必須</span></span></span></th>
+                <td><div class="m-table01__inputbox">
+                    <select name="history">
+                      <option value=""></option>
+                      <option value="3年〜5年">3年〜5年</option>
+                      <option value="5年〜10年">5年〜10年</option>
+                      <option value="10年以上">10年以上</option>
+                    </select>
+                    <span class="m-table01__note">※実務経験を3年以上とさせて頂いております。</span></div>
+                  
+                  <!-- /.m-table01__inputbox -->
+                  
+                    {% if errors.history %}
+                    <p class="m-table01__error">{{ errors.history }}</p>
+                    {% endif %}
+              </tr>
+                <tr>
+                  <th><span class="m-table01__heading">その他、ご意見・ご感想が<br class="pc-item">あればお寄せください。</span></th>
+                  <td>
+                    <p class="m-table01__txt"></p>
+                    <div class="m-table01__inputbox">
+                      <textarea name='message'></textarea>
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                  </td>
+                </tr>
+            </table>
+            <!-- /.m-table01 --> 
+          </div>
+          <!-- /.m-tablearea01__table -->
+
+<p class="mb30">ご入力いただいたお客様の個人情報(氏名、メールアドレス等)はお問い合わせに対するお返事に利用させていただきます。<br>その他、個人情報の取り扱いに関しましては、「<a href="/privacy/">プライバシーポリシー</a>」をご参照ください。</p>
+
+          <div class="m-tablearea01__btn">
+            <button class="m-arrow-btn01">入力内容確認画面へ<span class="m-arrow-btn01__icn"></span></button>
+          </div>
+        </form>
+      </div>
+      <!-- /.m-tablearea01 --> 
+
+
+    </div>
+    <!-- /.l-sp-inner --> 
+  </div>
+  <!-- /.component-area --> 
+  <!--/////////////////入力画面 end ///////////////////--> 
+  
+  
+</div>
+<!-- /.inner -->
+
+<?php include 'footer.php'; ?>

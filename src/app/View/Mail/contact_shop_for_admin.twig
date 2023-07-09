@@ -1,0 +1,31 @@
+{% autoescape false %}
+加盟店募集のお問合せがありました。
+
+[ お問合せ内容 ]
+
+・薬局・薬店名
+ {{ query.pharmacy_name }}
+
+・ご担当者様 氏名	
+ {{ query.name }}
+
+・ご住所	
+ {{ query.zip }}
+ {{ query.pref }}
+ {{ query.addr1 }}
+ {{ query.addr2 }}
+
+・メールアドレス	
+ {{ query.email }}
+
+・電話番号	
+ {{ query.tel }}
+
+・漢方相談歴	
+ {{ query.history }}
+
+・その他、ご意見・ご感想があればお寄せください。
+ 
+ {{ query.message }}
+
+{% endautoescape %}

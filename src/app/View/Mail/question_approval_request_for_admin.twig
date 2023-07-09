@@ -1,0 +1,27 @@
+【きぐすり.com】新規に漢方相談が寄せられました。承認してください
+
+きぐすり.comに新規の漢方相談が寄せられました。
+確認後、承認してください。
+{{ c.app.request.getUrl() }}{{ c.app.urlFor('default', {'controller':'question','action':'index','id': question.id})  }}
+
+━━━━━━━━━━━━━━━
+相談内容詳細
+━━━━━━━━━━━━━━━
+【ユーザー情報】
+■会員番号： {{ question.member_id }}
+■ニックネーム： {{ question.member_nickname }}
+■性別： {{ question.member_sex }}
+■年代： {{ question.member_age | era }}
+■お住まい： {{ question.member_pref }}
+
+【相談内容】
+■分野 {{ c.question_category(question.category_id) }}
+
+■相談内容詳細
+{{ question.content | raw }}
+
+
+
+
+
+

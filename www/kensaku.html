@@ -1,0 +1,817 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="日本全国の漢方薬局を検索することが出来ます。">
+<meta name="Keywords" content="漢方薬,漢方,漢方薬局,薬局,店舗,検索">
+<meta name="verify-v1" content="l/EXK7nGh+HfRce3BIyh2iVyV1b/UrxLSKukiCUmhQM=">
+<link rel="stylesheet" href="css_2009/base.css" type="text/css" media="all">
+<link rel="stylesheet" href="css_2009/layout.css" type="text/css" media="all">
+<link rel="stylesheet" href="search/kensaku.css" type="text/css" media="all">
+<link rel="shortcut icon" href="http://www.kigusuri.com/favicon.ico">
+<link rel="icon" href="http://www.kigusuri.com/favicon.ico" type="image/vnd.microsoft.icon">
+<title>漢方薬局 店舗紹介 | 漢方薬 漢方薬局 薬店のことなら きぐすり.com</title>
+<script type="text/javascript" src="common.js" language="JavaScript"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript"></script>
+<script type="text/javascript">
+// iPhone/iPad/iPod、Androidの場合は振り分けを判断
+if ( navigator.userAgent.indexOf('iPhone') > 0  
+|| navigator.userAgent.indexOf('iPod') > 0 
+|| (navigator.userAgent.indexOf('Android') > 0 && navigator.userAgent.indexOf('Mobile') > 0) ) {
+	document.write('<div align="center"><a href="./sp/kensaku.html"><img style="width: 95%;" src="./sp/img/to-sp.png"></a></div>');
+	}
+</script>
+<!-- #BeginLibraryItem "/Library/re2014hdr.lbi" -->
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/common/head.php");?>
+<!-- #EndLibraryItem -->
+</head>
+
+<body id="search" onLoad="MM_preloadImages('search/img/map-over/jmap-yamaguchi.gif','search/img/map-over/jmap-hiroshima.gif','search/img/map-over/jmap-okayama.gif','search/img/map-over/jmap-shimane.gif','search/img/map-over/jmap-tottori.gif','search/img/map-over/jmap-wakayama.gif','search/img/map-over/jmap-nara.gif','search/img/map-over/jmap-shiga.gif','search/img/map-over/jmap-hyogo.gif','search/img/map-over/jmap-kyoto.gif','search/img/map-over/jmap-osaka.gif','search/img/map-over/jmap-fukui.gif','search/img/map-over/jmap-ishikawa.gif','search/img/map-over/jmap-toyama.gif','search/img/map-over/jmap-kagoshima.gif','search/img/map-over/jmap-kumamoto.gif','search/img/map-over/jmap-miyazaki.gif','search/img/map-over/jmap-nagasaki.gif','search/img/map-over/jmap-saga.gif','search/img/map-over/jmap-oita.gif','search/img/map-over/jmap-fukuoka.gif','search/img/map-over/jmap-ehime.gif','search/img/map-over/jmap-tokushima.gif','search/img/map-over/jmap-kagawa.gif','search/img/map-over/jmap-mie.gif','search/img/map-over/jmap-aichi.gif','search/img/map-over/jmap-shizuoka.gif','search/img/map-over/jmap-niigata.gif','search/img/map-over/jmap-nagano.gif','search/img/map-over/jmap-gunma.gif','search/img/map-over/jmap-tochigi.gif','search/img/map-over/jmap-ibaraki.gif','search/img/map-over/jmap-chiba.gif','search/img/map-over/jmap-saitama.gif','search/img/map-over/jmap-kanagawa.gif','search/img/map-over/jmap-tokyo.gif','search/img/map-over/jmap-fukushima.gif','search/img/map-over/jmap-yamagata.gif','search/img/map-over/jmap-akita.gif','search/img/map-over/jmap-iwate.gif','search/img/map-over/jmap-aomori.gif','search/img/map-over/jmap-hokkaido.gif')">
+<!-- 外枠コンテナ -->
+<div id="container">
+	<div class="inner">
+<!-- #BeginLibraryItem "/Library/re2014hdr.lbi" -->
+	<!-- ヘッダーエリア -->
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/common/hdr.php");?>
+	<!-- //header -->
+<!-- #EndLibraryItem -->
+<!-- コンテンツコンテナ -->
+	<div id="contents">
+		<!-- メインコンテナ -->
+		<div id="main">
+			<div class="inner">
+
+				<!-- トピックパス -->
+				<div class="topic-path"><a href="../index.htm">トップ</a> &gt; <strong>漢方相談薬局・薬店店舗紹介</strong>
+            <p class="read">　きぐすり.com は、漢方薬、女性の健康、サプリメント、ハーブの情報を専門家がやさしく解説しています。</p>
+          </div>
+          <!-- /トピックパス ここまで -->
+
+
+
+<h2><img src="search/img/title_search.gif" alt="漢方薬局・薬店店舗紹介"></h2>
+
+<div id="boxkensakuCaption">
+<h3><img src="search/img/cap_search.gif" alt="漢方薬局検索：日本全国の漢方相談薬局・薬店の情報をご覧いただけます。" width="480" height="20" vspace="10"></h3>
+<p class="p_caption">地図より、お探しの都道府県をご選択下さい。<br>
+  アイコン表示で各漢方相談薬局・薬店の詳細がわかります。</p>
+</div><!-- /boxkensakuCaption -->
+
+<div id="boxMap">
+<p><a name="map_j"></a><img src="search/img/map-over/jmap.gif" alt="漢方薬局検索" width="543" height="470" usemap="#Map" name="map">
+<map name="Map">
+<area shape="rect" coords="39,196,117,215" href="search/yamaguchi.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-yamaguchi.gif',1)" alt="山口の漢方薬局 薬店">
+<area shape="rect" coords="39,176,117,195" href="search/hiroshima.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-hiroshima.gif',1)" alt="広島の漢方薬局 薬店">
+<area shape="rect" coords="39,157,117,176" href="search/okayama.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-okayama.gif',1)" alt="岡山の漢方薬局 薬店">
+<area shape="rect" coords="39,136,117,155" href="search/shimane.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-shimane.gif',1)" alt="島根の漢方薬局 薬店">
+<area shape="rect" coords="39,116,117,135" href="search/tottori.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-tottori.gif',1)" alt="鳥取の漢方薬局 薬店">
+<area shape="rect" coords="129,215,207,234" href="search/wakayama.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-wakayama.gif',1)" alt="和歌山の漢方薬局 薬店">
+<area shape="rect" coords="129,195,207,214" href="search/nara.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-nara.gif',1)" alt="奈良の漢方薬局 薬店">
+<area shape="rect" coords="129,175,207,194" href="search/shiga.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-shiga.gif',1)" alt="滋賀の漢方薬局 薬店">
+<area shape="rect" coords="129,155,207,174" href="search/hyogo.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-hyogo.gif',1)" alt="兵庫の漢方薬局 薬店">
+<area shape="rect" coords="129,135,207,154" href="search/kyoto.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-kyoto.gif',1)" alt="京都の漢方薬局 薬店">
+<area shape="rect" coords="129,115,207,134"  href="search/osaka.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-osaka.gif',1)" alt="大阪の漢方薬局 薬店">
+<area shape="rect" coords="220,155,298,174" href="search/fukui.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-fukui.gif',1)"alt="福井の漢方薬局 薬店">
+<area shape="rect" coords="220,135,298,154" href="search/ishikawa.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-ishikawa.gif',1)" alt="石川の漢方薬局 薬店">
+<area shape="rect" coords="220,115,298,134" href="search/toyama.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-toyama.gif',1)" alt="富山の漢方薬局 薬店">
+<!--<area shape="rect" coords="4,435,82,454" href="search/okinawa.html" alt="沖縄の漢方薬局 薬店">-->
+<area shape="rect" coords="4,415,82,434" href="search/kagoshima.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-kagoshima.gif',1)" alt="鹿児島の漢方薬局 薬店">
+<area shape="rect" coords="4,395,82,414" href="search/kumamoto.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-kumamoto.gif',1)" alt="熊本の漢方薬局 薬店">
+<area shape="rect" coords="4,375,82,394" href="search/miyazaki.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-miyazaki.gif',1)"  alt="宮崎の漢方薬局 薬店">
+<area shape="rect" coords="4,355,82,374" href="search/nagasaki.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-nagasaki.gif',1)" alt="長崎の漢方薬局 薬店">
+<area shape="rect" coords="4,335,82,354" href="search/saga.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-saga.gif',1)"  alt="佐賀の漢方薬局 薬店">
+<area shape="rect" coords="4,315,82,334" href="search/oita.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-oita.gif',1)" alt="大分の漢方薬局 薬店"> 
+<area shape="rect" coords="4,295,82,314" href="search/fukuoka.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-fukuoka.gif',1)" alt="福岡の漢方薬局 薬店">
+<!-- <area shape="rect" coords="171,435,249,454" href="search/kochi.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-kouchi.gif',1)" alt="高知の漢方薬局 薬店">-->
+<area shape="rect" coords="171,415,249,434" href="search/ehime.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-ehime.gif',1)" alt="愛媛の漢方薬局 薬店">
+<area shape="rect" coords="171,395,249,414" href="search/tokushima.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-tokushima.gif',1)" alt="徳島の漢方薬局 薬店">
+<area shape="rect" coords="171,375,249,394" href="search/kagawa.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-kagawa.gif',1)" alt="香川の漢方薬局 薬店">
+<area shape="rect" coords="261,435,339,454" href="search/mie.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-mie.gif',1)" alt="三重の漢方薬局 薬店">
+<area shape="rect" coords="261,415,339,434" href="search/aichi.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-aichi.gif',1)" alt="愛知の漢方薬局 薬店">
+<!-- <area shape="rect" coords="261,395,339,414" href="search/gifu.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-gifu.gif',1)" alt="岐阜の漢方薬局 薬店">-->
+<area shape="rect" coords="261,375,339,394" href="search/shizuoka.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-shizuoka.gif',1)"  alt="静岡の漢方薬局 薬店">
+<area shape="rect" coords="350,415,428,434" href="search/niigata.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-niigata.gif',1)" alt="新潟の漢方薬局 薬店">
+<area shape="rect" coords="350,395,428,414" href="search/nagano.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-nagano.gif',1)" alt="長野の漢方薬局 薬店">
+<!-- <area shape="rect" coords="350,375,428,394" href="search/yamanashi.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-yamanashi.gif',1)" alt="山梨の漢方薬局 薬店">-->
+<area shape="rect" coords="435,325,513,344" href="search/gunma.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-gunma.gif',1)" alt="群馬の漢方薬局 薬店">
+<area shape="rect" coords="435,305,513,324" href="search/tochigi.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-tochigi.gif',1)" alt="栃木の漢方薬局 薬店">
+<area shape="rect" coords="435,285,513,304" href="search/ibaraki.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-ibaraki.gif',1)" alt="茨城の漢方薬局 薬店">
+<area shape="rect" coords="435,265,513,284" href="search/chiba.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-chiba.gif',1)" alt="千葉の漢方薬局 薬店">
+<area shape="rect" coords="435,245,513,264" href="search/saitama.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-saitama.gif',1)" alt="埼玉の漢方薬局 薬店">
+<area shape="rect" coords="435,225,513,244" href="search/kanagawa.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-kanagawa.gif',1)" alt="神奈川の漢方薬局 薬店">
+<area shape="rect" coords="435,205,513,224" href="search/tokyo.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-tokyo.gif',1)" alt="東京の漢方薬局 薬店">
+<area shape="rect" coords="435,155,513,174" href="search/fukushima.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-fukushima.gif',1)" alt="福島の漢方薬局 薬店">
+<area shape="rect" coords="435,135,513,154" href="search/yamagata.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-yamagata.gif',1)" alt="山形の漢方薬局 薬店">
+<!-- <area shape="rect" coords="435,113,513,133" href="search/miyagi.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-miyagi.gif',1)" alt="宮城の漢方薬局 薬店">-->
+<area shape="rect" coords="435,93,513,112" href="search/akita.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-akita.gif',1)" alt="秋田の漢方薬局 薬店">
+<area shape="rect" coords="435,73,513,92" href="search/iwate.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-iwate.gif',1)" alt="岩手の漢方薬局 薬店">
+<area shape="rect" coords="435,55,513,72" href="search/aomori.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-aomori.gif',1)"  alt="青森の漢方薬局 薬店">
+<area shape="poly" coords="333,13,422,13,423,89,357,90,357,96,332,96" href="search/hokkaido.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-hokkaido.gif',1)" alt="北海道の漢方薬局 薬店">
+<area shape="rect" coords="435,34,513,53" href="search/hokkaido.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-hokkaido.gif',1)" alt="北海道の漢方薬局 薬店">
+<area shape="poly" coords="330,112,330,136,379,136,380,131,370,120,370,109,357,109,356,120,348,120,347,112" href="search/aomori.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-aomori.gif',1)"  alt="青森の漢方薬局 薬店">
+<area shape="rect" coords="330,136,356,169" href="search/akita.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-akita.gif',1)" alt="秋田の漢方薬局 薬店">
+<area shape="rect" coords="355,136,381,169" href="search/iwate.html"  onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-iwate.gif',1)" alt="岩手の漢方薬局 薬店">
+<area shape="rect" coords="330,167,355,197" href="search/yamagata.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-yamagata.gif',1)" alt="山形の漢方薬局 薬店">
+<!-- <area shape="rect" coords="356,168,381,198" href="search/miyagi.html"  onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-miyagi.gif',1)" alt="宮城の漢方薬局 薬店">-->
+<area shape="rect" coords="331,197,381,224" href="search/fukushima.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-fukushima.gif',1)" alt="福島の漢方薬局 薬店">
+<area shape="rect" coords="360,224,381,256" href="search/ibaraki.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-ibaraki.gif',1)" alt="茨城の漢方薬局 薬店">
+<area shape="rect" coords="342,223,360,254" href="search/tochigi.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-tochigi.gif',1)" alt="栃木の漢方薬局 薬店">
+<area shape="rect" coords="322,224,342,254" href="search/gunma.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-gunma.gif',1)" alt="群馬の漢方薬局 薬店">
+<!-- <area shape="rect" coords="316,263,335,283" href="search/yamanashi.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-yamanashi.gif',1)"  alt="山梨の漢方薬局 薬店">-->
+<area shape="poly" coords="360,256,360,274,365,274,365,291,379,291,380,256" href="search/chiba.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-chiba.gif',1)" alt="千葉の漢方薬局 薬店">
+<area shape="poly" coords="323,253,323,264,336,264,336,266,359,266,359,253" href="search/saitama.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-saitama.gif',1)" alt="埼玉の漢方薬局 薬店">
+<area shape="rect" coords="336,267,360,278" href="search/tokyo.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-tokyo.gif',1)" alt="東京の漢方薬局 薬店">
+<area shape="poly" coords="335,277,334,282,338,282,339,303,350,292,350,276" href="search/kanagawa.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-kanagawa.gif',1)" alt="神奈川の漢方薬局 薬店">
+<area shape="poly" coords="300,284,300,303,315,303,331,296,331,302,339,302,339,283" href="search/shizuoka.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-shizuoka.gif',1)"  alt="静岡の漢方薬局 薬店">
+<area shape="poly" coords="330,188,306,212,306,227,323,227,323,224,330,224" href="search/niigata.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-niigata.gif',1)" alt="新潟の漢方薬局 薬店">
+<area shape="poly" coords="306,227,306,241,299,241,300,283,316,283,317,264,322,264,323,227" href="search/nagano.html"  onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-nagano.gif',1)" alt="長野の漢方薬局 薬店">
+<!-- <area shape="poly" coords="283,242,283,264,278,264,278,283,298,284,299,242" href="search/gifu.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-gifu.gif',1)" alt="岐阜の漢方薬局 薬店">-->
+<area shape="poly" coords="277,283,277,298,281,298,281,303,298,303,299,285" href="search/aichi.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-aichi.gif',1)" alt="愛知の漢方薬局 薬店">
+<area shape="rect" coords="262,284,276,330" href="search/mie.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-mie.gif',1)" alt="三重の漢方薬局 薬店">
+<area shape="poly" coords="305,212,294,225,283,225,283,241,306,241" href="search/toyama.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-toyama.gif',1)" alt="富山の漢方薬局 薬店">
+<area shape="poly" coords="281,214,281,246,264,246,269,235,269,214" href="search/ishikawa.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-ishikawa.gif',1)" alt="石川の漢方薬局 薬店">
+<area shape="poly" coords="281,246,281,263,246,263,246,256,256,256,263,246" href="search/fukui.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-fukui.gif',1)" alt="福井の漢方薬局 薬店">
+<area shape="rect" coords="251,263,278,285" href="search/shiga.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-shiga.gif',1)"  alt="滋賀の漢方薬局 薬店">
+<area shape="rect" coords="246,284,262,312" href="search/nara.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-nara.gif',1)" alt="奈良の漢方薬局 薬店">
+<area shape="rect" coords="235,284,247,305" href="search/osaka.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-osaka.gif',1)" alt="大阪の漢方薬局 薬店">
+<area shape="poly" coords="237,305,248,305,248,312,263,312,263,331,237,331" href="search/wakayama.html"  onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-wakayama.gif',1)" alt="和歌山の漢方薬局 薬店">
+<area shape="poly" coords="234,252,234,283,251,283,251,264,245,264,245,252" href="search/kyoto.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-kyoto.gif',1)" alt="京都の漢方薬局 薬店">
+<area shape="rect" coords="216,251,235,296" href="search/hyogo.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-hyogo.gif',1)" alt="兵庫の漢方薬局 薬店">
+<area shape="rect" coords="194,251,217,273" href="search/tottori.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-tottori.gif',1)" alt="鳥取の漢方薬局 薬店">
+<area shape="rect" coords="195,274,216,297" href="search/okayama.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-okayama.gif',1)" alt="岡山の漢方薬局 薬店">
+<area shape="rect" coords="174,251,194,273" href="search/shimane.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-shimane.gif',1)" alt="島根の漢方薬局 薬店">
+<area shape="rect" coords="174,273,194,295" href="search/hiroshima.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-hiroshima.gif',1)" alt="広島の漢方薬局 薬店">
+<area shape="rect" coords="164,304,194,325" href="search/ehime.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-ehime.gif',1)" alt="愛媛の漢方薬局 薬店">
+<area shape="poly" coords="173,251,158,268,158,295,173,295" href="search/yamaguchi.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-yamaguchi.gif',1)" alt="山口の漢方薬局 薬店">
+<area shape="rect" coords="194,304,222,314" href="search/kagawa.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-kagawa.gif',1)" alt="香川の漢方薬局 薬店">
+<area shape="rect" coords="194,314,222,325" href="search/tokushima.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-tokushima.gif',1)" alt="徳島の漢方薬局 薬店">
+<!-- <area shape="poly" coords="164,325,164,340,176,340,183,335,206,335,211,340,222,340,222,325" href="search/kochi.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-kouchi.gif',1)" alt="高知の漢方薬局 薬店">-->
+<area shape="poly" coords="132,284,132,317,146,317,146,298" href="search/oita.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-oita.gif',1)" alt="大分の漢方薬局 薬店">
+<area shape="rect" coords="118,282,132,311" href="search/fukuoka.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-fukuoka.gif',1)" alt="福岡の漢方薬局 薬店">
+<area shape="rect" coords="107,282,118,306" href="search/saga.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-saga.gif',1)" alt="佐賀の漢方薬局 薬店">
+<area shape="rect" coords="99,282,107,317" href="search/nagasaki.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-nagasaki.gif',1)" alt="長崎の漢方薬局 薬店">
+<area shape="rect" coords="133,318,147,348" href="search/miyazaki.html"  onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-miyazaki.gif',1)" alt="宮崎の漢方薬局 薬店">
+<area shape="poly" coords="116,310,116,334,111,334,111,347,132,347,132,310" href="search/kumamoto.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-kumamoto.gif',1)" alt="熊本の漢方薬局 薬店">
+<area shape="poly" coords="112,348,112,363,120,363,120,355,131,355,131,370,137,370,147,361,147,348" href="search/kagoshima.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('map','','search/img/map-over/jmap-kagoshima.gif',1)" alt="鹿児島の漢方薬局 薬店">
+<!--<area shape="poly" coords="102,385,91,407,104,407,113,385" href="search/okinawa.html" alt="沖縄の漢方薬局 薬店">-->
+<area shape="rect" coords="22,5,279,86" href="mail-soudan.html" alt="メールで漢方相談はこちら">
+</map>
+</p>
+</div>
+<!--boxMap-->
+
+<br>
+<table width="100%" id="shopList_out" summary="漢方薬局一覧">
+  <tr>
+<td colspan="2" class="bg_green01"></td>
+</tr>
+<tr>
+<td width="50%">
+<table width="100%" cellpadding="0" id="shopList_00" summary="漢方薬局一覧">
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/hokkaido.html">北海道</a></th>
+<td>
+<a href="shop/kanyakudo/" target="_blank">上村漢薬堂薬局</a><br>
+<a href="shop/shinkawa/" target="_blank">新川薬局</a><br>
+</td>
+</tr>
+
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/aomori.html">青森</a></th>
+<td><a href="shop/futaba-hachi/" target="_blank">フタバ薬局</a><br>
+</td>
+</tr>
+
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+
+<tr>
+<th><a href="search/iwate.html">岩手</a></th>
+<td><a href="shop/asahi-kanpou/" target="_blank">漢方のあさひ薬局</a><br>
+</td>
+</tr>
+
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+
+<tr>
+<th><a href="search/akita.html">秋田</a></th>
+<td><a href="shop/kurose/" target="_blank">漢方クロセ薬局</a><br>
+</td>
+</tr>
+
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+
+<!-- <tr>
+<th><a href="search/miyagi.html">宮城</a></th>
+<td>
+</td>
+</tr>
+
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+-->
+<tr>
+<th><a href="search/yamagata.html">山形</a></th>
+<td><a href="shop/genkidou-yamagata/" target="_blank">元気堂薬店</a><br>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+
+<tr>
+<th><a href="search/fukushima.html">福島</a></th>
+<td><a href="shop/minatoya/" target="_blank">港屋漢方堂薬局</a><br>
+<a href="shop/daiei/" target="_blank">大栄漢方薬局</a><br>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<!-- <tr>
+<th><a href="search/yamanashi.html">山梨</a></th>
+<td>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+-->
+<tr>
+<th><a href="search/nagano.html">長野</a></th>
+<td><a href="shop/eijuya/" target="_blank">永寿屋 マーシィー稲田薬局「健幸館」</a><br>
+<!-- <a href="shop/yokoyama/" target="_blank">横山薬局</a><br>-->
+<a href="shop/futaba/" target="_blank">二葉薬局</a><br>
+<a href="shop/anzu-iseya/" target="_blank">JAあんずいせや薬局</a><br>
+<a href="shop/shakuyakudo/" target="_blank">芍薬堂</a><br>
+<a href="shop/sanpo/" target="_blank">三宝堂薬局</a><br>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/niigata.html">新潟</a></th>
+<td><a href="shop/harbin/" target="_blank">哈爾濱漢方薬局</a><br>
+<a href="shop/seisindou/" target="_blank">世伸堂薬局</a><br>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/ibaraki.html">茨城</a></th>
+<td><a href="shop/gotou/" target="_blank">五藤薬局</a><br>
+<a href="shop/tabata/" target="_blank">たばた関本薬局</a><br>
+<a href="shop/okada/" target="_blank">おかだ薬局</a><br>
+<a href="shop/yakuhodo/" target="_blank">薬方堂</a><br>
+<!-- <a href="shop/seikodo/" target="_blank">清晃堂</a><br>-->
+<a href="shop/kojindo-kanpou/" target="_blank">漢方専門薬局 厚仁堂</a><br>
+<a href="shop/haifukiya/" target="_blank">灰吹屋 山口薬局</a><br>
+<a href="shop/natumeya/" target="_blank">薬の棗屋（くすりのなつめや）</a><br>
+<a href="shop/suganuma/" target="_blank">スガヌマ薬局</a><br>
+<a href="shop/terunuma/" target="_blank">照沼薬局</a><br>
+<a href="shop/kikkoudo/" target="_blank">亀甲堂薬局</a><br>
+<a href="shop/power/" target="_blank">パワー調剤薬局 真壁店</a><br>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/tochigi.html">栃木</a></th>
+<td><a href="shop/ohyama/" target="_blank">大山漢方堂薬局</a><br>
+<!-- <a href="shop/hoshodo/" target="_blank">邦證堂薬局</a><br>-->
+<a href="shop/tounin/" target="_blank">漢方薬局 桃仁</a><br>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/gunma.html">群馬</a></th>
+<td><a href="shop/okunukikan/" target="_blank">奥貫(おくぬき)漢薬局</a><br>
+<a href="shop/takasaki-kanpou/" target="_blank">(有)高崎漢方薬局</a><br>
+<a href="shop/yakushido/" target="_blank">漢方専門 薬師堂</a><br>
+<a href="shop/wakabayashi/" target="_blank">くすりのわかばやし</a><br>
+<a href="shop/unique/" target="_blank">くすりのユニーク</a><br>
+<a href="shop/kikuchi/" target="_blank">菊池薬局</a><br>
+<a href="shop/kanai/" target="_blank">亀甲堂カナヰ薬局</a><br>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/chiba.html">千葉</a></th>
+<td colspan="2">
+<a href="shop/tomeido/" target="_blank">(有)東明堂石原鍼灸院･漢方薬局</a><br>
+<!-- <a href="shop/shimoda-kouseidou/" target="_blank">漢方専門薬局下田康生堂</a><br>-->
+<a href="shop/koyodo/" target="_blank">漢方の厚養堂薬局</a><br>
+<a href="shop/kireitogenki/" target="_blank">きれいとげんき</a><br>
+<a href="shop/wakou/" target="_blank">和光漢方薬局</a><br>
+<a href="shop/kanpo-genkido/" target="_blank">元気堂薬局</a><br>
+<a href="shop/rakuda/" target="_blank">クスリのらくだ</a><br>
+<a href="search/chiba.html#seishin-funabashi">漢方薬 誠心堂 船橋店</a><br>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/saitama.html">埼玉</a></th>
+<td><a href="shop/kasukabe/" target="_blank">漢方センター(有)春日部第一薬局</a><br>
+<!-- <a href="shop/hakusai/" target="_blank">漢方専門薬局博済</a><br>-->
+<a href="shop/shimizu/" target="_blank">漢方のしみず快生堂</a><br>
+<a href="shop/sakura-yakusoten/" target="_blank">漢方薬局さくら薬草店</a><br>
+<a href="shop/jikeido/" target="_blank">漢方薬局慈恵堂</a><br>
+<a href="shop/uematu/" target="_blank">漢方薬膳サロン ウエマツ薬局</a><br>
+<!-- <a href="search/saitama.html#koshigaya">中島博心堂薬局</a><br>-->
+<a href="shop/honcho/" target="_blank">本町薬局</a><br>
+<a href="shop/sugiyama/" target="_blank">東医堂　杉山薬局</a><br>
+<a href="shop/tourido/" target="_blank">桃李堂薬局</a><br>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/tokyo.html">東京</a></th>
+<td>
+<a href="shop/takashimado/" target="_blank">高島堂薬局</a><br>
+<a href="shop/marue/" target="_blank">漢方 マルエ薬局</a><br>
+<a href="shop/jinseidou/" target="_blank">馬場のくすりや 仁成堂漢方薬局</a><br>
+<a href="shop/tuzuno/" target="_blank">漢方ツヅノ薬局</a><br>
+<a href="shop/jinseido/" target="_blank">あさがやの漢方 市川仁生堂薬局</a><br>
+<a href="shop/yubido/" target="_blank">優美堂薬局</a><br>
+<a href="shop/hagiken/" target="_blank">漢方薬・自然薬のハギ健康堂</a><br>
+<a href="shop/seishin-do/" target="_blank">漢方薬 誠心堂 自由が丘店</a><br>
+<a href="shop/kumekawa/" target="_blank">博方堂クメカワ薬局</a><br>
+<a href="shop/jofuku/" target="_blank">徐福漢方薬局</a><br>
+<a href="shop/chofu.tozai-yakkyoku/" target="_blank">調布東西薬局</a><br>
+<a href="shop/kodamado/" target="_blank">こだま堂漢方薬局</a><br>
+<a href="shop/soukai/" target="_blank">壮快生活 神田本店</a><br>
+<a href="shop/toyodo-inagaki/" target="_blank">和漢薬舗 東洋堂 稲垣薬局</a><br>
+<a href="shop/yu-ko/" target="_blank">神楽坂 漢方 有恒薬局</a><br>
+<a href="shop/nakajima-ph/" target="_blank">中島薬局</a><br>
+<a href="shop/ginza-beautylife/" target="_blank">銀座ビューティーライフ</a><br>
+<a href="shop/uehara-pharmacy/" target="_blank">上原薬局</a><br>
+<a href="shop/keiyudo/" target="_blank">漢方薬 恵癒堂</a><br>
+<a href="shop/fujidou/" target="_blank">富士堂漢方薬局</a><br>
+<a href="shop/matsuedo/" target="_blank">松江堂薬局</a><br>
+<a href="shop/hirai/" target="_blank">平井薬局</a><br>
+<!-- <a href="shop/genkikanpou/" target="_blank">玄氣漢方薬局</a><br>-->
+<a href="shop/tenryu/" target="_blank">漢方薬の天龍堂</a><br>
+<a href="shop/ueda/" target="_blank">漢方上田薬店</a><br>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/kanagawa.html">神奈川</a></th>
+<td><a href="shop/sukoyakado/" target="_blank">すこやか堂薬局</a><br>
+<a href="shop/konishi/" target="_blank">小西漢方薬局</a><br>
+<!-- <a href="shop/kampow/" target="_blank">漢方専門サイトウ薬局</a><br>-->
+<a href="shop/oofuna/" target="_blank">大船漢方堂薬局</a><br>
+<a href="shop/taiseidou/" target="_blank">川崎泰生堂薬局</a><br>
+<a href="shop/iwamoto/" target="_blank">漢方の岩本薬局</a><br>
+<!-- <a href="shop/isezakicho/" target="_blank">伊勢佐木町漢方堂</a><br>-->
+<a href="shop/takagi/" target="_blank">髙木漢方</a><br>
+<a href="shop/daiboshido/" target="_blank">大星堂薬局</a><br>
+<a href="shop/tokiwakanpou/" target="_blank">ときわ漢方薬局</a><br>
+<!-- <a href="shop/ryu-gendo/" target="_blank">漢方専門薬局 龍元堂</a><br>
+<a href="shop/taijudo/" target="_blank">太寿堂 富岡薬局</a><br>-->
+<a href="shop/hanabusa/" target="_blank">花房薬局</a><br>
+<a href="shop/kanporo/" target="_blank">KANPORO 松山漢方相談薬局</a><br>
+<a href="shop/yamasita/" target="_blank">ヤマシタ薬局</a><br>
+<a href="shop/yakushindou/" target="_blank">薬心堂漢方薬局</a><br>
+<a href="shop/sakuma/" target="_blank">佐久間薬局</a><br>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/toyama.html">富山</a></th>
+<td><a href="shop/yamakan/" target="_blank">山本漢薬店</a>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/ishikawa.html">石川</a></th>
+<td><a href="shop/toyodo/" target="_blank">(有)東洋堂薬局</a><br>
+<a href="shop/nakamura-kanpoo/" target="_blank">中村漢方薬局</a><br>
+<!-- <a href="shop/izumi-kanpou/" target="_blank">いずみ薬局</a>-->
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/fukui.html">福井</a></th>
+<td><a href="../shop/koshijima/" target="_blank">越島漢方薬局</a><br>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/shizuoka.html">静岡</a></th>
+<td>
+<a href="shop/mutsugoro/" target="_blank">むつごろう薬局 静岡店</a><br>
+<a href="shop/ikeda/" target="_blank">イケダ薬局</a><br>
+<a href="shop/ishindo/" target="_blank">医心堂薬局</a><br>
+<!-- <a href="shop/shiseido/" target="_blank">漢方相談室 資生堂薬局本店</a><br>-->
+<a href="shop/nikonikodo/" target="_blank">ニコニコ堂薬局</a><br>
+<a href="shop/tani/" target="_blank">谷薬舗（谷薬局）</a><br>
+<a href="shop/hikobae/" target="_blank">蘖薬局</a><br>
+</td>
+</tr>
+<!-- <tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/gifu.html">岐阜</a></th>
+<td><a href="shop/●●●●/" target="_blank">●●●●</a><br>
+</td>
+</tr>-->
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/aichi.html">愛知</a></th>
+<td><a href="shop/yakusoen/" target="_blank">漢方専門 薬草園薬局</a><br>
+<a href="shop/aoki/" target="_blank">青木薬局</a><br>
+<a href="shop/tomi/" target="_blank">漢方のとみ薬局</a><br>
+<a href="shop/chu-o/" target="_blank">中央漢方薬局</a><br>
+<a href="shop/yamasou/" target="_blank">山総薬局</a><br>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+</table>
+</td>
+<td width="50%">
+<table width="100%" cellpadding="0" id="shopList_00" summary="漢方薬局一覧">
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/mie.html">三重</a></th>
+<td>
+<a href="shop/kenkou/" target="_blank">ケンコウ薬局</a><br>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/kyoto.html">京都</a></th>
+<td><a href="shop/kawarai/" target="_blank">(有)カワライ薬局</a><br>
+<a href="shop/kanpou-ichibe/" target="_blank">漢方の市兵衛薬局</a><br>
+<a href="shop/kanpou-kenshindo/" target="_blank">健伸堂薬局 宇治本店</a><br>
+<a href="shop/kenshindo-kyoto/" target="_blank">漢方の健伸堂薬局 京都駅前店</a><br>
+<a href="shop/oujitou/" target="_blank">黄治湯薬品</a><br>
+<a href="shop/seifu-do/" target="_blank">清風堂薬局</a><br>
+<a href="shop/imamura/" target="_blank">今村薬局</a><br>
+<a href="shop/chisaka/" target="_blank">わやくや千坂漢方薬局</a><br>
+<a href="shop/mukomati/" target="_blank">向日町ドラッグ</a><br>
+<!-- <a href="shop/sano-ph/" target="_blank">佐野薬局</a><br>-->
+<a href="shop/heiandou/" target="_blank">平安堂薬局</a><br>
+<a href="shop/kanpo-kakinoki/" target="_blank">漢方 柿ノ木薬局</a><br>
+<a href="shop/mitsuboshi/" target="_blank">三ツ星薬局</a><br>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/nara.html">奈良</a></th>
+<td>
+<a href="shop/fukuda-kanpou/" target="_blank"><span style="font-size:90%;">福田漢方すこやか相談所 薬局・鍼灸治療院</span></a><br>
+<a href="shop/kimura/" target="_blank">木村薬局</a><br>
+<a href="shop/sourakudou/" target="_blank">森田草楽堂薬局</a><br>
+<a href="shop/sanwa/" target="_blank">三和漢方堂</a><br>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/hyogo.html">兵庫</a></th>
+<td>
+<a href="shop/meimondo/" target="_blank">命門堂漢方薬局 神戸店</a><br>
+<a href="shop/darumado/" target="_blank">名良だるま堂薬局</a><br>
+<a href="shop/sanda/" target="_blank">薬局 サンダ</a><br>
+<a href="shop/kenkouya/" target="_blank">漢方薬局けんこう屋</a><br>
+<a href="shop/ninjindo/" target="_blank">にんじん堂薬局</a><br>
+<a href="shop/kobe-pharmacy/" target="_blank">神戸ファーマシー</a><br>
+<a href="shop/sanyodo/" target="_blank">山陽堂薬局</a><br>
+<a href="shop/hougendou/" target="_blank">寶元堂薬局</a><br>
+<a href="shop/yakukanpo/" target="_blank">漢方相談薬局 薬彩たはら</a><br>
+<a href="shop/kabochaya/" target="_blank">クスリのかぼちゃ屋</a><br>
+<a href="shop/koyo-pharmacy/" target="_blank">漢方本堂　甲陽</a><br>
+<a href="shop/shobido/" target="_blank">咲美堂漢方薬房</a><br>
+<a href="shop/are/" target="_blank">漢方の相談薬局アール堂</a>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/shiga.html">滋賀</a></th>
+<td>
+<a href="shop/wakaba/" target="_blank">ワカバ堂薬局</a><br>
+<a href="shop/fukuchi/" target="_blank">漢方のフクチ薬局</a><br>
+<a href="shop/katsuma/" target="_blank">漢方薬 勝馬薬局 大津店</a>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/osaka.html">大阪</a></th>
+<td><a href="shop/hirashi/" target="_blank">山之内薬局</a><br>
+<a href="shop/mikawaph/" target="_blank">(有)ミカワ薬局</a><br>
+<a href="shop/mikuni/" target="_blank">みくに薬局</a><br>
+<!--<a href="shop/saiseidou/" target="_blank">済生堂薬局</a><br>-->
+<a href="shop/aoidou/" target="_blank">漢方の葵堂薬局</a><br>
+<a href="shop/yabukiwakann/" target="_blank">(株)ヤブキ和漢薬局 堺店</a><br>
+<a href="shop/yabukiosaka/" target="_blank">(株)ヤブキ和漢薬局 大阪店</a><br>
+<a href="shop/miyukinokampo/" target="_blank">御幸の漢方</a><br>
+<a href="shop/star/" target="_blank">スター薬局</a><br>
+<a href="shop/abeno/" target="_blank">阿倍野近鉄薬店</a><br>
+<a href="shop/sakura-t/" target="_blank">さくら漢方薬局 豊中店</a><br>
+<a href="shop/meimondo-osaka/" target="_blank">命門堂漢方薬局 大阪店</a><br>
+<a href="shop/senburiya/" target="_blank">せんぶりや二宮薬店</a><br>
+<a href="shop/keyakido/" target="_blank">漢方のけやき堂薬局</a><br>
+<a href="shop/onoe-seishindo/" target="_blank">オノエ誠心堂漢方薬局</a><br>
+<a href="shop/kami-kanpou/" target="_blank">加美漢方薬局</a><br>
+<a href="shop/sinyodo/" target="_blank">新洋堂漢方薬局</a><br>
+<a href="shop/kenkoudo/" target="_blank">漢方の健康堂</a><br>
+<a href="shop/maruichi/" target="_blank">マルイチ薬品 高槻店</a><br>
+<a href="shop/kamakura/" target="_blank">和漢鎌倉薬局</a><br>
+<a href="shop/pharmacy-soma/" target="_blank">ファーマシーそま</a><br>
+<!--<a href="shop/arita/" target="_blank">有田薬局</a><br>-->
+<a href="shop/hakotsukuri/" target="_blank">翔心堂 箱作薬局駅前店</a><br>
+<a href="shop/meisendou/" target="_blank">命泉堂薬局</a><br>
+<a href="shop/abiko-meisendou/" target="_blank">命泉堂薬局 あびこ店</a><br>
+<a href="shop/nakatani-anshindou/" target="_blank">中谷安心堂漢方薬局</a><br>
+<a href="shop/tochimoto-ph/" target="_blank">栃本天海堂薬局 福島店</a><br>
+<a href="shop/halenova/" target="_blank">漢方薬局ハレノヴァ</a><br>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/wakayama.html">和歌山</a></th>
+<td><a href="shop/kimiidera/" target="_blank">紀三井寺漢方研究所</a><br>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/tottori.html">鳥取</a></th>
+<td><a href="shop/zenkaido/" target="_blank">遠藤全快堂薬局</a><br>
+<a href="shop/inui/" target="_blank">イヌイ薬局 宮長店</a><br>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/shimane.html">島根</a></th>
+<td><a href="shop/senjudou/" target="_blank">千寿堂薬局</a><br>
+<a href="shop/nomi/" target="_blank">能美恵壽堂薬局</a><br>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/okayama.html">岡山</a></th>
+<td><a href="shop/gekkodo/" target="_blank">月光堂薬局</a><br>
+<a href="shop/s-yamato/" target="_blank">栄町ヤマト薬局</a><br>
+<!-- <a href="shop/toshimori/" target="_blank">福神トシモリ薬局</a><br>-->
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/hiroshima.html">広島</a></th>
+<td>
+<a href="shop/teramachi-kanpou/" target="_blank">寺町漢方薬局</a><br>
+<a href="shop/tetsumura/" target="_blank">(有)テツムラ漢方薬局</a><br>
+<a href="shop/taiyo-kanpou/" target="_blank">太陽漢方薬局</a><br>
+<a href="shop/honoka/" target="_blank">ほのか薬局</a><br>
+<a href="shop/maeda/" target="_blank">マエダ方術薬局</a><br>
+<a href="shop/seiko-do/" target="_blank">薬局　誠宏堂</a><br>
+<a href="shop/ph-takasu/" target="_blank">たかす薬局</a><br>
+<a href="shop/smile/" target="_blank">スマイル薬局</a><br>
+<a href="shop/furubayashi/" target="_blank">古林漢方薬局</a>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/yamaguchi.html">山口</a></th>
+<td><a href="shop/midori/" target="_blank">みどり薬局</a><br>
+<a href="shop/kanpou_chouzendou/" target="_blank">長全堂薬局</a><br>
+<a href="shop/hoseidou/" target="_blank">補生堂漢方薬局 岐山通り店</a><br>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/kagawa.html">香川</a></th>
+<td><a href="shop/ozaki/" target="_blank">尾崎漢方薬局</a><br>
+<a href="shop/sagiokakanpou/" target="_blank">鷺岡漢方堂薬局</a><br>
+<a href="shop/teraichi/" target="_blank">寺一薬局</a><br>
+<a href="shop/phgenki" target="_blank">漢方薬局・元気通り</a><br>
+<a href="shop/sunadome/" target="_blank">すなどめ薬局</a>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/tokushima.html">徳島</a></th>
+<td><a href="shop/honindo/" target="_blank">本因堂薬局</a><br>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+<tr>
+<th><a href="search/ehime.html">愛媛</a></th>
+<td><a href="shop/youmeian/" target="_blank">漢方の養命庵 中野薬局</a><br>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+
+<!-- <tr>
+<th><a href="search/kochi.html">高知</a></th>
+<td>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+-->
+
+<tr>
+<th><a href="search/fukuoka.html">福岡</a></th>
+<td>
+<a href="shop/hakusui/" target="_blank">薬草の森 はくすい堂</a><br>
+<a href="shop/hakata-hakusui/" target="_blank">薬草の森 はくすい堂 博多リバレイン店</a><br>
+<a href="shop/999-koujidou" target="_blank">弘慈堂薬局</a><br>
+<a href="shop/hd_nakamura/" target="_blank">漢方薬局HDなかむら</a><br>
+<a href="shop/hykw/" target="_blank">（有）はやかわ漢方薬局</a><br>
+<a href="shop/otani/" target="_blank">大谷薬局</a><br>
+<a href="shop/kanpou-hayashi/" target="_blank">漢方のハヤシ薬局</a><br>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+
+<tr>
+<th><a href="search/oita.html">大分</a></th>
+<td>
+<a href="shop/kameya/" target="_blank">かめや薬局</a><br>
+<a href="shop/toyo.ishida/" target="_blank">(有)東洋メディック イシダ薬品 鍼灸治療院</a>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+
+<tr>
+<th><a href="search/saga.html">佐賀</a></th>
+<td>
+<a href="shop/healthy/" target="_blank">ヘルシーみやざき鹿島薬局</a><br>
+<a href="shop/imari-asahi/" target="_blank">あさひ薬局</a><br>
+<a href="shop/koukando/" target="_blank">皇漢堂薬局</a><br>
+<a href="shop/kagamiyakuhin/" target="_blank">鏡薬品 波動漢方研究所</a><br>
+<!-- <a href="shop/narisawa/" target="_blank">成沢薬局</a><br>-->
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+
+<tr>
+<th><a href="search/nagasaki.html">長崎</a></th>
+<td>
+<a href="shop/kaisei/" target="_blank">開生薬局</a><br>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+
+<tr>
+<th><a href="search/miyazaki.html">宮崎</a></th>
+<td><a href="shop/kampo-shigaki/index.html" target="_blank">漢方のしがき薬品</a><br>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+
+<tr>
+<th><a href="search/kumamoto.html">熊本</a></th>
+<td><a href="shop/ryoukan/" target="_blank">良寛堂薬局</a><br>
+<a href="shop/koshi/" target="_blank">敬和堂合志薬局</a><br>
+<a href="shop/nagasato/" target="_blank">漢方の永里三天堂薬局</a><br>
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+
+<tr>
+<th><a href="search/kagoshima.html">鹿児島</a></th>
+<td><a href="shop/ko-jindo/" target="_blank">厚仁堂薬局</a><br>
+<a href="shop/kinkou/" target="_blank">錦江薬局</a><br>
+<!-- <a href="shop/seo/" target="_blank">セオ薬局 いづろ店</a><br>-->
+</td>
+</tr>
+<tr>
+<th height="1" colspan="2"></th>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="bg_green01"></td>
+</tr>
+<caption>
+<img src="search/img/list_00.gif" alt="加盟薬局一覧" width="571" height="25">
+</caption>
+</table>
+
+<div align="center" style="text-align: center;"><a href="store-1.htm"><img src="search/img/img_question.gif" alt="漢方相談薬局・薬店ってどんな所？漢方薬って面倒な気が・・・。そんな疑問にお答えします。" width="414" height="100" border="0"></a>
+  <br>
+</div>
+<div class="pagetop"><a href="#header">ページトップへ</a></div>
+
+			</div><!-- /inner -->
+		</div><!-- /main -->
+<!-- #BeginLibraryItem "/Library/re2014menu.lbi" -->
+	<!-- #off_BeginLibraryItem "/Library/Sidebar.lbi" -->
+	<!-- #off_EndLibraryItem -->
+<!-- メニューエリア -->
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/common/menu.php");?>
+<!-- //menu -->
+<!-- #EndLibraryItem -->
+	</div><!-- /contents -->
+<!-- コンテンツコンテナ ここまで -->
+
+<!-- #BeginLibraryItem "/Library/re2014ftr.lbi" -->
+<!-- フッターエリア -->
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/common/ftr.php");?>
+	<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/common/analyticstracking.php") ?>
+<!-- //footer -->
+<!-- #EndLibraryItem -->
+
+	</div><!-- /inner -->
+</div><!-- /container -->
+
+<script type="text/javascript">
+// iPhone/iPad/iPod、Androidの場合は振り分けを判断
+if ( navigator.userAgent.indexOf('iPhone') > 0  
+|| navigator.userAgent.indexOf('iPod') > 0 
+|| (navigator.userAgent.indexOf('Android') > 0 && navigator.userAgent.indexOf('Mobile') > 0) ) {
+	document.write('<div align="center"><a href="./sp/kensaku.html"><img style="width: 95%;" src="./sp/img/to-sp.png"></a></div>');
+	}
+</script>
+
+</body>
+</html>

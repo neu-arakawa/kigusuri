@@ -1,0 +1,14 @@
+<br><br>
+<a name="$kjno">
+<table bgcolor=333333 cellpadding=0 cellspacing=0 width=560 border=0>
+<tr><td>
+<table cellpadding=1 cellspacing=1 width=560 border=0>
+<tr class=main2 bgcolor=CAED54><td><b>$tpname</b></td></tr>
+<tr class=main2 bgcolor=ffffcc><td>
+<table border=0 width="98%"><tr>
+<td>
+$tptext
+</td>
+</tr></table></td></tr>
+<tr class="main2" bgcolor=ffffcc><td align=right>XV“úF$crdy
+</td></tr></table></td></tr></table>

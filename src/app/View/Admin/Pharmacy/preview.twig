@@ -1,0 +1,333 @@
+{% extends "Admin/layout.twig" %}
+{% import "Admin/macro.twig" as forms %}
+
+{% block content %}
+
+{% 
+    set form = {
+        'code': {
+            'label': 'ID',       
+            'required': true
+        },
+        'name': {
+            'label': '薬局名',       
+            'required': true
+        },
+        'kana': {
+            'label': '薬局名かな',       
+            'required': true
+        },
+        'image1': {
+            'label': '画像',       
+            'required': false
+        },
+        'address': {
+            'label': '住所',       
+            'required': true
+        },
+        'tel': {
+            'label': '電話番号',       
+            'required': true
+        },
+        'fax': {
+            'label': 'FAX番号',       
+            'required': false
+        },
+
+        'openhours': {
+            'label': '営業時間',       
+            'required': false
+        },
+
+        'counseling_time': {
+            'label': '相談時間',       
+            'required': false
+        },
+        'access': {
+            'label': '交通アクセス',       
+            'required': false
+        },
+
+        'website': {
+            'label': 'Webサイト',       
+            'required': false
+        },
+
+        'facebook': {
+            'label': 'Facebookページ',       
+            'required': false
+        },
+
+        'email': {
+            'label': 'メールアドレス',       
+            'required': false
+        },
+
+        'image2': {
+            'label': '店舗イメージ',       
+            'required': false
+        },
+
+        'goodinfo': {
+            'label': 'お得情報',       
+            'required': false
+        },
+
+        'word': {
+            'label': 'ショップからの一言',       
+            'required': false
+        },
+
+        'latlon': {
+            'label': '緯度経度',       
+            'required': false
+        },
+
+        'tags': {
+            'label': '相談の多い分野・症状',       
+            'required': false
+        },
+
+
+        'email_counseling': {
+            'label': 'メール相談',       
+            'required': false
+        },
+
+        'reserve_shop': {
+            'label': '来店予約',       
+            'required': false
+        },
+
+        'topics': {
+            'label': '健康トピックス', 
+            'required': false
+        },
+
+        'etc': {
+            'label': 'その他', 
+            'required': false
+        },
+
+        'join': {
+            'label': '加盟ステータス', 
+            'required': true
+        },
+    } 
+       
+%}
+
+
+<section class="content-header">
+    <h1>
+        薬局店情報 
+        <small>登録・編集</small>
+    </h1>
+</section>
+
+
+<section class="content">
+    <div class="box">
+
+        <div class="box-header with-border">
+            <h3 class="box-title">確認画面</h3>
+        </div>
+        
+        <form action="{{ c.app.urlFor('default',{'controller': 'pharmacy','action': 'edit'})}}"','action': 'edit'})}}" novalidate="novalidate" class="form-horizontal" id="AdminNewsEditForm" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+<input type="hidden" name="{{csrf_key}}" value="{{csrf_token}}">
+<input type="hidden" name="_METHOD" value="PUT"/>
+{% for key, data in c.request.post %}
+{% if key != 'csrf_token' and key != 'next' and key != 'access' %}
+<input type="hidden" name="{{ key }}">
+{% endif %}
+{% endfor %}
+<input type="hidden" name="access[]">
+<input type="hidden" name="access[]">
+<input type="hidden" name="access[]">
+<input type="hidden" name="access[]">
+<input type="hidden" name="access[]">
+
+        <div class="box-body">
+
+{% for key, pro in form %}
+
+    <div class="form-group">
+<label class="col-sm-2 control-label">{{ pro.label }} {% if pro.required %}<i class="fa fa-asterisk text-red"></i>{% endif %}</label>
+<div class="col-sm-9">
+
+    {% if key == "image1" %}
+        {% if query[key] %}
+        <img src='{{ query[key]}}' width='300'>
+        {% endif %}
+    {% elseif key == "address" %}
+
+    <p class="form-control-static">〒{{ query.zip }} {{ query.pref }} {{ query.addr1 }} {{ query.addr2 }} {{ query.addr3 }}</p>
+    
+    
+    {% elseif key == "openhours" %}
+    
+        <table class="table">
+            <tbody>
+                <tr class='active'>
+                    <td class="text-center" style='width:12%'>月</th>
+                    <td class="text-center" style='width:12%'>火</th>
+                    <td class="text-center" style='width:12%'>水</th>
+                    <td class="text-center" style='width:12%'>木</th>
+                    <td class="text-center" style='width:12%'>金</th>
+                    <td class="text-center" style='width:12%'>土</th>
+                    <td class="text-center" style='width:12%'>日</th>
+                <tr>
+                    <td class='text-center'>{{ query.mon|default('-')|nl2br}}</td>
+                    <td class='text-center'>{{ query.tue|default('-')|nl2br}}</td>
+                    <td class='text-center'>{{ query.wed|default('-')|nl2br}}</td>
+                    <td class='text-center'>{{ query.thu|default('-')|nl2br}}</td>
+                    <td class='text-center'>{{ query.fri|default('-')|nl2br}}</td>
+                    <td class='text-center'>{{ query.sat|default('-')|nl2br}}</td>
+                    <td class='text-center'>{{ query.sun|default('-')|nl2br}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="form-control-static">{{ query.openhours_note | nl2br }}</p>
+    {% elseif key == "access" %}
+        {% for access in query.access %}
+        <p class="form-control-static">{{ access|nl2br }}</p>
+        {% endfor %}
+
+    {% elseif key == "website" %}
+            {% for i in 1..20 %}
+                 {% if query["website" ~ i ~ "_label"] and query["website" ~ i ~ "_url"]%}
+                 <div class="panel panel-default"><div class="panel-heading">Webサイト{{i}}</div>
+                 <div class="panel-body">
+                        <p class="form-control-static">{{query["website" ~ i ~ "_label"] }}</p>
+                        <p class="form-control-static"><a href='{{query["website" ~ i ~ "_url"] }}' target='preview'>{{query["website" ~ i ~ "_url"] }}</a></p>
+                 </div>
+                 </div>       
+                {% endif %}
+            {% endfor %}
+
+    {% elseif key == "image2" %}
+            {% for i in 1..3 %}
+            {% if query["image2_" ~ i ~ "_path"] %}
+             <div class="panel panel-default"><div class="panel-heading">画像{{i}}</div>
+             <div class="panel-body">
+                <img src='{{query["image2_" ~ i ~ "_path"] }}' height='180px'>
+                <p class="form-control-static">{{query["image2_" ~ i ~ "_caption"] }}</p>
+             </div>
+             </div>       
+             {% endif %}
+            {% endfor %}
+
+    {% elseif key == "latlon" %}
+
+    <p class="form-control-static">{{ query.lat }},{{ query.lon }}</p>
+
+    {% elseif key == "email_counseling" %}
+
+         <div class="panel panel-default"><div class="panel-heading">PC</div>
+         <div class="panel-body">
+        <a href='{{query.email_counseling_url1 }}' target='preview'>{{query.email_counseling_url1 }}</a>
+         </div>
+         </div>       
+
+         <div class="panel panel-default"><div class="panel-heading">スマホ</div>
+         <div class="panel-body">
+        <a href='{{query.email_counseling_url2 }}' target='preview'>{{query.email_counseling_url2 }}</a>
+         </div>
+         </div>       
+
+    {% elseif key == "reserve_shop" %}
+        {% if query.reserve_shop_flg == 2 %}
+        <div class="well well-sm">
+        完全予約制とする
+        </div>
+        {% endif %}
+         <div class="panel panel-default"><div class="panel-heading">PC</div>
+         <div class="panel-body">
+        <a href='{{query.reserve_shop_url1 }}' target='preview'>{{query.reserve_shop_url1 }}</a>
+         </div>
+         </div>       
+
+         <div class="panel panel-default"><div class="panel-heading">スマホ</div>
+         <div class="panel-body">
+        <a href='{{query.reserve_shop_url2 }}' target='preview'>{{query.reserve_shop_url2 }}</a>
+         </div>
+         </div>       
+    
+    {% elseif key == "topics" %}
+        <p class="form-control-static">{{ query.topics_flg ? '有効': '無効' }}</p>
+
+    {% elseif key == "etc" %}
+        <p class="form-control-static">
+        {% if query.insurance_flg %}保険調剤可<br>{% endif %}
+        {% if query.parking_flg %}駐車場<br>{% endif %}
+        {% if query.herb_flg %}ハーブの取扱い<br>{% endif %}
+        {% if query.decoction_flg %}煎じ薬取扱い<br>{% endif %}
+        {% if query.girlstaff_flg %}女性スタッフ常駐<br>{% endif %}
+        {% if query.internetorder_flg %}通信販売<br>{% endif %}
+        {% if query.goodinfo_flg %}お得な情報<br>{% endif %}
+        {% if query.review_flg %}お客様の声<br>{% endif %}
+        </p>
+    {% elseif key == "join" %}
+        <p class="form-control-static">{{ query.join_flg ? '加盟する': '加盟しない' }}</p>
+    {% else %}
+        <p class="form-control-static">{{ query[key] | nl2br }}</p>
+    {% endif %}
+
+
+</div>
+</div>
+
+{% endfor %}
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">相談コンテンツ設定</div>
+
+        <div class="panel-body">
+
+            <div class="form-group">
+            <label for="AdminNewsDispFlag" class="col-sm-2 control-label">通知用メールアドレス</label>
+            <p class="form-control-static">
+                {{ query['notice_email']}}
+            </div>
+            </div>
+
+            <div class="form-group">
+            <label for="AdminNewsDispFlag" class="col-sm-2 control-label">パスワード 
+                {% if query.id == false %}
+                <i class="fa fa-asterisk text-red"></i>
+                {% endif %}
+            </label>
+            {% if query.password %}
+                <p class="form-control-static">***** (パスワード設定する)</p>
+            {% else %}
+                <p class="form-control-static">パスワード設定しない</p>
+            {% endif %}
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">表示設定</div>
+        <div class="panel-body">
+            <div class="form-group">
+<label for="AdminNewsDispFlag" class="col-sm-2 control-label">公開設定 <i class="fa fa-asterisk text-red"></i></label>
+<div class="col-sm-9">
+<p class="form-control-static">{{query.show_flg ? 'する' : 'しない'}}</p>
+</div>
+</div>
+        </div>
+    </div>
+
+</div>
+
+
+        <div class="box-footer">
+<button type="submit" class="btn btn-default" onclick="$('[name=_METHOD]').val('BACK');"><i class="fa fa-arrow-circle-left"></i> キャンセル</a>
+    <button type="submit" class="btn btn-primary pull-right">登録完了 <i class="fa fa-arrow-circle-right"></i></button></div>
+        </form> </div>
+</section>
+{% endblock %}
+

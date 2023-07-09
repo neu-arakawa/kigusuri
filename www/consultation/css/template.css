@@ -1,0 +1,19 @@
+/* %icomoon
+----------------------------------------------------------*/
+/* %icomoon02
+----------------------------------------------------------*/
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'icomoon02';
+  src: url("fonts/icomoon.eot?ctabv3");
+  src: url("fonts/icomoon.eot?ctabv3#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?ctabv3") format("truetype"), url("fonts/icomoon.woff?ctabv3") format("woff"), url("fonts/icomoon.svg?ctabv3#icomoon") format("svg"); }
+@media screen and (min-width: 768px) {
+  #contents {
+    padding: 0 0; } }
+@media screen and (min-width: 768px) {
+  .top-wrapper {
+    margin-top: 0 !important; }
+
+  #contents .component-area {
+    margin-bottom: 40px; } }

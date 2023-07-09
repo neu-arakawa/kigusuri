@@ -1,0 +1,54 @@
+/* CSS Document */
+#main {margin:0 22px 0 10px;}
+#main #categoryName{margin:20px 0;}
+
+.clear{clear:both; line-height:0;}
+
+#boxCaption{border-left:5px solid #999;padding-left:10px;height:80px;}
+#boxCaption p{ color:#f90; font-weight:bold; font-size:90%;}
+
+#main #contentsArea{margin:20px 15px; font-size:90%; line-height:140%;}
+
+#main #contentsArea .sectionH3{ margin:40px 0;}
+#main #contentsArea .sectionH3 h3{ border-left:5px solid #C6EC4C;padding-left:5px;background:#f6f6f6;clear:both;}
+
+
+.new{background:url(../images/new.gif) no-repeat right top;padding:0 25px 0 0;}
+.author{margin:40px 0 0 0;padding:0 5px 0 0;background:#eee;font-size:80%;text-align:right;}
+.pagetop {font-size:80%;text-align: right;margin: 30px 0 5px;clear:both;}
+.pagetop a{background: url(../images/bt_top.gif) no-repeat left center;padding: 0 0 0 20px;}
+.em01{ color:#c00; margin:0 5px;}
+
+
+/* gallery
+---------------------------------------*/
+.gallery { margin:20px 0;}
+.gallery dl{ margin:0 10px 0 0; padding:0; float:left;}
+.gallery dl dt{ margin:0; padding:0;}
+.gallery dl dd{ margin:0; padding:0; color:#666; font-size:80%; text-align:left;}
+
+.note { margin:0 0 20px 0; padding:2px 5px; color:#f39; font-size:70%; border:1px solid #f39; clear:both; display:inline;}
+
+
+/* profile
+------------------------------------------------*/
+.headD {margin: 40px 0 10px;background-color: #c6ec4c;}
+.profile{width:582px;clear:both;}
+.profile .photoSpace{width:157px;float:left;text-align:center;font-size:12px;line-height:160%;padding:0 10px 0 0;}
+.profile .photoSpace dl{margin:0;}
+.profile .photoSpace dl dd{margin:0;}
+.profile .detailProf{width:415px;float:right;font-size:12px;line-height:160%;}
+.profile .detailProf h5{margin:10 0;}
+.profile .detailProf .sectionH4{margin:0 0 20px 0;}
+
+
+/* .pageList style
+------------------------------------------------*/
+#main .pageList{clear:both;margin:10px 0 0 0;background:url(../images/supplement/line_spacer.gif) no-repeat top;padding:10px 0 0 0;}
+#main .pageList dl{font-size:12px;line-height:160%;padding:0 0 0 10px;}
+#main .pageList dl dt{font-weight:bold;color:#666;font-size:1.2em;background:url(../images/mark_triangle_b.gif) no-repeat left center;padding:2px 0 2px 18px;}
+#main .pageList dl dd{background:url(../images/mark_triangle.gif) no-repeat left center;padding:2px 0 2px 18px;}
+#main .pageList dl .a{background:url(../images/mark_triangle.gif) no-repeat left center;padding:2px 0 2px 18px;}
+
+
+

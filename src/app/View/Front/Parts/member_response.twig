@@ -1,0 +1,33 @@
+<form>
+{% if msg %}
+<p class="m-txt-area01__txt">
+  {{ msg.response | nl2br  }}
+</p>
+<div class="m-txt-area01__btmrow clearfix">
+  <p class="m-txt-area01__date">投稿日時: {{ msg.response_date | date('Y/m/d H:i')  }}</p>
+  {% if myself and question.dead_stat == false and question.response_limit == false  %}
+  <div class="m-txt-area01__btmright">
+    <p class="m-txt-area01__delete"><a href="javascript:void(0)" class='response_delete'>このコメントを削除する</a></p>
+  </div>
+  <!-- /.m-txt-area01__btmright -->
+  {% endif %}
+</div>
+<input type='hidden' name='response_id' value='{{ msg.response_id }}'>
+<input type='hidden' name='answer_id'   value='{{ msg.answer_id }}'>
+{% else %}
+  <div class="m-txt-area01__comment">
+    <textarea placeholder="コメントする…" name='content'></textarea>
+  </div>
+  <!-- /.m-txt-area01__comment -->
+  <p class="tx-att"></p>
+  <div class="btn-comment">
+    <div class="m-txt-area01__btmright">
+      <button class="m-txt-area01__send response">コメントを送信する</button>
+    </div>
+    <!-- /.m-txt-area01__btmright -->
+  </div>
+  <!-- /.m-txt-area01__btmrow -->
+
+   <input type='hidden' name='answer_id' value='{{ input.answer_id }}'>
+{% endif %}
+</form>

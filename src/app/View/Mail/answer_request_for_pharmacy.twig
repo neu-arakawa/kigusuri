@@ -1,0 +1,16 @@
+【きぐすり.com】利用者から漢方相談が寄せられました。回答をお願いします。
+
+{{ pharmacy.name }} 御中
+
+いつもお世話になっております。
+漢方薬のきぐすり.com事務局です。
+きぐすり.comに一般のお客様から新規の漢方相談が寄せられました。
+ご回答をお願いします。
+
+{% for question in questions %}
+{{ question.content[:60] |replace({'\n': '','\r': ''}) }} {{  question.content | length > 60 ? '...' :'' }}
+{{ base_url }}/member.shop/consultation/answer/{{ question.id }}/
+
+{% endfor %}
+
+{% include '/Mail/signature.twig' with { 'for_pharmacy': true } %}

@@ -1,0 +1,30 @@
+
+
+<center>
+<FORM METHOD=POST ACTION="disp.cgi">
+<TABLE BGCOLOR=333333 CELLPADDING=0 CELLSPACING=0 WIDTH=500 BORDER=0>
+<TR>
+<TD>
+<TABLE CELLPADDING=1 CELLSPACING=1 WIDTH=100% BORDER=0>
+<TR BGCOLOR="#CAED54" class="main2" ALIGN=center><TD colspan=2>
+<a href="javascript:function voi(){};voi()" onClick="winOpen('win1','help.cgi?key=settokutei',380,380)"><img src="img/help.gif" border="0"></a>
+特定商取引に関する法律に基づく表示</TD></TR>
+<TR BGCOLOR="#FFFFCC" class="main2"><TD>販売業者名</TD><TD><input type=text name="company" value="$company" size=50></TD></TR>
+<TR BGCOLOR="#FFFFCC" class="main2"><TD>販売責任者名</TD><TD><input type=text name="name" value="$name" size=50></TD></TR>
+<TR BGCOLOR="#FFFFCC" class="main2"><TD>所在地</TD><TD><input type=text name="zip" value="$zip" size=14><BR><input type=text name="add" value="$add" size=50></TD></TR>
+<TR BGCOLOR="#FFFFCC" class="main2"><TD>電話番号</TD><TD><input type=text name="tel" value="$tel" size=30></TD></TR>
+<TR BGCOLOR="#FFFFCC" class="main2"><TD>FAX番号(任意)</TD><TD><input type=text name="fax" value="$fax" size=30></TD></TR>
+<TR BGCOLOR="#FFFFCC" class="main2"><TD>販売価格</TD><TD><input type=text name="price" value="$price" size=50></TD></TR>
+<TR BGCOLOR="#FFFFCC" class="main2"><TD>送料</TD><TD><TEXTAREA rows="5" cols="50" name="souryou">$souryou</TEXTAREA></TD></TR>
+<TR BGCOLOR="#FFFFCC" class="main2"><TD>その他の付帯費用</TD><TD><TEXTAREA rows="5" cols="50" name="other">$other</TEXTAREA></TD></TR>
+<TR BGCOLOR="#FFFFCC" class="main2"><TD>代金の支払い方法</TD><TD><TEXTAREA rows="5" cols="50" name="pay">$pay</TEXTAREA></TD></TR>
+<TR BGCOLOR="#FFFFCC" class="main2"><TD>返品・交換について</TD><TD><TEXTAREA rows="5" cols="50" name="henpin">$henpin</TEXTAREA></TD></TR>
+<TR BGCOLOR="#FFFFCC" class="main2"><TD>商品の引渡し時期</TD><TD><TEXTAREA rows="5" cols="50" name="watashi">$watashi</TEXTAREA></TD></TR>
+<TR BGCOLOR="#FFFFCC" class="main2"><TD>制限事項(任意)</TD><TD><TEXTAREA rows="5" cols="50" name="seigen">$seigen</TEXTAREA></TD></TR>
+</table></TD></TR></TABLE><BR><INPUT TYPE="hidden"NAME="pass"VALUE="$pass">
+<INPUT TYPE="hidden"NAME="write"VALUE="ok">
+<input type="submit" value="決 定">
+</FORM>
+
+</CENTER>
+

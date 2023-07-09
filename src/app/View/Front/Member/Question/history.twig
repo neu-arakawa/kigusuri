@@ -1,0 +1,121 @@
+<?php
+  //共通
+  require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+  //メタディスクリプション
+  $description = '';
+
+  //メタキーワード
+  $keywords = '';
+
+  //Facebook　全ページ共通の場合は空白にしてください
+  $fbimage = '';
+
+  //タイトル
+  $title = '相談履歴';
+
+  //css追加
+  $ex_tag_css = '<link rel="stylesheet" href="/member/css/style.css"><link rel="stylesheet" href="/member/css/template.css">';
+
+  //js追加
+  $ex_tag_js = '';//'<script src="/member/js/script.js"></script>';
+
+  //bodyID
+  $bodyID = 'member';
+
+?>
+<?php include 'header.php'; ?>
+
+
+	<div class="contents-header">
+		<ul class="topicpath fbox">
+			<li><a href="/">トップページ</a></li>
+			<li>相談履歴</li>
+		</ul>
+		<h1 class="header-ttl">相談履歴</h1>
+	</div>
+    <!-- /.contents-header -->
+
+
+  <div class="inner">
+
+    {% if c.member.question_cnt %}
+    <!--/////////////////相談履歴 start ///////////////////-->
+    <div class="component-area">
+      <div class="m-tabarea01">
+        <p class="m-tabarea01__intro l-sp-inner">あなたがこれまでに投稿した<br class="sp-item">漢方相談は <span class="m-tabarea01__num">{{ c.member.question_cnt | default(0)}}</span> 件です。</p>
+
+        <div class="m-tabarea01__tab">
+          <div class="m-tab01">
+            <ul class="m-tab01__tabs clearfix">
+              <li {% if c.params['search_type'] == ''           %}class='m-tab01__tab--active'{% endif %}><a href="{{ c.app.urlFor('qa_history') }}">すべて</a></li>
+              <li {% if c.params['search_type'] == 'has_answer' %}class='m-tab01__tab--active'{% endif %}><a href="{{ c.app.urlFor('qa_history') }}has_answer/">回答あり</a></li>
+              <li {% if c.params['search_type'] == 'no_answer'  %}class='m-tab01__tab--active'{% endif %}><a href="{{ c.app.urlFor('qa_history') }}no_answer/">回答なし</a></li>
+            </ul>
+            <!-- /.m-tab01__tabs -->
+            <div class="m-tab01__contents">
+              <div class="" id="">
+                <div class="m-tabcont01">
+                  {% if list|length %}
+                  <div class="m-tabcont01__count">
+                    <span class="m-tabcont01__smallnum">{{ pager.total_count }}</span>件中 / <span class="m-tabcont01__bignum">{{ pager.start_cnt }}〜{{ pager.end_cnt }}</span> 件表示
+                  </div>
+                  <!-- /.m-tabcont01__count -->
+                  <ul class="m-tabcont01__bal-list">
+                    {% include '/Front/Parts/question_list.twig' %}
+                  </ul>
+                  <!-- /.m-tabcont01__bal-list -->
+                  <ul class="m-tabcont01__btn-list">
+
+                    {% if pager.prev %}
+                    <li><a href="{{ url }}?page={{ pager.prev }}" class="m-arrow-btn02 m-arrow-btn02--prev m-arrow-btn02--gray">前へ</a></li>
+                    {% endif %}
+                    
+                    {% if pager.next %}
+                    <li><a href="{{ url }}?page={{ pager.next }}" class="m-arrow-btn02 m-arrow-btn02--next m-arrow-btn02--green">次へ</a></li>
+                    {% endif %}
+                  </ul>
+                  <!-- /.m-tabcont01__btn-list -->
+                    
+                  {% else %}
+                    該当の相談履歴はありません。
+                  {% endif %}
+                </div>
+                <!-- /.m-tabcont01 -->
+              </div>
+              <!-- /.m-tab01__content -->
+            </div>
+            <!-- /.m-tab01__contents -->
+          </div>
+          <!-- /.m-tab01 -->
+        </div>
+        <!-- /.m-tabarea01__tab -->
+      </div>
+      <!-- /.m-tabarea01 -->
+    </div>
+    <!-- /.component-area -->
+    <!--/////////////////相談履歴 end ///////////////////-->
+    {% else %}
+
+    <!--/////////////////登録完了メッセージ start ///////////////////-->
+        <div class="m-panel01 m-panel01">
+     	 <div class="l-sp-inner">
+          <div class="m-panel01__panel">
+            <p class="m-panel01__heading">まずは相談してみましょう！</p>
+            <p class="m-panel01__txt">あなたの相談履歴はありません。まずは「<a href="{{ c.app.urlFor('qa_request') }}">新規相談フォーム</a>」からご相談ください。<br />全国の漢方薬局・薬店があなたのお悩みにお答えします。</p>
+          </div>
+          <!-- /.m-panel01__panel -->
+          </div>
+          <!-- /.l-sp-inner -->
+        </div>
+        <!-- /.m-panel01 -->
+    <!--/////////////////登録完了メッセージ end ///////////////////-->
+
+
+    {% endif %}
+
+
+  </div>
+  <!-- /.inner -->
+
+<?php include 'footer.php'; ?>

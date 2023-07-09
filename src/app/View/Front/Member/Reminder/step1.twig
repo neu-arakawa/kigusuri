@@ -1,0 +1,110 @@
+<?php
+  //共通
+  require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+  //メタディスクリプション
+  $description = '';
+
+  //メタキーワード
+  $keywords = '';
+
+  //Facebook　全ページ共通の場合は空白にしてください
+  $fbimage = '';
+
+  //タイトル
+  $title = 'パスワードをお忘れの方';
+
+  //css追加
+  $ex_tag_css = '<link rel="stylesheet" href="/member/css/style.css"><link rel="stylesheet" href="/member/css/template.css">';
+
+  //js追加
+  $ex_tag_js = '<script src="/member/js/script.js"></script>';
+
+  //bodyID
+  $bodyID = 'member';
+
+?>
+<?php include 'header.php'; ?>
+
+
+	<div class="contents-header">
+		<ul class="topicpath fbox">
+			<li><a href="/">トップページ</a></li>
+			<li><a href="#">会員情報の編集</a></li>
+			<li>パスワードの変更</li>
+		</ul>
+		<h1 class="header-ttl">パスワードをお忘れの方</h1>
+	</div>
+    <!-- /.contents-header -->
+
+
+  <div class="inner">
+
+    {% if errors %}
+    <!--/////////////////エラーメッセージ start ///////////////////-->
+        <div class="m-panel01 m-panel01--red">
+     	 <div class="l-sp-inner">
+          <div class="m-panel01__panel">
+            <p class="m-panel01__heading">会員情報が見つかりません。</p>
+            <p class="m-panel01__txt">もう一度ご確認のうえ、ご入力してください。</p>
+          </div>
+          <!-- /.m-panel01__panel -->
+          </div>
+          <!-- /.l-sp-inner -->
+        </div>
+        <!-- /.m-panel01 -->
+    <!--/////////////////エラーメッセージ end ///////////////////-->
+    {% endif %}
+
+    <div class="component-area">
+      <div class="l-sp-inner">
+        <div class="m-formbox01">
+        <form method="post" loading>
+        <input type="hidden" name="{{csrf_key}}" value="{{csrf_token}}">
+            <p class="m-formbox01__txt">
+             ご登録いただいているメールアドレスを入力して「送信する」ボタンをクリックしてください。パスワード再設定用のご案内メールをお送りいたします。
+            </p>
+            <ul class="m-formbox01__inputlist">
+              <li>
+                <p class="m-formbox01__tit">メールアドレス</p>
+                <div class="m-formbox01__inputbox">
+                  <div class="m-formbox01__input"><input type="text" name='email'></div>
+                  {% if errors.email %}
+                  <p class="m-formbox01__error">{{ errors.email }}</p>
+                  {% endif %}
+                </div>
+                <!-- /.m-formbox01__inputbox -->
+              </li>
+
+              <li>
+                <p class="m-formbox01__tit">生年（西暦)</p>
+                    <div class="m-table01">
+                    <div class="m-table01__inputbox">
+                    <select name="birthday" class="small" >
+                        <option value=''></option>
+                        {% for y in 1900..'now' | date('Y') %}
+                        <option value='{{ y }}'>{{ y }}</option>
+                        {% endfor %}
+                    </select>
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                    </div>
+                    <!-- /.m-table01 -->
+              </li>
+                  
+            </ul>
+            <!-- /.m-formbox01__inputlist -->
+            <div class="m-formbox01__btn">
+              <button class="m-arrow-btn01">送信する<span class="m-arrow-btn01__icn"></span></button>
+            </div>
+          </form>
+        </div>
+        <!-- /.m-formbox01 -->
+      </div>
+      <!-- /.l-sp-inner -->
+    </div>
+    <!-- /.component-area -->
+  </div>
+  <!-- /.inner -->
+
+<?php include 'footer.php'; ?>

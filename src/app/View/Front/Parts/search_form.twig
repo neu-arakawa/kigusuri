@@ -1,0 +1,90 @@
+{% set category_pages = c.category_pages %}
+    <div class="m-kampo-search">
+      <p class="m-kampo-search__tit"><img src="/consultation/img/search_tit.png" alt="漢方相談の検索"></p>
+      <div class="m-kampo-search__main clearfix">
+        <div class="m-region-box">
+          <div class="m-region-box__inner">
+            <p class="m-region-box__tit"><img src="/consultation/img/region_tit.png" alt="気になる部位から探す"></p>
+            <div class="m-region-box__main">
+              <div class="m-region-box__region">
+                <ul class="m-region-box__list m-region-box__list--left">
+                  <li class="m-region-box__item-mimi"><a href="{{ category_pages['耳・鼻'] }}"><img src="/consultation/img/region_txt_region_mimi.png" alt="耳・鼻"></a></li>
+                  <li class="m-region-box__item-kubi"><a href="{{ category_pages['首・肩'] }}"><img src="/consultation/img/region_txt_region_kubi.png" alt="首・肩"></a></li>
+                  <li class="m-region-box__item-mune"><a href="{{ category_pages['胸'] }}"><img src="/consultation/img/region_txt_region_mune.png" alt="胸"></a></li>
+                  <li class="m-region-box__item-ichou"><a href="{{ category_pages['胃腸'] }}"><img src="/consultation/img/region_txt_region_ichou.png" alt="胃腸"></a></li>
+                  <li class="m-region-box__item-te"><a href="{{ category_pages['手'] }}"><img src="/consultation/img/region_txt_region_te.png" alt="手"></a></li>
+                  <li class="m-region-box__item-hara"><a href="{{ category_pages['腹'] }}"><img src="/consultation/img/region_txt_region_hara.png" alt="腹"></a></li>
+                  <li class="m-region-box__item-haiben"><a href="{{ category_pages['排便・肛門'] }}"><img src="/consultation/img/region_txt_region_haiben.png" alt="排便・肛門"></a></li>
+                  <li class="m-region-box__item-hainyou"><a href="{{ category_pages['排尿'] }}"><img src="/consultation/img/region_txt_region_hainyou.png" alt="排尿"></a></li>
+                  <li class="m-region-box__item-kansetsu"><a href="{{ category_pages['関節'] }}"><img src="/consultation/img/region_txt_region_kansetsu.png" alt="関節"></a></li>
+                  <li class="m-region-box__item-ashi"><a href="{{ category_pages['足'] }}"><img src="/consultation/img/region_txt_region_ashi.png" alt="足"></a></li>
+                </ul>
+                <!-- /.list -->
+                <ul class="m-region-box__list m-region-box__list--right">
+                  <li class="m-region-box__item-atama"><a href="{{ category_pages['頭'] }}"><img src="/consultation/img/region_txt_region_atama.png" alt="頭"></a></li>
+                  <li class="m-region-box__item-me"><a href="{{ category_pages['目'] }}"><img src="/consultation/img/region_txt_region_me.png" alt="目"></a></li>
+                  <li class="m-region-box__item-kounai"><a href="{{ category_pages['口内'] }}"><img src="/consultation/img/region_txt_region_kounai.png" alt="口内"></a></li>
+                  <li class="m-region-box__item-nodo"><a href="{{ category_pages['のど'] }}"><img src="/consultation/img/region_txt_region_nodo.png" alt="のど"></a></li>
+                  <li class="m-region-box__item-kokoro"><a href="{{ category_pages['こころ'] }}"><img src="/consultation/img/region_txt_region_kokoro.png" alt="こころ"></a></li>
+                  <li class="m-region-box__item-koshi"><a href="{{ category_pages['腰'] }}"><img src="/consultation/img/region_txt_region_koshi.png" alt="腰"></a></li>
+                  <li class="m-region-box__item-seishokuki"><a href="{{ category_pages['生殖器(男性)'] }}"><img src="/consultation/img/region_txt_region_seishokuki1.png" alt="生殖器（男性）"></a></li>
+                  <li class="m-region-box__item-seishokuki"><a href="{{ category_pages['生殖器(女性)'] }}"><img src="/consultation/img/region_txt_region_seishokuki2.png" alt="生殖器（女性）"></a></li>
+                  <li class="m-region-box__item-hifu"><a href="{{ category_pages['皮膚'] }}"><img src="/consultation/img/region_txt_region_hifu.png" alt="皮膚"></a></li>
+                  <li class="m-region-box__item-ketsueki"><a href="{{ category_pages['血液'] }}"><img src="/consultation/img/region_txt_region_ketsueki.png" alt="血液"></a></li>
+                </ul>
+                <!-- /.m-region-box__list -->
+              </div>
+              <!-- /.m-region-box__region -->
+            </div>
+            <!-- /.m-region-box__main -->
+          </div>
+          <!-- /.m-region-box__inner -->
+        </div>
+        <!-- /.m-region-box -->
+        <div class="m-kampo-search__right-col">
+          <div class="m-sq-box m-sq-box--keyword">
+            <div class="m-sq-box__inner">
+              <p class="m-sq-box__tit">キーワードから探す</p>
+              <div class="m-sq-box__main">
+                <p class="m-sq-box__txt">お悩みの症状やキーワードを入力してください。</p>
+                <form>
+                  <input type="text" class="m-sq-box__search-input">
+					<p class="tx-att"></p>
+                  <p class="m-sq-box__search-btn"><button class="m-sq-box__btn-body"><span class="icon-srch">検索する</span></button></p>
+                </form>
+              </div>
+              <!-- /.m-sq-box__main -->
+            </div>
+            <!-- /.m-sq-box__inner -->
+          </div>
+          <!-- /.m-sq-box -->
+          <div class="m-sq-box m-sq-box--pickup">
+            <div class="m-sq-box__inner">
+              <p class="m-sq-box__tit">症状</p>
+              <div class="m-sq-box__main">
+                <ul class="m-sq-box__list clearfix">
+                  <li><a href="{{ category_pages['冷え'] }}">冷え</a></li>
+                  <li><a href="{{ category_pages['ダイエット'] }}">ダイエット</a></li>
+                  <li><a href="{{ category_pages['不妊'] }}">不妊</a></li>
+                  <li><a href="{{ category_pages['アレルギー'] }}">アレルギー</a></li>
+                  <li><a href="{{ category_pages['神経'] }}">神経</a></li>
+                  <li><a href="{{ category_pages['生活習慣'] }}">生活習慣</a></li>
+                  <li><a href="{{ category_pages['アンチエイジング(老化)'] }}">アンチエイジング(老化)</a></li>
+                  <li><a href="{{ category_pages['子供'] }}">子供</a></li>
+                  <li><a href="{{ category_pages['赤ちゃん'] }}">赤ちゃん</a></li>
+                  <li><a href="{{ category_pages['全身症状'] }}">全身症状</a></li>
+                  <li><a href="{{ category_pages['その他'] }}">その他</a></li>
+                </ul>
+                <!-- /.m-sq-box__list -->
+              </div>
+              <!-- /.m-sq-box__main -->
+            </div>
+            <!-- /.m-sq-box__inner -->
+          </div>
+          <!-- /.m-sq-box -->
+        </div>
+        <!-- /.m-kampo-search__right-col -->
+      </div>
+      <!-- /.m-kampo-search__main -->
+    </div>
+    <!-- /.m-kampo-search -->

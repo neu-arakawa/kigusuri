@@ -1,0 +1,24 @@
+{% if errors %}
+<div class="errorBox">
+<h2>入力内容をご確認ください。</h2>
+<ul>
+{% for key,msg in errors %}
+<li><a href='#form-{{ key }}'>{{ msg }}</a></li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}
+
+<form method="post">
+<input type="hidden" name="{{csrf_key}}" value="{{csrf_token}}">
+<input type="hidden" name="_METHOD" id="_METHOD" value="PUT"/>
+{% for key, data in c.request.post %}
+{% if key != 'csrf_token' and key != 'next' and key != 'access' %}
+<input type="hidden" name="{{ key }}">
+{% endif %}
+{% endfor %}
+{{ query['nickname'] }}
+
+<input type='submit' onclick="document.getElementById('_METHOD').value = '';" value='キャンセル'>
+<input type='submit' value='送信'>
+</form>

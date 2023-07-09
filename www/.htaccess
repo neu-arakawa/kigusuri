@@ -1,0 +1,309 @@
+php_flag apc.cache_by_default "Off"
+
+# セッション関連
+php_value session.cookie_lifetime 1209600
+php_value session.gc_maxlifetime 1209600
+php_value session.cookie_httponly On
+
+ErrorDocument 403 /404.php
+ErrorDocument 404 /404.php
+ErrorDocument 500 /404.php
+
+AddType application/x-httpd-php .html
+
+RewriteEngine On
+RewriteBase /
+
+# Required SSL access
+RewriteCond %{REQUEST_URI} ^/admin [OR]
+RewriteCond %{REQUEST_URI} ^/member [OR]
+RewriteCond %{REQUEST_URI} ^/contact_shop [OR]
+RewriteCond %{REQUEST_URI} .*/form.html*$
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R,QSA]
+#
+## Required Non SSL access
+RewriteCond %{REQUEST_URI} !^/index.php
+RewriteCond %{REQUEST_URI} !^/admin
+RewriteCond %{REQUEST_URI} !^/member
+RewriteCond %{REQUEST_URI} !^/contact_shop
+RewriteCond %{REQUEST_URI} !.*/form.html*$
+RewriteCond %{REQUEST_URI} !.(gif|jpg|jpeg|png|swf|css|js|ico|ttf|woff|svg)$
+RewriteCond %{SERVER_PORT} 443
+RewriteRule ^.*$ http://%{HTTP_HOST}%{REQUEST_URI} [L,R,QSA]
+
+# Redirect
+RewriteRule ^index.htm / [R,L]
+RewriteRule ^FS-APL/FS-Form/form\.cgi /contact_shop/ [R,L] 
+
+
+# htm to html 
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_URI} ^.*\.htm$
+# RewriteRule ^(.*).htm$ $1.html [R=301,L]
+
+# Php System
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}/index.php !-f
+RewriteCond %{REQUEST_FILENAME}/index.html !-f
+RewriteRule . /index.php [L]
+
+# HTTPでアクセスされた場合
+# RewriteCond %{HTTPS} off
+# # 以下のURLは常に https にリダイレクトする
+# RewriteCond %{REQUEST_URI} .*/form.html*$
+# # ただし以下は除く
+# RewriteCond %{REQUEST_URI} !^.*\.(js|css|gif|jpg|png|ico)$
+# # https://kigusuri.com にリダイレクト
+# RewriteRule ^(.*)$ https://kigusuri.com%{REQUEST_URI} [R,L]
+
+
+
+
+
+
+
+Options +Includes
+Options +ExecCGI
+
+
+
+####################################################################################################
+
+php_flag mbstring.encoding_translation off
+php_value default_charset "UTF-8"
+AddType application/x-httpd-php .html
+AddType application/x-httpd-php .htm
+
+RedirectMatch (.*)/shop/taiseidou/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/jikeido/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/ueda/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/hykw/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/shiseido/(.*)$ http://www.kigusuri.com/end.html
+Redirect Permanent /faq/_faq35.html http://www.kigusuri.com/faq/faq35.html
+RedirectMatch (.*)/shop/seo/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/genkikanpou/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/kanyakudo-new/(.*)$ http://www.kigusuri.com/shop/kanyakudo/
+RedirectMatch (.*)/shop/toshimori/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/kampow/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/yokoyama/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/asahi-ryuseido/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/arita/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/taijudo/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/shimoda-kouseidou/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/izumi-kanpou/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/hakusai/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/nakajima/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/hoshodo/(.*)$ http://www.kigusuri.com/end.html
+Redirect Permanent /faq/faq54.html http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/narisawa/(.*)$ http://www.kigusuri.com/end.html
+Redirect Permanent /faq/index-faq01.html http://www.kigusuri.com/faq/index.html
+Redirect Permanent /faq/index-faq02.html http://www.kigusuri.com/faq/index.html
+Redirect Permanent /faq/index-faq03.html http://www.kigusuri.com/faq/index.html
+Redirect Permanent /faq/index-faq04.html http://www.kigusuri.com/faq/index.html
+Redirect Permanent /faq/index-faq05.html http://www.kigusuri.com/faq/index.html
+Redirect Permanent /faq/index-faq06.html http://www.kigusuri.com/faq/index.html
+Redirect Permanent /faq/index-faq07.html http://www.kigusuri.com/faq/index.html
+RedirectMatch (.*)/shop/nomurakenbido/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/sano-ph/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/saiseidou/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/herbs/(.*)$ http://www.kigusuri.com/end.html
+Redirect Permanent /shop/isezakicho/ http://www.kigusuri.com/shop/takagi/
+RedirectMatch (.*)/shop/ryu-gendo/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/dogendo/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/toyo1040/(.*)$ http://www.kigusuri.com/end.html
+Redirect Permanent /support/saiseidou0606.html http://www.kigusuri.com/end.html
+Redirect Permanent /support/sumitomo.html http://www.kigusuri.com/end.html
+RedirectMatch (.*)/cooking/author/toyo1040/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/shosokan/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/shisa/(.*)$ http://www.kigusuri.com/end.html
+Redirect Permanent /faq/faq29.html http://www.kigusuri.com/end.html
+Redirect Permanent /faq/faq52.html http://www.kigusuri.com/end.html
+Redirect Permanent /faq/faq55.html http://www.kigusuri.com/end.html
+Redirect Permanent /faq/faq57.html http://www.kigusuri.com/end.html
+Redirect Permanent /faq/faq58.html http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/jinseidou-kanpo/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/masuya/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/aoyama/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/seikodo/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/ikkando/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/kagiya/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/nakanome/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/ichiyo_kanpou/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/koizumi/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/support/koizumi0702.html http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/terabe/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/komiya-hyakusouen/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/eijuya-y/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/iwanaga/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/hyaku/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/shizen-kaiseido/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/sada/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/kanpousakamoto/(.*)$ http://www.kigusuri.com/end.html
+RedirectMatch (.*)/support/support16.html http://www.kigusuri.com/end.html
+RedirectMatch (.*)/shop/dojin/(.*)$ http://www.kigusuri.com/end.html
+Redirect Permanent /faq/faq17.html http://www.kigusuri.com/end.html
+Redirect Permanent /search/ibaragi.html http://www.kigusuri.com/search/ibaraki.html
+Redirect Permanent /yakuzenprof/prof-ikeda.html http://www.kigusuri.com/yakuzen/ikeda/
+Redirect Permanent /shop/nomura/ http://www.kigusuri.com/shop/nomurakenbido/
+Redirect Permanent /faq/faq28.html http://www.kigusuri.com/faq/faq11.html
+Redirect Permanent /faq/faq24.html http://www.kigusuri.com/faq/faq11.html
+Redirect Permanent /jiten/comments/feed/ http://www.kigusuri.com/jiten/feed/
+Redirect Permanent /nikaido/test.html http://www.kigusuri.com/eat-test/test.html
+Redirect Permanent /nikaido/matome.php http://www.kigusuri.com/eat-test/matome.php
+Redirect Permanent /shop/oofuna/support/index.php http://www.kigusuri.com/shop/oofuna/support.php
+Redirect Permanent /medicine/medicine-01.htm http://www.kigusuri.com/medicine/medicine-0101.html
+Redirect Permanent /goods/present0912.html http://www.kigusuri.com/goods/present0412.html
+Redirect Permanent /shop/tochimoto/ http://www.kigusuri.com/shop/halenova/
+Redirect Permanent /images_2009/navi_img/ http://www.kigusuri.com/navi_img/
+Redirect Permanent /seizai/hakuhoutan-index.html http://www.kigusuri.com/seizai/index.html
+Redirect Permanent /seizai/seizai001.html http://www.kigusuri.com/seizai/index.html
+Redirect 301 /kensaku.html  http://www.kigusuri.com/shop/
+Redirect 301 /herbal/shoplist.html  http://www.kigusuri.com/shop/search/feature/?pref=&addr1=&herb_flg=ハーブ取扱いあり
+Redirect 301 /mail-soudan.html  http://www.kigusuri.com/shop/search/feature/?pref=&addr1=&email_counseling_flg=メール相談受付可
+Redirect 301 /search/aichi.html http://www.kigusuri.com/shop/search/prefectures/愛知県/
+Redirect 301 /search/akita.html http://www.kigusuri.com/shop/search/prefectures/秋田県/
+Redirect 301 /search/aomori.html    http://www.kigusuri.com/shop/search/prefectures/青森県/
+Redirect 301 /search/chiba.html http://www.kigusuri.com/shop/search/prefectures/千葉県/
+Redirect 301 /search/ehime.html http://www.kigusuri.com/shop/search/prefectures/愛媛県/
+Redirect 301 /search/fukui.html http://www.kigusuri.com/shop/search/prefectures/福井県/
+Redirect 301 /search/fukuoka.html   http://www.kigusuri.com/shop/search/prefectures/福岡県/
+Redirect 301 /search/fukushima.html http://www.kigusuri.com/shop/search/prefectures/福島県/
+Redirect 301 /search/gifu.html  http://www.kigusuri.com/shop/search/prefectures/岐阜県/
+Redirect 301 /search/gunma.html http://www.kigusuri.com/shop/search/prefectures/群馬県/
+Redirect 301 /search/hiroshima.html http://www.kigusuri.com/shop/search/prefectures/広島県/
+Redirect 301 /search/hokkaido.html  http://www.kigusuri.com/shop/search/prefectures/北海道/
+Redirect 301 /search/hyogo.html http://www.kigusuri.com/shop/search/prefectures/兵庫県/
+Redirect 301 /search/ibaraki.html   http://www.kigusuri.com/shop/search/prefectures/茨城県/
+Redirect 301 /search/ishikawa.html  http://www.kigusuri.com/shop/search/prefectures/石川県/
+Redirect 301 /search/iwate.html http://www.kigusuri.com/shop/search/prefectures/岩手県/
+Redirect 301 /search/kagawa.html    http://www.kigusuri.com/shop/search/prefectures/香川県/
+Redirect 301 /search/kagoshima.html http://www.kigusuri.com/shop/search/prefectures/鹿児島県/
+Redirect 301 /search/kanagawa.html  http://www.kigusuri.com/shop/search/prefectures/神奈川県/
+Redirect 301 /search/kochi.html http://www.kigusuri.com/shop/search/prefectures/高知県/
+Redirect 301 /search/kumamoto.html  http://www.kigusuri.com/shop/search/prefectures/熊本県/
+Redirect 301 /search/kyoto.html http://www.kigusuri.com/shop/search/prefectures/京都府/
+Redirect 301 /search/mie.html   http://www.kigusuri.com/shop/search/prefectures/三重県/
+Redirect 301 /search/miyagi.html    http://www.kigusuri.com/shop/search/prefectures/宮城県/
+Redirect 301 /search/miyazaki.html  http://www.kigusuri.com/shop/search/prefectures/宮崎県/
+Redirect 301 /search/nagano.html    http://www.kigusuri.com/shop/search/prefectures/長野県/
+Redirect 301 /search/nagasaki.html  http://www.kigusuri.com/shop/search/prefectures/長崎県/
+Redirect 301 /search/nara.html  http://www.kigusuri.com/shop/search/prefectures/奈良県/
+Redirect 301 /search/niigata.html   http://www.kigusuri.com/shop/search/prefectures/新潟県/
+Redirect 301 /search/oita.html  http://www.kigusuri.com/shop/search/prefectures/大分県/
+Redirect 301 /search/okayama.html   http://www.kigusuri.com/shop/search/prefectures/岡山県/
+Redirect 301 /search/okinawa.html   http://www.kigusuri.com/shop/search/prefectures/沖縄県/
+Redirect 301 /search/osaka.html http://www.kigusuri.com/shop/search/prefectures/大阪府/
+Redirect 301 /search/saga.html  http://www.kigusuri.com/shop/search/prefectures/佐賀県/
+Redirect 301 /search/saitama.html   http://www.kigusuri.com/shop/search/prefectures/埼玉県/
+Redirect 301 /search/shiga.html http://www.kigusuri.com/shop/search/prefectures/滋賀県/
+Redirect 301 /search/shimane.html   http://www.kigusuri.com/shop/search/prefectures/島根県/
+Redirect 301 /search/shizuoka.html  http://www.kigusuri.com/shop/search/prefectures/静岡県/
+Redirect 301 /search/tochigi.html   http://www.kigusuri.com/shop/search/prefectures/栃木県/
+Redirect 301 /search/tokushima.html http://www.kigusuri.com/shop/search/prefectures/徳島県/
+Redirect 301 /search/tokyo.html http://www.kigusuri.com/shop/search/prefectures/東京都/
+Redirect 301 /search/tottori.html   http://www.kigusuri.com/shop/search/prefectures/鳥取県/
+Redirect 301 /search/toyama.html    http://www.kigusuri.com/shop/search/prefectures/富山県/
+Redirect 301 /search/wakayama.html  http://www.kigusuri.com/shop/search/prefectures/和歌山県/
+Redirect 301 /search/yamagata.html  http://www.kigusuri.com/shop/search/prefectures/山形県/
+Redirect 301 /search/yamaguchi.html http://www.kigusuri.com/shop/search/prefectures/山口県/
+Redirect 301 /search/yamanashi.html http://www.kigusuri.com/shop/search/prefectures/山梨県/
+Redirect 301 /sp/mail-soudan.html   http://www.kigusuri.com/shop/search/feature/?pref=&addr1=&email_counseling_flg=メール相談受付可
+Redirect 301 /sp/kensaku.html   http://www.kigusuri.com/shop/
+Redirect 301 /sp/search/aichi.html  http://www.kigusuri.com/shop/search/prefectures/愛知県/
+Redirect 301 /sp/search/akita.html  http://www.kigusuri.com/shop/search/prefectures/秋田県/
+Redirect 301 /sp/search/aomori.html http://www.kigusuri.com/shop/search/prefectures/青森県/
+Redirect 301 /sp/search/chiba.html  http://www.kigusuri.com/shop/search/prefectures/千葉県/
+Redirect 301 /sp/search/ehime.html  http://www.kigusuri.com/shop/search/prefectures/愛媛県/
+Redirect 301 /sp/search/fukui.html  http://www.kigusuri.com/shop/search/prefectures/福井県/
+Redirect 301 /sp/search/fukuoka.html    http://www.kigusuri.com/shop/search/prefectures/福岡県/
+Redirect 301 /sp/search/fukushima.html  http://www.kigusuri.com/shop/search/prefectures/福島県/
+Redirect 301 /sp/search/gifu.html   http://www.kigusuri.com/shop/search/prefectures/岐阜県/
+Redirect 301 /sp/search/gunma.html  http://www.kigusuri.com/shop/search/prefectures/群馬県/
+Redirect 301 /sp/search/hiroshima.html  http://www.kigusuri.com/shop/search/prefectures/広島県/
+Redirect 301 /sp/search/hokkaido.html   http://www.kigusuri.com/shop/search/prefectures/北海道/
+Redirect 301 /sp/search/hyogo.html  http://www.kigusuri.com/shop/search/prefectures/兵庫県/
+Redirect 301 /sp/search/ibaraki.html    http://www.kigusuri.com/shop/search/prefectures/茨城県/
+Redirect 301 /sp/search/ishikawa.html   http://www.kigusuri.com/shop/search/prefectures/石川県/
+Redirect 301 /sp/search/iwate.html  http://www.kigusuri.com/shop/search/prefectures/岩手県/
+Redirect 301 /sp/search/kagawa.html http://www.kigusuri.com/shop/search/prefectures/香川県/
+Redirect 301 /sp/search/kagoshima.html  http://www.kigusuri.com/shop/search/prefectures/鹿児島県/
+Redirect 301 /sp/search/kanagawa.html   http://www.kigusuri.com/shop/search/prefectures/神奈川県/
+Redirect 301 /sp/search/kochi.html  http://www.kigusuri.com/shop/search/prefectures/高知県/
+Redirect 301 /sp/search/kumamoto.html   http://www.kigusuri.com/shop/search/prefectures/熊本県/
+Redirect 301 /sp/search/kyoto.html  http://www.kigusuri.com/shop/search/prefectures/京都府/
+Redirect 301 /sp/search/mie.html    http://www.kigusuri.com/shop/search/prefectures/三重県/
+Redirect 301 /sp/search/miyagi.html http://www.kigusuri.com/shop/search/prefectures/宮城県/
+Redirect 301 /sp/search/miyazaki.html   http://www.kigusuri.com/shop/search/prefectures/宮崎県/
+Redirect 301 /sp/search/nagano.html http://www.kigusuri.com/shop/search/prefectures/長野県/
+Redirect 301 /sp/search/nagasaki.html   http://www.kigusuri.com/shop/search/prefectures/長崎県/
+Redirect 301 /sp/search/nara.html   http://www.kigusuri.com/shop/search/prefectures/奈良県/
+Redirect 301 /sp/search/niigata.html    http://www.kigusuri.com/shop/search/prefectures/新潟県/
+Redirect 301 /sp/search/oita.html   http://www.kigusuri.com/shop/search/prefectures/大分県/
+Redirect 301 /sp/search/okayama.html    http://www.kigusuri.com/shop/search/prefectures/岡山県/
+Redirect 301 /sp/search/okinawa.html    http://www.kigusuri.com/shop/search/prefectures/沖縄県/
+Redirect 301 /sp/search/osaka.html  http://www.kigusuri.com/shop/search/prefectures/大阪府/
+Redirect 301 /sp/search/saga.html   http://www.kigusuri.com/shop/search/prefectures/佐賀県/
+Redirect 301 /sp/search/saitama.html    http://www.kigusuri.com/shop/search/prefectures/埼玉県/
+Redirect 301 /sp/search/shiga.html  http://www.kigusuri.com/shop/search/prefectures/滋賀県/
+Redirect 301 /sp/search/shimane.html    http://www.kigusuri.com/shop/search/prefectures/島根県/
+Redirect 301 /sp/search/shizuoka.html   http://www.kigusuri.com/shop/search/prefectures/静岡県/
+Redirect 301 /sp/search/tochigi.html    http://www.kigusuri.com/shop/search/prefectures/栃木県/
+Redirect 301 /sp/search/tokushima.html  http://www.kigusuri.com/shop/search/prefectures/徳島県/
+Redirect 301 /sp/search/tokyo.html  http://www.kigusuri.com/shop/search/prefectures/東京都/
+Redirect 301 /sp/search/tottori.html    http://www.kigusuri.com/shop/search/prefectures/鳥取県/
+Redirect 301 /sp/search/toyama.html http://www.kigusuri.com/shop/search/prefectures/富山県/
+Redirect 301 /sp/search/wakayama.html   http://www.kigusuri.com/shop/search/prefectures/和歌山県/
+Redirect 301 /sp/search/yamagata.html   http://www.kigusuri.com/shop/search/prefectures/山形県/
+Redirect 301 /sp/search/yamaguchi.html  http://www.kigusuri.com/shop/search/prefectures/山口県/
+Redirect 301 /sp/search/yamanashi.html  http://www.kigusuri.com/shop/search/prefectures/山梨県/
+
+# 201612追加
+Redirect 301 /consultation/medicine/ /kampo/medicine/
+RedirectMatch /consultation/medicine.htm /kampo/medicine/
+Redirect 301 /consultation/support/ /shop/support/
+Redirect 301 /consultation/kampo-care/ /kampo/kampo-care/
+RedirectMatch /consultation/kampo-care.htm /kampo/kampo-care/
+Redirect 301 /consultation/herbal/ /kampo/herbal/
+RedirectMatch /consultation/herbal.html$ /kampo/herbal/
+Redirect 301 /consultation/mikage/ /kampo/mikage/
+Redirect 301 /kampo-care/ /kampo/kampo-care/
+Redirect 301 /support/ /kampo/support/
+Redirect 301 /event/ /kampo/event/
+RedirectMatch /kampo/herbal.htm$ /kampo/herbal/
+RedirectMatch /kampo/topics/(.+).htm$ /kampo/topics/$1.html
+Redirect 301 /consultation/nikaido/ /kampo/nikaido/
+Redirect 301 /kampo/herbal/shoplist.html /shop/search/feature/?pref=&addr1=&herb_flg=ハーブ取扱いあり
+RedirectMatch /consultation/health/(.+).htm$ /kampo/health/$1.html
+Redirect 301 /kampo-care.htm /kampo/kampo-care/
+Redirect 301 /jiten/ /kampo/jiten/
+Redirect 301 /medicine.htm /kampo/medicine/
+Redirect 301 /medicine/ /kampo/medicine/
+Redirect 301 /mikage/ /kampo/mikage/
+Redirect 301 /kouda/ /kampo/kouda/
+Redirect 301 /furusato/ /kampo/furusato/
+Redirect 301 /quiz/ /kampo/quiz/
+Redirect 301 /topics/ /kampo/topics/
+Redirect 301 /faq/ /kampo/faq/
+Redirect 301 /health.htm /kampo/health/
+Redirect 301 /supplement.htm /kampo/supplement/
+Redirect 301 /engei/ /kampo/engei/
+Redirect 301 /cooking.htm /kampo/cooking/
+Redirect 301 /nikaido/ /kampo/nikaido/
+Redirect 301 /herbal.htm /kampo/herbal/
+Redirect 301 /terada/ /kampo/terada/
+Redirect 301 /asano/ /kampo/asano/
+Redirect 301 /check/ /kampo/check/
+Redirect 301 /eat-test/ /kampo/eat-test/
+Redirect 301 /hajimete.html /beginner/
+Redirect 301 /calendar.html /kampo/calendar.html
+# Redirect 301 /FS-APL/FS-Form/form.cgi /contact_shop/
+RewriteRule ^/FS-APL/FS-Form/form\.cgi /contact_shop/ [R=301,L] 
+
+# 201701追加
+Redirect 301 /health/ /kampo/health/
+Redirect 301 /supplement/ /kampo/supplement/
+Redirect 301 /herbal/ /kampo/herbal/
+Redirect 301 /cooking/ /kampo/cooking/
+
+

@@ -1,0 +1,198 @@
+/* charset */
+@charset "utf-8";
+
+/*【表示フラグ】
+original-c.cssで設定。ない場合は、display: none;
+* 各種設定
+----------------------------------------------------*/
+
+/* ナビflag */
+.index {}
+.guide {}
+.support {}
+.access { display: none !important; }
+.privacy {}
+.sitemap {}
+.faq {}
+.product {}
+.howto {}
+.plus { display: none !important; } /* 漢方プラス */
+.consultation { display: none !important; }/* ご相談例 */
+
+/* 健康トピックス＆お客様の声 */
+/* topicとvoiceとは排他で設定、どちらかを必ず非表示にする */
+.topic {}/* 健康トピックス */
+.voice, .link-voice {display: none !important;}/* お客様の声ありの健康トピックス */
+
+
+/* お店からのサービス情報 */
+.service{
+}
+
+/* 自社サイト */
+.link-site{
+}
+
+/* ブログ */
+.link-blog{
+display: none !important;
+}
+
+/* メールマガジン */
+.link-mag{
+display: none !important;
+}
+
+/* フェイスブックページ */
+.link-fb{
+display: none !important;
+}
+
+/* ツイッター */
+.link-tw{
+display: none !important;
+}
+
+
+/* 受け付けていない場合は、display: none; */
+
+/* 電話相談の有無 */
+#tel {}
+
+/* FAX受付の有無 */
+.fax{}
+
+/* メール相談フォームの有無 */
+.mail {
+}
+
+/* 予約受付の有無 */
+.reserve {
+display: none !important;
+}
+
+/* 予約TELの有無 */
+.tel-reserve {
+display: none !important;
+}
+
+/* WEB予約フォームの有無 */
+.mail-reserve {
+display: none !important;
+}
+
+/* 相談の流れ */
+#contents-flow,
+.flow {
+display: none !important;
+}
+
+/* おすすめ商品 */
+#contents-goods {
+}
+/* 薬局情報（カート通販されるページは必須） */
+.disp_shop{}
+
+/* 健康トピックス */
+#contents-topics {}
+#contents-topics #topics-wrap {}
+
+/* 健康トピックスキーワード対応 */
+.topic-keyword {display: none;}
+
+/* お店からヒトコト スタッフ欄 */
+#hitokoto-staff{display: none !important;}
+
+/* 編集者のコメント */
+#contents-comment {display: none !important;}
+
+/* パンくず下のページ内アンカーリンク */
+.category-list{}
+
+/* 行き方写真 */
+#contents-access-ikikata {
+display: none !important;
+}
+
+
+/* 相談はこちら */
+
+/* 男性の先生 */
+div.soudan_m {
+	display: none !important;
+}
+
+/* 女性の先生 */
+div.soudan_w {
+}
+
+/* 
+----------------------------------------------------*/
+
+/* index
+----------------------------------------------------*/
+
+#hitokoto-reserve dd{
+	padding-left: 2em;
+}
+#contents-feature.top {
+    margin: 0;
+}
+
+/* トピックス欄高さ */
+#contents-center #contents-topics #topics-wrap {
+}
+
+.topictitle {
+	width:370px;
+	height:300px;
+	padding:0;
+	margin: 5px 0px 0px; 
+	overflow: auto;
+	scrollbar-base-color:white;
+	scrollbar-face-color:white;
+	scrollbar-track-color:F5F5F5;
+	scrollbar-arrow-color:darkgray;
+	scrollbar-3dlight-color:darkgray;
+	scrollbar-darkshadow-color:white;
+	scrollbar-highlight-color:white;
+	scrollbar-shadow-color:darkgray;
+}
+
+
+
+/* guide
+----------------------------------------------------*/
+#contents-tennai .gallery th {
+    vertical-align: bottom;
+}
+
+
+
+/* access
+----------------------------------------------------*/
+
+#contents-wrap #contents-access {
+	width:845px;
+}
+
+#contents-wrap #contents-access .contents-access .box-2col .col2 {
+    width: 421px;
+}
+
+
+/* support
+----------------------------------------------------*/
+
+/* clearfix
+----------------------------------------------------*/
+.clearfix:after {
+	content:".";
+	display:block;
+	clear:both;
+	height:0;
+	visibility:hidden;}
+
+/* .clearfix {overflow:hidden;} */	 /* dreamweaver上で表示が崩れない用 */
+/* div.clearfix { display:inline-block; } */ 
+

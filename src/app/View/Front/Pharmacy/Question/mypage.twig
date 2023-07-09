@@ -1,0 +1,171 @@
+<?php
+  //共通
+  require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+  //メタディスクリプション
+  $description = '';
+
+  //メタキーワード
+  $keywords = '';
+
+  //Facebook　全ページ共通の場合は空白にしてください
+  $fbimage = '';
+
+  //タイトル
+  $title = '';
+
+  //css追加
+  $ex_tag_css = '<link rel="stylesheet" href="/member.shop/css/style.css"><link rel="stylesheet" href="/member.shop/css/template.css">';
+
+  //js追加
+  $ex_tag_js = '<script src="/member/js/script.js"></script>';
+
+  //bodyID
+  $bodyID = 'mypage';
+
+?>
+
+  <?php include 'header.php'; ?>
+
+	<div class="contents-header">
+		<h1 class="header-ttl">マイページ</h1>
+	</div>
+    <!-- /.contents-header -->
+
+  <div class="inner">
+    
+    {% if pager.curpage == 1 %}
+
+        {% if notices | length %}
+        <div class="component-area">
+          <div class="l-sp-inner">
+            <ul class="m-list01">
+              {% for notice in notices %}
+              <li>
+                <p class="date">{{ notice.date | date('Y/m/d H:i')}}</p>
+                {% set cert = notice.answer_id ~ notice.question_id ~ notice.stat %}
+                <p class="tit"><a href="{{ c.app.urlFor('qa_answer',{'question_id': notice.question_id}) }}?c={{ cert | md5  }}">
+                {% if notice.stat == 'response' %}
+                    {{ notice.nickname }}さんからコメントが投稿されました。
+                {% else %}
+                    回答した漢方相談Q&amp;Aが「解決済み」になりました。
+                {% endif %}
+                </a></p>
+              </li>
+              {% endfor %}
+            </ul>
+            <!-- /.m-list01 -->
+          </div>
+          <!-- /.l-sp-inner -->
+        </div>
+        <!-- /.component-area -->
+        {% endif %}
+    
+    {% if no_answers|length %}
+    <div class="component-area">
+      <div class="l-sp-inner">
+        <div class="m-sq-box">
+          <div class="m-sq-box__inner">
+            <p class="m-sq-box__tit">症状・分野別</p>
+            <div class="m-sq-box__main">
+              <p class="m-sq-box__txt">（）内の数字はどの薬局からも<span class="u-dib">まだ回答がない相談件数です。</span>ぜひ回答をお願いします。</p>
+              <ul class="m-sq-box__list clearfix">
+                {% for no_answer in no_answers %}
+                <li><a href="{{ c.app.urlFor('pharmacy_qa_search' , {'search_type':'no_answer', q: c.config('question_categories')[ no_answer.category_id ] } ) }}">{{ c.config('question_categories')[ no_answer.category_id ] }}({{ no_answer.cnt }})</a></li>
+                {% endfor %}
+              </ul>
+              <!-- /.m-sq-box__list -->
+            </div>
+            <!-- /.m-sq-box__main -->
+          </div>
+          <!-- /.m-sq-box__inner -->
+        </div>
+        <!-- /.m-sq-box -->
+      </div>
+      <!-- /.l-sp-inner -->
+      <div class="m-tablearea01__btn text-c m-tablearea01__rireki sp-item"><a href='{{ c.app.urlFor('answer_history')}}' class="m-rireki-btn"><span class="m-rireki-btn__icn"></span>回答履歴</a></div>
+
+    </div>
+    <!-- /.component-area -->
+    {% endif %}
+
+    {% endif %}
+
+    <div class="component-area">
+
+      <div class="m-tablearea01">
+        <div class="l-sp-inner">
+          <p class="m-tablearea01__tit">お客さまからの漢方相談一覧</p>
+          <p class="m-tablearea01__leading">
+            一般の利用者から寄せられている最新の漢方相談一覧です。
+            <br class="pc-item">回答件数は他の薬局からの回答も含めた全件を表示しています。
+          </p>
+        </div>
+        <!-- /.l-sp-inner -->
+      </div>
+      <!-- /.m-tablearea01 -->
+    </div>
+    <!-- /.component-area -->
+
+    <div class="component-area">
+      <div class="m-tabarea01">
+
+        <div class="m-tabarea01__tab">
+          <div class="m-tab01">
+            <div class="m-tablearea01__btn text-c m-tablearea01__rireki pc-item"><a href='{{ c.app.urlFor('answer_history')}}' class="m-rireki-btn"><span class="m-rireki-btn__icn"></span>回答履歴</a></div>
+            <ul class="m-tab01__tabs clearfix">
+              <li {% if c.params['search_type'] == 'no_answer' %}class='m-tab01__tab--active'{% endif %}><a href="{{ c.app.urlFor('pharmacy_mypage') }}">回答なし</a></li>
+              <li {% if c.params['search_type'] == 'has_answer'%}class='m-tab01__tab--active'{% endif %}><a href="{{ c.app.urlFor('pharmacy_mypage', {search_type:'has_answer'}) }}">回答あり</a></li>
+              <li {% if c.params['search_type'] == 'all'  %}class='m-tab01__tab--active'{% endif %}><a href="{{ c.app.urlFor('pharmacy_mypage', {search_type:'all'}) }}">すべて</a></li>
+            </ul>
+
+
+
+            <!-- /.m-tab01__tabs -->
+            <div class="m-tab01__contents">
+              <div class="" id="">
+                <div class="m-tabcont01">
+                  {% if list|length %}
+                  <div class="m-tabcont01__count">
+                    <span class="m-tabcont01__smallnum">{{ pager.total_count }}</span>件中 / <span class="m-tabcont01__bignum">{{ pager.start_cnt }}〜{{ pager.end_cnt }}</span> 件表示
+                  </div>
+                  <!-- /.m-tabcont01__count -->
+                  <ul class="m-tabcont01__bal-list">
+                    {% include '/Front/Parts/question_list.twig' %}
+                  </ul>
+                  <!-- /.m-tabcont01__bal-list -->
+                  <ul class="m-tabcont01__btn-list">
+
+                    {% if pager.prev %}
+                    <li><a href="{{ url }}?page={{ pager.prev }}" class="m-arrow-btn02 m-arrow-btn02--prev m-arrow-btn02--gray">前へ</a></li>
+                    {% endif %}
+                    
+                    {% if pager.next %}
+                    <li><a href="{{ url }}?page={{ pager.next }}" class="m-arrow-btn02 m-arrow-btn02--next m-arrow-btn02--green">次へ</a></li>
+                    {% endif %}
+                  </ul>
+                  <!-- /.m-tabcont01__btn-list -->
+                    
+                  {% else %}
+                    登録された質問はありません。
+                  {% endif %}
+                </div>
+                <!-- /.m-tabcont01 -->
+              </div>
+              <!-- /.m-tab01__content -->
+            </div>
+            <!-- /.m-tab01__contents -->
+          </div>
+          <!-- /.m-tab01 -->
+        </div>
+        <!-- /.m-tabarea01__tab -->
+      </div>
+      <!-- /.m-tabarea01 -->
+    </div>
+    <!-- /.component-area -->
+
+    {% include '/Front/Parts/pharmacy_support.twig' %}
+  </div>
+  <!-- /.inner -->
+  
+  <?php include 'footer.php'; ?>

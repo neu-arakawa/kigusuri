@@ -1,0 +1,172 @@
+@charset "shift_jis";
+
+/* =======================================
+
+ kigusuri.com/hajimete.html/ CSS 
+
+-----------------------------------------
+hajimete index
+-----------------------------------------
+1.Base Structure
+	1-1.clearfix
+	1-2.title
+
+2.contents
+
+3.profile
+
+4.item-list
+
+5.item
+
+========================================== */
+
+/* 1.Base Structure
+========================================== */
+
+div#contents div#main div.inner div#contentsArea{
+	width:690px; font-size:14px; line-height:1.6;}
+
+div#contents div#main div.inner div#hajimete-warap{
+	margin:0; padding:0px 10px;
+	line-height: 1.5;}
+
+/* 1-1.clearfix
+---------------------------------------- */
+
+.clearfix:after {
+	content:".";
+	display:block;
+	clear:both;
+	height:0;
+	visibility:hidden;}
+
+.clearfix {overflow:hidden;}	 /* dreamweaverè„Ç≈ï\é¶Ç™ïˆÇÍÇ»Ç¢óp */
+
+div.clearfix {
+	display:inline-block;}
+ 
+dl.clearfix {
+	display:inline-block;}
+
+
+
+/* 2.title
+========================================== */
+
+div#contents div#main div.inner h2 {
+	margin:23px 0;
+    padding:0;}
+
+div#contents div#main div.inner div#hajimete-warap p{
+	margin:18px 0 18px 0;
+	padding:0 8px;}
+
+/* 3.box_hajimete
+========================================== */
+
+div#contents div#main div.inner div#hajimete-warap div.box_hajimete {
+	border: 4px #FFA233 solid;
+	padding:0 0 62px 0;
+	margin: 0 0 24px 0;
+	font-size:15px;}
+
+div#contents div#main div.inner div#hajimete-warap div.box_hajimete h3 {
+	border-bottom: 4px #FFA233 solid;
+	padding: 5px 0;}
+
+div#contents div#main div.inner div#hajimete-warap div.box_hajimete ul{
+	width:660px;}
+
+div#contents div#main div.inner div#hajimete-warap div.box_hajimete li{
+	display: block;
+	float: left;
+	width:330px;}
+
+div#contents div#main div.inner div#hajimete-warap div.box_hajimete li a{
+	display: block;
+	margin: 0 8px;
+	padding: 28px 0 24px 18px;
+	background:url(../images_2009/hajimete/list-type.gif)  center left no-repeat;
+	border-bottom: 3px #CCC dotted;
+	font-weight:bold;}
+
+
+/* 3.box_hajimete_left
+========================================== */
+
+div#contents div#main div.inner div#hajimete-warap div#box_hajimete_left {
+	border: 4px #FFA233 solid;
+	padding:0 0 62px 0;
+	margin: 0 0 24px 0;
+	float:left;
+	font-size:15px;}
+
+div#contents div#main div.inner div#hajimete-warap div#box_hajimete_left h3 {
+	border-bottom: 4px #FFA233 solid;
+	padding: 5px 0;}
+
+div#contents div#main div.inner div#hajimete-warap div#box_hajimete_left ul{
+	width:310px;}
+
+div#contents div#main div.inner div#hajimete-warap div#box_hajimete_left li{
+	width:310px;}
+
+div#contents div#main div.inner div#hajimete-warap div#box_hajimete_left li a{
+	display: block;
+	margin: 0 8px;
+	padding: 28px 0 24px 18px;
+	background:url(../images_2009/hajimete/list-type.gif) left no-repeat;
+	border-bottom: 3px #CCC dotted;
+	font-weight:bold;}
+
+/* 4.box_hajimete_right
+========================================== */
+
+div#contents div#main div.inner div#hajimete-warap div#box_hajimete_right {
+	border: 4px #FFA233 solid;
+	padding:0 0 62px 0;
+	margin: 0 0 24px 0;
+	float:right;
+	font-size:15px;}
+
+div#contents div#main div.inner div#hajimete-warap div#box_hajimete_right h3 {
+	border-bottom: 4px #FFA233 solid;
+	padding: 5px 0;}
+
+div#contents div#main div.inner div#hajimete-warap div#box_hajimete_right ul{
+	width:310px;}
+
+div#contents div#main div.inner div#hajimete-warap div#box_hajimete_right li{
+	width:310px;}
+
+div#contents div#main div.inner div#hajimete-warap div#box_hajimete_right li a{
+	display: block;
+	margin: 0 8px;
+	padding: 28px 0 24px 18px;
+	background:url(../images_2009/hajimete/list-type.gif) left no-repeat;
+	border-bottom: 3px #CCC dotted;
+	font-weight:bold;}
+
+/* 5.box_chui
+========================================== */
+
+div#contents div#main div.inner div#hajimete-warap div#box_chui {
+	border: 4px #ccc solid;
+	width:665px}
+
+div#contents div#main div.inner div#hajimete-warap div#box_chui h3{
+	font-size:16px;
+	color: #F44B12;
+	font-weight: bold;
+	padding: 12px 0 8px 12px;
+	border-bottom: 3px #ccc dotted;}
+
+div#contents div#main div.inner div#hajimete-warap div#box_chui p{
+	margin-left: 6px;
+	margin-right: 6px}
+
+div#contents div#main div.inner div#hajimete-warap div#box_chui ul{
+	list-style: disc;
+	padding: 0 0 0 24px;
+	margin: 0 0 0 6px}

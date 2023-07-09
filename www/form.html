@@ -1,0 +1,151 @@
+<?php
+	//共通
+	require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+	
+	//メタディスクリプション
+	$description = '';
+	
+	//メタキーワード
+	$keywords = '';
+	
+	//Facebook　全ページ共通の場合は空白にしてください
+	$fbimage = '';
+	
+	//タイトル
+	$title = 'ご意見・ご感想';
+	
+	//css追加
+	$ex_tag_css = '<link rel="stylesheet" type="text/css" media="all" href="/kampo/css/style.css">
+';
+	
+	//js追加
+	$ex_tag_js = '';
+	
+	//bodyID
+	$bodyID = 'kampo';
+		
+	//bodyClass 半角スペースで複数指定可
+	$bodyClass = '';
+
+?>
+<?php include 'header.php'; ?>
+<style>
+#formWrap {
+	width:700px;
+	margin:0 auto;
+	line-height:1.2;
+}
+#goiken table {
+	margin: 10px auto;
+}
+#goiken p {
+	line-height:1.4;
+	padding-bottom:0.5em;
+}
+table.formTable{
+	width:700px;
+	margin:0 auto;
+	border-collapse:collapse;
+}
+table.formTable td,table.formTable th{
+	border:1px solid #ccc;
+	padding:10px;
+}
+table.formTable th{
+	width:30%;
+	font-weight:normal;
+	background:#efefef;
+	text-align:left;
+}
+</style>
+
+	<article id="main" class="inner fbox shift-contents">
+
+		<section class="fbox kampo-sct">
+
+			<!--//////////////////// 移行コンテンツ start-->
+
+	<!-- トピックパス -->
+	<!-- /トピックパス ここまで -->
+
+<div class="contents-header">
+	<ul class="topicpath fbox"><li><a href="/">トップページ</a></li><li>ご意見・ご感想</li></ul>
+<h1 class="header-ttl">ご意見・ご感想</h1>
+</div>
+
+<div id="goiken">
+<!-- 			<div id="contentsArea"> -->
+
+<table border="0" cellspacing="0" cellpadding="0">
+<!-- <tr>
+<td><h2><img src="images/cap-iken.gif" alt="ご意見・ご感想" width="700" height="41"></h2></td>
+</tr>
+ -->
+<tr>
+<td colspan="2" class="t11"><p>&nbsp;</p>
+  <p>こちらの窓口では、漢方薬のきぐすり.comへのお問い合わせを承っております。</p>
+  <p>※ 個別の漢方相談・健康相談には、お答えいたしかねます。予めご了承くださいませ。</p>
+  <br>
+  <p>　・漢方薬や健康についてのご相談は <strong><a href="/consultation/">みんなの漢方相談Q&amp;A</a></strong> のコーナーをご利用くださいませ。</p>
+  <p>　・お薬の取扱い・ご購入については <strong><a href="/shop/">漢方薬局を探す</a></strong>より、最寄りの店舗へお気軽にご相談いただけます。</p>
+<div id="formWrap">
+<form action="mail.php" method="post">
+  <table class="formTable" summary="ご意見・ご感想フォーム">
+      <tr>
+        <th>お名前</th>
+        <td><input size="20" type="text" name="お名前"></td>
+      </tr>
+<!--
+      <tr>
+        <th>ご用件</th>
+        <td><select name="ご用件">
+            <option value="">選択してください</option>
+            <option value="ご意見・ご感想">ご意見・ご感想</option>
+            <option value="ご質問・お問い合わせ">ご質問・お問い合わせ</option>
+            <option value="リンクについて">リンクについて</option>
+            <option value="その他">その他</option>
+          </select></td>
+      </tr>
+-->
+		<tr>
+		<th>返信希望先<br>
+		  メールアドレス</th>
+		<td>
+		<input size="30" type="text" name="メールアドレス">
+		<span class="t10">（半角）</span><br>
+		&nbsp;&nbsp;<span style="color:#333333;font-size:0.8em;">（記入例）info@kigusuri.com</span></td>
+		</tr>
+		<tr>
+		<th>ご意見・ご感想</th>
+		<td>
+		<textarea rows="15" cols="50" name="ご意見・ご感想"></textarea>
+		</td>
+		</tr>
+</table>
+  <p style="text-align:center;"><br><br>
+      <input type="submit" value="　 確認 　"><!-- 　<input type="reset" value="リセット"> -->
+    </p>
+  </form>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<br>
+  <p>　・漢方薬や健康についてのご相談は <strong><a href="/consultation/">みんなの漢方相談Ｑ＆Ａ</a></strong> のコーナーをご利用くださいませ。</p>
+  <p>　・お薬の取扱い・ご購入については <strong><a href="/shop/">漢方薬局を探す</a></strong>より、最寄りの店舗へお気軽にご相談いただけます。</p>
+</td>
+</tr>
+</table>
+
+</div><!-- /goiken -->
+
+			<!--//////////////////// 移行コンテンツ end-->
+
+
+
+		</section>
+
+	</article>
+	
+<?php include 'footer.php'; ?>

@@ -1,0 +1,216 @@
+/* CSS Document */
+#main{margin:0 0 0 10px; padding:0; width:582px;}
+#categoryName{margin:20px 0;}
+
+
+/* theme
+----------------------------------------------------------*/
+#theme table{width:582px;border-left:5px solid #999999;}
+#theme table th{vertical-align:top;text-align:left;padding-left:10px;}
+#theme table th p{color:ff6600;font-size:90%;}
+#theme table td{width:160px;vertical-align:top;font-size:80%;color:666666;padding:0;}
+
+
+.point{color:#ff3366;}
+.author{text-align:right;font-weight:bold; color:#c63;}
+.term{ margin:0 5px;font-size:90%; color:#660;}
+.imgR{ margin:0 10px; float:right;}
+.imgL{ margin:0 10px; float:left;}
+.clear{ clear:both;}
+
+
+.def { margin:20px 0; padding:0;background-image:url(../support/img/r-s.gif); background-repeat:repeat-y;}
+.def dl{ margin:0; padding:0;}
+.def dl dt{ margin:0; padding:5px 0 5px 10px; color:#F69; font-weight:bold; background-image:url(../support/img/r-t.gif); background-repeat:no-repeat; }
+.def dl dd{ margin:0 15px; padding:0 0 0 12px; background-image:url(../images/common/listMark01.gif); background-position:left center; background-repeat:no-repeat; display:inline;}
+.def .bottom{ margin:0; padding:0; background-color:#fff; background-image:url(../support/img/r-b.gif); background-repeat:no-repeat; height:10px; }
+.def .e{ background:none;}
+
+/* contentsArea
+----------------------------------------------------------*/
+#contentsArea{
+	margin:20px 15px;
+	font-size:90%;
+	line-height:160%;
+	clear:both;
+}
+#contentsArea h3{text-indent: 5px;color: #333333;background-color:#e9e9e9;border-left:5px solid #c6ec4c;}
+#contentsArea h4{margin:20px 0 0 5px;text-indent:10px;color: #333333;border-left:5px solid #c6ec4c; line-height:100%;}
+body#support #cont table.fl-l #main #contentsArea p{margin: 1em 0;}
+body#support #cont table.fl-l #main #contentsArea h3{font-weight: bold;text-indent: 5px;color: #333333;background-color:#e9e9e9;border-left:5px solid #c6ec4c;}
+body#support #cont table.fl-l #main #contentsArea h3{font-weight: bold;margin-top: 1.5em;}
+body#support #cont table.fl-l #main #contentsArea h4{font-weight: bold;}
+
+#contentsArea .galleryL{margin:10px 0;}
+#contentsArea .galleryL dl{margin:0 10px 0 0;padding:0;float:left;}
+#contentsArea .galleryL dt{margin:0;padding:0;text-align:center;}
+#contentsArea .galleryL dd{text-align:center;margin:0;padding:0;font-size:80%;}
+
+#contentsArea .galleryR{margin:10px 0;}
+#contentsArea .galleryR dl{margin:0 0 0 10px;padding:0;float:right;}
+#contentsArea .galleryR dt{margin:0;padding:0;text-align:center;}
+#contentsArea .galleryR dd{text-align:center;margin:0;padding:0;font-size:80%;}
+
+#contentsArea .galleryC{margin:10px auto;}
+#contentsArea .galleryC dl{margin:0;padding:0;}
+#contentsArea .galleryC dt{margin:5px 0;padding:0;text-align:center;}
+#contentsArea .galleryC dd{margin:0;padding:0;text-align:center;font-size:80%;}
+
+
+/* hitokoto
+----------------------------------------------------------*/
+.hitokoto{ margin:40px 16px; padding:0; width:520px; background-color: #FFFAE8; border-bottom: 1px solid #FFCC33; color:#333;}
+.hitokoto h4{ margin:0; padding:0; width:520px; height:52px; background-image:url(../support/img/img_message.gif); background-repeat:no-repeat; background-position:left top; text-indent:-999px;}
+.hitokoto p{ margin:0; padding:5px 10px;}
+
+
+/* matome
+----------------------------------------------------------*/
+.matome{ margin:5px 16px 40px 16px; padding:10px; width:520px; background-color:#FFFAE8; border: 1px solid #FFCC33; color:#333;}
+.matome p{ margin:0; padding:5px 10px;}
+
+
+
+/* 
+----------------------------------------------------------*/
+.tableEx1{border-collapse:collapse;font-size:90%;}
+.tableEx1 caption{background:#ffcc66;font-weight:bold;color:#333;line-height:200%;}
+.tableEx1 th{background:#FDE8C9;padding:5px;border:1px solid #ffcc66;font-weight:normal;}
+.tableEx1 td{background:#ffffff;padding:5px;border:1px solid #ffcc66;}
+.tableEx1 td strong{color:#d86a43;font-size:110%;}
+.tableEx1 td ul li{margin:10px 0;}
+
+
+/* example
+----------------------------------------------------------*/
+#contentsArea .example{ margin:15px; padding:5px 10px; background-color:#FFE9F0; color:#c36;}
+
+
+/* pagetop
+----------------------------------------------------------*/
+.pagetop{
+clear:both;
+font-size:70%;
+text-align:right;
+margin:15px 0 0;}
+.pagetop a{background:url(../images/bt_top.gif) no-repeat left;padding-left:20px;}
+
+
+/* summary
+----------------------------------------------------------*/
+#contentsArea .summary {
+width:520px;
+background-color: #FFFAE8;
+border-bottom: 1px solid #FFCC33;
+padding: 0;
+margin:20px 16px;
+color: #333333;
+}
+.summary strong{color:#d86a43;}
+.summary p{margin:10px;}
+
+
+/* profile style 
+--------------------------------------*/
+.profile{clear:both;margin:40px 0 0 0;}
+.profile h3{background:#c6ec4c;margin:10px 0;}
+.profile .photoSpace{
+width:157px;
+float:left;
+text-align:center;
+font-size:80%;
+line-height:160%;
+padding:0 10px 0 0;
+}
+.profile .photoSpace dl{margin:0;padding:0;}
+.profile .photoSpace dl dd{margin:0;padding:0;}
+.profile .detailProf{
+width:415px;
+float:right;
+font-size:80%;
+line-height:160%;
+margin:0;
+padding:0;
+}
+.profile .detailProf h4{margin:10 0;}
+.profile .detailProf .btn{text-align:right;}
+
+/* photo */
+.ph_noimage{ width:100px; height:120px; margin:0 auto; background-image:url(../support/img/ph_noimage.jpg); background-repeat:no-repeat;}
+.phKoizumi{ width:130px; height:98px; margin:0 auto; background-image:url(../support/img/ph_koizumi.jpg); background-repeat:no-repeat;}
+.phShirai { width:100px; height:120px; margin:0 auto; background-image:url(../support/img/ph_shirai.jpg); background-repeat:no-repeat;}
+.phsaji { width:100px; height:120px; margin:0 auto; background-image:url(../support/img/ph_saji.jpg); background-repeat:no-repeat;}
+.phueda { width:100px; height:120px; margin:0 auto; background-image:url(../support/img/ph_ueda.jpg); background-repeat:no-repeat;}
+.phueda02 { width:100px; height:120px; margin:0 auto; background-image:url(../support/img/ph_ueda02.jpg); background-repeat:no-repeat;}
+.phsatou { width:100px; height:120px; margin:0 auto; background-image:url(../support/img/ph_satou.jpg); background-repeat:no-repeat;}
+.phmaeda { width:100px; height:120px; margin:0 auto; background-image:url(../support/img/ph_maeda.jpg); background-repeat:no-repeat;}
+.ph_yanoma_d { width:100px; height:120px; margin:0 auto; background-image:url(../support/img/ph_yanoma_d.jpg); background-repeat:no-repeat;}
+.ph_yanoma_a { width:100px; height:120px; margin:0 auto; background-image:url(../support/img/ph_yanoma_a.jpg); background-repeat:no-repeat;}
+.ph_sada_d { width:100px; height:120px; margin:0 auto; background-image:url(../support/img/ph_sada.jpg); background-repeat:no-repeat;}
+.ph_ozaki { width:100px; height:120px; margin:0 auto; background-image:url(../support/img/ph_ozaki.jpg); background-repeat:no-repeat;}
+#ozaki_pro dd{
+	margin-left:4px; padding:0;
+}
+#ozaki_pro dd ul{
+	margin:0; padding:0; list-style-image: url(../images/list_mark01.gif);
+}
+#ozaki_pro dd ul li{
+	margin:0 0 0 32; padding:0;
+}
+.ph_kenkouya { width:100px; height:120px; margin:0 auto; background-image:url(../support/img/ph_matsubara.jpg); background-repeat:no-repeat;}
+.ph_okunukikan { width:100px; height:120px; margin:0 auto; background-image:url(../support/img/ph_nakata.jpg); background-repeat:no-repeat;}
+
+/* categoryList
+----------------------------------------------------------*/
+#main .categoryList{
+font-size:80%;
+line-height:160%;
+background: url(../images/supplement/line_spacer.gif) no-repeat left top;
+margin-top: 15px;
+padding-top: 15px;}
+#main .categoryList div{width:291px;float:left;}
+#main .categoryList dl{margin:0;padding:0}
+#main .categoryList dl dt{margin:0;padding:0;}
+#main .categoryList dl dd{margin:0;;padding:0;}
+#main .categoryList ul{margin:0;padding:0;}
+#main .categoryList ul li{margin:0 0 0 20px;padding:0;}
+
+.matome strong{color:#d86a43;}
+
+/* support15（春日部第一薬局様）
+----------------------------------------------------------*/
+#kouen{
+	text-align:center;
+	width:280px;
+	margin:0;}
+
+
+#kouen p{margin:5px 0 ; padding:0; line-height:1.2; font-size:12px;}
+
+/* 関連リンク  support15,22（春日部第一薬局様）
+--------------------------------------*/
+.relation {
+	background-image: url(../images/relation.gif);
+	background-position: left 3px;
+	background-repeat: no-repeat;
+	margin: 20px 0;
+	padding: 0 0 0 100px;
+}
+.relation h3 {
+	display: none;
+}
+.relation ul {
+	margin: 0;
+	padding: 0;
+}
+.relation ul li {
+	list-style-type: none;
+	padding: 0;
+}
+.relation a {
+	background-image: url(../images/illust/article.gif);
+	background-position: left center;
+	background-repeat: no-repeat;
+	font-weight: bold;
+	padding: 0 0 0 15px;
+}

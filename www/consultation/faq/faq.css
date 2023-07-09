@@ -1,0 +1,253 @@
+@charset "UTF-8";
+
+/* =======================================
+
+ kigusuri.com/faq/index.html 専用CSS
+
+-----------------------------------------
+faq index
+-----------------------------------------
+1.Base Structure
+	1-1.clearfix
+	1-2.title
+
+2.contentesArea
+
+3.左メニュー　-------ボツ
+
+4.右メニュー
+	4-1.faq-list
+	4-2.漢方薬について - faq-menu -
+	4-3.漢方相談薬局について - faq-menu-right -
+	4-4.お問合せ - info-index -
+
+5.clearfix
+
+6.print
+========================================== */
+
+/* 1.Base Structure
+========================================== */
+
+body {
+	font-size: 95%;
+	}
+	
+a:link {
+	text-decoration: none;
+	color: #0000ff;
+	}
+
+a:visited {
+	text-decoration: none;
+	color: #660099;
+	}
+
+a:hover {
+	text-decoration: underline;
+	color: #cc3366;
+	}
+
+a:active {
+	color: #808000;
+	}
+
+p{	margin:0; padding:0;}
+
+*{
+	line-height:1.6;}
+
+/* 2.contentesArea
+========================================== */
+
+div#container div#main div#contentsArea { 
+	width:690px;
+	margin-left:0px;
+/* 	font-size:15px; */
+	line-height:1.8;}
+
+div#container div#main div#contentsArea div#desc{
+	margin:0;
+	padding:3px 0 0 6px;}
+
+#main .topic-path .read {
+    margin: 5px 0 16px;}
+
+
+/* 3.左メニュー
+========================================== */
+
+div#container div#main div#contentsArea div.float-L{
+	float:left;}
+
+/* 4.右メニュー
+========================================== */
+
+div#container div#main div#contentsArea div#faq-box{
+	margin:4px 0 0 8px;}
+
+div#container div#main div#contentsArea div#faq-box img#img-index{
+	margin:4px 0 0 0;}
+
+div#container div#main div#contentsArea div#faq-box div.faq-index{
+	border-top:#999 dotted 1px;
+	margin:6px 20px 6px 10px;}
+
+div#container div#main div#contentsArea div#faq-box h3#faq-h3{
+	background-image:url(img/img-question.gif);
+	background-position:left center;
+	background-repeat:no-repeat;
+	padding:30px 0 30px 40px;}
+	
+div#container div#main div#contentsArea div#faq-box h3#info-h3{
+	background-image:url(img/infomation.gif);
+	background-position:left center;
+	background-repeat:no-repeat;
+	padding:30px 0 30px 40px;}
+
+/* 4-1.faq-list
+--------------------------------------------- */
+
+div#container div#main div#contentsArea div#faq-box div#faq-list{
+	width:676px;}
+
+div#container div#main div#contentsArea div#faq-box div#faq-list div{
+	background-image:url(img/question-mark.gif);
+	background-position:left top;
+	background-repeat:no-repeat;}
+
+div#container div#main div#contentsArea div#faq-box div#faq-list div.ichiran-btn{
+	background-image:none;}
+
+div#container div#main div#contentsArea div#faq-box div#faq-list div#faq-menu{
+	margin:0 10px;}
+
+div#container div#main div#contentsArea div#faq-box div#faq-list div#faq-menu h4{
+	margin:6px 5px 0;
+	background-color:#FFE3E3;
+	border-bottom:#999 dotted 1px;
+	border-top:3px solid #F53C68;
+	font-weight:bold;
+	padding:4px 30px;
+	background-image: url(img/yajirushi.gif);
+	background-repeat:no-repeat;
+	background-position:left center;
+	}
+
+div#container div#main div#contentsArea div#faq-box div#faq-list span#ichiran a{
+	display:block;}
+
+div#container div#main div#contentsArea div#faq-box div#faq-list span#ichiran{
+	margin:0 0 0 8px;
+	padding:0 0 0 4px;
+	font-weight:normal;
+	color:#444}
+
+div#container div#main div#contentsArea div#faq-box div#faq-list div#faq-menu div{
+	margin:12px 5px 10px 8px;
+	padding:0;
+	height:80px;
+	border-bottom:1px #999 solid;}
+
+div#container div#main div#contentsArea div#faq-box div#faq-list div#faq-menu{
+	background-image:none;}
+
+div#container div#main div#contentsArea div#faq-box div#faq-list div#faq-menu div p{
+	/*background-image:url(img/menu-btn.gif);
+	background-repeat:no-repeat;
+	background-position:left top;*/
+	margin:0 0 0 60px;
+	padding:10px 0 16px 6px;}
+
+div#container div#main div#contentsArea div#faq-box div#faq-list div#faq-menu div.ichiran-btn{
+	border:none;
+	margin:6px 0 -24px 0;
+	padding:0;
+	text-align:right;}
+
+div#container div#main div#contentsArea div#faq-box div#faq-list div#faq-menu div.ichiran-btn span{
+	display:block;
+	background-image:url(img/list-ichiran.gif);
+	background-repeat:no-repeat;
+	background-position:left center;
+	margin:0 0 0 540px;
+	padding:0 6px 0 0;}
+
+/* 4-4.お問合せ - info-index -
+--------------------------------------------- */
+
+div#container div#main div#contentsArea div#faq-box div#info-index{
+	/*border-top:#777 solid 2px;
+	border-bottom: #999 dashed 1px;*/
+	margin:0;
+	text-align: center;}
+
+div#container div#main div#contentsArea div#faq-box div#info-index ul{
+	margin: 5em auto 2em;
+	width: 520px;}
+
+
+div#container div#main div#contentsArea div#faq-box div#info-index ul li{
+	display:inline;
+	margin:0 16px;}
+
+/* 2-1.next-faq
+--------------------------------------------- */
+
+div#container div#main div#contentsArea div#faq-box div#faq-list div#next-index{
+	margin:0px 12px 6px 12px;
+	padding:0 0;
+	background-image:none;}
+
+div#container div#main div#contentsArea div#faq-box div#faq-list div#next-index p#front-move{
+	float:left;
+	text-align:left;
+	margin:3px 0 0 0;
+	width:325px;}
+
+div#container div#main div#contentsArea div#faq-box div#faq-list div#next-index p#back-move{
+	float:right;
+	text-align:right;
+	margin:3px 0 0 0;
+	width:325px;}
+
+div#container div#main div#contentsArea div#faq-box div#faq-list div#next-index span{
+	font-weight:bold;
+	color:#F53C68;
+	display:block;}
+
+/* 5.highlight
+========================================== */
+.highlight a:hover *{
+filter: alpha(opacity=75);
+-moz-opacity:0.75;
+opacity:0.75;
+text-decoration:underline;
+}
+
+/* 5.clearfix
+========================================== */
+
+.clearfix:after {
+	content:".";
+	display:block;
+	clear:both;
+	height:0;
+	visibility:hidden;}
+
+.clearfix {overflow:hidden;}	 /* dreamweaver上で表示が崩れない用 */
+
+
+div.clearfix {
+ display:inline-block;}
+
+
+/* 6.print
+========================================== */
+@media print {
+
+	.faq-c { margin-bottom:25px; }
+	.faq { display: none; }
+
+}
+

@@ -1,0 +1,54 @@
+<center>
+<FORM METHOD=POST ACTION="write.cgi">
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=0 BORDER=0>
+<TR bgcolor="333333">
+	<TD ALIGN="center">
+<TABLE CELLPADDING=2 CELLSPACING=1 WIDTH=600 BORDER=0>
+<TR class="main2">
+<TD bgcolor="CAED54" align="center" colspan="2"><a href="javascript:function voi(){};voi()" onClick="winOpen('win1','help.cgi?key=page_num',380,380)"><img src="img/help.gif" border="0"></a>商品番号</TD>
+<TD bgcolor="CAED54" align="center"><a href="javascript:function voi(){};voi()" onClick="winOpen('win1','help.cgi?key=item_name',380,380)"><img src="img/help.gif" border="0"></a>商品名</TD>
+<TD bgcolor="CAED54" align="center"><a href="javascript:function voi(){};voi()" onClick="winOpen('win1','help.cgi?key=price',380,380)"><img src="img/help.gif" border="0"></a>商品単価</TD>
+<TD bgcolor="CAED54" align="center">
+<a href="javascript:function voi(){};voi()" onClick="winOpen('win1','help.cgi?key=pic',380,380)"><img src="img/help.gif" border="0"></a>
+<a href="javascript:function voi(){};voi()" onClick="winOpen('win1','write.cgi?delete=img_list',380,380)">画像名</a></TD>
+<TD bgcolor="CAED54" align="center"><a href="javascript:function voi(){};voi()" onClick="winOpen('win1','help.cgi?key=zaiko',380,380)"><img src="img/help.gif" border="0"></a>商品表示</TD>
+</TR>
+<TR align="center" class="main2">
+<TD BGCOLOR="FFFFCC" colspan="2"><input type="hidden" name="page_num" VALUE="$page_num" size="3"><input type="hidden" name="num" VALUE="$num" size="10">$num</TD>
+<TD BGCOLOR="FFFFCC"><input type="text" name="name" VALUE="$name" size="25"></TD>
+<TD BGCOLOR="FFFFCC"><input type="text" name="price" VALUE="$price" size="7"></TD>
+
+<TD BGCOLOR="FFFFCC"><input type="text" name="pic" VALUE="$pic" size="7"></TD>
+<TD BGCOLOR="FFFFCC">
+<!-- <input type="text" name="zaiko" VALUE="$zaiko" size="7"> -->
+<select name="zaiko">
+	<option value="0" $ZaikoSelected[0] >表示しない</option>
+	<option value="1" $ZaikoSelected[1] >表示する</option>
+</select>
+</TD>
+</TR>
+<TR class="main2" align="center">
+<TD bgcolor="#CAED54" colspan=6>
+<a href="javascript:function voi(){};voi()" onClick="winOpen('win1','help.cgi?key=comment',380,380)"><img src="img/help.gif" border="0"></a>
+商品の紹介文
+</TD>
+</TR>
+<TR BGCOLOR="FFFFCC" class="main2" align="center">
+<TD colspan=6>
+<textarea rows=8 cols=70 name="comment">$comment</textarea>
+</TD>
+</TR>
+</table></TD>
+</TR>
+</TABLE>
+
+<BR><input type ="hidden" name ="display2" value ="$display2">
+<input type="hidden" name="company" VALUE="$company">
+<input type ="hidden" name ="disp" value ="$display3">
+<INPUT TYPE="hidden" NAME="pass" VALUE="$pass">
+<input type ="hidden" name ="write" value ="ok">
+<input type ="hidden" name ="open_file" value ="$open_file">
+<input type ="hidden" name ="num_edit" value ="$edit">
+<input type ="submit" value ="決 定">
+</form>
+</center>

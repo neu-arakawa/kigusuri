@@ -1,0 +1,156 @@
+<?php
+  //共通
+  require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+  //メタディスクリプション
+  $description = '';
+
+  //メタキーワード
+  $keywords = '';
+
+  //Facebook　全ページ共通の場合は空白にしてください
+  $fbimage = '';
+
+  //タイトル
+  if(!empty($context['pharmacy'])){
+    $title = h($context['pharmacy']['name']).'が回答した漢方相談';
+  }
+  else if(!empty($context['params']['q'])){
+    $title = h($context['params']['q']).'の検索結果';
+  }
+  else {
+    $title = 'Q&A一覧';
+  }
+
+  //css追加
+  $ex_tag_css = '<link rel="stylesheet" href="/consultation/css/style.css"><link rel="stylesheet" href="/consultation/css/template.css">';
+
+  //js追加
+  $ex_tag_js = '<script src="/consultation/js/script.js"></script>';
+
+  //bodyID
+  $bodyID = 'consultation';
+
+?>
+<?php include 'header.php'; ?>
+
+
+	<div class="contents-header">
+		<ul class="topicpath fbox">
+			<li><a href="/">トップページ</a></li>
+			<li><a href="/consultation/">みんなの漢方相談Q&amp;A</a></li>
+            {% if pharmacy %}
+            <li>{{ pharmacy.name }}が回答した漢方相談</li>
+            {% elseif c.params.q %}
+			<li>「{{ c.params.q }}」の検索結果</li>
+            {% else %}
+			<li>Q&amp;A一覧</li>
+            {% endif %}
+		</ul>
+
+        {% if pharmacy %}
+		<h1 class="header-ttl">{{ pharmacy.name }}が回答した漢方相談</h1>
+        {% elseif c.params.q %}
+		<h1 class="header-ttl">「{{ c.params.q }}」の検索結果</h1>
+        {% else %}
+		<h1 class="header-ttl">Q&amp;A一覧</h1>
+        {% endif %}
+	</div>
+    <!-- /.contents-header -->
+
+
+  <div class="inner">
+
+
+    <div class="component-area">
+      <div class="m-category01">
+      <div class="m-category01__total_wrap">
+        {% if c.params.q and pharmacy == false %}
+        <p class="m-category01__total"><span class="m-category01__totalbig">「{{ c.params.q }}」</span>に関する漢方相談</p>
+        {% endif %}
+        {% if list|length or query.filter %}
+        <div class="m-tablearea01__btn pc-item"><button class="m-arrow-btn04" type="button" onclick="location.href='{{ c.app.urlFor('qa_request') }}{% if category_id %}?category_id={{category_id}}{% endif %}'">漢方薬局・薬店に相談する<span class="m-arrow-btn04__icn"></span></button></div>
+      </div>
+        <div class="m-category01__box">
+
+          <div class="m-category01__count">
+         {% if pager.total_count %}
+          <div class="m-category01__smallnum_wrap">
+            <span class="m-category01__smallnum">{{ pager.total_count }}</span>件中 / <span class="m-category01__bignum">{{ pager.start_cnt }}〜{{ pager.end_cnt }}</span> 件表示
+          </div>
+         {% endif %}
+        <form id='fr'>
+        <div class="m-table01">
+                    <div class="m-table01__inputbox">
+                    <p class="label">絞り込み:</p>
+                      <select name='filter'>
+                        <option value=''>なし</option>
+                        <option value='has_answer'>回答ありのみ表示</option>
+                        <option value='resolved'>解決済みのみ表示</option>
+                      </select>
+                    </div>
+                    <div class="m-table01__inputbox">
+                    <p class="label">並び替え:</p>
+                      <select name='order'>
+                        <option value=''>投稿日時順</option>
+                        <option value='answer_date'>回答日時順</option>
+                        <option value='like'>参考になった順</option>
+                      </select>
+                    </div>
+                    </div>
+          <!-- /.m-table01 -->
+        </form>
+
+          </div>
+          <!-- /.m-category01__count -->
+
+
+        {% if list|length %}
+          <ul class="m-category01__bal-list">
+            {% include '/Front/Parts/question_list.twig' %}
+          </ul>
+        {% else %}
+          <div class="component-wait-tx mb30">
+          <p>絞り込み条件に一致する「{{ c.params.q }}」に関する漢方相談は見つかりませんでした</p>
+          </div>
+        {% endif %}
+          {% if pager.next or pager.prev %}
+          <!-- /.m-category01__bal-list -->
+          <ul class="m-category01__btn-list">
+            {% if pager.prev %}
+            <li><a href="{{ url }}?page={{ pager.prev }}{{ '&' ~ query_string }}" class="m-arrow-btn02 m-arrow-btn02--prev m-arrow-btn02--gray">前へ</a></li>
+            {% endif %}
+            {% if pager.next %}
+            <li><a href="{{ url }}?page={{ pager.next }}{{ '&' ~ query_string }}" class="m-arrow-btn02 m-arrow-btn02--next m-arrow-btn02--green">次へ</a></li>
+            {% endif %}
+          </ul>
+          <!-- /.m-category01__btn-list -->
+          {% endif %}
+        <div class="m-tablearea01__btn">
+        <a class="m-arrow-btn04" href='{{ c.app.urlFor('qa_request') }}{% if category_id %}?category_id={{category_id}}{% endif %}'>漢方薬局・薬店に相談する<span class="m-arrow-btn04__icn"></span></a>
+        </div>
+        <!-- /.m-tablearea01__btn -->
+        </div>
+
+        <!-- /.m-category01__box -->
+        {% else %}
+        <div class="m-category01__box mb30">
+        <p class="atn-tx">お探しの条件に一致する漢方相談は見つかりませんでした。<br><br class="sp-item">お探しの情報が見つからないときは、新規相談フォームから先生に相談してみましょう。</p>
+            <a class="m-arrow-btn05" href="{{ c.app.urlFor('qa_request') }}{% if category_id %}?category_id={{category_id}}{% endif %}">新規相談フォーム<span class="m-arrow-btn05__icn"></span></a>
+            <p></p>
+        </div>
+        <!-- /.m-category01__box -->
+        {% endif %}
+      </div>
+      <!-- /.m-category01 -->
+    </div>
+    <!-- /.component-area -->
+    
+    <div class="component-area">
+        {% include '/Front/Parts/search_form.twig' %}
+    </div>
+    <!-- /.component-area -->
+  </div>
+  <!-- /.inner -->
+
+<?php include 'footer.php'; ?>

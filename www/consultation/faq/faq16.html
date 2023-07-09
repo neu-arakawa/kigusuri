@@ -1,0 +1,103 @@
+<?php
+	//共通
+	require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+	//メタディスクリプション
+	$description = '';
+
+	//メタキーワード
+	$keywords = '漢方,漢方薬,漢方薬局,よくある質問,FAQ,Q&A,郵送,販売';
+
+	//Facebook　全ページ共通の場合は空白にしてください
+	$fbimage = '';
+
+	//タイトル
+	$title = '薬局へ行けません。送ってもらうことはできますか？ | 漢方 よくある質問（Q&amp;A） | 漢方相談（Q&amp;A）';
+
+	//css追加
+	$ex_tag_css = '<link rel="stylesheet" href="/common/css/shift.css">
+<link rel="stylesheet" href="css/faq.css">
+<link rel="stylesheet" href="css/faq-list.css">
+<link rel="stylesheet" href="css/faq-kampo.css">
+<link rel="stylesheet" href="css/shift_faq.css">
+<link rel="stylesheet" href="css/shift_faq-list.css">
+<link rel="stylesheet" href="css/shift_faq-kampo.css">
+<link rel="stylesheet" href="/consultation/css/style.css">';
+
+	//js追加
+	$ex_tag_js = '<script src="/common/js/shift_common.js"></script>';
+
+	//bodyID
+	$bodyID = 'consultation';
+
+?>
+<?php include 'header.php'; ?>
+
+	<div class="contents-header">
+		<ul class="topicpath fbox">
+			<li><a href="/">トップページ</a></li>
+			<li><a href="/consultation/">漢方相談（Q&amp;A）</a></li>
+			<li><a href="/consultation/faq/">漢方 よくある質問（Q&amp;A）</a></li>
+			<li>薬局へ行けません。送ってもらうことはできますか？</li>
+		</ul>
+		<p class="header-ttl">漢方相談Q&amp;A</p>
+	</div>
+
+
+	<article id="main" class="inner fbox shift-contents">
+
+		<section class="fbox kampo-sct">
+			<p class="main-head-description">きぐすり.com は、<strong>漢方薬、女性の健康、サプリメント、ハーブ</strong>の情報を専門家がやさしく解説しています。</p>
+			<h1 class="ttl01">病気の悩みを漢方で</h1>
+
+
+			<!--//////////////////// 移行コンテンツ start-->
+
+
+			<div id="faq-box">
+ <div id="faq-list">
+  <div id="faq-kampo">
+   <h4 id="kaito"><span>ご質問に対するご回答</span></h4>
+   <div id="answer">
+    <div id="answer-h">
+     <h4>薬局へ行けません。送ってもらうことはできますか？</h4>
+    </div>
+    <div id="answer-txt">
+     <div id="answer-01" style="padding-right: 1.5em;">
+      <p> 始めは、漢方薬は本人への、オーダーメイド医薬品ですので、本人もしくは状態を把握されている方が来られないと、症状や体質に合わせて、調剤をすることができません。<br /> よほどの事情がないかぎり、漢方薬を始めから宅配・郵送することは無理と考えてください。</p>
+      <br />
+      <p>最初、ご本人か本人を良くわかった方に代理で来店いただき、じっくりと相談をして、漢方薬を決める事が大事です。<br /> その服用の結果をふまえて、2度目からなら、郵送・宅配もできるかと思います。<br /> 病気・病状に対して、より効果を上げるためには、この順番は避けてとおれません。</p>
+      <br />
+      <p class="pharmacy-m"><a href="../shop/teramachi-kanpou/" target="_blank">寺町漢方薬局（広島県広島市）　<br /> 窪田 信明先生</a></p>
+     </div>
+    </div>
+    <div class="clearfix" id="next-faq">
+     <p id="front-move"><span>前の質問</span><a href="faq15.html">&laquo; 「本人が相談に行かなくては…。」</a></p>
+     <p id="back-move"><span>次の質問</span><a href="faq18.html">「漢方相談薬局での相談には、どのくらい…？」 &raquo;</a></p>
+    </div>
+   </div>
+  </div>
+ </div>
+ <!-- #BeginLibraryItem "/Library/list_faq-info.lbi" -->
+ <div class="faq-index">
+  <div class="highlight" id="info-index">
+   <ul>
+    <li><a href="../kensaku.html"><img alt="あなたの街の漢方薬局・薬店へ" height="83" src="img/pharmacy-btn.gif" width="223" /></a></li>
+    <li><a href="../mail-soudan.html"><img alt="メールで漢方相談" height="82" src="img/mail-btn.gif" width="223" /></a></li>
+   </ul>
+  </div>
+ </div>
+ <!-- #EndLibraryItem -->
+ 
+</div>
+
+
+			<!--//////////////////// 移行コンテンツ end-->
+
+
+		</section>
+
+
+	</article>
+
+<?php include 'footer.php'; ?>

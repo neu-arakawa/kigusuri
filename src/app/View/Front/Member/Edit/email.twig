@@ -1,0 +1,138 @@
+<?php
+  //共通
+  require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+  //メタディスクリプション
+  $description = '';
+
+  //メタキーワード
+  $keywords = '';
+
+  //Facebook　全ページ共通の場合は空白にしてください
+  $fbimage = '';
+
+  //タイトル
+  $title = 'メールアドレスの変更';
+
+  //css追加
+  $ex_tag_css = '<link rel="stylesheet" href="/member/css/style.css"><link rel="stylesheet" href="/member/css/template.css">';
+
+  //js追加
+  $ex_tag_js = '<script src="/member/js/script.js"></script>';
+
+  //bodyID
+  $bodyID = 'member';
+
+?>
+<?php include 'header.php'; ?>
+
+
+	<div class="contents-header">
+		<ul class="topicpath fbox">
+			<li><a href="/">トップページ</a></li>
+			<li><a href="{{ c.app.urlFor('member_edit')}}">会員情報編集</a></li>
+			<li>メールアドレスの変更</li>
+		</ul>
+		<h1 class="header-ttl">メールアドレスの変更</h1>
+	</div>
+    <!-- /.contents-header -->
+
+
+  <div class="inner">
+    
+    {% if errors %}
+    <!--/////////////////エラーメッセージ start ///////////////////-->
+        <div class="m-panel01 m-panel01--red">
+     	 <div class="l-sp-inner">
+          <div class="m-panel01__panel">
+            <p class="m-panel01__heading">登録内容が正しく入力されていません。</p>
+            <p class="m-panel01__txt">もう一度ご確認のうえ、ご入力してください。</p>
+          </div>
+          <!-- /.m-panel01__panel -->
+          </div>
+          <!-- /.l-sp-inner -->
+        </div>
+        <!-- /.m-panel01 -->
+    <!--/////////////////エラーメッセージ end ///////////////////-->
+    {% endif %}
+    
+    <!--/////////////////メールアドレス変更画面 start ///////////////////-->
+    <div class="component-area">
+      <div class="l-sp-inner">
+        <div class="m-tablearea01">
+        <form method="post">
+        <input type="hidden" name="_METHOD" id="_METHOD" value="PUT"/>
+        <input type="hidden" name="{{csrf_key}}" value="{{csrf_token}}">
+
+            <div class="m-tablearea01__table">
+              <table class="m-table01">
+                <tr>
+                  <th><span class="m-table01__heading">変更前のメールアドレス</span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                    <p>{{ c.member['email'] }}</p>
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                  </td>
+                </tr>
+                <tr>
+                  <th><span class="m-table01__heading">新しいメールアドレス</span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                      <input type="text" name='email'>
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                    {% if errors.email %}
+                    <p class="m-table01__error">{{ errors.email }}</p>
+                    {% endif %}
+                  </td>
+                </tr>
+                <tr>
+                  <th><span class="m-table01__heading">メールアドレス（再入力）</span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                      <input type="text" name='email_confirm'>
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                  </td>
+                </tr>
+                <tr>
+                  <th><span class="m-table01__heading">現在のパスワード </span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                      <input type="password" name='password'>
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                    <p class="m-table01__description">※ご利用のパスワードをご入力ください。</p>
+                    {% if errors.password %}
+                    <p class="m-table01__error">{{ errors.password }}</p>
+                    {% endif %}
+                  </td>
+                </tr>
+              </table>
+              <!-- /.m-table01 -->
+            </div>
+            <!-- /.m-tablearea01__table -->
+            <div class="m-tablearea01__btn">
+              <button class="m-arrow-btn01">この内容で変更する<span class="m-arrow-btn01__icn"></span></button>
+            </div>
+          </form>
+         <p class="m-tablearea02__taikai"><a href="{{ c.app.urlFor('member_edit')}}">会員情報変更のページへ戻る</a></p>
+
+        </div>
+        <!-- /.m-tablearea01 -->
+      </div>
+      <!-- /.l-sp-inner -->
+    </div>
+    <!-- /.component-area -->
+    <!--/////////////////メールアドレス変更画面 end ///////////////////-->
+
+
+
+
+    
+    
+  </div>
+  <!-- /.inner -->
+
+<?php include 'footer.php'; ?>

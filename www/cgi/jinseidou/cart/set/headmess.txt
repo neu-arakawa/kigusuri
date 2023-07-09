@@ -1,0 +1,5 @@
+おすすめ商品案内
+<p>おすすめの商品、取扱い商品は、たくさんございます。
+詳しくは、<a href="http://www.jinseidou.com/" target="_blank">馬場のくすりや　仁成堂漢方薬局 公式ホームページ</a>をご利用下さい。
+<a href="http://www.jinseidou.com/" target="_blank">http://www.jinseidou.com/</a></p>
+<!-- <p><a href="set/disp_shop.html" target="_blank">【 医薬品の特定販売に関する表示 】</a>　|　<a href="set/disp.html" target="_blank">【 特定商取引に関する法律に基づく表示 】</a></p> -->

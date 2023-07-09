@@ -1,0 +1,64 @@
+<?php
+  //共通
+  require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+  //メタディスクリプション
+  $description = '';
+
+  //メタキーワード
+  $keywords = '';
+
+  //Facebook　全ページ共通の場合は空白にしてください
+  $fbimage = '';
+
+  //タイトル
+  $title = '加盟店募集';
+
+  //css追加
+  $ex_tag_css = '<link rel="stylesheet" href="/member/css/style.css"><link rel="stylesheet" href="/member/css/template.css">';
+
+  //js追加
+  $ex_tag_js = '';
+
+  //bodyID
+  $bodyID = 'member';
+
+?>
+<?php include 'header.php'; ?>
+
+<div class="contents-header">
+  <ul class="topicpath fbox">
+    <li><a href="/">トップページ</a></li>
+    <li><a href="/contact_shop/">加盟店募集　お問い合わせフォーム</a></li>
+    <li>完了画面</li>
+  </ul>
+  <h1 class="header-ttl">加盟店募集　お問い合わせフォーム</h1>
+</div>
+<!-- /.contents-header -->
+
+  <div class="inner">
+
+
+
+<!--please wait comment start-->
+<div class="component-wait-tx2">
+<p>お問い合わせを承りました。ありがとうございました。<br class="pc-item">
+後日、きぐすり.com事務局よりご連絡いたします。今しばらくお待ちくださいませ。</p>
+</div>
+                <div class="cont-set-wrap">
+                <ul class="list-style01">
+                  <li>※ご連絡には1週間程度かかる場合がございます</li>
+                  <li>※何日経過しても連絡が来ない場合は、システム上の都合やメールアドレスの打ち間違いなどにより正常に送信されていない可能性が考えられます。その際はお手数ですが、info@kigusuri.comまで再度お問い合わせください。</li>
+                  <li>※本フォームの主旨と直接関係のないご質問やお問い合わせにはお応えできない場合があります。ご了承ください。</li>
+                </ul>
+                </div>
+
+<div class="m-tablearea01__btn mt40"><a href='/' class="m-arrow-btn01" >トップページへ戻る<span class="m-arrow-btn01__icn"></a></button></div>
+<!--please wait comment end-->
+
+
+  </div>
+  <!-- /.inner -->
+<!-- /.inner -->
+
+<?php include 'footer.php'; ?>

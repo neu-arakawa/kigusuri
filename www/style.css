@@ -1,0 +1,1084 @@
+/*
+Theme Name: Chinese medicine
+Description: A Child Theme of Twenty Ten
+Theme URI: http://www.megumithemes.com/
+Author: Megumi Themes
+Author URI: http://www.megumithemes.com/
+Template: twentyten
+Version: 1.0.0
+*/
+@import url(initial.css);
+/* ******************************************************** 
+ * 10px = 78%     11px = 85%	 12px = 93%     13px = 100%
+ * 14px = 108%	  15px = 116%    16px = 124%    17px = 131%
+ * 18px = 139%    19px = 147%    20px = 155%    21px = 163.5%
+ * 22px = 170%    23px = 178%    24px = 186%    25px = 194%
+ * 26px = 201%    27px = 208%    28px = 216.7%  29px = 224%
+ * 30px = 232%    31px = 239%    32px = 248%    33px = 255%
+ * ********************************************************  */
+a:link {
+/*	text-decoration:none; */
+    color: #0000ff;
+}
+a:visited {
+/*	text-decoration:none; */
+    color: #660099;
+}
+a:hover {
+    text-decoration: underline;
+    color: #c36;
+}
+a:active {
+    color: #808000;
+}
+.entry-content a:link ,
+#symptoms_box a:link ,
+#genre_box a:link ,
+#foodstuff_box a:link ,
+#author_box a:link {
+	color:#360;
+/*	text-decoration:none; */
+}
+.entry-content a:visited ,
+#symptoms_box a:visited ,
+#genre_box a:visited ,
+#foodstuff_box a:visited ,
+#author_box a:visited {
+	color:#360;
+/*	text-decoration:none; */
+}
+.entry-content a:active ,
+#symptoms_box a:active ,
+#genre_box a:active ,
+#foodstuff_box a:active ,
+#author_box a:active {
+	color:#c33;
+/*	text-decoration:none; */
+}
+.entry-content a:hover ,
+#symptoms_box a:hover ,
+#genre_box a:hover ,
+#foodstuff_box a:hover ,
+#author_box a:hover {
+	color:#c33; 
+	text-decoration:underline;
+}
+.entry-title a:link {
+	color:#f33;
+	text-decoration:none;
+}
+.entry-title a:visited {
+	color:#f33;
+	text-decoration:none;
+}
+.entry-title a:active {
+	color:#c33;
+	text-decoration:none;
+}
+.entry-title a:hover {
+	color:#f93; 
+	text-decoration:underline;
+}
+.entry-content .tab_list a:link {
+	color:#360; 
+/*	color:#503604; yakuzen */
+/*	text-decoration:none; */
+}
+.entry-content .tab_list a:visited {
+	color:#360; 
+/*	color:#503604; yakuzen */
+/*	text-decoration:none; */
+}
+.entry-content .tab_list a:active {
+	color:#c33; 
+/*	color:#503604; yakuzen */
+	text-decoration:none;
+}
+.entry-content .tab_list a:hover {
+	color:#c33; 
+/*	color:#503604; yakuzen */
+	text-decoration:underline;
+}
+.single .entry-content .tab_list a:link {
+	color:#690;
+	text-decoration:none;
+}
+.single .entry-content .tab_list a:visited {
+	color:#690;
+/*	text-decoration:none; */
+}
+.single .entry-content .tab_list a:active {
+	color:#690;
+/*	text-decoration:none; */
+}
+.single .entry-content .tab_list a:hover {
+
+	color:#690;
+	text-decoration:underline;
+}
+
+/* =Layout
+-------------------------------------------------------------- */
+
+#container {
+	width: 100%;
+	margin: 0 -196px 0 0;
+	float: left;
+}
+#content {
+	margin: 0 199px 0 12px;
+}
+#primary {
+	width: 184px;
+	overflow: hidden;
+	float: right;
+	clear: right;
+}
+#footer {
+	width: 888px;
+	margin:0;
+	border:1px solid #CCC;
+	padding:5px;
+	clear: both;
+}
+
+/* Twenty Ten Reset Style */
+#wrapper {
+	width: 900px;
+	margin: 0 auto;
+	padding:0;
+	background: #fff;
+}
+
+/* =Header
+-------------------------------------------------------------- */
+#header {
+	padding:0;
+}
+	#header img {
+		display:block;
+	}
+
+/* =Breadcrumbs
+-------------------------------------------------------------- */
+#breadcrumbs {
+	margin:5px 0 8px;
+	margin-top:3px;
+	border-bottom:1px solid #999;
+	padding:3px 0;
+	list-style:none;
+}
+	#breadcrumbs li {
+		display:inline;
+	}
+	#breadcrumbs a {
+		text-decoration:none; 
+	}
+.desc {
+	margin-bottom:20px;
+	margin-left:15px;
+}
+
+.main_title {
+	margin-bottom:15px;
+}
+	.main_title img {
+		display:block;
+	}
+.single .main_title {
+	margin-bottom:30px;
+}
+.main_img {
+	margin-bottom:12px;
+}
+	.main_img img {
+		display:block;
+	}
+
+
+/* =Main
+-------------------------------------------------------------- */
+#main {
+/*	width: 900px; */
+	width: 899px;
+	border-left:1px solid #CCC;
+	padding-bottom:20px;
+	background:url(images/background/main_back.png) repeat-y right;
+	overflow: hidden;
+	clear: both;
+}
+
+/* =Footer
+-------------------------------------------------------------- */
+#footer ul {
+	text-align:right;
+	margin:0;
+	list-style:none;
+}
+	#footer ul li {
+		display:inline;
+	}
+	#footer ul li a {
+		padding-left:10px;
+		text-decoration:none;
+	}
+
+/* =Images
+-------------------------------------------------------------- */
+.recipe {
+	margin-bottom:23px;
+	border-bottom:1px solid #E5E3CE;
+	clear:both;
+}
+
+.page-title {
+	font-size:186%;
+/*	margin-bottom:3px; */
+	padding:8px 0 4px 20px;
+	background:#fff3f3;
+	border-bottom: solid 1px #ffe0f0;
+	border-right: solid 1px #ffe0f0;
+}
+.entry-title {
+	color:#f33;
+/*	color:#690; yakuzenのカラー*/
+/*	font-size:224%; */
+	margin-bottom:5px;
+	border-bottom:3px solid #C8EC4D;
+}
+.single .entry-title {
+	margin-bottom:5px;
+	border-bottom:none;
+	padding-right:55px;
+}
+.entry-content div.slogan {
+	color:#C99;
+/*	color:#FE7F00; yakuzenのカラー*/
+	font-size:116%;
+	font-weight:bold;
+	margin-bottom:12px;
+}
+.single .entry-content div.slogan {
+	padding-right:55px;
+}
+	.single .entry-content div.slogan p {
+		margin-bottom:12px;
+	}
+
+.archive .entry-content div ,
+.home .entry-content div ,
+.search .entry-content div {
+	width:513px;
+	float:right;
+}
+#content table.tab_list {
+	width:100%;
+	font-size:108%;
+	margin-bottom:12px;
+	border-collapse: separate;
+	border-spacing:0 2px;
+	border:none;
+}
+	#content table.tab_list th {
+		width:8em;
+		text-align:left;
+		font-weight:normal;
+		padding: 3px 0 3px 10px;
+		background:#fff3f3;
+/*		background:#EDFFAF; yakuzen グリーン*/
+	}
+	#content table.tab_list td {
+		border-bottom: dotted 1px #ffe0ee;
+		padding: 3px 0 3px 10px;
+	}
+
+
+/* =Page
+-------------------------------------------------------------- */
+.entry-content {
+	font-size:116%;
+}
+	.single .entry-content h2 {
+		margin-bottom:13px;
+	}
+	.single .entry-content p {
+		margin-bottom:32px;
+	}
+	.single #content .recipe_dete_box {
+		width:336px;
+		margin-bottom:22px;
+		float:left;
+	}
+	.single #content table.recipe_dete {
+		width:100%;
+		margin-bottom:12px;
+		border-collapse: separate;
+		border-spacing:0 2px;
+		border:none;
+	}
+		.single #content table.recipe_dete th {
+			width:35%;
+			text-align:left;
+			font-weight:normal;
+			padding:3px 5px;
+		}
+		.single #content table.recipe_dete td {
+			width:75%;
+			border:none;
+			padding:3px 5px;
+		}
+
+#recipe_meta {
+	width:336px;
+	float:left;
+}
+#recipe_img {
+	width:335px;
+	float:right;
+}
+.recipe_img_box {
+	margin-bottom:10px;
+	border:1px solid #c7c7c7;
+	padding:4px 4px 10px;
+	background:#fff3f3;
+}
+	.recipe_img_box img {
+		margin-bottom:10px;
+		display:block;
+	}
+#knowledge_box {
+	width:669px;
+	margin-bottom:28px;
+	border:3px solid #503604;
+	padding:7px;
+	background:#F93;
+}
+#knowledge_box div {
+	border:3px solid #503604;
+	padding:20px 14px 0;
+	background:#FFC;
+}
+	#knowledge_box h3 {
+		font-size:100%;
+		margin-bottom:5px;
+		padding-left:24px;
+		background:url(images/other/icon_01.png) no-repeat 11px 0.2em;
+	}
+	#knowledge_box p {
+		border-top:1px solid #DDDDA8;
+		padding:12px 11px 0;
+	}
+.qr {
+	width:336px;
+	float:right;
+}
+	.qr p img {
+		vertical-align:top;
+		margin-top:-12px;
+		float:left;
+	}
+
+.make_01 ,
+.make_02 ,
+.make_03 ,
+.make_04 ,
+.make_05 ,
+.make_06 ,
+.make_07 ,
+.make_08 ,
+.make_09 ,
+.make_10 ,
+.make_11 ,
+.make_12 {
+	width:223px;
+	min-height:8em;
+	height: auto !important;
+	height: 8em;
+	margin-bottom:10px;
+	float:left;
+}
+.make_02 ,
+.make_05 ,
+.make_08 ,
+.make_11 {
+	margin-left:10px;
+}
+.make_03 ,
+.make_06 ,
+.make_09 ,
+.make_12 {
+	float:right;
+}
+.single .entry-content .make_01 p ,
+.single .entry-content .make_02 p ,
+.single .entry-content .make_03 p ,
+.single .entry-content .make_04 p ,
+.single .entry-content .make_05 p ,
+.single .entry-content .make_06 p ,
+.single .entry-content .make_07 p ,
+.single .entry-content .make_08 p ,
+.single .entry-content .make_09 p ,
+.single .entry-content .make_10 p ,
+.single .entry-content .make_11 p ,
+.single .entry-content .make_12 p {
+	margin-bottom:10px;
+}
+.single .entry-content .make_01 p.number ,
+.single .entry-content .make_02 p.number ,
+.single .entry-content .make_03 p.number ,
+.single .entry-content .make_04 p.number ,
+.single .entry-content .make_05 p.number ,
+.single .entry-content .make_06 p.number ,
+.single .entry-content .make_07 p.number ,
+.single .entry-content .make_08 p.number ,
+.single .entry-content .make_09 p.number ,
+.single .entry-content .make_10 p.number ,
+.single .entry-content .make_11 p.number ,
+.single .entry-content .make_12 p.number {
+	margin-bottom:5px;
+	border-bottom:1px dotted #999999;
+}
+
+	.make_01 img ,
+	.make_02 img ,
+	.make_03 img ,
+	.make_04 img ,
+	.make_05 img ,
+	.make_06 img ,
+	.make_07 img ,
+	.make_08 img ,
+	.make_09 img ,
+	.make_10 img ,
+	.make_11 img ,
+	.make_12 img {
+		display:block;
+		margin-bottom:5px;
+	}
+
+/* =Images
+-------------------------------------------------------------- */
+#symptoms_box ,
+#foodstuff_box {
+	width:334px;
+	font-size:108%;
+	margin-bottom:9px;
+	border:1px solid #C6EC4C;
+	float:left;
+}
+#foodstuff_box {
+	float:right;
+}
+#genre_box ,
+#author_box ,
+#search_box {
+	width:215px;
+	font-size:108%;
+	margin-bottom:31px;
+	border:1px solid #C6EC4C;
+	float:left;
+}
+#author_box {
+	margin-left:20px;
+}
+#search_box {
+	float:right;
+}
+
+#symptoms_box h2 ,
+#genre_box h2 ,
+#foodstuff_box h2 ,
+#author_box h2 ,
+#search_box h2 {
+	margin:0;
+}
+	#symptoms_box h2 img ,
+	#genre_box h2 img ,
+	#foodstuff_box h2 img ,
+	#author_box h2 img ,
+	#search_box h2 img {
+		display:block;
+	}
+#symptoms_box p ,
+#genre_box p ,
+#foodstuff_box p ,
+#author_box p  {
+	margin:0;
+	padding:10px 5px;
+}
+#search_box form {
+	margin:0;
+	padding:5px 5px 6px;
+}
+#search_box form input.text {
+	width:150px;
+	margin:0;
+}
+.thumb {
+	clear:left;
+}
+
+.tab_nav {
+	text-align:center;
+	margin:25px 0;
+	clear:both;
+}
+	.tab_nav a ,
+	.tab_nav span {
+		color:#FFF;
+		border:1px solid #F58B23;
+		padding:5px 10px;
+		background:#F58B23;
+	}
+	.tab_nav a:hover ,
+	.tab_nav span.current {
+		color:#F58B23;
+		background:#FFF;
+	}
+	.tab_nav a.prev ,
+	.tab_nav a.next {
+		color:#F58B23;
+		border:none;
+		padding:5px 10px;
+		background:none;
+	}
+	.tab_nav a:hover.prev ,
+	.tab_nav a:hover.next {
+		background:none;
+	}
+
+/* ---- social_button ---- */
+.social_button {
+	text-align:center;
+	vertical-align: middle;
+	margin-bottom:10px;
+	border:1px solid #9BC50C;
+	padding:5px;
+	background:#C8EC4D;
+}
+
+#related_box h2 {
+	padding-bottom: 13px;
+}
+#related_box li {
+	width:156px;
+	text-align:center;
+	margin-bottom:10px;
+	float:left;
+}
+#related_box li.related_2 ,
+#related_box li.related_3 {
+	margin-left:20px;
+}
+#related_box li.related_4 {
+	float:right;
+}
+#related_box {
+	width:100%;
+	position:relative;
+}
+#related_box p.go_top {
+	position:absolute;
+	top:0.74em;
+	right:0.5em;
+}
+
+.search_button {
+	text-align:center;
+}
+/* === header ===
+------------------------------*/
+#wrapper #header {
+    background: url(http://www.kigusuri.com/images_2009/bg_header.gif) no-repeat scroll 0 0;
+/*  background: url(../images_2009/bg_header.jpg) no-repeat scroll 0 0; */
+    position: relative;
+    width: 900px;
+    height: 130px;
+}
+#wrapper #header .inner {
+    border: none;
+}
+#wrapper #header #title h1 {
+    position:absolute;
+    top: 6px;
+    right: 7px;
+	font-size:85%;
+    font-weight: normal;
+}
+#wrapper #header #title img {
+    padding: 0;
+    margin: 0;
+    height: 100px;
+    vertical-align: bottom;
+    /* IE6?N'w?b?_??????]?v?i(??????????h?? */
+}
+#wrapper #header #search {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    /* ????{?b?N?X??u???? */
+    right: 34px;
+    top: 59px;
+}
+
+#wrapper #header #navi {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: #c30;
+    font-weight: bold;
+	text-decoration: none;
+}
+#wrapper #header #navi a ,
+#wrapper #header #navi a img {
+	display:inline;
+}
+
+/* === menu?F?T?u?R???e?i??|?T?C?h???j???[
+------------------------------*/
+#primary #menu {
+    padding-left: 3px;
+}
+#primary #menu h2 img {
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-left: auto;
+}
+#primary #menu .green {
+    font-size: 12px;
+    color:#690;
+    margin: 0 auto 0;
+    padding-left: 5px;
+}
+#primary #menu li {
+    list-style-type: none;
+}
+#primary #menu li a img {
+    margin-top: -3px;
+    margin-right: auto;
+    margin-bottom: 5px;
+    margin-left: auto;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 8px;
+}
+#primary #menu .banner {
+    text-align: center;
+}
+#primary #menu .banner p {
+    margin: 0 auto 10px;
+}
+#primary #menu .border {
+	width:180px;
+	border-top:1px inset;
+	display: block;
+	margin: 0.5em auto;
+}
+
+#recipe_meta h2 ,
+#function_box h2 ,
+#timesaver_box h2 ,
+#related_pages_box h2 {
+/*	font-size:186%; */
+	font-size:116%;
+	color:#FE7F00;
+}
+#recipe_meta h3 ,
+#function_box h3 ,
+#timesaver_box h3 ,
+#related_pages_box h3 {
+	font-size:108%;
+	font-weight:bold;
+	margin-bottom:10px;
+	border-bottom:1px solid #DDDDA8;
+	padding-left:15px;
+	background:url(images/other/icon_02.png) no-repeat left 0.2em;
+}
+
+#recipe_meta ul ,
+#recipe_meta ol ,
+#function_box ul ,
+#function_box ol ,
+#timesaver_box ul ,
+#timesaver_box ol ,
+#related_pages_box ul ,
+#related_pages_box ol {
+	margin:1.12em 0 1.12em 1.12em;
+}
+#recipe_meta ul ul ,
+#recipe_meta ul ol ,
+#recipe_meta ol ul ,
+#recipe_meta ol ol ,
+#function_box ul ul ,
+#function_box ul ol ,
+#function_box ol ul ,
+#function_box ol ol ,
+#timesaver_box ul ul ,
+#timesaver_box ul ol ,
+#timesaver_box ol ul ,
+#timesaver_box ol ol ,
+#related_pages_box ul ul ,
+#related_pages_box ul ol ,
+#related_pages_box ol ul ,
+#related_pages_box ol ol {
+	margin-top:0;
+	margin-bottom:0;
+}
+#recipe_meta ol ,
+#function_box ol ,
+#timesaver_box ol ,
+#related_pages_box ol {
+	margin-left:40px;
+	list-style-type:decimal;
+}
+
+#recipe_meta ul li ,
+#function_box ul li ,
+#timesaver_box ul li ,
+#related_pages_box ul li {
+	padding-bottom:5px;
+	padding-left:15px;
+	background:url(images/other/icon_02.png) no-repeat left 0.2em;
+	height:1%;
+}
+#related_box ul li a {
+	font-size:78%;
+	padding-top: 5px;
+}
+.type-recipe {
+	width:100%;
+	position:relative;
+	display:block;
+}
+.WP-PrintIcon {
+	position:absolute;
+	top:0;
+	right:0;
+}
+/* =Print Style
+-------------------------------------------------------------- */
+
+@media print {
+	body {
+		background: none !important;
+	}
+	#wrapper {
+		clear: both !important;
+		display: block !important;
+		float: none !important;
+		position: relative !important;
+	}
+	#header {
+		border-bottom: 2pt solid #000;
+		padding-bottom: 18pt;
+	}
+	#colophon {
+		border-top: 2pt solid #000;
+	}
+	#site-title,
+	#site-description {
+		float: none;
+		line-height: 1.4em;
+		margin: 0;
+		padding: 0;
+	}
+	#site-title {
+		font-size: 13pt;
+	}
+	.entry-content {
+		font-size: 14pt;
+		line-height: 1.6em;
+	}
+	.entry-title {
+		font-size: 21pt;
+	}
+	#access,
+	#branding img,
+	#respond,
+	.comment-edit-link,
+	.edit-link,
+	.navigation,
+	.page-link,
+	.widget-area {
+		display: none !important;
+	}
+	#container,
+	#header,
+	#footer {
+		margin: 0;
+		width: 100%;
+	}
+	#content,
+	.one-column #content {
+		margin: 24pt 0 0;
+		width: 100%;
+	}
+	.wp-caption p {
+		font-size: 11pt;
+	}
+	#site-info,
+	#site-generator {
+		float: none;
+		width: auto;
+	}
+	#colophon {
+		width: auto;
+	}
+	img#wpstats {
+		display: none;
+	}
+	#site-generator a {
+		margin: 0;
+		padding: 0;
+	}
+	#entry-author-info {
+		border: 1px solid #e7e7e7;
+	}
+	#main {
+		display: inline;
+	}
+	.home .sticky {
+		border: none;
+	}
+}
+
+/* =2011公開間に合わせ
+-------------------------------------------------------------- */
+
+/* 食材の持つ働き・ワンポイントアドバイス インデント */
+#function_box ul,
+#function_box p,
+#timesaver_box p {
+	margin-left:2em;
+	margin-right:1em;
+}
+
+/* 材料内の分類 */
+#recipe_meta h3 {
+	margin-left:1em;
+}
+
+#recipe_meta ul.kakomi {
+	margin: -8px 0 1.3em 1.12em;
+	padding: 10px 5px 10px 2em;
+	background-color: #f6fff0;
+	
+
+}
+#recipe_meta ul.kakomi li {
+	background-image:none;
+	list-style-type:square;
+	margin-left: 1em;
+	padding-left:0em;
+}
+
+/* キャプションなし時に下があくのを変更 */
+.recipe_img_box {
+	padding:4px;
+}
+.recipe_img_box img {
+	margin-bottom:0px;
+}
+
+/* 詳しく検索のフォームサイズ */
+#search_box form input.text {
+	width:146px;
+}
+/* 漢方ミニ知識 解説者 */
+span.cmt {
+	font-size: 78%;
+	color:#666;
+}
+
+/* キャッチコピー内レシピ執筆者 */
+p.auth {
+	float: right;
+	clear: right;
+	color: #666666;
+	font-weight: normal;
+	font-size: 90%;
+}
+p.auth a:link {
+	color: #666666;
+	text-decoration:none;
+}
+
+p.auth a:visited {
+	color: #666666;
+	text-decoration:none;
+	}
+p.auth a:hover {
+	color: #669900;
+	text-decoration:none;
+}
+p.auth a:active {
+	color: #669900;
+	text-decoration:none;
+	}
+
+/* 個別ページ「レシピデータ」不要項目非表示 */
+.recipe_dete_box tr.symptoms {
+	display: none;
+}
+.recipe_dete_box tr.genre {
+	
+}
+.recipe_dete_box tr.foodstuff {
+	
+}
+.recipe_dete_box tr.author {
+	
+}
+.recipe_dete_box tr.post_date {
+	display: none;
+}
+
+
+/* 以下、準備中につき非表示 */
+
+/* リストページの表を非表示 */
+#content table.tab_list {
+}
+
+/* 携帯QRコード */
+.qr {
+	display: none;
+}
+
+/* その他のレシピ */
+#related_box p a:link {
+	color: #c33;
+}
+
+#related_box p a:visited {
+	color: #c33;
+}
+
+/* 印刷用ボタン */
+.WP-PrintIcon{
+}
+
+/* taxonomy-author-ikeda.php */
+
+body #post-113 {
+	font-size:93%;
+	color:#333333;
+}
+/* h1非表示 */
+#post-113 h1 {
+	display: none;
+}
+/* トピックパスリンク色 */
+#post-113 .entry-content .topic-path a:link,
+#post-113 .entry-content .pagetop a:link {
+	color: #0000ff;
+}
+#post-113 .entry-content .topic-path a:visited,
+#post-113 .entry-content .pagetop a:visited {
+	color: #660099;
+}
+/* .column */
+#main #post-113 .column {
+	padding:0 1.5em 0 2em;
+}
+#main #post-113 .column h3 {
+	margin:2em 0 1em;
+	padding:4px 0 4px 14px;
+	clear:both;
+	background:#F6F6F6 none repeat scroll 0 0;
+	border-left:5px solid #C6EC4C;
+	font-weight:bold;
+}
+#main #post-113 .column p {
+	padding:0 1.5em 0 2em;
+	line-height:1.4;
+}
+
+/* = 関連リンクに置く、薬局様からのお知らせ
+--------------------------------------------------------------
+<div class="fromShop">
+<h2>薬局からのお知らせ</h2>
+	<div>
+内容
+（<a href="http://www.kigusuri.com/shop/＄フォルダ＄/">＄薬局名＄</a>）</p>
+	</div>
+</div><!-- /fromShop -->
+-------------------------------------------------------------- */
+
+#related_pages_box div.fromShop {
+	margin: 2em;
+	padding: 0.5em 2em 1em 1em;
+	border: solid 1px #9c0;
+	background-color: #f9ffdf;
+}
+#related_pages_box div.fromShop h2 {
+	color: #515151;
+	font-size: 20px;
+	font-weight: bold;
+}
+#related_pages_box div.fromShop div {
+	margin: 0.5em 0 0.5em 1em;
+}
+
+#related_pages_box div.fromShop div p {
+	line-height: 1.4;
+	margin-bottom: 1em;
+}
+
+
+
+/* = 先生紹介ページ用
+-------------------------------------------------------------- */
+.page .entry-title {
+		border-bottom:none;
+		margin-top: 1em;
+	}
+.page .entry-content p {
+		margin-bottom:1.28em;
+	}
+#profile h3 {
+	background: #C6EC4C no-repeat 0 0;
+	margin: 10px 0;
+	font-size: 0;
+}
+
+#photoSpace {
+	margin: 0 0 0 14px;
+	float:right;
+	line-height: 1.2em;
+	text-align: center;
+	width: 160px;
+}
+#photoSpace img {
+	display: block;
+	margin: 0 0 4px;
+	padding: 0;
+}
+#shopProf p {
+	margin-bottom:1.28em;
+}
+#shopProf p.osae03 {
+	color: #ff9900;
+	line-height: 1.2em;
+	margin: 8px 0;
+}
+
+/* = リストの表
+-------------------------------------------------------------- */
+
+table.tab_list tr.symptoms {
+	display: none;
+}
+table.tab_list tr.genre {
+	
+}
+table.tab_list tr.foodstuff {
+	
+}
+table.tab_list tr.author {
+	
+}
+table.tab_list tr.post_date {
+	display: none;
+}

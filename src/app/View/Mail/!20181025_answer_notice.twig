@@ -1,0 +1,20 @@
+【きぐすり.com】{{ pharmacy.name }}から回答がありました。
+
+{{ question.member_nickname }} 様
+
+いつも漢方薬のきぐすり.comをご利用いただき、ありがとうございます。
+{{ question.member_nickname }}様からの漢方相談に{{ pharmacy.name }}様から回答が寄せられました。
+以下のURLからご確認ください。
+
+【薬局からの回答】
+{{ answer.content[:60] |replace({'\n': '','\r': ''}) }} {{  answer.content | length > 60 ? '...' :'' }}
+{{ url }}
+
+※回答した漢方相談薬局・薬店にお礼のコメントを投稿する場合は
+　ログインが必要です。
+
+【漢方薬局・薬店情報】
+店舗名 ：{{ pharmacy.name }}
+{{ pharmacy.url }}
+
+{% include '/Mail/signature.twig' with {'after_answer' : true } %}

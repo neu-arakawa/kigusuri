@@ -1,0 +1,33 @@
+#main {margin:0 22px 0 10px;}
+#main #categoryName{margin:20px 0;}
+
+#main #description{ font-size: 80%; line-height: 160%; color: #666;}
+
+.pagetop {font-size: 10px;text-align: right;margin: 30px 0 5px;clear:both;}
+.pagetop a{background: url(../images/bt_top.gif) no-repeat left center;padding: 0 0 0 20px;}
+
+#contentsArea { margin:20px 15px; font-size:90%; line-height:150%;}
+#contentsArea h3{ margin:20px 0;border-left:5px solid #C6EC4C;padding-left:5px;background:#f6f6f6;clear:both;}
+
+/* intro
+-----------------------------------------*/
+#intro{ padding-right:80px; background-image:url(../soudan/img/img-nayami.gif); background-repeat:no-repeat; background-position:right bottom;}
+#intro h3{ background:none; border:none;}
+
+/* caution
+-----------------------------------------*/
+.caution{ padding:10px; background-color:#fc9;}
+.caution p{ margin:0; padding-left:1em; text-indent:-1em;}
+
+/* form 
+-----------------------------------------*/
+fieldset{ border:0; padding:0;}
+form{ margin:20px 0;}
+form table{ border-collapse:collapse; border:1px solid #660;}
+form table th{ padding:5px; font-weight:normal;color:#330; background-color:#FFFFC7; text-align:left; border-bottom:1px solid #660;}
+form table td{ padding:5px;color:#330; background-color:#fff; border-bottom:1px solid #660; font-size:90%;}
+form table td span{ color:#990000; line-height:160%; font-size:80%;}
+optgroup{color:#333;font-style: normal;}
+/* button */
+.button input{ margin:20px 25px 20px 0;padding:3px 5px; border-right:1px solid #660;border-bottom:1px solid #660; background-color:#F7F773; color:#330;}
+

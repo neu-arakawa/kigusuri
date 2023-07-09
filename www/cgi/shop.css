@@ -1,0 +1,167 @@
+/* common style
+-------------------------------------------*/
+body {padding: 0px;	margin: 0px;}
+h1,h2,h3,h4 {margin:0;font-size:1.0em;}
+.font_s {font-size: 0.8em;}
+.emPink {color: #ff6699;}
+.emGre {color: #390;}
+.emRed {color: #f30;}
+th {font-weight: normal;}
+ul {
+margin-bottom: 0px;
+margin-left: 14px;
+padding: 7px;
+margin-top: 0px;
+}
+.clear{ clear:both; line-height:0;}
+
+.pdf{ margin:5px 0;}
+.pdf a{ padding-left:18px; background-image:url(../images/common/icon_pdf.gif); background-repeat:no-repeat; background-position:left top;}
+.pdf span{ font-size:80%; color:#c30; margin-left:10px;}
+.btnPdf{ margin:10px 0; text-align:right;}
+
+img{border:none;}
+.imgL{ float:left; margin-right:10px;}
+
+
+/* header */
+#header{ width:800px; height:90px;}
+#logo{ margin:0 10px;}
+#pn{ height:66px; text-align:right;}
+#pn img{ margin:0 10px;}
+#gnavi{ width:800px; margin:0 0 25px 0;}
+#snavi img{ margin:0 5px;}
+
+.table01 th {
+	font-weight: normal;
+	background-color: #CCFFCC;
+	text-align: left;
+	padding: 3px 7px;
+}
+.table01 td {
+	background-color: #f5f5f5;
+	padding-top: 3px;
+	padding-right: 7px;
+	padding-bottom: 3px;
+	padding-left: 7px;
+}
+.table02 {
+	font-size:0.8em;
+	color: #333333;
+	border-collapse:collapse;
+}
+.table02 th {
+	background-color: #FFFFCC;
+	border: 1px solid #666666;
+	padding: 2px;
+}
+.table02 td {
+	border: 1px solid #666666;
+	padding: 2px;
+}
+
+.table03 {border-collapse:collapse;}
+.table03 th {font-size: 0.8em;background-color: #eeeeee;border: 1px solid #999999;padding: 3px;white-space:nowrap;}
+.table03 td {font-size: 0.8em;border: 1px solid #999999;padding: 3px;background:#fff;}
+
+.osusume {font-weight: bold;color: #0000FF;text-decoration: underline;}
+
+/* service style
+-------------------------------------------*/
+
+.service {
+	color: #FF9900;
+	border: 1px dotted #FF9900;
+	font-weight: bold;
+	line-height: 140%;
+	background-color: #FFFCE6;
+	padding: 8px;
+	text-align: left;
+	margin-right: 0px;
+	margin-left: 0px;
+}
+.infoBox {
+	border: 1px solid #FF9900;
+	background-color: #FFFCE6;
+	padding: 3px;
+	width: 90%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+/* contact
+-------------------------------------------*/
+.contact dl{margin:0;}
+.contact dl dt{margin:5px 0;}
+.contact dl dd{margin:5px 0 5px 15px;}
+
+.contactTel{
+background:url(img/ico_tel.gif) no-repeat 5px center;
+font-weight:bold;
+padding:5px 5px 5px 30px;
+font-size:1.1em;
+color:#666;
+}
+.contactMail{
+background:url(img/ico_mail.gif) no-repeat 5px center;
+font-weight:bold;
+padding:5px 5px 5px 30px;
+font-size:1.1em;
+color:#666;
+}
+/* intro
+-------------------------------------------*/
+.intro{margin:0 25px;text-align:left;padding:0;}
+
+/* inquiry
+----------------------------------------------------------------------*/
+.inquiry{margin:20px 0;}
+.inquiry a{ margin:0; padding:0 0 0 35px; background-image:url(img/icon_male.gif); background-position:left; background-repeat:no-repeat;}
+
+
+/* blog
+-------------------------------------------*/
+.blog dl{ margin:0; padding:0; border:1px solid #690; font-size:90%;}
+.blog dl dt{ padding:4px 0 4px 5px; font-weight:bold; color:#690; background-color:#E6FF66;  border-bottom:1px solid #690;}
+.blog dl dd{ margin:0; padding:5px; font-size:90%;}
+.blog dl a{ padding-left:50px;text-decoration:none;background-image:url(img/icon_blog.gif); background-repeat:no-repeat; background-position:3px center;}
+
+
+/* info
+-------------------------------------------*/
+.info dl{ margin:0; padding:0;}
+.info dl dt{ padding:4px 0 4px 17px; font-weight:bold; color:#690; border-bottom:medium dotted #690; background-image:url(../images/common/listMark02.gif); background-position:left 5px; background-repeat:no-repeat;}
+.info dl dd{ margin:0; padding:5px; font-size:90%;}
+.info dl a{ padding-left:12px;background-image:url(../images/common/arrowR02.gif); background-repeat:no-repeat; background-position:3px center;}
+
+
+
+/* ÉwÉbÉ_Å[îwåi */
+.amadokoro{background-image: url(img/bg/amadokoro.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.sakura{background-image: url(img/bg/sakura.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.momo{background-image: url(img/bg/momo.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.gerbera{background-image: url(img/bg/gerbera.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.lavender{background-image: url(img/bg/lavender.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.dokudami{background-image: url(img/bg/dokudami.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.shakuyaku{background-image: url(img/bg/shakuyaku.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.touki{background-image: url(img/bg/touki.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.matatabi{background-image: url(img/bg/matatabi.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.yuri_03{background-image: url(img/bg/yuri_03.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+
+.winered{background-image: url(img/bg/winered.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.green{background-image: url(img/bg/green.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.verdant_green{background-image: url(img/bg/verdant_green.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.cho{background-image: url(img/bg/cho.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+
+/* ÉwÉbÉ_Å[îwåiìXï‹ÉIÉäÉWÉiÉã */
+.tokiwakanpou{background-image: url(img/bg/original/tokiwakanpou.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+
+address {
+	font-size:70%;
+	font-style:normal;
+	margin:0;
+	padding:5px 5px 0 0;
+	text-align:right;
+}

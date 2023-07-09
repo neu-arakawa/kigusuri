@@ -1,0 +1,152 @@
+@charset "utf-8";
+* {
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+	font-size: 12px;
+	font-style: normal;
+	font-family: "ＭＳ Ｐゴシック", "ヒラギノ角ゴ Pro W3", Osaka, sans-serif;
+}
+body {
+	text-align: center;
+	color: #222;
+	background-color: #FFF;
+}
+form fieldset {
+	padding: 0px 10px;
+}
+form fieldset legend {
+	margin-bottom: 6px;
+}
+form input {
+	ime-mode: disabled;
+	padding: 1px;
+}
+form textarea {
+	font-family: "ＭＳ ゴシック", "Osaka－等幅", monospace;
+	padding: 2px;
+	line-height: 1.2em;
+}
+form label {
+	cursor: pointer;
+}
+form optgroup option {
+	margin-left: 2.0em;
+}
+h1, h2 {
+	font-size: 18px;
+}
+h2 {
+	margin: 20px 0px;
+}
+em {
+	font-style: normal;
+}
+p, ul {
+	margin: 12px 0px;
+}
+ul {
+	margin-left: 18px;
+}
+dl dt {
+	margin-top: 6px;
+}
+dl dd {
+	margin-left: 20px;
+}
+dt, dd, li, p {
+	line-height: 1.3em;
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+table tr th {
+	text-align: center;
+	padding: 6px 0px 4px 0px;
+}
+table tr td {
+	padding: 6px 7px 5px 7px;
+}
+table tr th,
+table tr td {
+	border: 1px solid #BBB;
+}
+address {
+	font-style: normal;
+}
+div#container {
+	width: 700px;
+	margin: 0px auto;
+}
+div#container > div {
+	margin: 20px 0px;
+}
+div#container table th {
+	color: inherit;
+	background-color: #F0F0F0;
+}
+div#container table,
+div#container form fieldset {
+	color: inherit;
+	background-color: #FAFAFA;
+}
+div#menu, div#form {
+	margin: 20px 0px;
+}
+div#menu ul {
+	margin: 0px;
+}
+div#menu ul li {
+	display: inline;
+}
+div#copyright {
+	margin: 20px 0px;
+}
+input#pass,
+input.pass {
+	font-family: Verdana, Arial, Tahoma, sans-serif;
+}
+input.button {
+	text-align: center;
+	width: 5.6em;
+}
+*.help {
+	cursor: help;
+	border-bottom: 1px dotted;
+}
+*.error, *.new {
+	color: #F60;
+	background-color: inherit;
+}
+*.new {
+	margin-left: 2px;
+}
+table tr.modified {
+	color: inherit;
+	background-color: #F0F0F0;
+}
+em.required {
+	margin-left: 2px;
+	font-size: 11px;
+	color: #F60;
+	background-color: inherit;
+}
+em.example {
+	font-size: 10px;
+	color: #999;
+	background-color: inherit;
+}
+*.graph em {
+	display: block;
+	position: relative;
+	height: 1.2em;
+	line-height: 1.2em;
+	font-weight: normal;
+	color: inherit;
+	background-color: #DDD;
+}
+*.graph em span {
+	position: absolute;
+	left: 4px;
+}

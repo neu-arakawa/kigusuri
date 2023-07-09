@@ -1,0 +1,6 @@
+<a href="set/disp.html" target="_blank">【 特定商取引に関する法律に基づく表示 】</a>
+
+上記商品以外にも取り扱う商品はたくさんございます。
+メール、FAXもしくはお電話にてお問い合わせ下さい。
+
+<div style="margin-left:2em; font-size:90%; text-align:left;"><a href="cart_list.cgi">▲ 商品案内 一覧へ戻る</a></div>

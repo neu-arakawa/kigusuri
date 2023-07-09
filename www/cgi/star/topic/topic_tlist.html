@@ -1,0 +1,38 @@
+	<br>
+	<div align="center">
+		<br>
+		
+				<table width="720" border="1" cellspacing="0" cellpadding="5">
+		  		<tr>
+					<td width="70"  bgcolor="#ffffcc"><font size="2" color="#000000">依頼番号</font></td>
+		    		<td width="200" bgcolor="#ffffff">$irno</td>
+					<td width="70"  bgcolor="#ffffcc" align="center"><font size="2" color="#000000">受付日</font></td>
+		    		<td width="200" bgcolor="#ffffff">$crdy</td>
+					<td width="90" align="center" bgcolor="#5555ff" valign="middle" rowspan="2">
+						<br>
+						<form action="./smate_editview.cgi" method="post">
+							<input type="hidden" name="mode" value="temp2public">
+							<input type="hidden" name="fnamer" value="$fnamer">
+							<input type="hidden" name="authe_id" value="$in{authe_id}">
+							<input type="hidden" name="authe_pwd" value="$in{authe_pwd}">
+							<input type="submit" value="検査・認証">
+						</form></td>
+					<td width="90" align="center" bgcolor="#ff5555" valign="middle"  rowspan="2">
+						<br>
+						<form action="./topic_del.cgi" method="post">
+						<input type="hidden" name="mode" value="del">
+						<input type="hidden" name="fnamer" value="$fnamer">
+						<input type="hidden" name="authe_id" value="$in{authe_id}">
+						<input type="password" name="authe_pwd" size="10">
+						<input type="submit" value="削除">
+						</form></td>
+				</tr>
+				<tr>
+					<td bgcolor="#ffffcc"><font size="2" color="#000000">表示<br>タイトル</font></td>
+		    		<td colspan="3" bgcolor="#ffffff">$tpname</td>
+				</tr>
+				</table>
+					
+				
+
+		</div>

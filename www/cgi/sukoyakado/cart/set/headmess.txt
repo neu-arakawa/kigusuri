@@ -1,0 +1,2 @@
+<h3>すこやか堂薬局 商品案内</h3>
+<!--<h4 class="medic"><a href="https://www.kigusuri.com/cgi/sukoyakado/cart/cart_list.cgi">オンラインショップ 商品一覧</a> ｜ <a href="https://www.kigusuri.com/cgi/sukoyakado/cart/product.html">医薬品のご紹介</a>（店頭にてお求めいただけます）</h4></div>-->

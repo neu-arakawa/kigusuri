@@ -1,0 +1,76 @@
+<?php
+  //共通
+  require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+  //メタディスクリプション
+  $description = '';
+
+  //メタキーワード
+  $keywords = '';
+
+  //Facebook　全ページ共通の場合は空白にしてください
+  $fbimage = '';
+
+  //タイトル
+  $title = 'ご相談内容を削除する';
+
+  //css追加
+  $ex_tag_css = '<link rel="stylesheet" href="/member/css/style.css"><link rel="stylesheet" href="/member/css/template.css">';
+
+  //js追加
+  $ex_tag_js = '<script src="/member/js/script.js"></script>';
+
+  //bodyID
+  $bodyID = 'member';
+
+?>
+<?php include 'header.php'; ?>
+
+
+	<div class="contents-header">
+		<ul class="topicpath fbox">
+			<li><a href="/">トップページ2</a></li>
+			<li><a href="/consultation/">みんなの漢方相談Q&amp;A</a></li>
+			<li>ご相談内容を削除{{ question ? '依頼' : ""}}する</li>
+		</ul>
+		<h1 class="header-ttl">ご相談内容を削除{{ question ? '依頼' : ""}}する</h1>
+	</div>
+    <!-- /.contents-header -->
+
+
+  <div class="inner">
+    
+    
+    
+    <!--/////////////////登録完了メッセージ start ///////////////////-->
+        <div class="m-panel01 m-panel01">
+     	 <div class="l-sp-inner">
+          <div class="m-panel01__panel">
+            {% if question %}
+            <p class="m-panel01__heading">削除依頼を受け付けました。</p>
+            <p class="m-panel01__txt">削除承認にはしばらく時間が掛かります。もうしばらくお待ちください。</p>
+            <p class="m-panel01__txt">内容によっては削除しかねる場合があります。予めご了承ください。</p>
+            {% else %}
+            <p class="m-panel01__heading">質問内容を削除しました。</p>
+            {% endif %}
+          </div>
+          <!-- /.m-panel01__panel -->
+          </div>
+          <!-- /.l-sp-inner -->
+        </div>
+        <!-- /.m-panel01 -->
+    <!--/////////////////登録完了メッセージ end ///////////////////-->
+    
+    
+
+
+            <div class="m-tablearea01__btn mt40">
+              <button type="button" class="m-arrow-btn01 question_delete" onClick="location.href='{{ c.app.urlFor('qa_history')}}';">相談履歴を見る<span class="m-arrow-btn01__icn"></span></button>
+            </div>
+
+    
+  </div>
+  <!-- /.inner -->
+  <!-- /.inner -->
+
+<?php include 'footer.php'; ?>

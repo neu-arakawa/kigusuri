@@ -1,0 +1,171 @@
+{% extends "Admin/layout.twig" %}
+
+{% block content %}
+
+<script>
+$(function() {
+
+    $('.btn_delete').click(function(){
+
+        message  = '<p>ID: '+$(this).parents('tr').find('td:eq(0)').text()+'</p>';        
+        message += '<p>ニックネーム: '+$(this).parents('tr').find('td:eq(1)').text()+'</p>';        
+        message += '<p>生年: '+$(this).parents('tr').find('td:eq(2)').text()+'</p>';        
+        message += '<p>性別: '+$(this).parents('tr').find('td:eq(3)').text()+'</p>';        
+        message += '<p>都道府県: '+$(this).parents('tr').find('td:eq(4)').text()+'</p>';        
+        message += '<p>メールアドレス: '+$(this).parents('tr').find('td:eq(7)').text()+'</p>';        
+         
+        var _this = this;
+        bootbox.confirm({
+            title: '下記の会員を退会します。よろしいでしょうか。',
+            message: message,
+            buttons: {
+                confirm: {
+                    label: '退会する',
+                    className: 'btn-success'
+                },
+                cancel: {
+                    label: '退会しない',
+                    className: 'btn-danger'
+                }
+            },
+            callback: function (result) {
+                if(result){
+                    $.ajax({
+                        url: "/admin/member/delete/",
+                        type: "post",
+                        dataType: "json",
+                        data: {
+                            csrf_token: $('[name=csrf_token]').val(),
+                            id: $(_this).attr('member_id')
+                        }
+                    }).done(function (response) {
+                        $(_this).parent().html("<i class='fa fa-check'></i>");
+                    }).fail(function(jqXHR) {
+                        document.head.innerHTML = "";
+                        document.body.innerHTML = jqXHR.responseText;
+                    });
+                }
+            }
+        });
+    });
+});
+</script>
+
+
+
+
+<section class="content-header">
+    <h1>
+        会員情報<small>一覧</small>
+    </h1>
+</section>
+
+
+<section class="content">
+
+<div class="well searchBox">
+
+		<form action="{{ c.app.urlFor('default',{'controller': 'member'})}}" class="form-inline" novalidate="novalidate" id="AdminNewsIndexForm" method="GET" accept-charset="utf-8">	
+
+            <div class="input-append">
+            <label for="AdminNewsCategoryId">状態</label>
+            <select name="del_flg" class="form-control" id="AdminNewsCategoryId">
+                <option value="">すべて</option>
+                <option value="0">会員</option>
+                <option value="1">退会</option>
+            </select>
+                <input type="text" class="form-control" name='id' placeholder="IDで検索する" value="" style='width:10%'>
+                <input type="text" class="form-control" name='keyword' placeholder="ニックネーム or 都道府県 等で検索する" value="" style='width:70%'>
+                <button type="submit" class="form-control" id='btn_search'><i class="fa fa-search"></i></button>
+            </div>
+        </form>
+
+</div>
+
+{% if list|length %}
+
+    <div class="col-sm-5" style='margin:10px'>
+        {{ pager.total_count  }} 件中 {{ pager.start_cnt }} - {{ pager.end_cnt }} 件目を表示    </div>
+        <div class="box-body">
+<form id='frm' method="post" action="{{ c.app.urlFor('default',{'controller': 'member','action': 'del'})}}">
+<input type="hidden" name="{{csrf_key}}" value="{{csrf_token}}">
+<input type="hidden" name="_METHOD" value="DELETE"/>
+<input type="hidden" name="id" value="">
+            <table class="table table-striped">
+                <tr>
+                    <th style="width: 20px">ID</th>
+                    <th style="width: 300px" >ニックネーム</th>
+                    <th style="width: 20px">生年</th>
+                    <th style="width: 80px">性別</th>
+                    <th style="width: 90px">都道府県</th>
+                    <th style="width: 20px">DM</th>
+                    <th style="width: 70px">質問数</th>
+                    <th style="">メールアドレス</th>
+                    <th style="width: 100px">操作</th>
+                </tr>
+
+                {% for data in list %}
+                    <tr>
+                        <td>{{data.id}}</td>
+                        <td>{{data.nickname}}</td>
+                        <td>{{data.birthday}}</td>
+                        <td>{{data.sex}}</td>
+                        <td>{{data.pref}}</td>
+                        <td>{% if data.dm_flg %}<i class='fa fa-heart'></i>{% endif %}</td>
+                        <td><p class="text-right">
+                        <a href='/admin/question/?member_id={{data.id}}' target="_blank">
+                        {{data.question_cnt|default(0)}} 件</a>
+                        
+                        </p></td>
+                        <td>{{data.email}}</td>
+                        <td>
+                        {% if data.del_flg == 0 %}
+                        <a href='javascript:void(0);' class="btn btn-xs btn-danger btn_delete" member_id='{{data.id}}'><i class="fa fa-trash"></i> 退会</a>
+                        {% else %}
+                        退会済
+                        {% endif %} 
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+</form>
+        </div>
+        <div class="clearfix">
+
+{% if pager.total_pages > 1 %}
+<ul class="pagination pull-right">
+{% if pager.prev %}
+  <li><a href="{{ c.app.urlFor('default',{'controller': 'member'})}}?page={{pager.prev}}&{{query_string}}">«</a></li>
+{% endif %}
+{% for page in pager.start_page .. pager.end_page %}
+{% if page == pager.curpage %}
+  <li class="active"><a href="#">{{ page }}</a></li>
+{% else %}
+    <li><a href="{{ c.app.urlFor('default',{'controller': 'member'})}}?page={{page}}&{{query_string}}">{{page}}</a></li>
+{% endif %}
+{% endfor %}
+{% if pager.next %}
+ <li><a href="{{ c.app.urlFor('default',{'controller': 'member'})}}?page={{pager.next}}&{{query_string}}">»</a></li>
+{% endif %}
+</ul>
+{% endif %}
+	<div class="col-sm-5">
+		{{ pager.total_count  }} 件中 {{ pager.start_cnt }} - {{ pager.end_cnt }} 件目を表示	</div>
+</div>
+
+<div class="well searchBox" style='margin-top:10px'>
+<a class="btn btn-primary" href="{{ c.app.urlFor('default',{'controller': 'member','action':'download'})}}?{{query_string}}" ><i class="fa fa-download"></i> <b>検索した結果を全件ダウンロードする</b></a>
+</div>
+
+{% else %}
+<div class="well searchBox">
+該当する情報はありません。
+</div>
+
+{% endif %}
+
+
+</section>
+
+{% endblock %}
+

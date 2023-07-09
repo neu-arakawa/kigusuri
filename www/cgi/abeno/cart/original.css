@@ -1,0 +1,41 @@
+*{
+	line-height:1.4;}
+
+#logo-abeno{ margin:3px 0 0 18px; float:left;}
+
+table td.name-shop{
+	margin:0;
+	padding:6px 10px;
+	border-top:none;}
+
+table td.comment-shop{
+	margin:0;
+	padding:4px 6px;
+	border-top:none;}
+
+table td.price-shop{
+	margin:0;
+	padding:6px 10px;}
+	
+
+.name-shop{
+	color:#262625;
+	font-weight:bold;}
+
+.name-shop span{
+	display:block;
+	border-left: 8px #65ab31 solid;
+	padding: 12px 0px 12px 12px;
+	margin: 8px 0 8px 8px;
+	font-size:18px;
+	font-weight:bold;}
+	
+	
+.comment-shop{
+	padding:12px 8px 8px 8px;
+	line-height: 1.5;
+	border-top:#999 dotted 1px;}
+	
+.image-shop{
+	padding:12px 8px 8px 8px;
+	border-top:#999 dotted 1px;}

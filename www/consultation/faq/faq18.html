@@ -1,0 +1,114 @@
+<?php
+	//共通
+	require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+	//メタディスクリプション
+	$description = '';
+
+	//メタキーワード
+	$keywords = '漢方,漢方薬,漢方薬局,よくある質問,FAQ,Q&A,相談時間,どれくらい';
+
+	//Facebook　全ページ共通の場合は空白にしてください
+	$fbimage = '';
+
+	//タイトル
+	$title = '漢方相談薬局での相談には、どのくらいの時間がかかりますか？ | 漢方 よくある質問（Q&amp;A） | 漢方相談（Q&amp;A）';
+
+	//css追加
+	$ex_tag_css = '<link rel="stylesheet" href="/common/css/shift.css">
+<link rel="stylesheet" href="css/faq.css">
+<link rel="stylesheet" href="css/faq-list.css">
+<link rel="stylesheet" href="css/faq-kampo.css">
+<link rel="stylesheet" href="css/shift_faq.css">
+<link rel="stylesheet" href="css/shift_faq-list.css">
+<link rel="stylesheet" href="css/shift_faq-kampo.css">
+<link rel="stylesheet" href="/consultation/css/style.css">';
+
+	//js追加
+	$ex_tag_js = '<script src="/common/js/shift_common.js"></script>';
+
+	//bodyID
+	$bodyID = 'consultation';
+
+?>
+<?php include 'header.php'; ?>
+
+	<div class="contents-header">
+		<ul class="topicpath fbox">
+			<li><a href="/">トップページ</a></li>
+			<li><a href="/consultation/">漢方相談（Q&amp;A）</a></li>
+			<li><a href="/consultation/faq/">漢方 よくある質問（Q&amp;A）</a></li>
+			<li>漢方相談薬局での相談には、どのくらいの時間がかかりますか？</li>
+		</ul>
+		<p class="header-ttl">漢方相談Q&amp;A</p>
+	</div>
+
+
+	<article id="main" class="inner fbox shift-contents">
+
+		<section class="fbox kampo-sct">
+			<p class="main-head-description">きぐすり.com は、<strong>漢方薬、女性の健康、サプリメント、ハーブ</strong>の情報を専門家がやさしく解説しています。</p>
+			<h1 class="ttl01">病気の悩みを漢方で</h1>
+
+
+			<!--//////////////////// 移行コンテンツ start-->
+
+
+			<div id="faq-box">
+ <div id="faq-list">
+  <div id="faq-kampo">
+   <h4 id="kaito"><span>ご質問に対するご回答</span></h4>
+   <div id="answer">
+    <div id="answer-h">
+     <h4>漢方相談薬局での相談には、どのくらいの時間がかかりますか？</h4>
+    </div>
+    <div id="answer-txt">
+     <div id="answer-01">
+      <p>初回は30分～60分、二回目以降は電話での対応でOKの方から初回並みにしっかり時間を確保する必要のある方などさまざまです。</p>
+      <br />
+      <p>一般的には、視覚によって患者さんの病状を判断する望診、耳や鼻によって患者さんが出す音やにおいから判断する聞診、ご自身や近親者から必要事項を聞きだす問診、患者さんに直接触れて（脈診・腹診など）判断する切診の四診で総合的に判断するためこの程度の時間が必要になります。</p>
+      <p class="pharmacy-m"><a href="../shop/fukuda-kanpou/index.html" target="_blank">福田漢方すこやか相談所　薬局・鍼灸治療院　　福田 佳司先生</a></p>
+     </div>
+     <p class="line">&nbsp;</p>
+     <div id="answer-02">
+      <p>症状や患者さまの生活環境により、時間が左右しますが、概ね1時間程度、患者さまとお話しするお時間を頂いております。</p>
+      <p class="pharmacy-w"><a href="../shop/rakuda/index.html" target="_blank">クスリのらくだ　　峯村　ふみ子先生</a></p>
+     </div>
+    </div>
+    <div class="clearfix" id="next-faq">
+     <p id="front-move"><span>前の質問</span><a href="faq16.html">&laquo; 「薬局へ行けません。送って…。」</a></p>
+     <p id="back-move"><span>次の質問</span><a href="faq19.html">「漢方薬局・薬店では、ハーブを販売していますか？」 &raquo;</a></p>
+    </div>
+   </div>
+   <div id="kanren">
+    <h3>この質問に関連のあるオススメ記事</h3>
+    <ul>
+     <li><a href="faq22.html">ゆっくりご相談したいのですが？</a></li>
+     <li><a href="faq23.html">相談だけでもいいですか？</a></li>
+    </ul>
+   </div>
+  </div>
+ </div>
+ <!-- #BeginLibraryItem "/Library/list_faq-info.lbi" -->
+ <div class="faq-index">
+  <div class="highlight" id="info-index">
+   <ul>
+    <li><a href="../kensaku.html"><img alt="あなたの街の漢方薬局・薬店へ" height="83" src="img/pharmacy-btn.gif" width="223" /></a></li>
+    <li><a href="../mail-soudan.html"><img alt="メールで漢方相談" height="82" src="img/mail-btn.gif" width="223" /></a></li>
+   </ul>
+  </div>
+ </div>
+ <!-- #EndLibraryItem -->
+ 
+</div>
+
+
+			<!--//////////////////// 移行コンテンツ end-->
+
+
+		</section>
+
+
+	</article>
+
+<?php include 'footer.php'; ?>

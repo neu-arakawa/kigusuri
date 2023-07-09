@@ -1,0 +1,21 @@
+/* CSS Document */
+#main{ margin: 0 22px 0 10px; padding:0; border:0;}
+#main #description{ font-size: 80%; line-height: 160%; color: #666;}
+#main #categoryName{margin:20px 0;}
+#main #contentsArea{ margin: 20px 15px; padding:0; border: 0; font-size:90%; line-height:140%;}
+#main #contentsArea .boxCaption h3{ margin: 20px 0; padding: 0;color:#f93; font-weight:bold;}
+
+.infoEnd{ color:#f00;}
+.clear{ clear:both; line-height:0;}
+.em01{color:#CC3333;}
+.new{ padding-right:25px; background-image:url(../images/new.gif); background-position:right top; background-repeat:no-repeat;}
+
+.pagetop {font-size: 10px;text-align: right;margin: 30px 0 5px;clear:both;}
+.pagetop a{background: url(../images/bt_top.gif) no-repeat left center;padding: 0 0 0 20px;}
+
+#sectionNews {padding:0 0 0 160px;background-image: url(../news/img/img_news.gif);background-repeat: no-repeat;background-position: left top;height: 150px;	clear: both;}}
+#sectionNews h3{ display:none;}
+#sectionNews table{font-size: 90%;line-height: 160%;}
+#sectionNews table th {	padding: 0 10px 0 0;font-weight: normal;text-align: left;vertical-align: top;}
+
+.link{ padding-right:14px; background-image:url(../images/icon_link.gif); background-repeat:no-repeat; background-position:right;}

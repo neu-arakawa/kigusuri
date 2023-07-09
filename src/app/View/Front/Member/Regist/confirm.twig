@@ -1,0 +1,146 @@
+<?php
+  //共通
+  require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+  //メタディスクリプション
+  $description = '';
+
+  //メタキーワード
+  $keywords = '';
+
+  //Facebook　全ページ共通の場合は空白にしてください
+  $fbimage = '';
+
+  //タイトル
+  $title = '新規会員登録';
+
+  //css追加
+  $ex_tag_css = '<link rel="stylesheet" href="/member/css/style.css"><link rel="stylesheet" href="/member/css/template.css">';
+
+  //js追加
+  $ex_tag_js = '<script src="/member/js/script.js"></script>';
+
+  //bodyID
+  $bodyID = 'member';
+
+?>
+<?php include 'header.php'; ?>
+
+
+	<div class="contents-header">
+		<ul class="topicpath fbox">
+			<li><a href="/">トップページ</a></li>
+			<li>新規会員登録</li>
+		</ul>
+		<h1 class="header-ttl">新規会員登録</h1>
+	</div>
+    <!-- /.contents-header -->
+
+
+  <div class="inner">
+    <p>入力内容をお確かめください。</p>
+    <!--/////////////////確認画面 start ///////////////////-->
+    <div class="component-area">
+      <div class="l-sp-inner">
+        <div class="m-tablearea01">
+        <form method="post" loading>
+        <input type="hidden" name="{{csrf_key}}" value="{{csrf_token}}">
+        <input type="hidden" name="_REF" id="_REF" value="confirm"/>
+        <input type="hidden" name="_METHOD" id="_METHOD" value="PUT"/>
+        {% for key, data in c.request.post %}
+        {% if key != 'csrf_token' and key != 'next' and key != 'access' %}
+        <input type="hidden" name="{{ key }}">
+        {% endif %}
+        {% endfor %}
+            <div class="m-tablearea01__table">
+              <table class="m-table01">
+                <tr>
+                  <th><span class="m-table01__heading">ニックネーム</span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                      <p>{{ query.nickname }} </p>
+                      <span class="m-table01__note">※一度登録すると変更できません。</span>
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                  </td>
+                </tr>
+                <tr>
+                  <th><span class="m-table01__heading">メールアドレス</span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                    <p>{{ query.email }} </p>
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                  </td>
+                </tr>
+                <tr>
+                  <th><span class="m-table01__heading">パスワード</span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                    <p>※セキュリティのため表示していません</p>
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                  </td>
+                </tr>
+                <tr>
+                  <th><span class="m-table01__heading">生年（西暦）</span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                      <p>{{ query.birthday }} 年</p>
+                      <span class="m-table01__note">※一度登録すると変更できません。</span>
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                  </td>
+                </tr>
+                <tr>
+                  <th><span class="m-table01__heading">性別</span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                      <p>{{ query.sex }}</p>
+                      <span class="m-table01__note">※一度登録すると変更できません。</span>
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                  </td>
+                </tr>
+                <tr>
+                  <th><span class="m-table01__heading">都道府県</span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                      <p>{{ query.pref }}</p>
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                  </td>
+                </tr>
+                <tr>
+                  <th><span class="m-table01__heading">DM 受け取り</span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                      <p>{{ query.dm_flg ? '受け取る' : '受け取らない' }}</p>
+
+                      <!-- /.m-table01__radiolist -->
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                  </td>
+                </tr>
+              </table>
+              <!-- /.m-table01 -->
+            </div>
+            <!-- /.m-tablearea01__table -->
+            <p class="m-tablearea01__note">この内容でよろしければ、『この内容で登録する』ボタンを押してください。</p>
+            <div class="m-tablearea01__btn">
+              <button class="m-arrow-btn02 m-arrow-btn02--prev m-arrow-btn02--gray" onclick="document.getElementById('_METHOD').value = '';">戻る<span class="m-arrow-btn01__icn"></span></button>
+              <button class="m-arrow-btn01">この内容で登録する<span class="m-arrow-btn01__icn"></span></button>
+            </div>
+          </form>
+        </div>
+        <!-- /.m-tablearea01 -->
+      </div>
+      <!-- /.l-sp-inner -->
+    </div>
+    <!-- /.component-area -->
+    <!--/////////////////確認画面 end ///////////////////-->
+    
+  </div>
+  <!-- /.inner -->
+
+<?php include 'footer.php'; ?>

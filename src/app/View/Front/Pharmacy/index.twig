@@ -1,0 +1,220 @@
+ {% php %}
+	//共通
+	require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+	
+	//メタディスクリプション
+	$description = '';
+	
+	//メタキーワード
+	$keywords = '';
+	
+	//Facebook　全ページ共通の場合は空白にしてください
+	$fbimage = '';
+	
+	//タイトル
+	$title = '漢方薬局を探す';
+	
+	//css追加
+	$ex_tag_css = '<link rel="stylesheet" href="/common/css/shop.css">';
+	
+	//js追加
+	$ex_tag_js = '<script src="/common/js/search.js"></script>
+<script src="/common/js/geolocation.js"></script>
+';
+	
+	//bodyID
+	$bodyID = 'search';
+	
+    include 'header.php';
+ {% endphp %}
+
+	<div class="contents-header">
+		<ul class="topicpath fbox">
+			<li><a href="/">トップページ</a></li>
+			<li>漢方薬局を探す</li>
+		</ul>
+		<h1 class="header-ttl">漢方薬局を探す</h1>
+	</div>
+	
+	
+	<article id="main" class="inner fbox">
+	
+		<!--//////////////////// 都道府県から探す start-->
+		<div class="srch-box-l pref-box srch-box">
+			<h2 class="srch-box-ttl ttl-pref">都道府県から探す</h2>
+			<p class="pref-box-img pc-item"><img src="img/pref_img.jpg" alt="" width="597" height="443" usemap="#Map">
+				<map name="Map">
+					<area shape="poly" coords="452,31,565,31,570,37,569,111,563,117,453,118,446,111,446,37,452,30" href="#" alt="北海道">
+					<area shape="poly" coords="441,137,541,137,548,143,547,165,435,166,434,145,440,137" href="#" alt="青森県">
+					<area shape="rect" coords="491,168,549,198" href="#" alt="岩手県">
+					<area shape="rect" coords="435,167,490,198" href="#" alt="秋田県">
+					<area shape="rect" coords="447,199,490,230" href="#" alt="山形県">
+					<area shape="rect" coords="492,199,548,230" href="#" alt="宮城県">
+					<area shape="rect" coords="467,231,548,259" href="#" alt="福島県">
+					<area shape="rect" coords="516,261,548,315" href="#" alt="茨城県">
+					<area shape="poly" coords="548,317,517,317,516,364,521,365,523,371,527,373,541,374,547,369,547,318" href="#" alt="千葉県">
+					<area shape="rect" coords="479,262,514,291" href="#" alt="栃木県">
+					<area shape="rect" coords="434,262,477,291" href="#" alt="群馬県">
+					<area shape="rect" coords="465,293,514,314" href="#" alt="埼玉県">
+					<area shape="rect" coords="464,316,514,337" href="#" alt="東京都">
+					<area shape="rect" coords="455,339,514,365" href="#" alt="神奈川県">
+					<area shape="poly" coords="464,232,445,232,445,199,435,200,435,219,407,219,407,258,464,258,464,233" href="#" alt="新潟県">
+					<area shape="rect" coords="371,219,405,259" href="#" alt="富山県">
+					<area shape="rect" coords="434,293,463,337" href="#" alt="山梨県">
+					<area shape="rect" coords="407,261,432,337" href="#" alt="長野県">
+					<area shape="rect" coords="407,339,454,365" href="#" alt="静岡県">
+					<area shape="rect" coords="366,339,405,366" href="#" alt="愛知県">
+					<area shape="poly" coords="404,261,371,261,371,269,375,269,375,304,366,305,366,337,405,336,404,260" href="#" alt="岐阜県">
+					<area shape="poly" coords="369,211,363,205,348,205,341,212,342,269,369,269,368,210" href="#" alt="石川県">
+					<area shape="rect" coords="316,227,341,269" href="#" alt="福井県">
+					<area shape="rect" coords="331,271,374,302" href="#" alt="滋賀県">
+					<area shape="poly" coords="363,304,341,304,341,358,321,358,320,374,357,374,363,367,362,304" href="#" alt="三重県">
+					<area shape="rect" coords="320,304,340,356" href="#" alt="奈良県">
+					<area shape="rect" coords="288,271,329,302" href="#" alt="大阪府">
+					<area shape="poly" coords="313,224,308,219,287,219,288,269,313,269,313,224" href="#" alt="京都府">
+					<area shape="poly" coords="285,219,267,219,261,225,261,302,285,301,286,219" href="#" alt="兵庫県">
+					<area shape="poly" coords="317,304,294,304,295,367,302,373,318,374,317,304" href="#" alt="和歌山県">
+					<area shape="rect" coords="218,234,260,263" href="#" alt="鳥取県">
+					<area shape="rect" coords="218,264,260,302" href="#" alt="岡山県">
+					<area shape="poly" coords="213,220,209,219,170,219,170,263,215,263,216,229,215,224" href="#" alt="島根県">
+					<area shape="rect" coords="170,265,216,302" href="#" alt="広島県">
+					<area shape="poly" coords="167,219,150,219,144,225,144,296,150,301,168,301,167,220" href="#" alt="山口県">
+					<area shape="poly" coords="277,318,271,312,232,312,232,335,278,335,278,319" href="#" alt="香川県">
+					<area shape="rect" coords="232,338,278,358" href="#" alt="徳島県">
+					<area shape="poly" coords="229,312,185,312,179,318,179,357,230,357,229,312" href="#" alt="愛媛県">
+					<area shape="poly" coords="277,360,179,360,179,377,184,384,272,383,278,378,277,359" href="#" alt="高知県">
+					<area shape="poly" coords="131,241,123,234,94,234,94,262,132,262,131,242" href="#" alt="福岡県">
+					<area shape="rect" coords="94,264,132,296" href="#" alt="大分県">
+					<area shape="rect" coords="65,234,92,275" href="#" alt="佐賀県">
+					<area shape="rect" coords="94,297,132,333" href="#" alt="宮崎県">
+					<area shape="rect" coords="65,277,92,333" href="#" alt="熊本県">
+					<area shape="poly" coords="62,234,47,233,41,239,41,281,47,287,62,287,62,233" href="#" alt="長崎県">
+					<area shape="poly" coords="131,334,65,335,64,353,71,359,125,359,132,352,131,335" href="#" alt="鹿児島県">
+					<area shape="poly" coords="86,385,45,384,35,390,32,397,32,404,34,409,42,414,86,415,92,412,97,406,98,397,94,389,85,385" href="#" alt="沖縄県">
+				</map>
+			</p>
+			<div class="srch-box-inner sp-item">
+				<form id='prefectures_search' action="/shop/search/prefectures/:pref/" method="">
+					<select name='pref' class="srch-pref srch-custom custom-field pref01">
+						<option value="">都道府県を選択</option>
+                           <optgroup label="北海道・東北地方">
+                               <option value="北海道">北海道</option>
+                               <option value="青森県">青森県</option>
+                               <option value="岩手県">岩手県</option>
+                               <option value="宮城県">宮城県</option>
+                               <option value="秋田県">秋田県</option>
+                               <option value="山形県">山形県</option>
+                               <option value="福島県">福島県</option>
+                           </optgroup>
+                           <optgroup label="関東地方">
+                               <option value="茨城県">茨城県</option>
+                               <option value="栃木県">栃木県</option>
+                               <option value="群馬県">群馬県</option>
+                               <option value="埼玉県">埼玉県</option>
+                               <option value="千葉県">千葉県</option>
+                               <option value="東京都">東京都</option>
+                               <option value="神奈川県">神奈川県</option>
+                           </optgroup>
+                           <optgroup label="中部地方">
+                               <option value="新潟県">新潟県</option>
+                               <option value="富山県">富山県</option>
+                               <option value="石川県">石川県</option>
+                               <option value="福井県">福井県</option>
+                               <option value="山梨県">山梨県</option>
+                               <option value="長野県">長野県</option>
+                               <option value="岐阜県">岐阜県</option>
+                               <option value="静岡県">静岡県</option>
+                               <option value="愛知県">愛知県</option>
+                           </optgroup>
+                           <optgroup label="近畿地方">
+                               <option value="三重県">三重県</option>
+                               <option value="滋賀県">滋賀県</option>
+                               <option value="京都府">京都府</option>
+                               <option value="大阪府">大阪府</option>
+                               <option value="兵庫県">兵庫県</option>
+                               <option value="奈良県">奈良県</option>
+                               <option value="和歌山県">和歌山県</option>
+                           </optgroup>
+                           <optgroup label="中国地方">
+                               <option value="鳥取県">鳥取県</option>
+                               <option value="島根県">島根県</option>
+                               <option value="岡山県">岡山県</option>
+                               <option value="広島県">広島県</option>
+                               <option value="山口県">山口県</option>
+                           </optgroup>
+                           <optgroup label="四国地方">
+                               <option value="徳島県">徳島県</option>
+                               <option value="香川県">香川県</option>
+                               <option value="愛媛県">愛媛県</option>
+                               <option value="高知県">高知県</option>
+                           </optgroup>
+                           <optgroup label="九州,沖縄地方">
+                               <option value="福岡県">福岡県</option>
+                               <option value="佐賀県">佐賀県</option>
+                               <option value="長崎県">長崎県</option>
+                               <option value="熊本県">熊本県</option>
+                               <option value="大分県">大分県</option>
+                               <option value="宮崎県">宮崎県</option>
+                               <option value="鹿児島県">鹿児島県</option>
+                               <option value="沖縄県">沖縄県</option>
+                           </optgroup>
+					</select>							
+					<div class="btn-area">
+						<button type="button" class="btn-submit btn-custom"><span class="icon-srch">検索する</span></button>
+					</div>
+				</form>
+			</div>
+			
+		</div>
+		<!--//////////////////// 都道府県から探す end-->
+	
+		
+		<div class="srch-box-s">
+			<!--//////////////////// 店舗の特長から探す start-->
+			<div class="srch-box feature-box">
+				<h2 class="srch-box-ttl ttl-feature">店舗の特長から探す</h2>
+				<div class="srch-box-inner">
+					<p>営業時間や取り扱い有無など、店舗の特長からお探しいただけます。</p>
+					<p class="btn-detail-srch"><a href="/shop/search" class="btn02"><span class="icon-arrow01">詳細検索へ</span></a></p>
+				</div>
+			</div>
+			<!--//////////////////// 店舗の特長から探す end-->
+
+			<!--//////////////////// キーワードから探す start-->
+			<div class="srch-box keyword-box">
+                    <form action="{{ c.app.urlFor('shop_search_keyword') }}" method="GET">
+					<h2 class="srch-box-ttl ttl-keyword">キーワードから探す</h2>
+					<div class="srch-box-inner">
+						<p>店舗名や住所などからお探しいただけます。</p>
+						<input name="q" type="text" class="srch-box-keyword text-custom">
+						<div class="btn-area">
+							<button class="btn-submit btn-custom"><span class="icon-srch">検索する</span></button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!--//////////////////// キーワードから探す end-->
+
+		</div>
+		
+		
+	
+		<!--//////////////////// 現在地から探す start-->
+		<div class="srch-box gps-box sp-item">
+			<h2 class="srch-box-ttl ttl-gps">現在地から探す</h2>
+			<div class="srch-box-inner">
+				<p>現在地から近い店舗をお探しいただけます。<br>
+				※お使いの端末で位置情報サービスをONにする必要があります。</p>
+				<p class="btn-detail-srch"><a href="javascript:void(0)" class="btn02 locationSearch"><span class="icon-arrow01">現在地検索へ</span></a></p>
+			</div>
+		</div>
+		<!--//////////////////// 現在地から探す end-->
+		
+		
+		
+	</article>
+	
+ {% php %}
+ include 'footer.php'; 
+
+ {% endphp %}

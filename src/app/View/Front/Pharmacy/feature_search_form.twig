@@ -1,0 +1,50 @@
+ {% php %}
+	//共通
+	require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+	
+	//メタディスクリプション
+	$description = '';
+	
+	//メタキーワード
+	$keywords = '';
+	
+	//Facebook　全ページ共通の場合は空白にしてください
+	$fbimage = '';
+	
+	//タイトル
+	$title = '店舗の特長から探す | 漢方薬局を探す';
+	
+	//css追加
+	$ex_tag_css = '<link rel="stylesheet" href="/common/css/shop.css">';
+	
+	//js追加
+	$ex_tag_js = '<script src="/common/js/search.js"></script>
+';
+	
+	//bodyID
+	$bodyID = 'search';
+	
+    include 'header.php';
+
+{% endphp %}
+
+	<div class="contents-header">
+		<ul class="topicpath fbox">
+			<li><a href="/">トップページ</a></li>
+			<li><a href="/shop/">漢方薬局を探す</a></li>
+			<li>店舗の特長から探す</li>
+		</ul>
+		<h1 class="header-ttl">店舗の特長から探す</h1>
+	</div>
+	
+	
+	<article id="main" class="inner">
+		
+    {% include '/Front/Parts/pharmacy_search_form.twig' with {'pharmacy': data, 'type':'feature'} %}
+		
+	</article>
+	
+{% php %}
+ include 'footer.php'; 
+{% endphp %}
+

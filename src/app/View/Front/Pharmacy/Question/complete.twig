@@ -1,0 +1,89 @@
+<?php
+  //共通
+  require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+  //メタディスクリプション
+  $description = '';
+
+  //メタキーワード
+  $keywords = '';
+
+  //Facebook　全ページ共通の場合は空白にしてください
+  $fbimage = '';
+
+  //タイトル
+  $title = '新規相談フォーム';
+
+  //css追加
+  $ex_tag_css = '<link rel="stylesheet" href="/member.shop/css/template.css"><link rel="stylesheet" href="/member.shop/css/style.css">';
+
+  //js追加
+  $ex_tag_js = '<script src="/member/js/script.js"></script>';
+
+  //bodyID
+  $bodyID = 'mypage';
+
+?>
+<?php include 'header.php'; ?>
+
+
+	<div class="contents-header">
+		<ul class="topicpath fbox">
+			<li><a href="{{ c.app.urlFor('pharmacy_mypage') }}">マイページトップ</a></li>
+			<li>相談回答フォーム</li>
+		</ul>
+		<h1 class="header-ttl">相談回答フォーム</h1>
+	</div>
+    <!-- /.contents-header -->
+
+
+  <div class="inner">
+    
+    
+    
+    <!--/////////////////登録完了メッセージ start ///////////////////-->
+        <div class="m-panel01 m-panel01">
+     	 <div class="l-sp-inner">
+          <div class="m-panel01__panel">
+            <p class="m-panel01__heading">回答完了いたしました。</p>
+            <p class="m-panel01__txt">ご回答いただきありがとうございます。回答内容がサイトに掲載されました。</p>
+          </div>
+          <!-- /.m-panel01__panel -->
+          </div>
+          <!-- /.l-sp-inner -->
+        </div>
+        <!-- /.m-panel01 -->
+    <!--/////////////////登録完了メッセージ end ///////////////////-->
+    
+    <div class="m-tablearea01__btn text-c mt40"><a href="{{ c.app.urlFor('answer_history') }}"><button class="m-arrow-btn01">回答履歴を見る<span class="m-arrow-btn01__icn"></span></button></a></div>
+    
+    {% if list|length %}
+    <div class="component-area mt40">
+      <div class="m-newly01">
+        <p class="m-newly01__tit"><img src="/member.shop/img/newly01_category.png" alt="最近の漢方相談"></p>
+        <ul class="m-newly01__bal-list">
+                    {% include '/Front/Parts/question_list.twig' %}
+          </ul>
+
+          {% if pager.next or pager.prev %}
+          <!-- /.m-category01__bal-list -->
+          <ul class="m-category01__btn-list">
+            {% if pager.next %}
+            <li><a href="{{ url }}?page={{ pager.next }}" class="m-arrow-btn02 m-arrow-btn02--prev m-arrow-btn02--gray">前へ</a></li>
+            {% endif %}
+            {% if pager.prev %}
+            <li><a href="{{ url }}?page={{ pager.prev }}" class="m-arrow-btn02 m-arrow-btn02--next m-arrow-btn02--green">次へ</a></li>
+            {% endif %}
+          </ul>
+          <!-- /.m-category01__btn-list -->
+          {% endif %}
+      </div>
+      <!-- /.m-newly01 -->
+    </div>
+    <!-- /.component-area -->
+    {% endif %}
+
+  </div>
+  <!-- /.inner -->
+
+<?php include 'footer.php'; ?>

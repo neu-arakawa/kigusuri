@@ -1,0 +1,19 @@
+【きぐすり.com】回答した漢方相談にコメントが寄せられました。
+
+{{ pharmacy.name }} 御中
+
+いつもお世話になっております。
+漢方薬のきぐすり.com事務局です。
+ご回答いただいた漢方相談に対し、相談者からコメントが寄せられました。
+
+【相談者からのコメント】
+{{ question.response[:60] |replace({'\n': '','\r': ''}) }} {{  question.response | length > 60 ? '...' :'' }}
+
+
+【相談内容の詳細はこちら】
+{{ base_url }}/member.shop/consultation/answer/{{ question.id }}/
+
+※コメントに対して、加盟店様より追加のご回答をいただくことはシステム上できません。
+　ご質問者様への連絡が必要な場合は、ご回答の内容を添え、事務局へお申し付けください。
+
+{% include '/Mail/signature.twig' with { 'for_pharmacy': true } %}

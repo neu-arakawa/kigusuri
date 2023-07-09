@@ -1,0 +1,173 @@
+<?php
+  //共通
+  require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+  //メタディスクリプション
+  $description = '';
+
+  //メタキーワード
+  $keywords = '';
+
+  //Facebook　全ページ共通の場合は空白にしてください
+  $fbimage = '';
+
+  //タイトル
+  $title = '新規相談フォーム';
+
+  //css追加
+  $ex_tag_css = '<link rel="stylesheet" href="/member/css/style.css"><link rel="stylesheet" href="/member/css/template.css">';
+
+  //js追加
+  $ex_tag_js = '<script src="/member/js/script.js"></script>';
+
+  //bodyID
+  $bodyID = 'member';
+
+?>
+<?php include 'header.php'; ?>
+	<div class="contents-header">
+		<ul class="topicpath fbox">
+			<li><a href="/">トップページ</a></li>
+			<li><a href="/consultation/">みんなの漢方相談Q&amp;A</a></li>
+			<li>新規相談フォーム</li>
+		</ul>
+		<h1 class="header-ttl">新規相談フォーム</h1>
+	</div>
+    <!-- /.contents-header -->
+
+
+  <div class="inner">
+    
+    {% if errors %}
+    <!--/////////////////エラーメッセージ start ///////////////////-->
+        <div class="m-panel01 m-panel01--red">
+     	 <div class="l-sp-inner">
+          <div class="m-panel01__panel">
+            <p class="m-panel01__heading">登録内容が正しく入力されていません。</p>
+            <p class="m-panel01__txt">もう一度ご確認のうえ、ご入力してください。</p>
+          </div>
+          <!-- /.m-panel01__panel -->
+          </div>
+          <!-- /.l-sp-inner -->
+        </div>
+        <!-- /.m-panel01 -->
+    <!--/////////////////エラーメッセージ end ///////////////////-->
+    {% endif %}
+
+    <!--/////////////////ご相談入力 start ///////////////////-->
+    <div class="component-area">
+      <div class="m-tablearea04">
+        <p class="mb20 l-sp-inner">お悩みの症状や漢方薬に関するご質問・相談したい内容を入力してください。<br>送信された内容はホームページに掲載され、きぐすり.comに加盟の漢方薬局・薬店がお答えします。</p>
+        <p class="m-table01__required">※ご相談内容は投稿して即座には掲載されません。運営事務局での承認後に掲載されます。</p>
+        <div class="m-tablearea04__heading">
+          <div class="m-heading02">
+            <p class="m-heading02__txt">ご相談入力</p>
+          </div>
+          <!-- /.m-heading02 -->
+        </div>
+        <!-- /.m-tablearea04__heading -->
+        <div class="l-sp-inner">
+            <form method="post">
+            <input type="hidden" name="{{csrf_key}}" value="{{csrf_token}}">
+            <div class="m-tablearea04__table">
+              <table class="m-table01 m-table01--type02">
+                <tr>
+                  <th><span class="m-table01__heading">部位・症状 <span class="m-table01__required">※必須</span></span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                      <select name='category_id'>
+                        <option value=''></option>
+                        {% for k, v in c.config('question_categories') %}
+                        <option value='{{ k }}'>{{ v }}</option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                    {% if errors.category_id %}
+                    <p class="m-table01__error">{{ errors.category_id }}</p>
+                    {% endif %}
+                  </td>
+                </tr>
+                <tr>
+                  <th class="m-table01_cell--top"><span class="m-table01__heading">ご相談内容 <span class="m-table01__required">※必須</span></span></th>
+                  <td>
+
+                    <p class="m-table01__txt"></p>
+                    <div class="m-table01__inputbox">
+                      <textarea name='content' class="m-table01__textarea--full" placeholder="相談内容を入力してください。（1000文字以内）"></textarea>
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                    {% if errors.content %}
+                    <p class="m-table01__error">{{ errors.content}}</p>
+                    {% endif %}
+                  </td>
+                </tr>
+              </table>
+              <!-- /.m-table01 -->
+            </div>
+            <!-- /.m-tablearea04__table -->
+            <ul class="m-tablearea04__notes">
+              <li>※住所や名前など個人を特定する内容を記入するのはご遠慮ください。</li>
+              <li>※漢方薬局・薬店からの回答には時間を要する場合がございます。あらかじめご了承ください。</li>
+              <li>※ご質問に対して、必ずしも回答ができるわけではございません。1週間以上経過して回答がない場合は、ご回答が出せない旨ご了承お願いいたします。</li>
+            </ul>
+            <!-- /.m-tablearea04__notes -->
+            <div class="m-tablearea01__btn">
+              <button class="m-arrow-btn01">確認画面へ進む<span class="m-arrow-btn01__icn"></span></button>
+            </div>
+          </form>
+        </div>
+        <!-- /.l-sp-inner -->
+      </div>
+      <!-- /.m-tablearea04 -->
+    </div>
+    <!-- /.component-area -->
+    <!--/////////////////ご相談入力 end ///////////////////-->
+
+    <!--/////////////////あなたの情報 start ///////////////////-->
+    <div class="component-area">
+      <div class="m-tablearea03">
+        <div class="m-tablearea03__heading">
+          <div class="m-heading02">
+            <p class="m-heading02__txt">あなたの情報</p>
+          </div>
+          <!-- /.m-heading02 -->
+        </div>
+        <!-- /.m-tablearea03__heading -->
+        <div class="l-sp-inner">
+          <div class="m-tablearea03__table">
+            <table class="m-table01 m-table01--type02">
+              <tr>
+                <th><span class="m-table01__heading">ニックネーム</span></th>
+                <td>{{ c.member['nickname'] }} さん</td>
+              </tr>
+              <tr>
+                <th><span class="m-table01__heading">性別</span></th>
+                <td>{{ c.member['sex'] }}</td>
+              </tr>
+              <tr>
+                <th><span class="m-table01__heading">年代</span></th>
+                <td>{{ c.member['birthday'] | year2era }}</td>
+              </tr>
+              <tr>
+                <th><span class="m-table01__heading">お住まい</span></th>
+                <td>{{ c.member['pref'] }}</td>
+              </tr>
+            </table>
+            <!-- /.m-table01 -->
+          </div>
+          <!-- /.m-tablearea03__table -->
+          <div class="m-tablearea03__btn"><a href="{{ c.app.urlFor('member_edit') }}" class="m-edit-btn">会員情報編集</a></div>
+        </div>
+        <!-- /.l-sp-inner -->
+      </div>
+      <!-- /.m-tablearea03 -->
+    </div>
+    <!-- /.component-area -->
+    <!--/////////////////あなたの情報 end ///////////////////-->
+    
+    
+  </div>
+  <!-- /.inner -->
+
+<?php include 'footer.php'; ?>

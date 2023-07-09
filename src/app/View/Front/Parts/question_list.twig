@@ -1,0 +1,67 @@
+{% for v in list %}
+         <li>
+           <div class="m-bal01 m-bal01--{{ v.member_sex == '男性'? 'male' : 'female' }}">
+             <div class="m-bal01__content">
+               <ul class="m-bal01__info">
+                 <li class="m-bal01__infoitem--from">（{{ v.member_age |era }}・{{ v.member_sex }}
+                 {% if c.member_type == 'pharmacy' %}
+                    ・{{ v.member_pref }}
+                 {% endif %}
+                 ）からの相談</li>
+                 <li>部位・症状： 
+                    {%- if c.member_type == 'pharmacy' -%}
+                     {# 薬局会員 #}
+                      <a href="{{ c.app.urlFor('pharmacy_qa_search', {'search_type': c.params['search_type'], q: c.config('question_categories')[ v.category_id ] | url_encode })}}">{{ c.config('question_categories')[ v.category_id ] }}</a></li>
+                    {%- else -%}
+                     {# 薬局会員以外 #}
+                      <a href="{{ c.app.urlFor('qa_list', {'search_type': 'category', q: c.config('question_categories')[ v.category_id ] | url_encode })}}">{{ c.config('question_categories')[ v.category_id ] }}</a></li>
+                    {%- endif -%}
+
+                    {% if c.action != 'top' %}
+                        {% if c.member_type == 'pharmacy' %}
+                            {# 薬局会員 #}
+                            {% if c.has_answer(v.id) %}
+                            <li class="m-bal01__flag m-bal01__flag--orange"><a class="is-click"><span class="icon-checkmark"></span>回答済み</a></li>
+                            {% elseif v.dead_stat == 0 %}
+                            <li class="m-bal01__flag m-bal01__flag--orange pc-item"><a class="m-kaitou-btn" href="{{ c.app.urlFor('qa_answer',{'question_id': v.id}) }}">回答する<span class="m-kaitou-btn__icn"></span></a></li>
+                            {% endif %}
+                        {% else %}
+                            {# 薬局会員以外 #}
+                            {% if v.approval_stat == 0 %}
+                            <li class="m-bal01__flag m-bal01__flag--red"><span class="m-bal01__flagtxt">承認待ち</span></li>
+                            {% elseif v.dead_stat == 0 %}
+                            <li class="m-bal01__flag m-bal01__flag--orange"><span class="m-bal01__flagtxt">回答受付中</span></li>
+                            {% elseif v.dead_stat == 1 %}
+                            <li class="m-bal01__flag m-bal01__flag--blue"><span class="m-bal01__flagtxt">解決済み</span></li>
+                            {% elseif v.dead_stat == 2 %}
+                            <li class="m-bal01__flag m-bal01__flag--gray"><span class="m-bal01__flagtxt">回答締切</span></li>
+                            {% endif %}
+                        {% endif %}
+                    {% endif %}
+               </ul>
+               <!-- /.m-bal01__infobox -->
+               <p class="m-bal01__txt">
+               {%- if c.member_type == 'pharmacy' and v.show_flg == 0 -%}
+                {# 薬局会員 #}
+                (この相談は事務局の判断で非公開になりました)<br> 
+               {%- endif -%}
+               {{- v.content[:90]  -}} {{-  v.content | length > 90 ? '...' :'' -}}
+               {% if c.member_type == 'pharmacy' %}
+                {# 薬局会員 #}
+                <a href="{{ c.app.urlFor('qa_answer',{'question_id': v.id}) }}" class="m-bal01__more">もっと見る</a></p>
+               {% else %}
+                {# 薬局会員以外 #}
+               <a href="{{ c.app.urlFor('qa_detail',{'id': v.id}) }}" class="m-bal01__more">もっと見る</a></p>
+               {% endif %}
+         		<p class="m-bal01__date">投稿日時： {{ v.created| date('Y/m/d H:i') }} {% if v.answer_date %}回答日時:{{ v.answer_date| date('Y/m/d H:i') }}{% endif %}</p>
+               <ul class="m-bal01__counts">
+                 <li>回答：<span class="m-bal01__num">{{ v.answer_cnt | default('0') }}</span>件</li>
+                 <li>参考になった：<span class="m-bal01__num">{{ v.like_cnt | default('0') }}</span>件</li>
+               </ul>
+               <!-- /.m-bal01__counts -->
+             </div>
+             <!-- /.m-bal01__content -->
+           </div>
+           <!-- /.m-bal01 -->
+         </li>
+{% endfor %}

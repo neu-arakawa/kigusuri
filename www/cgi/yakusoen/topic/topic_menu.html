@@ -1,0 +1,31 @@
+	<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=0 BORDER=0>
+<TR bgcolor="#333333">
+	<TD ALIGN="center">
+<TABLE CELLPADDING=2 CELLSPACING=1 WIDTH=600 BORDER=0>
+<tr><td bgcolor="#ffffcc" align="center"><br>		
+		<form action="./topic_write.cgi" method="post">
+		<font size="3">新規にトピック情報を登録する　　</font>
+		<input type="hidden" name="mode" value="input">
+		<input type="submit" value="トピック情報新規登録">
+		<input type="hidden" name="authe_pwd" value="$passwd">
+		</form>
+	</td></tr>
+	<tr><td bgcolor="#ffffcc" align="center"><br>
+		<form action="./topic_list.cgi" method="post">
+		<font size="3">登録されているトピック情報を見る　　</font>
+		<input type="hidden" name="mode" value="publicall">
+		<input type="submit" value="　トピック情報一覧　">
+		<input type="hidden" name="authe_pwd" value="$passwd">
+		</form>
+	</td></tr>	
+	<tr><td bgcolor="#ffffcc" align="center"><br>		
+		<form action="./topic_create.cgi" method="post">
+		<font size="3">トピックリスト作成（HPに反映させる）　　</font>
+		<input type="hidden" name="mode" value="input">
+		<input type="submit" value="トピックリスト作成">
+		<input type="hidden" name="authe_pwd" value="$passwd">
+		</form>
+	</td></tr>
+		</table>
+</td></tr>
+</table>

@@ -1,0 +1,235 @@
+{% php %}
+	//共通
+	require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+	
+	//メタディスクリプション
+	$description = '';
+	
+	//メタキーワード
+	$keywords = '';
+	
+	//Facebook　全ページ共通の場合は空白にしてください
+	$fbimage = '';
+	
+	//タイトル
+	$title = $context['data']['name'].' | 漢方薬局を探す';
+	
+	//css追加
+	$ex_tag_css = '<link rel="stylesheet" href="/common/css/shop.css"><link rel="stylesheet" href="/consultation/css/style.css">';
+	
+	//js追加
+	$ex_tag_js = '<script src="/common/js/search.js"></script>
+<script src="/common/js/geolocation.js"></script>
+    ';
+	
+	//bodyID
+	$bodyID = 'search';
+	
+    include 'header.php'; 
+{% endphp %}
+
+	<div class="contents-header">
+		<ul class="topicpath fbox">
+			<li><a href="/">トップページ</a></li>
+			<li><a href="/shop/">漢方薬局を探す</a></li>
+			<li>{{ data.name }}</li>
+		</ul>
+		<h1 class="header-ttl">漢方薬局を探す</h1>
+	</div>
+	
+	<article id="main" class="inner shop-detail">
+	
+	
+		<!--//////////////////// shop-header start-->
+		<div class="shop-header">
+			<div class="shop-header-ttlwrap">
+				<p class="shop-area"><span>{{ data.pref }}{{ data.addr1 }}</span></p>
+				<h1 class="shop-name">{{ data.name }}<span class="shop-name-ruby">（{{ data.kana }}）</span></h1>
+			</div>
+			<p class="shop-thumb">
+            {% if data.image1 %}
+            <img src="{{ data.image1}}" alt="{{ data.name }}">
+            {% else %}
+                画像がありません。
+            {% endif %}
+            </p>
+			<ul class="detail-shop-icons">
+                {% include '/Front/Parts/pharmacy_service.twig' with {'pharmacy': data} %}
+			</ul>
+
+            {% if data.websites|length %}
+			<ul class="shop-related-links">
+				<li class="btn-shopsite"><a href="{{ data.websites.0.url }}" target="_blank" class="btn02"><span class="icon-arrow01">店舗サイト</span></a></li>
+			</ul>
+            {% endif %}
+			<ul class="shop-related-links">
+
+                {% if data.email_counseling_flg %}
+				<li class="btn-reservation"><a href="{{ data.email_counseling_url1 }}" sp='{{ data.email_counseling_url2 }}' target="_blank" class="btn01 sp_link"><span class="icon-arrow01">メール相談</span></a></li>
+                {% endif %}
+                {% if data.reserve_shop_flg %}
+				<li class="btn-reservation"><a href="{{ data.reserve_shop_url1 }}"  sp='{{ data.reserve_shop_url2 }}' target="_blank" class="btn01 sp_link"><span class="icon-arrow01">予約</span></a></li>
+                {% endif %}
+			</ul>
+		</div>
+		<!--//////////////////// shop-header end-->
+        
+        {% if data.goodinfo %}
+		<!--//////////////////// お得情報 start-->
+		<section class="shop-otoku shop-block">
+			<h2 class="shop-ttl otoku-ttl"><span>店舗からのお得情報</span></h2>
+            <p>{{ data.goodinfo |nl2br}}</p>
+		</section>
+		<!--//////////////////// お得情報 end-->
+        {% endif %}
+
+		<!--//////////////////// 店舗からのコメント start-->
+		<section class="shop-comment shop-block">
+			<h2 class="shop-ttl comment-ttl"><span>店舗からのコメント</span></h2>
+            <p>{{ data.word |nl2br}}</p>
+			<ul class="shop-comment-photos">
+                {% for image in data.image2 %}
+                {% if image.path != '' %}
+				<li class=""><span class="photos-img"><img src="{{ image.path }}" alt="{{ image.caption }}"></span>
+				<span class="photos-caption">{{ image.caption }}</span></li>
+                {% endif %}
+                {% endfor %}
+			</ul>		
+		</section>
+		<!--//////////////////// 店舗からのコメント end-->
+		
+
+		
+		<!--//////////////////// 店舗情報 start-->
+		<section class="shop-info shop-block">
+			<h2 class="shop-ttl info-ttl"><span>店舗情報</span></h2>
+			<table class="shop-info-tbl tbl01 th-side">
+				<tr>
+					<th scope="row">住所</th>
+					<td>〒{{ data.zip }}{{ data.pref }}{{ data.addr1 }}{{ data.addr2 }}{{ data.addr3  }}</td>
+				</tr>
+				<tr>
+					<th scope="row">TEL</th>
+					<td><span class="tel-linktext">{{ data.tel | nl2br }}</span></td>
+				</tr>
+                {% if data.fax %}
+				<tr>
+					<th scope="row">FAX</th>
+					<td>{{ data.fax }}</td>
+				</tr>
+                {% endif %}
+                {% if data.email %}
+				<tr>
+					<th scope="row">メールアドレス</th>
+					<td><span data-email='[{{ data.email | ascii}}]'></span></td>
+				</tr>
+                {% endif %}
+				<tr>
+					<th scope="row">営業時間</th>
+					<td>
+						<div class="shop-hours-wrap">
+
+                            {% 
+                                set weeks = {
+                                    'mon': '月',
+                                    'tue': '火',
+                                    'wed': '水',
+                                    'thu': '木',
+                                    'fri': '金',
+                                    'sat': '土',
+                                    'sun': '日',
+                                }
+                            %}
+                            {% for key, val in weeks %} 
+							<dl class="shop-hours">
+								<dt>{{ val }}</dt>
+								<dd>
+                                {% set opentimes = data[key] %}
+                                {% if opentimes |length and opentimes.0 != '' %}
+                                {% for timeopen in opentimes %}
+                                <span class="shop-hours-inner">{{ timeopen }}</span>
+                                {% if loop.last == false %} <br class="pc-item">{% endif %}
+                                {% endfor %} 
+                                {% else %}
+                                -
+                                {% endif %}
+                                </dd>
+							</dl>
+                            {% endfor %}
+						</div>
+						<p class="shop-hours-info">{{ data.openhours_note | nl2br }}</p>
+					</td>
+				</tr>
+                {% if data.counseling_time != '' %}
+				<tr>
+					<th scope="row">相談時間</th>
+					<td>{{ data.counseling_time | nl2br}}</td>
+				</tr>
+                {% endif %}
+                {% if data.websites|length %}
+				<tr>
+					<th scope="row">WEBサイト</th>
+					<td>
+						<ul class="shop-sitelinks">
+                            {% for website in data.websites %} 
+							<li><a href="{{ website.url }}" target="_blank">{{ website.label }}</a></li>
+                            {% endfor %}
+						</ul></td>
+				</tr>
+                {% endif %}
+				<tr>
+					<th scope="row">相談の多い症状・分野</th>
+					<td>{{ data.tags }}</td>
+				</tr>
+			</table>
+		</section>
+		<!--//////////////////// 店舗情報 end-->
+		
+
+		
+		<!--//////////////////// 交通アクセス start-->
+		<section class="shop-access shop-block">
+			<h2 class="shop-ttl access-ttl"><span>交通アクセス</span></h2>
+			<div class="shop-map-wrap fbox">
+				<div class="shop-map">
+					<iframe src="https://maps.google.co.jp/maps?ll={{data.lat}},{{data.lon}}&q={{data.name}}&output=embed&t=m&z=16" width="300" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+				<div class="shop-map-info">
+
+					<ul>
+                    {% for access in data.access %}
+                        {% if access %}
+						<li>{{ access | nl2br }}</li>
+                        {% endif %}
+                    {% endfor %}
+					</ul>
+
+					<p class="link-gmap pc-item"><a href="https://maps.google.co.jp/maps?ll={{data.lat}},{{data.lon}}&q={{data.name}}" target="_blank">Googleマップを見る</a></p>
+					<p class="link-route sp-item"><a href="javascript:void(0)" target="_blank" class="btn03 routeSearch" latlon='{{ data.lat }},{{ data.lon }}'><span class="icon-arrow01">ルート案内</span></a></p>
+				</div>
+			</div>
+		</section>
+		<!--//////////////////// 交通アクセス end-->
+		
+
+    {% if questions|length %}
+    <div class="component-area">
+      <div class="m-newly01">
+        <p class="shopdetail-name"><span>{{ data.name }} が回答した漢方相談</span></p>
+        <ul class="m-newly01__bal-list">
+        {% include '/Front/Parts/question_list.twig' with {list:questions} %}
+        </ul>
+        <!-- /.m-newly01__bal-list -->
+        <div class="m-tablearea01__btn mt40"><a class="m-arrow-btn01" href='{{ c.app.urlFor('qa_list',{search_type:'answer', q: data.code })}}'>すべて見る<span class="m-arrow-btn01__icn"></span></a></div>
+   </div>
+      <!-- /.m-newly01 -->
+      
+    </div>
+    <!-- /.component-area -->
+    {% endif %}		
+	</article>
+	
+
+  
+  
+{% php %} include 'footer.php'; {% endphp %}

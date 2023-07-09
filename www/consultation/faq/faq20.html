@@ -1,0 +1,116 @@
+<?php
+	//共通
+	require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+	//メタディスクリプション
+	$description = '';
+
+	//メタキーワード
+	$keywords = '漢方,漢方薬,漢方薬局,よくある質問,FAQ,Q&A,治る';
+
+	//Facebook　全ページ共通の場合は空白にしてください
+	$fbimage = '';
+
+	//タイトル
+	$title = 'なんでも漢方薬で治りますか？ | 漢方 よくある質問（Q&amp;A） | 漢方相談（Q&amp;A）';
+
+	//css追加
+	$ex_tag_css = '<link rel="stylesheet" href="/common/css/shift.css">
+<link rel="stylesheet" href="css/faq.css">
+<link rel="stylesheet" href="css/faq-list.css">
+<link rel="stylesheet" href="css/faq-kampo.css">
+<link rel="stylesheet" href="css/shift_faq.css">
+<link rel="stylesheet" href="css/shift_faq-list.css">
+<link rel="stylesheet" href="css/shift_faq-kampo.css">
+<link rel="stylesheet" href="/consultation/css/style.css">';
+
+	//js追加
+	$ex_tag_js = '<script src="/common/js/shift_common.js"></script>';
+
+	//bodyID
+	$bodyID = 'consultation';
+
+?>
+<?php include 'header.php'; ?>
+
+	<div class="contents-header">
+		<ul class="topicpath fbox">
+			<li><a href="/">トップページ</a></li>
+			<li><a href="/consultation/">漢方相談（Q&amp;A）</a></li>
+			<li><a href="/consultation/faq/">漢方 よくある質問（Q&amp;A）</a></li>
+			<li>なんでも漢方薬で治りますか？</li>
+		</ul>
+		<p class="header-ttl">漢方相談Q&amp;A</p>
+	</div>
+
+
+	<article id="main" class="inner fbox shift-contents">
+
+		<section class="fbox kampo-sct">
+			<p class="main-head-description">きぐすり.com は、<strong>漢方薬、女性の健康、サプリメント、ハーブ</strong>の情報を専門家がやさしく解説しています。</p>
+			<h1 class="ttl01">病気の悩みを漢方で</h1>
+
+
+			<!--//////////////////// 移行コンテンツ start-->
+
+
+			<div id="faq-box">
+ <div id="faq-list">
+  <div id="faq-kampo">
+   <h4 id="kaito"><span>ご質問に対するご回答</span></h4>
+   <div id="answer">
+    <div id="answer-h">
+     <h4>なんでも漢方薬で治りますか？</h4>
+    </div>
+    <div id="answer-txt">
+     <div id="answer-01">
+      <p>治らないものもあります。</p>
+      <br />
+      <p>スガヌマ薬局は調剤もおこなっていて、現代医学（西洋医学）の勉強会にも毎月参加しています。</p>
+      <p>ぢ、皮膚病など手術が必要と思われる症状によっては専門病院に紹介状をお書きします。<br />気軽にご来店の上、ご相談ください。</p>
+      <p class="pharmacy-m"><a href="../shop/suganuma/" target="_blank">スガヌマ薬局　菅沼 真一郎先生</a></p>
+     </div>
+     <p class="line">&nbsp;</p>
+     <div id="answer-02">
+      <p>先天性の難病・奇形などは漢方で治す・あるいは改善する事は難しいと考えております。</p>
+      <p>救急医療を施すべき患者さんに対しても、漢方よりは西洋医学の方がよりよい対処が出来る場合が多いです。</p>
+      <br />
+      <p>一方、漢方薬は、体質改善により、自分の病気を自分で治す力、すなわち「自然治癒力」を高めて、皆さんが元気に生活できるお手伝い、すなわち血管・筋力・骨・免疫力を健やかに保つ事が出来ると思います。</p>
+      <p>老化やストレスから来る病気の予防や、慢性的な症状でお悩みの方にはとても効果的であると考えております。</p>
+      <br />
+      <p>何でも漢方薬で治る、とは考えてはおりませんが、漢方薬で出来ることは少なくないとも思います。</p>
+      <br />
+      <p>一度ゆっくりご相談して頂ければ幸いです。</p>
+      <p class="pharmacy-w"><a href="../shop/rakuda/index.html" target="_blank">クスリのらくだ　　峯村　ふみ子先生</a></p>
+     </div>
+    </div>
+    <div class="clearfix" id="next-faq">
+     <p id="front-move"><span>前の質問</span><a href="faq19.html">&laquo; 「漢方薬局・薬店では、ハーブを販売していますか？」</a></p>
+     <p id="back-move"><span>次の質問</span><a href="faq21.html">「相談だけでもいいですか？」 &raquo;</a></p>
+    </div>
+   </div>
+  </div>
+ </div>
+ <!-- #BeginLibraryItem "/Library/list_faq-info.lbi" -->
+ <div class="faq-index">
+  <div class="highlight" id="info-index">
+   <ul>
+    <li><a href="../kensaku.html"><img alt="あなたの街の漢方薬局・薬店へ" height="83" src="img/pharmacy-btn.gif" width="223" /></a></li>
+    <li><a href="../mail-soudan.html"><img alt="メールで漢方相談" height="82" src="img/mail-btn.gif" width="223" /></a></li>
+   </ul>
+  </div>
+ </div>
+ <!-- #EndLibraryItem -->
+ 
+</div>
+
+
+			<!--//////////////////// 移行コンテンツ end-->
+
+
+		</section>
+
+
+	</article>
+
+<?php include 'footer.php'; ?>

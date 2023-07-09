@@ -1,0 +1,24 @@
+#main {margin:0 22px 0 10px; width:582px;}
+
+#main .header{ margin:20px 0; padding:5px; background-color:#F7FEE1; border-top:1px solid #9c0; height:20px;}
+#main .header h2{ margin:0; font-size:90%; color:#690; float:left;}
+#main .header p{ margin:0; float:right; font-size:80%;}
+
+.clear{ clear:both; line-height:0;}
+.space{ margin:20px 0;}
+
+#main #description{ font-size: 80%; line-height: 160%; color: #666;}
+
+.pagetop {font-size: 10px;text-align: right;margin: 30px 0 5px;clear:both;}
+.pagetop a{background: url(../images/bt_top.gif) no-repeat left center;padding: 0 0 0 20px;}
+
+.saerch{ margin:30px 0;clear:both;}
+.search fieldset{ border:0;}
+.search legend{ margin:0; padding:0;color:#690; font-size:80%;}
+.search fieldset input{ margin:0; float:left;}
+.search fieldset .btn{ margin:0 10px;}
+
+#main .intro{ margin:20px 0; font-size:80%;}
+
+#main #list dl{font-size:80%; line-height:160%;}
+#main #list dl dd{margin-left:10px; width:500px; word-break:break-all;}

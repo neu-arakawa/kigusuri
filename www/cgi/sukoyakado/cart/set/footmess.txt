@@ -1,0 +1,5 @@
+<!--<a href="set/disp.html" target="_blank">【 特定商取引に関する法律に基づく表示 】</a>
+
+-->上記商品以外にも、お取扱い商品は多数ございます。お気軽にご相談下さい。
+
+<!--<h4 class="medic"><a href="https://www.kigusuri.com/cgi/sukoyakado/cart/cart_list.cgi">▲ オンラインショップ 商品一覧 へ戻る</a> ｜ <a href="https://www.kigusuri.com/cgi/sukoyakado/cart/product.html">医薬品のご紹介</a>（店頭にてお求めいただけます）</h4>-->

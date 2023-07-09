@@ -1,0 +1,16 @@
+#container #main #missing h2 {
+font-size: 200%;
+font-weight: bolder;
+color:#f36;
+}
+#container #main #missing form { padding:10px 20px; background-color:#F8FEE2;}
+#container #main #missing fieldset { border:0;}
+#container #main #missing legend {display:none;}
+#description2 { margin:0; padding:0 0 0 5px; border:0; height:100%;}
+#description2 h1 { margin:0;padding:3px 5px;color:#333; letter-spacing:2px; font-size:10px; line-height:9px; font-weight:normal;}
+#index h1{
+line-height:100%;
+font-size:10px;
+font-weight:normal;
+margin:0;
+}

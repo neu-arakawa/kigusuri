@@ -1,0 +1,173 @@
+/* CSS Document */
+#main{margin:0 0px 0 0px;}
+#categoryName{margin:20px 0;}
+
+#boxCaption {
+	padding: 0 110px 0 10px;
+	background-image:url(../search/img/staff01.gif);
+	background-repeat: no-repeat;
+	background-position:right bottom;
+	border-left:5px solid #999;
+}
+#boxCaption h2{ margin:0 0 20px 0;}
+#boxCaption p{font-size:80%; margin:10px 0; line-height:120%;}
+.point{color:#ff3366;}
+
+
+/* contentsArea
+----------------------------------------------------------*/
+#contentsArea{
+margin:0px 10px;
+font-size:90%;
+line-height:160%;
+}
+
+.sectionH3{ margin:40px 0 10px 0;}
+.sectionH3 h3{ padding:2px 0 2px 20px; font-size:120%; color:#fff; background-image:url(../search/img/bg_city.gif); background-repeat: no-repeat; height:30px;}
+
+/* city */
+.city{ margin:20px 0 0 0; padding:10px; background-color:#ffffcc; border:1px solid #ccc; font-size:90%;}
+.city ul{ margin:0; padding:0;}
+.city ul li{ margin:0 5px 0 0; padding:0; list-style-type:none; display:inline; color:#999; line-height:160%;}
+.city ul li a{ font-weight:bold;}
+
+/*----各市店舗検索テーブル----*/
+#city_shoplist {
+	line-height: 130%;
+}
+#city_shoplist th {
+    background-color:CCFF66;
+    border:1px solid #99FF66;
+	font-size:14px;
+	font-weight: normal;
+	vertical-align: middle;
+}
+#city_shoplist td {
+    border:1px solid #DCDCDC;
+    font-size: 12px;
+	color:#666666;
+	padding-left: 7px;
+}
+#city_shoplist a{color:#009966;}
+.city_color{color: #FF6633;}
+
+/* info */
+.none{ margin:40px 0;}
+#intro{ margin:40px 0 20px 0; font-size:90%;}
+#intro h3 { margin:0 0 0 0; padding-bottom:3px;font-size:120%; letter-spacing:1px; color:#666; border-bottom:4px dotted #9c3;}
+#intro p{ margin:7px 0;}
+
+/* shopSummary */
+.shopSummary { margin:20px 0;}
+.shopSummary table{ border:1px solid #999; width:562px;}
+.shopSummary h4{
+	padding-left:5px;
+	background-color:#ff9;
+	text-align:left;
+	border-top:1px solid #999;
+	border-right:1px solid #999;
+	border-left:1px solid #999;
+	font-size: 120%;
+}
+.shopSummary h4 a{
+	display:block;
+	padding: 2px 5px;
+	background: #ff9 url(../search/img/btn_more_s.gif) no-repeat right center;
+	margin: 0 5px;
+
+}
+.shopSummary h4 a span {
+	font-size: 85%;
+	font-weight: normal;
+}
+
+.shopSummary th{ padding: 0 10px; background-color:#f9f9f9; font-weight:normal; text-align:left; font-size:80%; border-right:1px solid #999; border-bottom:1px solid #999; white-space:nowrap;}
+.shopSummary td{ padding:3px 5px; font-size:80%; border-right:1px solid #999; border-bottom:1px solid #999; vertical-align:top; line-height:140%;}
+.shopSummary td p{ margin:0 0 7px 0;}
+.shopSummary .icon ul{ margin:0; padding:0;}
+.shopSummary .icon ul li{ margin:0; padding:0; list-style-type:none; display:inline;}
+.shopSummary .imgArea{ text-align:right; min-width:160px;}
+.aIcon{ margin:0 5px; font-size:80%;}
+.more{
+	padding:2px 0 2px 140px;
+	background-image:url(../search/img/btn_more.gif);
+	background-repeat:no-repeat;
+	height: 80px;
+	font-size: 1.1em;
+}
+a.more{
+	display: block;
+	height: 28px;
+}
+.more span{
+	font-size:80%;
+	}
+.prepare{ margin:15px; color:#666; line-height:160%;}
+
+/* kamei */
+#kamei { margin:50px 0; text-align:center;}
+
+
+/* form */
+#Form form table{ margin:10px; font-size:100%; border-collapse:collapse; border:1px solid #660;}
+#Form form table th{ padding:5px; font-weight:normal;color:#330; background-color:#FFFFC7; text-align:left; border-bottom:1px solid #660;}
+#Form span{ color:#f30; font-size:10px; margin:0 3px;}
+#Form form table td{ padding:5px;color:#330; background-color:#fff; border-bottom:1px solid #660; font-size:90%;}
+#Form form .btn{ margin:20px 0;}
+#Form form .btn input{ margin-right:20px; border:1px solid #660; background-color:#F7F773;}
+#Form .caution{ margin:15px; padding:10px; background-color:#FFEDDB;}
+#Form .caution p{ margin:0; padding-left:1em; text-indent:-1em;}
+#Form fieldset{ border:0;}
+#Form legend{ display:none;}
+
+
+
+/* go to top */
+.gototop{ text-align:center;}
+
+/* pagetop */
+.pagetop{
+	clear:both;
+	font-size:70%;
+	text-align:right;
+	margin:15px 0 0;}
+.pagetop a{background:url(../images/bt_top.gif) no-repeat left;padding-left:20px;}
+
+
+/* summary */
+.summary {
+border-top: 1px solid #FF9999;
+border-bottom: 1px solid #FF9999;
+margin: 20px 0;
+padding: 0 120px 0 10px;
+color: #990000;
+line-height:120%;
+background-color:#FFECEC;
+background-position:right center;
+background-repeat:no-repeat;
+background-image: url(../images/illust-woman3.gif);
+}
+
+
+
+/* categoryList */
+#main .categoryList{
+	margin: 10px 0 0 0;
+	padding: 15px 0 0 0;
+	background: url(../images/supplement/line_spacer.gif) no-repeat left top;
+	}
+#main .categoryList table{border-collapse:collapse; border:none;font-size:80%;line-height:160%;width:580px;}
+#main .categoryList table th{padding:2px 0; text-align:left; vertical-align:top;}
+#main .categoryList table td{padding:2px 0; vertical-align:top;}
+
+#main .categoryList dl{ margin:20px 0; padding:0;}
+#main .categoryList dl dt{ margin:5px 0; padding:0; width:225px; float:left; clear:both;}
+#main .categoryList dl dd{ margin:5px 0; padding:0; width:357px; font-size:80%; float:left;}
+
+
+/* 掲載基準 */
+#std{ margin:50px 40px 40px 40px; padding:5px 10px; }
+#std h3{ margin:5px 0; padding:0 0 2px 0; text-indent:-9999px; background-image:url(../search/img/head_std.gif); background-repeat:no-repeat; height:24px; border-bottom:1px solid #c00;}
+#std ul{ margin:10px 0 0 10px; padding:0;}
+#std ul li{ margin:0; padding:0 0 0 10px; background-image:url(../images/common/listMark03.gif); background-repeat:no-repeat; background-position:left 7px; list-style-type:none;}
+#std p{ text-align:right;}

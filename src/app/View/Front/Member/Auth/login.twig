@@ -1,0 +1,137 @@
+<?php
+  //共通
+  require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+  //メタディスクリプション
+  $description = '';
+
+  //メタキーワード
+  $keywords = '';
+
+  //Facebook　全ページ共通の場合は空白にしてください
+  $fbimage = '';
+
+  //タイトル
+  $title = 'ログイン';
+
+  //css追加
+  $ex_tag_css = '<link rel="stylesheet" href="/member/css/style.css"><link rel="stylesheet" href="/member/css/template.css">';
+
+  //js追加
+  $ex_tag_js = '<script src="/member/js/script.js"></script>';
+
+  //bodyID
+  $bodyID = 'member';
+
+?>
+<?php include 'header.php'; ?>
+
+
+	<div class="contents-header">
+		<ul class="topicpath fbox">
+			<li><a href="/">トップページ</a></li>
+			<li><a href="/consultation/">みんなの漢方相談Q&amp;A</a></li>
+      <li>ログイン</li>
+		</ul>
+		<h1 class="header-ttl">ログイン</h1>
+	</div>
+    <!-- /.contents-header -->
+
+
+  <div class="inner">
+
+    {% if errors %}
+        <div class="m-panel01 m-panel01--red">
+        <div class="l-sp-inner">
+          <div class="m-panel01__panel">
+            <p class="m-panel01__heading">入力した内容にエラーがありました。</p>
+            {% for key,msg in errors %}
+            <p class="m-panel01__txt">{{ msg }}</p>
+            {% endfor %}
+          </div>
+          <!-- /.m-panel01__panel -->
+          </div>
+          <!-- /.l-sp-inner -->
+        </div>
+        <!-- /.m-panel01 -->
+    {% endif %}
+
+    {% set msg = c.app_session('member_auth') %}
+    {% if msg %}
+      <div class="l-sp-inner">
+        <div class="m-panel01 m-panel01--blue">
+          <div class="m-panel01__panel">
+            <p class="m-panel01__heading">このサービスは会員制です</p>
+            <p class="m-panel01__txt">サービスを利用するには会員登録後、ログインしてください。</p>
+          </div>
+          <!-- /.m-panel01__panel -->
+        </div>
+        <!-- /.m-panel01 -->
+      </div>
+      <!-- /.l-sp-inner -->
+    {{ c.app_session_clear('member_auth') }}
+    {% endif %}
+
+    {% set msg = c.app_session('change_password') %}
+    {% if msg %}
+    <!--/////////////////汎用メッセージ start ///////////////////-->
+        <div class="m-panel01 m-panel01--blue">
+        <div class="l-sp-inner">
+          <div class="m-panel01__panel">
+            <p class="m-panel01__heading">{{ msg }}</p>
+            <p class="m-panel01__txt">変更したパスワードでログインしてください。</p>
+          </div>
+          <!-- /.m-panel01__panel -->
+          </div>
+          <!-- /.l-sp-inner -->
+        </div>
+        <!-- /.m-panel01 -->
+    <!--/////////////////汎用メッセージ end ///////////////////-->
+    {{ c.app_session_clear('change_password') }}
+    {% endif %}
+
+    <div class="component-area">
+      <div class="l-sp-inner">
+        <div class="m-formbox01">
+            <form method="post">
+            <input type="hidden" name="{{csrf_key}}" value="{{csrf_token}}">
+            <p class="m-formbox01__txt">
+              メールアドレス、パスワードを入力の上、「ログイン」ボタンをクリックしてください。<br>
+              会員登録がお済みでない方は、まず<a href="{{ c.app.urlFor('member_regist') }}">会員登録</a>を行ってください。
+            </p>
+            <ul class="m-formbox01__inputlist">
+              <li>
+                <p class="m-formbox01__tit">メールアドレス</p>
+                <div class="m-formbox01__inputbox">
+                  <div class="m-formbox01__input"><input type="text" name='email' value=''></div>
+                </div>
+                <!-- /.m-formbox01__inputbox -->
+              </li>
+              <li>
+                <p class="m-formbox01__tit">パスワード</p>
+                <div class="m-formbox01__inputbox">
+                  <div class="m-formbox01__input"><input type="password" name='password' value=''></div>
+                </div>
+                <!-- /.m-formbox01__inputbox -->
+              </li>
+            </ul>
+            <!-- /.m-formbox01__inputlist -->
+            <div class="m-formbox01__save">
+              <label><input type="checkbox" name='autologin' value='On'>ログイン状態を保存する</label>
+            </div>
+            <!-- /.m-formbox01__save -->
+            <div class="m-formbox01__btn">
+              <button class="m-arrow-btn01">ログイン<span class="m-arrow-btn01__icn"></span></button>
+            </div>
+            <p class="m-formbox01__forget"><a href="{{ c.app.urlFor('password_reminder') }}">パスワードをお忘れの方</a></p>
+          </form>
+        </div>
+        <!-- /.m-formbox01 -->
+      </div>
+      <!-- /.l-sp-inner -->
+    </div>
+    <!-- /.component-area -->
+  </div>
+  <!-- /.inner -->
+
+<?php include 'footer.php'; ?>

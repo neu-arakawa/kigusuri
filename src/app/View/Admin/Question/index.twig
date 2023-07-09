@@ -1,0 +1,203 @@
+{% extends "Admin/layout.twig" %}
+
+{% block content %}
+<script src="/common/js/readmore.min.js"></script>
+<script>
+$(function() {
+    $('.text_collapse').readmore({
+    	speed: 700,
+    	collapsedHeight: 100,
+    	moreLink: '<a href="#" class="">もっと見る</a>',
+    	lessLink: '<a href="#" class="">閉じる</a>'
+    });
+
+//    $('#btn_search').click(function(){
+//        if($('#question_id').val() != ''){
+//            location.href = $(this).attr('url')+$('#question_id').val()+'/';
+//        }
+//    });
+
+     //$('.main-header').hide();
+     //$('.main-sidebar').hide();
+     //$('.content-wrapper').css('margin-left','0');
+});
+</script>
+
+{% if query.member_id %}
+ <style type="text/css">
+    .main-header  {display: none}
+    .main-sidebar  {display: none}
+    .content-wrapper{margin-left:0}
+</style>
+{% endif %}
+
+<section class="content-header">
+	<h1>
+		質問<small>一覧</small>
+	</h1>
+</section>
+
+
+<section class="content">
+
+{% if query.member_id == false %}
+<div class="well searchBox">
+		<form class="form-inline" >	
+            <div class="input-append">
+
+            <label for="AdminNewsCategoryId">カテゴリ</label>
+            <select name="category_id" class="form-control" id="AdminNewsCategoryId">
+                <option value="">すべて</option>
+                {% for k, v in c.config('question_categories') %}
+                <option value='{{ k }}'>{{ v }}</option>
+                {% endfor %}
+            </select>
+                <input type="text" name='id' class="form-control" id='question_id' placeholder="質問Noで検索する" value="">
+                <button type="submit" class="form-control" id='btn_search' url='{{ c.app.urlFor('default',{'controller': 'question','action': 'index'})}}'><i class="fa fa-search"></i></button>
+            </div>
+        </form>
+</div>
+{% endif %}
+
+<div class="row">
+  <div class="col-md-12">
+    <!-- Custom Tabs -->
+    <div class="nav-tabs-custom">
+      {% if c.params.id == false and query.member_id == false %}
+      <ul class="nav nav-tabs">
+        <li {% if c.action=='index' %}class="active"{% endif %}><a href="{{ c.app.urlFor('default',{'controller': 'question','action': 'index'})}}">すべて</a></li>
+        <li {% if c.action=='approval_before' %}class="active"{% endif %}><a href="{{ c.app.urlFor('default',{'controller': 'question','action': 'approval_before'})}}">未承認</a></li>
+        <li {% if c.action=='approval_ok' %}class="active"{% endif %}><a href="{{ c.app.urlFor('default',{'controller': 'question','action': 'approval_ok'})}}">承認OK</a></li>
+        <li {% if c.action=='approval_ng' %}class="active"{% endif %}><a href="{{ c.app.urlFor('default',{'controller': 'question','action': 'approval_ng'})}}">承認NG</a></li>
+      </ul>
+      {% endif %}
+      <div class="tab-content">
+
+
+{% if list|length %}
+
+    <div class="col-sm-push-12 text-right">
+        {{ pager.total_count  }} 件中 {{ pager.start_cnt }} - {{ pager.end_cnt }} 件目を表示    </div>
+		<div class="box-body">
+<form id='frm' method="post" action="{{ c.app.urlFor('default',{'controller': 'question','action': 'del'})}}">
+<input type="hidden" name="{{csrf_key}}" value="{{csrf_token}}">
+<input type="hidden" name="_METHOD" value="DELETE"/>
+<input type="hidden" name="id" value="">
+			<table class="table table-striped">
+				<tr>
+					<th class='text-center' style="width: 60px">No</th>
+					<th class='text-center' style="width: 180px">投稿日</th>
+					<th style="width: 120px">部位・症状</th>
+					<th>質問内容</th>
+					<th class='text-center' style="width: 80px">承認</th>
+					<th class='text-center' style="width: 80px">公開</th>
+					<!--<th class='text-center' style="width: 40px">編集</th>-->
+					<th class='text-center' style="width: 40px">削除</th>
+				</tr>
+
+                {% for data in list %}
+                    {% set category = c.config('question_categories')[ data.category_id ] %}
+					<tr>
+						<td class='text-center'>{{data.id}}</td>
+						<td class='text-center'>{{data.created| date('Y/m/d H:i')}}</td>
+						<td><div class='question_category'>{{ category }}</div></td>
+						<td style="word-break: break-all;"><div class='text_collapse question_content'>{{data.content | nl2br }}</div></td>
+						<td class='text-center'>
+                        {% if data.approval_stat == 0%} 
+                            <a href="javascript:void(0)" class="approval_setting btn btn-xs btn-warning" question_id = '{{ data.id }}' category='{{ category }}' content='{{ data.content }}'><i class="fa fa-pencil"></i> 承認する</a>
+                        {% else %}
+                            <i class='fa {{ data.approval_stat == 1 ? 'fa-check-circle' : 'fa-remove' }}'></i>
+                        {% endif %}
+                        </td>
+						<td class='text-center'>
+                        {% if data.approval_stat == 1 %} 
+                            {% if data.show_flg == 0 %}
+                                <a href="javascript:void(0)" class="show_setting btn btn-xs btn-danger" question_id = '{{ data.id }}' show_flg=0><i class="fa fa-warning"></i> 非公開</a>
+                            {% else %}
+                                <a href="javascript:void(0)" class="show_setting btn btn-xs btn-primary" question_id = '{{ data.id }}' show_flg=1><i class="fa fa-wifi"></i> 公開</a>
+                            {% endif %}
+                        {% else %}
+                        -
+                        {% endif %}
+                        </td>
+						<!--<td class='text-center'><a href="{{ c.app.urlFor('default',{'controller': 'news','action': 'edit','id':data.id})}}" class="btn btn-xs btn-primary"><i class="fa fa-pencil"></i> 編集</a></td>-->
+						<td class='text-center'><a href='javascript:void(0);' my_label='{{data.title}}' onclick='$("[name=id]").val("{{data.id}}");' class="delete btn btn-xs btn-danger"><i class="fa fa-trash"></i> 削除</a></td>
+					</tr>
+                {% endfor %}
+			</table>
+</form>
+		</div>
+		<div class="box-footer clearfix">
+
+        <div class="clearfix">
+
+{% if pager.total_pages > 1 %}
+<ul class="pagination pull-right">
+
+{% if pager.prev %}
+  <li><a href="{{ c.app.urlFor('default',{'controller': 'question','action': c.action })}}?page={{pager.prev}}&{{query_string}}">«</a></li>
+{% endif %}
+
+{% for page in pager.start_page .. pager.end_page %}
+{% if page == pager.curpage %}
+  <li class="active"><a href="#">{{ page }}</a></li>
+{% else %}
+    <li><a href="{{ c.app.urlFor('default',{'controller': 'question','action': c.action })}}?page={{page}}&{{query_string}}">{{page}}</a></li>
+{% endif %}
+{% endfor %}
+{% if pager.next %}
+ <li><a href="{{ c.app.urlFor('default',{'controller': 'question','action': c.action})}}?page={{pager.next}}&{{query_string}}">»</a></li>
+{% endif %}
+</ul>
+{% endif %}
+	<div class="col-sm-5">
+		{{ pager.total_count  }} 件中 {{ pager.start_cnt }} - {{ pager.end_cnt }} 件目を表示	</div>
+</div>
+
+<div class="well searchBox" style='margin-top:10px'>
+<a class="btn btn-primary" href="{{ c.app.urlFor('default',{'controller': 'question','action':'download'})}}?{{query_string}}" ><i class="fa fa-download"></i> <b>検索した結果を全件ダウンロードする</b></a>
+</div>
+{% else %}
+<div class="well searchBox">
+該当する情報はありません。
+</div>
+
+{% endif %}
+
+      {% if c.params.id %}
+       <a href='{{ c.app.urlFor('default',{'controller': 'question','action': 'index'})}}'><i class='fa fa-reply'></i> すべての質問一覧へ戻る</a> 
+      {% endif %}
+      </div><!-- /.tab-content -->
+    </div><!-- nav-tabs-custom -->
+  </div><!-- /.col -->
+</div><!-- /.row -->
+
+</section>
+
+ <!-- モーダルダイアログ -->
+  <div class="modal" id="staticModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true" data-show="true" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&#215;</span><span class="sr-only">閉じる</span>
+          </button>
+          <h4 class="modal-title">Static Modal タイトル</h4>
+        </div><!-- /modal-header -->
+        <div class="modal-body">
+          <p class="recipient">本文</p>
+          <p>
+            <a class="btn btn-info" href="#001" data-dismiss="modal">data-dismiss 有り</a>
+            <a class="btn btn-info" href="#002">data-dismiss 無し</a>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+          <button type="button" class="btn btn-primary">変更を保存</button>
+        </div>
+      </div> <!-- /.modal-content -->
+    </div> <!-- /.modal-dialog -->
+  </div> <!-- /.modal -->
+
+
+{% endblock %}

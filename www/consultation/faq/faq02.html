@@ -1,0 +1,136 @@
+<?php
+	//共通
+	require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+	//メタディスクリプション
+	$description = '';
+
+	//メタキーワード
+	$keywords = '漢方,漢方薬,漢方薬局,よくある質問,FAQ,Q&A,西洋薬,併用';
+
+	//Facebook　全ページ共通の場合は空白にしてください
+	$fbimage = '';
+
+	//タイトル
+	$title = '西洋薬を服用しているけど、漢方を併用しても大丈夫？ | 漢方 よくある質問（Q&amp;A） | 漢方相談（Q&amp;A）';
+
+	//css追加
+	$ex_tag_css = '<link rel="stylesheet" href="/common/css/shift.css">
+<link rel="stylesheet" href="css/faq.css">
+<link rel="stylesheet" href="css/faq-list.css">
+<link rel="stylesheet" href="css/faq-kampo.css">
+<link rel="stylesheet" href="css/shift_faq.css">
+<link rel="stylesheet" href="css/shift_faq-list.css">
+<link rel="stylesheet" href="css/shift_faq-kampo.css">
+<link rel="stylesheet" href="/consultation/css/style.css">';
+
+	//js追加
+	$ex_tag_js = '<script src="/common/js/shift_common.js"></script>';
+
+	//bodyID
+	$bodyID = 'consultation';
+
+?>
+<?php include 'header.php'; ?>
+
+	<div class="contents-header">
+		<ul class="topicpath fbox">
+			<li><a href="/">トップページ</a></li>
+			<li><a href="/consultation/">漢方相談（Q&amp;A）</a></li>
+			<li><a href="/consultation/faq/">漢方 よくある質問（Q&amp;A）</a></li>
+			<li>西洋薬を服用しているけど、漢方を併用しても大丈夫？</li>
+		</ul>
+		<p class="header-ttl">漢方相談Q&amp;A</p>
+	</div>
+
+
+	<article id="main" class="inner fbox shift-contents">
+
+		<section class="fbox kampo-sct">
+			<p class="main-head-description">きぐすり.com は、<strong>漢方薬、女性の健康、サプリメント、ハーブ</strong>の情報を専門家がやさしく解説しています。</p>
+			<h1 class="ttl01">病気の悩みを漢方で</h1>
+
+
+			<!--//////////////////// 移行コンテンツ start-->
+
+
+			<div id="faq-box">
+ <div id="faq-list">
+  <div id="faq-kampo">
+   <h4 id="kaito"><span>ご質問に対するご回答</span></h4>
+   <div id="answer">
+    <div id="answer-h">
+     <h4>西洋薬を服用しているけど、漢方を併用しても大丈夫？</h4>
+    </div>
+    <div id="answer-txt">
+     <div id="answer-01">
+      <p>現在までに、西洋薬と併用して問題があるとされる例はいくつか発表されています。</p>
+      <p>代表的なものは、小柴胡湯(ショウサイコトウ)とインターフェロンの併用で起きる間質性肺炎などです。</p>
+      <p> しかし、これらの例は「漢方を漢方的に使う」という大原則から外れた使い方をした例が全てであり、漢方的にきちんとした処方の運用をすれば問題にはならなかったのではないか？というのが本当のところだと考えます。</p>
+      <p> もちろんアレルギーなどの問題もありますが、数多い高島堂薬局の治療例のなかで大きな問題になったことは現在までありません。 </p>
+      <p class="pharmacy-m"><a href="../shop/takashimado/index.html" target="_blank">高島堂薬局（東京都文京区）　<br />雨宮　昌男先生</a></p>
+     </div>
+     <p class="line">&nbsp;</p>
+     <div id="answer-02">
+      <p>相互作用に注意して服用する必要のある処方の組み合わせや病院の治療と併用する場合、禁忌の場合もあります。<br />ほとんどが大丈夫なのですが、自己判断せず服用の際は専門家に相談されることだと思います。</p>
+      <br />
+      <p class="pharmacy-m"><a href="../shop/fukuda-kanpou/" target="_blank">福田漢方すこやか相談所　薬局・鍼灸治療院（奈良県吉野郡）　<br />福田 佳司先生</a></p>
+     </div>
+     <p class="line">&nbsp;</p>
+     <div id="answer-03">
+      <p>基本的には、併用は止めてください。</p>
+      <br />
+      <p>西洋薬どうし、西洋薬と健康食品・食品の併用禁忌の例がたくさんでてきています。<br /> 漢方薬との併用も良くない場合があります。<br /> よって最悪の場合、両方効かないだけでなく、副作用も考えられますので。<br /> しかし、病状や病態によっては漢方薬が飲めるケースもあります。<br /> よく漢方薬に詳しい薬剤師に相談してください。</p>
+      <br />
+      <p class="pharmacy-m"><a href="../shop/teramachi-kanpou/" target="_blank">寺町漢方薬局（広島県広島市）　<br />窪田 信明先生</a></p>
+     </div>
+     <p class="line">&nbsp;</p>
+     <div id="answer-04">
+      <p>病院から西洋薬が処方されている場合、処方されている西洋薬によっては一緒に飲むと問題があるものもあります。<br /> ワーファリンは人参との併用によって作用が悪くなることがあります。</p>
+      <br />
+      <p>高血圧や低カリウム血症のお薬を飲んでいるお客様の場合、甘草を大量にとると偽性アルドステロン症を引き起こす恐れがあるので、甘草の含まれる漢方薬を大量に飲むことには注意が必要です。</p>
+      <br />
+      <p>一緒に併用すると吸収を阻害したりするものもあります。<br /> たとえば、貧血のお薬として病院で鉄剤を服用しているお客様は、ケイヒ、シャクヤクなどタンニンを含む漢方薬を一緒に飲むと鉄剤の吸収を阻害します。<br /> 当店で漢方薬を出す場合、病院の薬と吸収上、問題があるものは、一緒に飲まないようにお話いたします。</p>
+      <br />
+      <p>上記の例は一例に過ぎません。<br /> 病院のお薬を飲んでいるお客様は必ずご持参して、薬局で、一緒に服用して問題ないかを確認していただくことをおすすめいたします。</p>
+      <br />
+      <p>スガヌマ薬局は、処方箋薬も1000種類以上在庫しています。<br /> コンピューターをつかって、漢方薬との相互作用チェックもおこないます。<br /> ご相談の場合、病院の薬が確認できない場合、漢方薬を出さないこともございます。<br /> ぜひお薬かお薬手帳のように病院での処方薬の内容がわかるものをお持ちください。</p>
+      <br />
+      <p class="pharmacy-m"><a href="../shop/suganuma/" target="_blank">スガヌマ薬局（茨城県坂東市）　<br />菅沼 真一郎先生</a></p>
+     </div>
+     <p class="line">&nbsp;</p>
+     <div id="answer-05">
+      <p>西洋薬と漢方薬は作用機序が異なるので、同列にして議論するのは根本的に間違っています。<br /> カリウムがあるからと言って漢方薬の生薬をワーファリンと併用するのはよろしくないとしたら、野菜も食べられなくなります。<br /> 朝鮮人参は血流を改善する効果があるので、ワーファリンの作用を邪魔すると言うのは臨床実験でもされた上の結論か確かめるべきでしょう。<br /> 小柴胡湯で間質性肺炎を誘発する可能性があると言うのは単なる初歩的な誤診です。<br /> 漢方で非常に大切なところが寒熱を見極めると言うところです。<br /> 寒熱も見極められないようなレベルで漢方薬を出すことが問題です。<br /> 漢方薬を患者に対して出そうとするならば、そのぐらいのレベルは最低必要です。<br /> 小柴胡湯の柴胡は血を冷やす働きがあり、熱を取ります。<br /> 当然、身体が冷えている人に長期に投与すれば肺も冷えて間質性肺炎になる確率は高まります。<br /> 自信がなければ、投与後の患者の状態を見れば逆治をすれば身体が冷えて来たり、顔色が悪くなったり、「けほっ」という咳をしたり、何らかの冷えの兆候が出てきます。<br /> それも判断できないと言うのは問題です。<br /> しかるべき、知識と経験を持った者が処方または指導すれば誤治はないはずです。<br /> 誤治を漢方薬の副作用と言うのは間違いです。</p>
+      <p class="pharmacy-m"><a href="../shop/kenkou/" target="_blank">ケンコウ薬局（三重県津市）　<br /> 秋江　洋和先生</a></p>
+     </div>
+    </div>
+    <div class="clearfix" id="next-faq">
+     <p id="front-move"><span>前の質問</span><a href="faq01.html">&laquo; 「煎じ薬とエキス剤の違い…？」</a></p>
+     <p id="back-move"><span>次の質問</span><a href="faq03.html">「妊娠中は漢方薬はのんでも&hellip;。」 &raquo;</a></p>
+    </div>
+   </div>
+  </div>
+ </div>
+ <!-- #BeginLibraryItem "/Library/list_faq-info.lbi" -->
+ <div class="faq-index">
+  <div class="highlight" id="info-index">
+   <ul>
+    <li><a href="../kensaku.html"><img alt="あなたの街の漢方薬局・薬店へ" height="83" src="img/pharmacy-btn.gif" width="223" /></a></li>
+    <li><a href="../mail-soudan.html"><img alt="メールで漢方相談" height="82" src="img/mail-btn.gif" width="223" /></a></li>
+   </ul>
+  </div>
+ </div>
+ <!-- #EndLibraryItem -->
+ 
+</div>
+
+
+			<!--//////////////////// 移行コンテンツ end-->
+
+
+		</section>
+
+
+	</article>
+
+<?php include 'footer.php'; ?>

@@ -1,0 +1,176 @@
+{% set category = config['question_categories'][question['category_id']] %}
+<?php
+  //共通
+  require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+  //メタディスクリプション
+  $description = '';
+
+  //メタキーワード
+  $keywords = '';
+
+  //Facebook　全ページ共通の場合は空白にしてください
+  $fbimage = '';
+
+  //タイトル
+  $title = 'ご相談内容を削除する';
+
+  //css追加
+  $ex_tag_css = '<link rel="stylesheet" href="/consultation/css/style.css"><link rel="stylesheet" href="/consultation/css/template.css">';
+
+  //js追加
+  $ex_tag_js = '<script src="/consultation/js/script.js"></script>';
+
+  //bodyID
+  $bodyID = 'consultation';
+
+?>
+<?php include 'header.php'; ?>
+
+
+	<div class="contents-header">
+		<ul class="topicpath fbox">
+			<li><a href="/">トップページ</a></li>
+			<li><a href="/consultation/">みんなの漢方相談Q&amp;A</a></li>
+			<li>ご相談内容を削除{{ c.params.mode  == 'request' ? '依頼':'' }}する</li>
+		</ul>
+		<p class="header-ttl">ご相談内容を削除{{ c.params.mode  == 'request' ? '依頼':'' }}する</p>
+	</div>
+    <!-- /.contents-header -->
+
+
+  <div class="inner">
+    <div class="component-area">
+      <div class="l-sp-inner">
+        <div class="m-panel01">
+       <div class="m-panel01 m-panel01--red">
+          <div class="m-panel01__panel">
+            {% if c.params.mode  == 'request' %}
+            <p class="m-panel01__heading">この相談内容を削除依頼しますか？</p>
+            <p class="m-panel01__txt">削除するには事務局の承認が必要です。</p>
+            {% else %}
+            <p class="m-panel01__heading">この相談内容を削除しますか？</p>
+            <p class="m-panel01__txt">操作を完了すると、このご相談内容はサイトから削除されます。</p>
+            {% endif %}
+          </div>
+          <!-- /.m-panel01__panel -->
+        </div>
+        <!-- /.m-panel01 -->
+      </div>
+      <!-- /.l-sp-inner -->
+    </div>
+    <!-- /.component-area -->
+
+
+    <div class="component-area">
+      <div class="l-sp-inner">
+        <div class="m-question01">
+          <p class="m-question01__tit"><img src="/consultation/img/question01_tit.png" alt="ご相談内容"></p>
+          <div class="m-question01__balloon">
+            <div class="m-bal02">
+              <div class="m-bal02__inforow">
+                <p class="m-bal02__profile">
+                {% if question.member_sex == '男性' %}
+                <img src="/consultation/img/question01_icn_male.png" alt="">
+                {% else %}
+                <img src="/consultation/img/question01_icn_female.png" alt="">
+                {% endif %}
+                </p>
+                <div class="m-bal02__userdata">
+                  <p class="m-bal02__name">{{ question.member_nickname }}さん</p>
+                  <div class="m-bal02__midrow clearfix">
+                    <ul class="m-bal02__infolist clearfix">
+                      <li>（{{ question.member_age | era }}・{{ question.member_sex }}）からの相談</li>
+                      <li>部位・症状: <a href="{{ c.app.urlFor('qa_list', {'search_type': 'category', 'q' : category })  }}">{{ category }}</a></li>
+                    </ul>
+                    <!-- /.m-bal02__infolist -->
+                    <p class="m-bal02__date">{{ question.created| date('Y/m/d H:i') }}</p>
+                  </div>
+                  <!-- /.m-bal02__midrow -->
+                </div>
+                <!-- /.m-bal02__userdata -->
+              </div>
+              <!-- /.m-bal02__inforow -->
+              <p class="m-bal02__txt">
+                {{ question.content | nl2br }}
+              </p>
+            </div>
+            <!-- /.m-bal02 -->
+          </div>
+          <!-- /.m-question01__balloon -->
+        </div>
+        <!-- /.m-question01 -->
+      </div>
+      <!-- /.l-sp-inner -->
+    </div>
+    <!-- /.component-area -->
+    
+    <div class="component-area">
+   <div class="l-sp-inner">
+    <div class="m-tablearea01__table">
+            <form method="post">
+            <input type="hidden" name="{{csrf_key}}" value="{{csrf_token}}">
+            <input type="hidden" name="_METHOD" id="_METHOD" value="PUT"/>
+
+            {% if c.params.mode  == 'request' %}
+
+
+            <div class="m-table01">
+            <p class="mb10"><span class="m-table01__required">※必須</span></p>
+            	<div class="m-table01__inputbox">
+                	<textarea class="m-table01__textarea--full" placeholder="削除理由を入力してください。（1000文字以内）" name='reason'></textarea>
+                </div>
+                <!-- /.m-table01__inputbox -->
+                <p class="m-table01__error"></p>
+                <ul class="list-dalete">
+                <li>※削除依頼後、きぐすり.com運営事務局の確認がとれ次第、削除処理いたします。</li>
+                <li>※内容によっては削除できない場合があります。ご了承ください。</li>
+                </ul>
+            </div>
+            <!-- /.m-table01 -->
+            {% endif %}
+
+            <div class="m-tablearea01__btn mt20">
+              <button type="button" class="m-arrow-btn02-2 m-arrow-btn02--prev m-arrow-btn02--gray" onclick="location.href='{{ c.app.urlFor('qa_detail', {id: question.id }) }}'">戻る<span class="m-arrow-btn01__icn"></span></button>
+              {% if c.params.mode  == 'request' %}
+              <button type="button" class="m-arrow-btn01 question_delete" comfirm='削除依頼します。よろしいでしょうか。'>削除依頼する
+              {% else %}
+              <button type="button" class="m-arrow-btn01 question_delete" comfirm='削除します。よろしいでしょうか。'>削除する
+              {% endif %}
+              <span class="m-arrow-btn01__icn"></span></button>
+            </div>
+            </form>
+                    <!-- /.m-table01__inputbox -->
+    </div>
+    <!-- /.m-tablearea01__table -->
+      </div>
+      <!-- /.l-sp-inner -->
+
+    </div>
+    <!-- /.component-area -->
+  </div>
+    <!-- /.content-area -->
+  </div>
+  <!-- /.inner -->
+
+  <!-- modal window -->
+          <div class="m-question01__modal">
+            <div class="m-modal01">
+              <div class="m-modal01__overlay"></div>
+              <div class="m-modal01__content">
+                <p class="m-modal01__close"><a href="#"><img src="/consultation/img/img_close01.png" alt=""></a></p>
+                <p class="m-modal01__tit">-</p>
+                <p class="m-modal01__detail">-</p>
+                <ul class="m-modal01__btn-list">
+                  <li><a href="javascript:void(0)" class="m-btn01 m-btn01--green ok-btn">はい</a></li>
+                  <li><a href="javascript:void(0)" class="m-btn01 m-btn01--gray cancel-btn">いいえ</a></li>
+                </ul>
+                <!-- /.m-modal01__btn-list -->
+              </div>
+              <!-- /.m-modal01__content -->
+            </div>
+            <!-- /.m-modal01 -->
+          </div>
+          <!-- /.m-question01__modal -->
+  <!--/ modal window -->
+<?php include 'footer.php'; ?>

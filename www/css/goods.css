@@ -1,0 +1,727 @@
+/* CSS Document */
+#main{ margin: 0 22px 0 10px; padding:0; border:0;}
+#main #categoryName{margin:20px 0;}
+#main #contentsArea{
+	margin: 20px 15px;
+	padding:0;
+	border: 0;
+	line-height:140%;
+}
+#main #contentsArea .sectionH3{ clear:both;}
+#main #contentsArea .sectionH3 h3{ margin: 20px 0; padding: 0 0 0 7px; border-left:5px solid #caed52; color:#333; background-color:#eee; font-size:14px;}
+#main #contentsArea .sectionH3 p{ font-size:14px; line-height:20px;}
+#main #contentsArea .sectionH3 ul{ font-size:14px; line-height:20px;}
+#main #contentsArea .sectionH4{ margin:40px 0 0 0;}
+#main #contentsArea .sectionH4 h4{ margin: 20px 0; padding: 0 0 0 20px; color:#693; background-image:url(../images/mark_square2.gif); background-repeat:no-repeat; background-position:left center;}
+
+.author{background:#f2f2f2;font-size:80%;text-align:right;margin:30px 0 0 0;padding:2px 5px 2px 0;}
+.infoEnd{ color:#f00;}
+.clear{ clear:both; line-height:0;}
+.em01{color:#CC3333;}
+.em02{ color:#c60; font-size:120%;}
+.imgR{ float:right; margin-left:10px;}
+.imgL{ float:left; margin-right:10px;}
+.sml{ font-size:85%;}
+
+/* def */
+.def dl{ margin:0 0 0 20px; padding:0 10px; border-left:2px solid #9c3;}
+.def dl dt{ margin:0; padding:0; font-weight:bold; color:#690;}
+.def dl dd{ margin:0; padding:0;}
+
+
+
+/* gallery 
+--------------------------------------------------------*/
+#contentsArea .galleryR{margin:0;}
+#contentsArea .galleryR img{ padding:2px; border:1px solid #ccc;}
+#contentsArea .galleryR dl{margin:0 0 0 10px;padding:0;float:right;}
+#contentsArea .galleryR dt{margin:0;padding:0;text-align:center;}
+#contentsArea .galleryR dd{margin:0;padding:0;text-align:center;font-size:75%;#color:#666;}
+
+#contentsArea .gR180{margin:0;}
+#contentsArea .gR180 img{ padding:2px; border:1px solid #ccc;}
+#contentsArea .gR180 dl{margin:0 0 0 10px;padding:0;float:right; width:180px;}
+#contentsArea .gR180 dt{margin:0;padding:0;}
+#contentsArea .gR180 dd{margin:0;padding:0;font-size:80%;#color:#666; line-height:120%;}
+
+
+/* caption 
+--------------------------------------------------------*/
+#tableCaption { border-left: 5px solid #999; width: 570px;}
+#tableCaption th { padding: 0 0 0 7px;text-align: left;vertical-align: top;font-weight: normal;font-size: 120%;line-height: 160%;color: #333;}
+#tableCaption td {vertical-align: top;}
+#tableCaption p { padding:16px 16px 0px 4px; font-size:14px; line-height:18px;}
+#boxCaption { padding-left:10px; border-left: 5px solid #999; height:80px;}
+#boxCaption p{ color:#f93; font-weight:bold;}
+
+.feature{ margin:10px 0;padding:5px; background:#fff;color:#f93; font-weight:bold;}
+#tableCaption h2{ margin:20px 0 0 0; font-size:120%; color:#333; font-weight:normal; letter-spacing:-2px;}
+
+
+/* memo 
+--------------------------------------------------------*/
+#contentsArea .memo{ margin:20px 15px; padding:0; font-size:90%; color:#C76302; border-bottom:2px solid #ff9900;}
+#contentsArea .memo h4{ border-bottom:2px solid #ff9900;}
+#contentsArea .memo h5{ margin:10px; padding:0 0 0 10px; background-image: url(../images/arrow3.gif); background-repeat:no-repeat; background-position:left center;}
+#contentsArea .memo p{ margin:10px; padding:0;}
+
+#contentsArea .memo2{ margin:20px 0; padding:5px 10px; color:#333; border:1px solid #999;}
+#contentsArea .memo2 h3{ margin:0 0 10px 0; padding:0; font-size:120%; background-color:#eee;}
+#contentsArea .memo2 h4{ margin:0; padding:0 0 0 18px; border-bottom:1px dotted #666; background-image: url(../images/common/listMark02.gif); background-repeat:no-repeat; background-position:left;}
+#contentsArea .memo2 p{ margin:5px 0 5px 10px; padding:0;}
+
+#contentsArea .memo3{ margin:0px 220px 0 0; padding:0px 5px; color:#333; border:1px solid #999;}
+
+
+/* salespoint
+------------------------------------------*/
+#contentsArea .sp{ margin:20px 0; padding:5px 10px; color:#333; background-color:#FFFAE7; border:1px solid #f93;}
+#contentsArea .sp h3{ margin:0 0 10px 0; padding:2px 5px; font-size:120%; background-color:#fc6; color:#330;}
+
+
+
+
+/* reference 
+--------------------------------------------------------*/
+#contentsArea .reference{ margin:15px; padding:2px 10px; background-image:url(../images/bg_dot3.gif); border:1px solid #eee;}
+#contentsArea .reference h4{ margin:10px 0; padding:0 0 0 7px; color:#333; border-left:5px solid #ccc;}
+#contentsArea .reference .sectionH5{ margin:20px 0;clear:both; font-size:90%; }
+#contentsArea .reference .sectionH5 h5{margin:0; padding:0;color:#996600; }
+#contentsArea .reference .sectionH5 p{margin:0; }
+#contentsArea .reference .sectionH5 img{ float:left; border:1px solid #ccc; margin:0 10px 0 0; padding:3px;}
+
+/* self medication
+--------------------------------------------------------*/
+#contentsArea .self {background: url(../goods/img/bg_self.gif) no-repeat left 10px;padding-left: 180px;border-top: 1px dotted #999999;margin-top: 40px;font-size:0.9em;}
+#contentsArea .self h3 {display: none;}
+#contentsArea .self p{margin:5px 0;}
+
+#contentsArea #self{ margin:20px 0;border-top:1px dotted #999999;font-size:0.9em; padding-top:20px;}
+#contentsArea #self h3{height:60px; width:550px;display:block;text-indent:-9999px;margin-bottom:10px; background: url(../goods/img/cap_self.gif) no-repeat;}
+#contentsArea #self p{margin:5px 0 5px 0;}
+#contentsArea #self img{padding:3px;border-top:1px solid #cccccc;border-right:1px solid #999999;border-bottom:1px solid #999999;border-left:1px solid #cccccc;background-color:#f9f9f9;}
+
+#contentsArea #self2{ margin:20px 0;border-top:1px dotted #999999;font-size:13px; line-height:18px; padding-top:20px;}
+#contentsArea #self2 h3{height:60px; width:550px;display:block;text-indent:-9999px;margin-bottom:10px; background: url(../goods/img/cap_self.gif) no-repeat;}
+#contentsArea #self2 p{margin:5px 0 5px 0;}
+#contentsArea #self2 img{padding:3px;}
+
+/* get
+--------------------------------------------------------*/
+#contentsArea .get{ margin:0;}
+#contentsArea .get h3{ margin:15px 0; padding:3px 0 3px 5px; color:#fff; background-color:#ff9933; font-size:120%;}
+#contentsArea .get p{padding:0px;}
+#contentsArea .get a {height:41px;width:277px;display:block;text-indent:-9999px;margin-bottom:20px;}
+
+#contentsArea .oubo {margin-left: 0px;padding-left: 10px;margin-bottom: 0px;}
+#contentsArea .get .oubo h4{ margin:20px 0; color:#333; padding-left:7px; font-size:110%;}
+#contentsArea .get .oubo h4 span { margin:0 5px 0 0; padding:0 5px; background:#f93; color:#fff;}
+#contentsArea .oubo a {
+	background: url(../goods/img/bt_present3.gif) no-repeat;
+	overflow: hidden;
+}
+
+#contentsArea .search {margin-left: 10px;padding-left: 10px;}
+#contentsArea .search a {background: url(../goods/img/bt_search.gif) no-repeat;}
+#contentsArea .search a:hover{background:url(../goods/img/bt_search_o.gif) no-repeat;}
+
+#contentsArea .buy {
+	padding:0 170px 0 10px;
+	background-image:url(../goods/img/girl.gif);
+	background-repeat:no-repeat;
+	background-position:right;
+}
+#contentsArea .get .buy h4{ margin:20px 0; color:#333; padding-left:7px; font-size:110%;}
+#contentsArea .get .buy h4 span {
+	margin:0 5px 0 0;
+	padding:0 5px;
+	background:#f93;
+}
+#contentsArea .buy a {
+	background: url(../goods/img/bt_cart.gif) no-repeat;
+	overflow: hidden;
+}
+
+
+/* goodsSummary
+--------------------------------------------------------*/
+#contentsArea .goodsSummary{margin:0px 16px; padding:0;}
+#contentsArea .goodsSummary table {background-color:#fff; font-size:90%; color:#333;line-height: 160%;border-collapse:collapse}
+#contentsArea .goodsSummary table caption{ padding:0 0 0 15px;text-align:left; font-weight:bold; color:#669900;background-image: url(../images/bt_right.gif); background-repeat:no-repeat; background-position:left center;}
+#contentsArea .goodsSummary table th{ padding: 3px 9px 3px 10px;font-weight: normal;text-align: left;background-color: #F0FFC4;border: 1px solid #99cc00;white-space:nowrap;}
+#contentsArea .goodsSummary table td {border: 1px solid #99CC00;padding: 3px 9px 3px 10px;}
+.cap01{ background-color:#9c0; color:#fff; font-weight:bold;}
+
+
+/* listvolume 
+--------------------------------------------------------*/
+.listvolume ul li{display:inline;}
+
+
+/* formTable 
+------------------------------------------*/
+.formTable{font-size:90%;width:530px;}
+.formTable th{font-weight:normal;text-align:left;background:#e9e9e9;padding:5px;white-space:nowrap;}
+.formTable td{background:#EFFFE1;padding:5px;}
+.formTable td span{font-size:80%;}
+fieldset{border:none;}
+legend{display:none;}
+
+
+/* howto 
+------------------------------------------*/
+.howto{width:510px; margin:10px; padding:10px; border:1px solid #99cc66;}
+.howto h4{ margin:0 0 5px 0; padding:0 0 0 5px; border-left:5px solid #99cc66; color:#669933;}
+.howto p{margin:0 0 0 20px;}
+.howto ol{margin:0;padding:0 0 0 40px;}
+.howto .gallery ol{ margin:5px 0 0;padding:0;}
+.howto .gallery ol li { margin:0 3px 0 0; padding:0; list-style-type:none; float:left;}
+.howto .gallery ol li img{ padding:2px; border:1px solid #ccc;}
+.howto .gallery p{ margin:0; padding:0; font-size:70%; color:#666;clear:both;}
+
+.howto .galleryR{margin:0;}
+.howto .galleryR img{ padding:2px; border:1px solid #ccc;}
+.howto .galleryR dl{margin:0 0 0 10px;padding:0;float:right;}
+.howto .galleryR dt{margin:0;padding:0;text-align:center;}
+.howto .galleryR dd{margin:0;padding:0;text-align:center;font-size:75%;#color:#666;}
+
+
+/* step */
+.step1{ padding-left:70px; margin:30px 0 7px 0; color:#c60; background-image:url(../images/common/step1.gif); background-repeat:no-repeat; background-position:left;}
+.step2{ padding-left:70px; margin:30px 0 7px 0; color:#c60; background-image:url(../images/common/step2.gif); background-repeat:no-repeat; background-position:left;}
+.step3{ padding-left:70px; margin:30px 0 7px 0; color:#c60; background-image:url(../images/common/step3.gif); background-repeat:no-repeat; background-position:left;}
+.step4{ padding-left:70px; margin:30px 0 7px 0; color:#c60; background-image:url(../images/common/step4.gif); background-repeat:no-repeat; background-position:left;}
+.step5{ padding-left:70px; margin:30px 0 7px 0; color:#c60; background-image:url(../images/common/step5.gif); background-repeat:no-repeat; background-position:left;}
+
+
+/* linkList
+------------------------------------------*/
+.linkList{ margin:20px; text-align:center; font-size:90%; border:3px dotted #999;}
+.linkList ul{ margin:0; padding:5px;}
+.linkList ul li{ margin:0; padding:0; list-style-type:none; display:inline;}
+.linkList ul li a{ margin:0 30px;}
+.linkList ul li .old { padding:0 0 0 15px; background-image:url(../images/mark_triangle_l.gif); background-repeat:no-repeat; background-position:left center;}
+.linkList ul li .now { padding:0 15px 0 0; background-image:url(../images/mark_triangle.gif); background-repeat:no-repeat; background-position:right center;}
+
+
+
+
+
+/* order form
+------------------------------------------*/
+.orderEtc{ margin:15px; padding:10px; font-size:90%; line-height:120%; background:#f9f9f9; border:1px solid #ccc;}
+.orderEtc p{ margin:8px 0;}
+
+
+
+
+
+
+/*************************************************
+ oubo.html
+**************************************************/
+#introOubo{ margin:15px; left:160%;}
+#introOubo span{ margin:0 3px; font-size:160%; font-weight:bold; color:#f36; font-family:Arial, Helvetica, sans-serif;}
+#introOubo strong{ font-size:110%;}
+
+
+/*************************************************
+ past
+**************************************************/
+#contentsArea .past{ margin:40px 0;}
+#contentsArea .past h3{ margin: 20px 0; padding: 0 0 0 7px; border-left:5px solid #caed52; color:#333; background-color:#eee;}
+
+.past .goods{ margin:20px 0;}
+.past .goods table { width:530px; border:0; padding:0; margin:10px 0 20px 0;}
+.past .goods table caption{ padding:3px 0 20px 30px; text-align:left; color:#fff; font-size:90%; font-weight:bold; background-image:url(../goods/img/bg_head01.gif); background-repeat:no-repeat; background-position:left top; display:block; width:140px; height:20px;}
+.past .goods table th{ padding:0;vertical-align:top; width:120px; text-align:left;}
+.past .goods table td{ padding:5px; vertical-align:top; font-size:90%; background:#F5FFE1;width:400px;}
+
+.past .goods h4{ padding:0 0 0 5px; border-left:5px solid #95D11C;color:#80B80F;}
+.past .goods ul{ margin:15px 0 0 20px;}
+
+.past .goodsTable{ border-collapse: collapse; border:1px solid #360; font-size:90%; width:549px;}
+.past .goodsTable th{ border:1px solid #360; width:136px; color:#360; background-color:#DEFDD4;}
+.past .goodsTable td{ border-right:1px solid #360; text-align:center; padding:3px; vertical-align:top;}
+.past .goodsTable td ul { margin:0; padding:0;}
+.past .goodsTable td ul li{ margin:5px 0; padding:0; list-style-type:none;}
+
+/* caution */
+.caution{ margin:10px 20px; padding:5px 10px 5px 35px; background-image:url(../images/common/icon_caution.gif); background-repeat:no-repeat; background-position:left 5px; font-size:90%; color:#f36;}
+.caution h4{ font-size:120%; line-height:100%; margin:0;}
+.caution p{ margin:10px 0; padding:0;}
+
+/* note */
+.note01{ font-size:70%;}
+.note02{ margin:20px 10px; padding:0 0 0 30px; font-size:80%; background-image:url(../images/common/icon_note.gif); background-repeat:no-repeat; background-position: left 5px;}
+.note02 p{ margin:0 0 10px 0;}
+.note02 p span{ padding-bottom:2px; border-bottom:1px dotted #999;}
+.note02 dl{ margin:0 0 10px 0;}
+.note02 dl dt{ margin:0; padding:0; font-weight:bold; color:#690; font-size:120%;}
+.note02 dl dd{ margin:0; padding:0; font-size:90%; color:#693;}
+
+
+
+/*************************************************
+ original style
+**************************************************/
+
+/* zakkoku */
+#zakkoku{font-size:90%;
+color:#333;
+width:540px;}
+#zakkoku h4{ padding-left:60px; padding-top:7px; font-size:120%; letter-spacing:1px; color:#960; background-image:url(../goods/img/bg_zakkokuH4.gif); background-repeat:no-repeat; height:30px;}
+
+#zakkoku th{ padding-right:10px; padding-bottom:5px; vertical-align:top;}
+#zakkoku td{ vertical-align:top; padding-bottom:5px; line-height:140%;}
+#zakkoku td strong{ color:#f60;}
+
+#zakkoku img{margin:1px;
+padding:1px;
+background-color:#CCC;
+border:solid 1px #333;
+}
+.howtoZakkoku{margin:0 10px; padding-left:80px;background-image:url(../goods/img/suihanki.gif); background-position:20px top; background-repeat:no-repeat;}
+
+/* hakuhotan */
+.koka h4{color:#ff6600;}
+.koka p{margin:0 0 15px 0;}
+.koka ul {margin:0 0 15px 15px;}
+.koka ul li{display:inline; margin:0 3px 0 0;}
+.koka dl dt{color:#ff6600;font-weight:bold;}
+.koka dl dd{display:inline; margin:0 10px 0 0;}
+.kokaS h4{color:#ff6600; font-weight:bold; border-bottom:dotted 1px #ff6600; margin:30px 300px 10px 0; border-left:solid 5px #ff6600; text-indent:5px;}
+.kokaS p{margin:0 0 15px 0;}
+.kokaL {margin:0 0 10px 0; font-size:90%; background-color:#f9f9f9; padding:20px;}
+.kokaL h4{color:#ff6600; font-weight:bold; margin:10px 0; padding:0 0 0 5px;  border-left:solid 5px #ff6600; line-height:100%;}
+.kokaL p{margin:0 0 10px 0;}
+
+
+.seibun table { border-collapse: separate; font-size:100%; margin:10px 0 20px 0; border:1px solid #ccc; width:550px;}
+.seibun table caption{ text-align:left; color:#690; font-weight:bold; line-height:100%;}
+.seibun table th{ text-align:left; padding:2px 5px; vertical-align:top;}
+.seibun table th img{ padding:3px; border:1px solid #ccc;}
+.seibun table td{ padding:2px 5px; vertical-align:top; line-height:120%;}
+
+/* ranran */
+.anzen{ padding-left:75px; background-image:url(../goods/img/anzen.gif); background-repeat:no-repeat; background-position:left 3px;}
+.benri{ padding-left:75px; background-image:url(../goods/img/benri.gif); background-repeat:no-repeat; background-position:left 3px;}
+.anshin{ padding-left:75px; background-image:url(../goods/img/anshin.gif); background-repeat:no-repeat; background-position:left 3px;}
+.chumoku{ padding-left:75px; background-image:url(../goods/img/chumoku.gif); background-repeat:no-repeat; background-position:left 3px;}
+
+/* oresent */
+.present-txt{margin:5px 0; padding:2px; border:1px solid #999999; color:#333333; font-size:80%; width:175px; line-height:1.2em; text-align:center;}
+
+/* table */
+#rice_table{
+	width:539px;
+	font-size:14px;
+	border-left:1px #666 solid;
+	border-top:1px #666 solid;
+}
+
+#rice_table th{
+	padding:5px;
+	font-weight:normal;
+	text-align:left;
+	background-color:#FC9;
+	border-bottom:1px #666 solid;
+	border-right:1px #666 solid;
+}
+
+#rice_table td{
+	padding:5px 3px 0px 0px;
+	border-bottom:1px #666 solid;
+	border-right:1px #666 solid;
+	text-align:right;
+}
+
+#rice_table td font{
+	color:#C33;
+	font-size:90%;
+}
+
+#div_shun{
+	width:500px;
+	padding:10px;
+	border:1px solid #FF99FF;
+	margin-left:20px;
+	background-color:#FFECFF;}
+	
+#div_shun font{
+	font-style:italic;
+	font-size:95%;
+}
+
+#div_shitsu{
+	width:520px;
+	padding:10px;
+	border:1px solid #069;
+	margin-left:16px;
+	background-color:#def;}
+
+#div_shitsu dl{
+	margin:6 0 0 0;
+}
+
+
+#div_shitsu dt{
+	color:#a33;
+	margin:0 0 8 0;}
+
+#div_shitsu li{
+	margin:0 0 0 -20;
+}
+
+
+#n4{
+	text-align:center;
+	margin:0px;
+	font-weight:normal;
+	font-size:100%;
+}
+
+#nihon{
+	display:block;
+	text-align:right;
+	margin:0px 12px 0px 0px;
+}
+
+.rice table { width:530px; border:0; padding:0; margin:10px 0 20px 0;}
+.rice table caption{ padding:3px 0 20px 30px; text-align:left; color:#fff; font-size:90%; font-weight:bold; background-image:url(../goods/img/bg_head01.gif); background-repeat:no-repeat; background-position:left top; display:block; width:140px; height:20px;}
+.rice table th{ padding:0;vertical-align:top; width:120px; text-align:left;}
+.rice table td{ padding:5px; vertical-align:top; font-size:90%; background:#F5FFE1;width:400px;}
+
+.rice h4{ padding:0 0 0 5px; border-left:5px solid #95D11C;color:#80B80F;}
+
+.tea_r{
+ width:500px;
+ padding:10px;
+ margin:0px;
+}
+
+.tea_r font{
+	color:#F63;
+	margin:0 3 0 0;
+}
+
+.imgL_tea{ 
+	float:left;
+	margin:0 10 0 14;
+	}
+
+.div_center{
+	 text-align:center;
+}
+
+.profile .detailProf{
+width:415px;
+float:right;
+font-size:80%;
+line-height:160%;
+}
+.profile .detailProf h4{margin:10 0;}
+.profile .detailProf .btn{text-align:right;}
+
+.ph_sada_d { width:100px; height:120px; margin:0 auto; background-image:url(../support/img/ph_sada.jpg); background-repeat:no-repeat;}
+
+.profile .photoSpace{
+width:157px;
+float:left;
+text-align:center;
+font-size:80%;
+line-height:160%;
+padding:0 10px 0 0;
+}
+
+#sec3_dl a{
+	font-weight:bold;
+}
+
+#imgL_mr14{
+	margin:14px;
+	float:right;
+}
+
+.txt_right{
+	text-align:right;
+}
+
+/* 今日から出来る肥満対策 */
+
+table#tableCaption p{
+	margin:0;}
+	
+p.pad0{
+	margin:0;
+	padding:0;}	
+
+div.sectionH3 img.shikaku{
+	display:block; float:left; margin:1px 6px 0 2px ; padding:0;}
+
+div.sectionH3 div#himan-img01{display:block; text-align:center; margin:6px 0 0 0;}
+
+div#top div#contentsArea div.sectionH3 p.p-b{
+	font-size:16px; font-weight:bold;}
+	
+div#top div#contentsArea div#BMI-sokutei dl{
+	margin:0; padding:0;}
+	
+div#top div#contentsArea div#BMI-sokutei dt{
+	float:left; margin:0 0 0 24px; padding:0;}	
+	
+div#top div#contentsArea div#BMI-sokutei dd{
+	margin:0 0 0 54px;}		
+
+div#top div#contentsArea div#BMI-sokutei dd.dd-b{
+	margin:0 0 0 54px; font-weight:bold;}		
+	
+div#top div#contentsArea div#BMI-sokutei dd span{
+	color:red; font-weight:bold;}
+
+div#top div#contentsArea div#BMI{
+	border:1px #F08300 solid; background-color:#fff9f4; margin:0 24px ; padding:0;}
+	
+div#top div#contentsArea div#BMI h3{
+	border:none; background-color:none; background-image:url(../goods/img/1005/icon-bg.gif); margin:14px 0 6px 0; padding:0;}
+
+div#top div#contentsArea div#BMI h3 span{
+	background-color:#FFF; padding:4px 14px; margin:0 0 0 8px; border:1px #7F9DB9 solid;}
+
+div#top div#contentsArea div#BMI p#nyuryoku{
+	font-size:80%; margin:0 10px 4px 8px; padding:0;}
+
+div#top div#contentsArea div#BMI p#nyuryoku span{
+	color:#F00;}
+
+div#top div#contentsArea div#BMI form{
+	padding:0 20px; margin:0 0 10px 0;}
+	
+div#top div#contentsArea div#BMI form p.p-m4{
+	margin:4px 0 ; padding:0;}
+
+div#top div#contentsArea div#BMI form p.p-m10{
+	margin:10px 0 ; padding:0;}
+	
+div#top div#contentsArea div#BMI form p#p-bmi{
+	border-top: 1px #F08300 dashed; padding:10px 0 0 0; margin:4px 0;}
+	
+div#top div#contentsArea div#BMI form p#p-bmi input{
+	color:red; font-weight:bold;}
+
+div#top div#contentsArea div#BMI form p.p-bmi4{
+	margin:4px 0 ; padding:0;}
+
+div#top div#contentsArea div#BMI form p.p-bmi4 input{
+	color:red; font-weight:bold;}
+	
+	
+div#top div#contentsArea div#soudan_box h4{
+	 font-size:14px; font-weight:bold; margin:0 24px; padding:0;}
+
+div#top div#contentsArea div#soudan_box div.clearfix{
+	 margin:10px 24px; padding:14px 20px 14px 20px; background-color:#fff9f4; border:1px #F08300 solid;}
+	 
+div#top div#contentsArea div#soudan_box div.clearfix p#p-soudan{margin:0 30px 10px 0;}
+
+/* 今日から出来る熱中症対策 */
+
+div#top div#contentsArea div.sectionH3 ul#tyu-i{
+	margin:6px 0 0 20px;
+	padding:0;}
+
+div#top div#contentsArea div.sectionH3 table#taisaku{
+	width:540px;
+	margin:0 22px;}
+
+div#top div#contentsArea div.sectionH3 table#taisaku td#taisaku01{
+	background-color:#FFE0FF;
+	border:1px solid #FF89C4;
+	padding:6px 0 0 6px;
+	width:160px;}
+
+div#top div#contentsArea div.sectionH3 table#taisaku td#taisaku02{
+	background-color:#E0E0FF;
+	border:1px solid #C489FF;
+	padding:6px 0 0 6px;
+	width:160px;}
+
+div#top div#contentsArea div.sectionH3 table#taisaku td#taisaku03{
+	background-color:#E0FFFF;
+	border:1px solid #89FFFF;
+	padding:6px 0 0 6px;
+	width:160px;}
+
+div#top div#contentsArea div.sectionH3 table#taisaku td#taisaku04{
+	background-color:#E0FFE0;
+	border:1px solid #89FF89;
+	padding:6px 0 0 6px;
+	width:160px;}
+
+div#top div#contentsArea div.sectionH3 table#taisaku td#taisaku05{
+	background-color:#FFFFE0;
+	border:1px solid #FFFF7F;
+	padding:6px 0 0 6px;
+	width:160px;}
+
+div#top div#contentsArea div.sectionH3 table#taisaku td#taisaku06{
+	background-color:#FFEFE0;
+	border:1px solid #FFC489;
+	padding:6px 0 0 6px;
+	width:160px;}
+
+div#top div#contentsArea div.sectionH3 table#taisaku img{
+	margin:0 0 6px 18px;}
+
+.clearfix:after {
+	content:".";
+	display:block;
+	clear:both;
+	height:0;
+	visibility:hidden;}
+
+div#top div#contentsArea div.sectionH3 ol.taisaku-netyu{
+	margin:10px 0 10px 30px;
+	padding:0;}
+
+div#top div#contentsArea div.sectionH3 ol.taisaku-netyu li{
+	margin:3px 0 3px 0; padding:0;}
+
+.clearfix {overflow:hidden;}	 /* dreamweaver上で表示が崩れない用 */
+
+
+div.clearfix {
+ display:inline-block;}
+ 
+ 
+ div#top div#contentsArea div#fu-ja{
+	border:1px #F08300 solid; background-color:#fff9f4; margin:0 24px ; padding:0 20px;}
+ 
+/* 今日から出来る家族みんなで元気 */
+
+table#tableCaption p#h2-p{
+	font-weight:bold;}
+
+div#top div#contentsArea div.sectionH3 span#str-spa{
+	font-weight:bold;
+	color:#F63;}
+	
+div#top div#contentsArea div.sectionH3 div.get div.oubo p#oubo-p{
+	font-weight:bold;}
+
+div#top div#contentsArea div.sectionH3 p#p-kochira{
+	margin:16px 0 0 16px; 
+	padding:0;}
+
+div#top div#contentsArea div.sectionH3 span#kensaku{
+	display:block;
+	background-image:url(../images_2009/arrow_kensaku.gif);
+	background-position:left;
+	background-repeat:no-repeat;
+	padding:0 0 0 16px;
+	margin:0;}
+	
+div.sectionH3 dl.example{
+	margin:0;
+	padding:0;
+	font-size:14px;}
+
+div.sectionH3 dl.example dt{
+	margin:0 0 4px 0;
+	padding:2px 0 2px 6px;
+	font-weight:bold;
+	border-left:6px #F83D5F solid;}
+
+div.sectionH3 dl.example dd{
+	margin:0 0 12px 0;
+	padding:0 0 12px 0;
+	border-bottom:1px #999 dashed;}
+
+div.sectionH3 dl.rank{
+	margin:0;
+	padding:0;}
+
+div.sectionH3 dl.rank dt{
+	margin:0 0 4px 0;
+	padding:2px 0 0px 74px;
+	border-bottom:1px #CCC dotted;
+	font-size:14px;}
+
+div.sectionH3 dl.rank dt#rank_01{
+	background-image:url(../goods/img/1101/num_g01.gif);
+	background-repeat:no-repeat;
+	background-position:left;}
+
+div.sectionH3 dl.rank dt#rank_02{
+	background-image:url(../goods/img/1101/num_g02.gif);
+	background-repeat:no-repeat;
+	background-position:left;}
+	
+div.sectionH3 dl.rank dt#rank_03{
+	background-image:url(../goods/img/1101/num_g03.gif);
+	background-repeat:no-repeat;
+	background-position:left;}
+
+div.sectionH3 dl.rank dt#rank_04{
+	background-image:url(../goods/img/1101/num_g04.gif);
+	background-repeat:no-repeat;
+	background-position:left;}
+
+div.sectionH3 dl.rank dd{
+	margin:4px 6px;
+	padding:0 0 0 0;}
+
+div.sectionH3 dl.rank dd ol ol{
+	margin:4px 0 4px 0;
+	padding:0 0 0 24px;}
+
+div.sectionH3 dl.num dt{
+	margin:0 0 2px 0;
+	padding:0 0 0 26px;
+	font-size:14px;
+	border-bottom:1px #999 dashed;}
+
+div.sectionH3 dl.num dd{
+	margin:4px 6px;
+	padding:0;}
+
+div.sectionH3 dl.num dt#num01{
+	background-image:url(../goods/img/1101/num01.gif);
+	background-position:left;
+	background-repeat:no-repeat;}
+
+div.sectionH3 dl.num dt#num02{
+	background-image:url(../goods/img/1101/num02.gif);
+	background-position:left;
+	background-repeat:no-repeat;}
+	
+div.sectionH3 dl.num dt#num03{
+	background-image:url(../goods/img/1101/num03.gif);
+	background-position:left;
+	background-repeat:no-repeat;}
+
+div.sectionH3 img.imgL{
+	float:right;
+	margin:6px;}
+
+/* 今日から出来る花粉症対策 1202 */
+
+div#top div#main div#contentsArea div.sectionH3 ul.ul-kafun{
+	margin:10px 0 0 0;
+	list-style-type:none;
+	padding:0;}
+
+div.sectionH3 ul#bold-kafun{
+	font-weight:bold;
+	list-style-type:none;
+	margin:10px 0 0 0;
+	padding:0;}
+
+div.sectionH3 p.p-kafun{
+	font:bold;}
+
+div#support li{
+	display:inline;}
+
+div#support li#li-margin{
+	margin:	0 20px 0 0 ;}

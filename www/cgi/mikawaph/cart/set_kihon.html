@@ -1,0 +1,85 @@
+<center>
+<FORM METHOD=POST ACTION="set.cgi">
+<TABLE BGCOLOR=333333 CELLPADDING=0 CELLSPACING=0 WIDTH=600 BORDER=0>
+<TR>
+<TD>
+<TABLE CELLPADDING=1 CELLSPACING=1 WIDTH=100% BORDER=0>
+<TR BGCOLOR=CAED54 ALIGN=center><TD colspan=2 class="main2">基本項目設定</TD></TR>
+<TR BGCOLOR=FFFFCC><TD class="main2">
+<a href="javascript:function voi(){};voi()" onClick="winOpen('win1','help.cgi?key=user',380,380)"><img src="img/help.gif" border="0"></a>注文メールの送信先</TD><TD class="main2"><input type=text name=user value="$user" size=50></TD></TR>
+<TR BGCOLOR=FFFFCC><TD class="main2">
+<a href="javascript:function voi(){};voi()" onClick="winOpen('win1','help.cgi?key=subject',380,380)"><img src="img/help.gif" border="0"></a>注文メールのタイトル</TD><TD class="main2"><input type=text name=subject value="$subject"　注文書 size=50></TD></TR>
+<TR BGCOLOR=FFFFCC><TD class="main2">
+<a href="javascript:function voi(){};voi()" onClick="winOpen('win1','help.cgi?key=ginkou_pay',380,380)"><img src="img/help.gif" border="0"></a>銀行振込の設定</TD><TD class="main2"><input type="radio" name="ginkou_pay" VALUE="on" $ginkou_pay1>銀行振込オン<input type="radio" name="ginkou_pay" VALUE="off" $ginkou_pay2>銀行振込オフ</TD></TR>
+<TR BGCOLOR=FFFFCC><TD class="main2">
+<a href="javascript:function voi(){};voi()" onClick="winOpen('win1','help.cgi?key=yuubin_pay',380,380)"><img src="img/help.gif" border="0"></a>郵便振込の設定</TD><TD class="main2"><input type="radio" name="yuubin_pay" VALUE="on" $yuubin_pay1>郵便振込オン<input type="radio" name="yuubin_pay" VALUE="off" $yuubin_pay2>郵便振込オフ</TD></TR>
+<TR BGCOLOR=FFFFCC><TD class="main2">
+<a href="javascript:function voi(){};voi()" onClick="winOpen('win1','help.cgi?key=daibiki_pay',380,380)"><img src="img/help.gif" border="0"></a>代金引換払いの設定</TD><TD class="main2"><input type="radio" name="daibiki_pay" VALUE="on" $daibiki_pay1>代金引換払いオン<input type="radio" name="daibiki_pay" VALUE="off" $daibiki_pay2>代金引換払いオフ
+<br><br>
+	
+	<table CELLPADDING=1 CELLSPACING=1 WIDTH=100% BORDER=0>
+	<tr><td width="30"><td>
+	<TABLE BGCOLOR=333333 CELLPADDING=0 CELLSPACING=0 WIDTH=60% BORDER=0>
+	<TR><TD>
+	<table CELLPADDING=1 CELLSPACING=1 WIDTH=100% BORDER=0>
+		<TR BGCOLOR=CAED54 ALIGN=center><TD colspan=2 class="main2">代金引換手数料設定</TD></TR>
+		<TR BGCOLOR=FFFFCC><TD class="main2">10,000円未満の場合</TD><TD class="main2"><input type=text name=daibiki_0 value="$daibiki_0" size=5>円</TD></TR>
+		<TR BGCOLOR=FFFFCC><TD class="main2">10,000円以上<BR>30,000円未満の場合</TD><TD class="main2"><input type=text name=daibiki_1 value="$daibiki_1" size=5>円</TD></TR>
+		<TR BGCOLOR=FFFFCC><TD class="main2">30,000円以上<BR>100,000円未満の場合</TD><TD class="main2"><input type=text name=daibiki_3 value="$daibiki_3" size=5>円</TD></TR>
+		<TR BGCOLOR=FFFFCC><TD class="main2">100,000円以上<BR>300,000円未満の場合</TD><TD class="main2"><input type=text name=daibiki_10 value="$daibiki_10" size=5>円</TD></TR>
+	</table>
+	</td></tr>
+	</table>
+	</td></tr>
+	</table>
+<br>
+</TD></TR>
+<TR BGCOLOR=FFFFCC><TD class="main2">
+<a href="javascript:function voi(){};voi()" onClick="winOpen('win1','help.cgi?key=time_appoint',380,380)"><img src="img/help.gif" border="0"></a>配達時間帯指定の設定</TD><TD class="main2"><input type="radio" name="time_appoint" VALUE="on" $time_appoint1>配達時間帯指定オン<input type="radio" name="time_appoint" VALUE="off" $time_appoint2>配達時間帯指定オフ	</TD></TR>
+<TR BGCOLOR=FFFFCC><TD class="main2">
+<a href="javascript:function voi(){};voi()" onClick="winOpen('win1','help.cgi?key=day_appoint',380,380)"><img src="img/help.gif" border="0"></a>配達日指定の設定</TD><TD class="main2"><input type="radio" name="day_appoint" VALUE="on" $day_appoint1>配達日指定オン<input type="radio" name="day_appoint" VALUE="off" $day_appoint2>配達日指定オフ	</TD></TR>
+<TR BGCOLOR=CAED54 ALIGN=center><TD colspan=2 class="main2">基本送料設定</TD></TR>
+<TR BGCOLOR=FFFFCC><TD class="main2">
+<a href="javascript:function voi(){};voi()" onClick="winOpen('win1','help.cgi?key=souryou',380,380)"><img src="img/help.gif" border="0"></a>
+基本送料設定</TD><TD class="main2">
+$souryou_
+<br>
+<a href="javascript:function voi(){};voi()" onClick="winOpen('win1','help.cgi?key=souryou1',380,380)"><img src="img/help.gif" border="0"></a>
+固定送料<input type=text name=souryou1 value="$souryou1" size=8>円
+<br>
+<a href="javascript:function voi(){};voi()" onClick="winOpen('win1','help.cgi?key=free',380,380)"><img src="img/help.gif" border="0"></a>
+送料免除額…<input type=text name=souryou2 value="$souryou2" size=8>円以上購入時に送料無料
+</TD></TR>
+<TR BGCOLOR=FFFFCC><TD class="main2">
+<a href="javascript:function voi(){};voi()" onClick="winOpen('win1','help.cgi?key=todoufuken',380,380)"><img src="img/help.gif" border="0"></a>
+都道府県別送料選択時</TD><TD class="main2"><input type="radio" name="free" VALUE="on" $free1>一定額購入時は送料無料にする<br><input type="radio" name="free" VALUE="off" $free2>送料無料設定なし </TD></TR>
+<TR BGCOLOR=CAED54 ALIGN=center><TD colspan=2 class="main2">自由入力欄</TD></TR>
+<TR BGCOLOR="#FFFFCC" class="main2"><TD>
+<a href="javascript:function voi(){};voi()" onClick="winOpen('win1','help.cgi?key=mise_message',380,380)"><img src="img/help.gif" border="0"></a>
+お店からのメッセージ<br>（決済画面に表示されます）</TD><TD><TEXTAREA rows="5" cols="50" name="mise_message">$mise_message</TEXTAREA></TD></TR>
+<TR BGCOLOR="#FFFFCC" class="main2"><TD>
+<a href="javascript:function voi(){};voi()" onClick="winOpen('win1','help.cgi?key=headmessage',380,380)"><img src="img/help.gif" border="0"></a>
+商品案内ヘッダー<br>（商品案内画面の上部に表示されます）</TD><TD><TEXTAREA rows="5" cols="50" name="HeaderMessage">$HeaderMessage</TEXTAREA></TD></TR>
+<TR BGCOLOR="#FFFFCC" class="main2"><TD>
+<a href="javascript:function voi(){};voi()" onClick="winOpen('win1','help.cgi?key=footmessage',380,380)"><img src="img/help.gif" border="0"></a>
+商品案内フッター<br>（商品案内画面の上部に表示されます）</TD><TD><TEXTAREA rows="5" cols="50" name="FooterMessage">$FooterMessage</TEXTAREA></TD></TR>
+</table></TD></TR></TABLE><BR><INPUT TYPE="hidden" NAME="pass" VALUE="$pass">
+<INPUT TYPE="hidden" NAME="write" VALUE="ok">
+<input type="submit" value="決 定">
+
+<!-- 個人情報を記憶 --><input type="hidden" name="memory" VALUE="on">
+<!-- ファイルロック --><input type="hidden" name="f_lock" VALUE="on">
+<!-- sendmailのパス設定 --><input type=hidden name="mail_pass1" value="usr"><input type=hidden name="mail_pass2" value="sbin">
+<!-- ホームページのURL --><input type=hidden name="url_jump" value="http://www.kigusuri.com/ejima/index.html">
+<!-- 店舗へ戻るボタンの表示 --><input type=hidden name="url_name" value="店舗へ戻る" size=50>
+<!-- カートログの期限設定 [分]単位 --><input type=hidden name="del_minute" value="120" size=5>
+<!-- 在庫表示の設定 --><input type="hidden" name="zaiko_disp" VALUE="off">
+
+
+
+</FORM>
+
+
+<BR><BR>
+</center>
+

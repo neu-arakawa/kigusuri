@@ -1,0 +1,146 @@
+<?php
+  //共通
+  require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+  //メタディスクリプション
+  $description = '';
+
+  //メタキーワード
+  $keywords = '';
+
+  //Facebook　全ページ共通の場合は空白にしてください
+  $fbimage = '';
+
+  //タイトル
+  $title = '加盟店募集';
+
+  //css追加
+  $ex_tag_css = '<link rel="stylesheet" href="/member/css/style.css"><link rel="stylesheet" href="/member/css/template.css">';
+
+  //js追加
+  $ex_tag_js = '';
+
+  //bodyID
+  $bodyID = 'member';
+
+?>
+<?php include 'header.php'; ?>
+
+<div class="contents-header">
+  <ul class="topicpath fbox">
+    <li><a href="/">トップページ</a></li>
+    <li><a href="/contact_shop/">加盟店募集　お問い合わせフォーム</a></li>
+    <li>確認画面</li>
+  </ul>
+  <h1 class="header-ttl">確認画面</h1>
+</div>
+<!-- /.contents-header -->
+
+<div class="inner">
+  
+  
+  
+    <!--/////////////////入力画面 start ///////////////////-->
+  <div class="component-area">
+    <div class="l-sp-inner">
+      
+<div class="m-tablearea01">
+        <form method="post" loading>
+        <input type="hidden" name="{{csrf_key}}" value="{{csrf_token}}">
+        <input type="hidden" name="_REF" id="_REF" value="confirm"/>
+        <input type="hidden" name="_METHOD" id="_METHOD" value="PUT"/>
+        {% for key, data in c.request.post %}
+        {% if key != 'csrf_token' and key != 'next' and key != 'access' %}
+        <input type="hidden" name="{{ key }}">
+        {% endif %}
+        {% endfor %}
+          <div class="m-tablearea01__table">
+            <table class="m-table01">
+              <tr>
+                <th><span class="m-table01__heading">薬局・薬店名</span></th>
+                <td>
+                <p>{{ query.pharmacy_name }} </p>
+                </td>
+              </tr>
+              <tr>
+                <th><span class="m-table01__heading">ご担当者様 氏名</span></th>
+                <td><p>{{ query.name }}</p></td>
+              </tr>
+              <tr class="adress">
+                <th><span class="m-table01__heading">ご住所</span></th>
+                <td>
+                  <div class="m-table01__inputbox"><span class="label">郵便番号</span>
+                    <p class="tx_area">{{ query.zip }}</p>
+                  </div>
+                  <!-- /.m-table01__inputbox -->
+
+                  <div class="m-table01__inputbox"><span class="label">都道府県</span>
+                    <p class="tx_area">{{ query.pref }}</p>
+                  </div>
+                  <!-- /.m-table01__inputbox -->
+
+                  <div class="m-table01__inputbox"><span class="label">市区町村番地</span>
+                    <p class="tx_area">{{ query.addr1 }}</p>
+                  </div>
+                  <!-- /.m-table01__inputbox -->
+
+                  <div class="m-table01__inputbox"><span class="label">ビル・建物名</span>
+                    <p class="tx_area">{{ query.addr2 }}</p>
+                  </div>
+                  <!-- /.m-table01__inputbox -->
+                 </td> 
+                  
+              </tr>
+              <tr>
+                <th><span class="m-table01__heading">メールアドレス</span></th>
+                <td><p>{{ query.email }}</p></td>
+              </tr>
+              <tr>
+                <th><span class="m-table01__heading">電話番号</span></th>
+                <td><p>{{ query.tel }}</p></td>
+              </tr>
+              <tr>
+                <th><span class="m-table01__heading">漢方相談歴</span></th>
+                <td><p>{{ query.history }}</p></td>
+              </tr>
+                <tr>
+                  <th><span class="m-table01__heading">その他、ご意見・ご感想が<br class="pc-item">あればお寄せください。</span></th>
+                  <td>
+                  <p class="tx_area">{{ query.message | nl2br}}</p>
+
+                  </td>
+                </tr>
+            </table>
+            <!-- /.m-table01 --> 
+          </div>
+          <!-- /.m-tablearea01__table -->
+
+          <p class="component-wait-tx2">以下の内容で送信します。<br>送信内容に問題がなければ「送信する」ボタンをクリックしてください。</p>
+          <div class="m-tablearea01__btn">
+            <button class="m-arrow-btn02 m-arrow-btn02--prev m-arrow-btn02--gray" onclick="document.getElementById('_METHOD').value = '';">戻る<span class="m-arrow-btn01__icn"></span></button>
+            <button class="m-arrow-btn01">送信する<span class="m-arrow-btn01__icn"></span></button>
+          </div>
+        </form>
+      </div>
+    <!-- /.tablearea01 --> 
+    </div>
+    <!-- /.l-sp-inner --> 
+  </div>
+  <!-- /.component-area --> 
+  <!--/////////////////入力画面 end ///////////////////--> 
+
+  
+
+
+
+
+  
+  
+
+<!-- /.component-area --> 
+<!--/////////////////入力画面 end ///////////////////-->
+
+</div>
+<!-- /.inner -->
+
+<?php include 'footer.php'; ?>

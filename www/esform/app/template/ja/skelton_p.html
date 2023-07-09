@@ -1,0 +1,110 @@
+<? require_once './app/postman.php'; ?>
+<<?='?'?>xml version="1.0" encoding="utf-8"<?='?'?>>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-style-type" content="text/css" />
+	<meta http-equiv="content-script-type" content="text/javascript" />
+	<title>{$form_name}</title>
+	<link rel="stylesheet" type="text/css" href="./app/common.css" media="all" />
+	<script type="text/javascript" src="./app/prototype.js"></script>
+	<script type="text/javascript" src="./app/common.js"></script>
+</head>
+
+<body>
+
+
+<script type="text/javascript">
+// <![CDATA[
+	window.onload = function() {
+		Validator.register('inputform', [
+<?/* js_part_p */?>
+
+<?/* js_part_p */?>
+		]);
+	};
+// ]]>
+</script>
+
+
+<div id="container">
+
+<div id="contents">
+<? IF ($ERROR) : ?>
+	<h2>{$form_name} [エラー]</h2>
+	<p><a href="/">ホームページへ戻る</a></p>
+	<div class="box">
+		<ul class="error">
+			<li><?=$ERROR?>。</li>
+		</ul>
+		<p>
+			<a href="{$form_file}" onclick="history.go(-2);return false;" onkeypress="return;">入力画面へ戻る</a>
+		</p>
+	</div>
+<? ELSEIF ($DONE) : ?>
+	<h2>{$form_name} [完了]</h2>
+	<p><a href="/">ホームページへ戻る</a></p>
+	<p class="navi">入力画面 <span>&raquo;</span> 確認画面 <span>&raquo;</span> <em>完了画面</em></p>
+	<div class="box">
+		<ul>
+			<li>メールを送信しました。</li>
+			<li>返信されるまで、しばらくお待ち下さい。</li>
+			<li>1週間後の<?=mb_date(86400 * 7)?>になっても返信されない場合は届いていない可能性がありますので、再度送信して下さい。</li>
+		</ul>
+	</div>
+<? ELSEIF ($CONFIRM) : ?>
+	<h2>{$form_name} [確認]</h2>
+	<p><a href="/">ホームページへ戻る</a></p>
+	<p class="navi">入力画面 <span>&raquo;</span> <em>確認画面</em> <span>&raquo;</span> 完了画面</p>
+	<table summary="確認内容">
+<?/* confirm_part_p */?>
+
+<?/* confirm_part_p */?>
+	</table>
+	<form action="{$form_file}" method="post">
+		<fieldset>
+			<legend>{$form_name}</legend>
+			<input type="hidden" name="id" value="{$id}" />
+			<?=$hidden?>
+			<p style="text-align: center;">
+				<input type="button" value="やり直す" class="button" onclick="history.back();return false;" onkeypress="return;" />
+				<input type="submit" name="_send" value="この内容を送信する" class="button" style="width: 11em;" />
+			</p>
+		</fieldset>
+	</form>
+<? ELSE : ?>
+	<h2>{$form_name}</h2>
+	<p><a href="/">ホームページへ戻る</a></p>
+	<p class="navi"><em>入力画面</em> <span>&raquo;</span> 確認画面 <span>&raquo;</span> 完了画面</p>
+<? if ($errors) { ?>
+	<p class="error">入力エラーを訂正して下さい。</p>
+<? } ?>
+	<form action="{$form_file}" method="post" enctype="multipart/form-data" accept-charset="utf-8" id="inputform">
+		<fieldset>
+			<legend>{$form_name}</legend>
+			<input type="hidden" name="id" value="{$id}" />
+			<table summary="送信フォーム">
+<?/* form_part_p */?>
+
+<?/* form_part_p */?>
+			</table>
+			<p style="text-align: center;">
+				<input type="reset" value="やり直す" class="button" />
+				<input type="submit" value="確認画面へ" class="button" style="width: 10em;" />
+			</p>
+		</fieldset>
+	</form>
+<? ENDIF; ?>
+</div>
+
+<?/* 改変禁止 */?>
+<div id="copyright">
+	<address><a href="http://www.mt312.com/">ES-FORM</a></address>
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+/* CSS Document */
+#main{ margin: 0 22px 0 10px; padding:0; border:0;}
+#main #description{ font-size: 80%; line-height: 160%; color: #666;}
+#main #categoryName{margin:20px 0;}
+#main #contentsArea{ margin: 20px 15px; padding:0; border: 0; font-size:90%; line-height:140%;}
+#main #contentsArea .boxCaption h3{ margin: 20px 0; padding: 0;color:#f93; font-weight:bold;}
+#terada #wrp-contents #cont table.fl-l #main #contentsArea{ font-size:1em; line-height:1.4;}
+
+.clear{ clear:both; line-height:0;}
+.em01{color:#CC3333;}
+.new{ padding-right:25px; background-image:url(../images/new.gif); background-position:right top; background-repeat:no-repeat;}
+.imgL{ margin:0 15px 0 0; float:left;}
+.imgR{ margin:0 0 0 15px; float:right;}
+.headerA { margin:25px 0; padding:0 0 0 35px; color:#666; background-image:url(../images/common/a.gif); background-position:left center; background-repeat:no-repeat;}
+.headerB { margin:25px 0; padding:0 0 0 35px; color:#666; background-image:url(../images/common/b.gif); background-position:left center; background-repeat:no-repeat;}
+.liter{ font-size: xx-small;}
+
+.pagetop {font-size: 10px;text-align: right;margin: 30px 0 5px;clear:both;}
+.pagetop a{background: url(../images/bt_top.gif) no-repeat left center;padding: 0 0 0 20px;}
+
+
+/* indexH3
+------------------------------------------------*/
+.indexH3{ margin:40px 0;}
+.indexH3 h3{ margin:15px 0;}
+.indexH3 ul{ margin:0 0 0 15px; padding:0;}
+.indexH3 ul li{ margin:5px 0; padding:0 0 0 12px; font-weight:bold; list-style-type:none; background-image:url(../terada/img/listStyle1.gif); background-position:left center; background-repeat:no-repeat;} 
+
+
+/* sectionH3
+------------------------------------------------*/
+#contentsArea .sectionH3 { margin:20px 0;}
+#contentsArea .sectionH3 h3{ border-left:5px solid #C6EC4C;padding-left:5px;background:#f6f6f6;clear:both;}
+
+/* boxCaption
+------------------------------------------------*/
+#boxCaption{border-left:5px solid #999;padding-left:10px;height:80px;}
+#boxCaption p{ color:#f90; font-weight:bold; font-size:90%;}
+
+
+/* profile
+------------------------------------------------*/
+.headD {margin: 40px 0 10px;background-color: #c6ec4c;}
+.profile{width:582px;clear:both;}
+.profile .photoSpace{width:157px;float:left;text-align:center;font-size:12px;line-height:160%;padding:0 10px 0 0;}
+.profile .photoSpace dl{margin:0;}
+.profile .photoSpace dl dd{margin:0;}
+.profile .detailProf{width:415px;float:right;font-size:12px;line-height:160%;}
+.profile .detailProf h5{margin:10 0;}
+.profile .detailProf .sectionH4{margin:0 0 20px 0;}
+
+/* footNavi
+------------------------------------------------*/
+.footNavi {margin:20px 0; padding: 10px 0; background-image:url(../terada/img/bgfootNavi.gif); background-repeat:repeat-x; height:50px;}
+.footNavi ol{ margin:0; padding:0;}
+.footNavi ol li{ margin:0; padding:0; list-style-type:none; display:inline; font-weight:bold; line-height:200%;}
+.footNavi a.next{ float:right; padding-right:30px; background-image:url(../images/common/arrowR.gif); background-repeat:no-repeat; background-position:right center;}
+.footNavi a.back{ float:left; padding-left:30px; background-image:url(../images/common/arrowL.gif); background-repeat:no-repeat; background-position:left center;}
+.footNavi .btn { margin:20px 0 10px; text-align:center;}
+
+
+/* image
+----------------------------------------------------------*/
+#contentsArea .image{
+padding:0 0 10px 100px;
+margin: 20px 0;
+background-image:url(../terada/img/img_completion.gif);
+background-repeat:no-repeat;
+background-position:left top;
+border-bottom:1px dotted #99cc33;
+}
+#contentsArea .image h4{display:none;}
+
+
+/* gallery
+----------------------------------------------------------*/
+/* index.html */
+.galleryR dl{ margin:0; padding:0; float:right;}
+.galleryR dl dt{ margin:0; padding:0;}
+.galleryR dl dd{ margin:0; padding:0; color:#666; font-size:80%;}
+/* other */
+.gallery th{ padding:2px;}
+.gallery td{ padding:2px; font-size:80%; color:#666;}
+
+
+/* prepare
+----------------------------------------------------------*/
+#contentsArea .prepare{
+margin:20px 0;
+padding:0 0 10px 100px;
+background-image:url(../terada/img/img_prepare.gif);
+background-repeat:no-repeat;
+background-position:left top;
+border-bottom:1px dotted #6c3;
+}
+#contentsArea .prepare h4{ display:none;}
+#contentsArea .prepare h5{ margin:5px 0; padding:2px 5px 2px 20px; color:#390; background-image:url(../terada/img/mark01.gif); background-position:left; background-repeat:no-repeat;}
+#contentsArea .prepare dl {
+	margin:0 0 20px 0;
+	padding:5px;
+	background-color:#F6FEF1;
+	border:1px solid #6c3;
+	font-size:95%;
+}
+#contentsArea .prepare dl dt{ margin:0; padding:0 0 0 5px; border-left:5px solid #6c3;}
+#contentsArea .prepare dl dd{ margin:0 0 0 10px; padding:0;}
+.list_no { list-style-type: none; } 
+
+/* howto
+----------------------------------------------------------*/
+#contentsArea .howto{
+margin:20px 0;
+padding:0 0 10px 100px;
+background-image:url(../terada/img/img_howto.gif);
+background-repeat:no-repeat;
+background-position:left top;
+border-bottom:1px dotted #99cc33;
+}
+#contentsArea .howto h4{ display:none;}
+#contentsArea .howto h5{ margin:5px 0; padding:2px 5px 2px 20px; color:#390; background-image:url(../terada/img/mark01.gif); background-position:left; background-repeat:no-repeat;}
+#contentsArea .howto h6{ margin:5px 0 5px 0; padding:0 5px 0 3px; color:#390; border-left:solid 5px #66CC66; font-size:100%;}
+#contentsArea .howto dl { margin:0 0 20px 0; padding:5px; background-color:#F6FEF1; border:1px solid #6c3;}
+#contentsArea .howto dl dt{ margin:0; padding:0 0 0 5px; border-left:5px solid #6c3;}
+#contentsArea .howto dl dd{ margin:0 0 0 10px; padding:0;}
+
+/* step
+----------------------------------------------------------*/
+#contentsArea .step1{ margin:20px 0 70px; padding:0 0 0 100px; background-image:url(../terada/img/step1.gif); background-position:15px top; background-repeat:no-repeat;}
+#contentsArea .step1 h3 { padding:0 0 3px 0; color:#5BB500; font-size:110%; border-bottom:3px dotted #666;}
+#contentsArea .step1 p{ margin:10px 0 10px 10px;}
+
+#contentsArea .step2{ margin:20px 0 70px; padding:0 0 0 100px; background-image:url(../terada/img/step2.gif); background-position:15px top; background-repeat:no-repeat;}
+#contentsArea .step2 h3 { padding:0 0 3px 0; color:#5BB500; font-size:110%; border-bottom:3px dotted #666;}
+#contentsArea .step2 p{ margin:10px 0 10px 10px;}
+
+#contentsArea .step3{ margin:20px 0 70px; padding:0 0 0 100px; background-image:url(../terada/img/step3.gif); background-position:15px top; background-repeat:no-repeat;}
+#contentsArea .step3 h3 { padding:0 0 3px 0; color:#5BB500; font-size:110%; border-bottom:3px dotted #666;}
+#contentsArea .step3 p{ margin:10px 0 10px 10px;}
+
+#contentsArea .step4{ margin:20px 0 70px; padding:0 0 0 100px; background-image:url(../terada/img/step4.gif); background-position:15px top; background-repeat:no-repeat;}
+#contentsArea .step4 h3 { padding:0 0 3px 0; color:#5BB500; font-size:110%; border-bottom:3px dotted #666;}
+#contentsArea .step4 p{ margin:10px 0 10px 10px;}
+
+#contentsArea .step5{ margin:20px 0 70px; padding:0 0 0 100px; background-image:url(../terada/img/step5.gif); background-position:15px top; background-repeat:no-repeat;}
+#contentsArea .step5 h3 { padding:0 0 3px 0; color:#5BB500; font-size:110%; border-bottom:3px dotted #666;}
+#contentsArea .step5 p{ margin:10px 0 10px 10px;}
+
+
+/* summary
+----------------------------------------------------------*/
+.summary {
+	margin: 20px 0;
+	padding: 0 10px 0 120px;
+	min-height: 170px;
+	color: #990000;
+	line-height: 1.4;
+	border-top: 1px solid #FF9999;
+	border-bottom: 1px solid #FF9999;
+	background-color:#FFECEC;
+	background-image:url(../terada/img/terada.gif);
+	background-repeat:no-repeat;
+	background-position:left bottom;
+}
+
+
+
+/* categoryList
+----------------------------------------------------------*/
+#main .categoryList{font-size:80%;line-height:160%;background: url(../images/supplement/line_spacer.gif) no-repeat left top;margin-top: 40px;padding-top: 15px;}
+#main .categoryList div{width:291px;float:left;}
+#main .categoryList ul{margin:5px 0 0 0;padding:0;}
+#main .categoryList ul li{margin:0 0 0 20px;padding:0;}
+#main .categoryList p { margin:5px 0 5px 20px;}
+#main .categoryList p a{  padding-left:12px; background-image:url(../images/mark_triangle.gif); background-repeat:no-repeat; background-position:left center;}
+#top table tr td table tr td #main #contentsArea .sectionH3 .prepare dl {
+	margin-top: 5px;
+}
+
+.bold{
+	font-weight:bold;
+}

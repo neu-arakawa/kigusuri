@@ -1,0 +1,13 @@
+Options +Includes
+Options +ExecCGI
+
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{HTTPS} off
+RewriteCond %{REQUEST_URI} .*/cart.*$
+RewriteCond %{REQUEST_URI} !^.*\.(js|css|gif|jpg|png|ico)$
+RewriteRule ^(.*)$ https://www.kigusuri.com%{REQUEST_URI} [R,L]
+
+# 漢方マルヱ薬局様 通販カート削除に伴い、自社サイトからの通販リンクを商品紹介記事へ誘導
+RedirectMatch (.*)/cgi/marue/(.*)$ http://www.kigusuri.com/shop/marue/topic/1429578000.html

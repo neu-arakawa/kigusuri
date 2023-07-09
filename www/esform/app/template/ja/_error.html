@@ -1,0 +1,7 @@
+{if $errors}
+			<ul class="error">
+{foreach from=$errors key=key item=error}
+				<li>{$error}。</li>
+{/foreach}
+			</ul>
+{/if}

@@ -1,0 +1,11 @@
+<tr>
+<td colspan="2" height="10"><img src="img/spacer.gif" width="1" height="10"></td>
+</tr>
+<tr>
+<td width="25" align="center"><img src="img/img_marker.gif" width="15" height="15"></td>
+<td width="345">[ $crdy ]</td>
+</tr>
+<tr>
+<td width="25" align="center">&nbsp;</td>
+<td width="345"><a href="./topic.html#$kjno">$tpname</a></td>
+</tr>

@@ -1,0 +1,37 @@
+{% macro file_upload_input(name, obj) %}
+    {% set obj = obj[name] %}
+    <ul class="tableInner">
+    {% if obj.tmp_name %}
+     <li>
+     <li><label><input name="{{name}}_delete" type="checkbox" value="on" />削除する</label></li>
+      <dl class="inner fBox useimg">
+     <dd>
+     {% if obj.tmp_name matches '/\.gif$|\.png$|\.jpg$|\.jpeg$|\.bmp$/i' %}
+     <img src="{{ obj.tmp_name }}?dummy={{ random() }}" alt="選択されている画像" width="300"/>
+     {% else %}
+     <a href="{{ obj.tmp_name }}?dummy={{ random() }}" target="{{name}}"/>登録されているファイル</a>
+     {% endif %}
+     </dd>
+ </dl></li>
+     {% endif %}
+ 	<li><dl class="inner fBox useimg">
+     <dd><input name="{{name}}" type="file" /><br />
+     <span class="note">容量は2MBバイトまでアップロード可能です。</span></dd>
+    </dl>
+    </li>
+    </ul>
+{% endmacro %}
+
+{% macro file_upload_preview(name, obj) %}
+    {% set obj = obj[name] %}
+    {% if obj.tmp_name and obj.mode != 'delete'  %}
+        {% if obj.tmp_name and obj.tmp_name matches '/\.gif$|\.png$|\.jpg$|\.jpeg$|\.bmp$/i' %}
+        <img src='{{ obj.tmp_name }}' width="300">
+        {% else %}
+        <a href='{{ obj.tmp_name }}' target="img">アップロードされたファイル</a>
+        {% endif %} 
+    {% else %}
+    -
+    {% endif %} 
+{% endmacro %}
+

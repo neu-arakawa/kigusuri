@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<title>漢方薬局 相談 | 愛知県瀬戸市 | 漢方専門　薬草園薬局 | 健康トピックス</title>
+<meta name="description" content="愛知県瀬戸市の漢方薬局、漢方専門　薬草園薬局からの漢方・健康に関する最新情報。">
+<meta name="Keywords" content="漢方薬局,漢方薬,漢方相談,漢方,健康トピックス,愛知県瀬戸市,漢方専門　薬草園薬局">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script type="text/javascript" src= "common.js" language="JavaScript"></script>
+<link href="../shopitem.css" rel="stylesheet" type="text/css">
+<link href="css/original.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="MM_preloadImages('../navi_img/type_green02/navi_kigusuri-over.gif','../navi_img/type_green02/navi_home-over.gif','../navi_img/type_green02/navi_shop-over.gif','../navi_img/type_green02/navi_support-over.gif','../navi_img/type_green02/navi_faq-over.gif')">
+<div align="center">
+<table width="802" border="0" cellspacing="0" cellpadding="0" height="100%">
+<tr>
+<td class="sidecolor-g" width="1" rowspan="2"><img src="img/spacer.gif" width="1" height="10"></td>
+<td valign="top">
+
+<!--▼ ヘッダーはじまり　▼-->
+<div id="header" class="amadokoro">
+<a href="http://www.kigusuri.com/shop/yakusoen/"><img src="img/img_logo.gif" alt="漢方専門　薬草園薬局" id="logo"></a>
+<img src="img/bn_soudan.gif" alt="電話で漢方相談 0561-83-8856" id="pn">
+</div>
+<!-- /header  -->
+<div id="snavi">
+<ul>
+<!--<li><a href="mailto:"><img src="../navi_img/green/navi_icon04.gif" alt="お問い合せ"></a></li>-->
+<li><a href="support.php#contact"><img src="../navi_img/green/navi_icon04.gif" alt="お問い合せ"></a></li>
+<li><a href="sitemap.html"><img src="../navi_img/green/navi_icon02.gif" alt="サイトマップ"></a></li>
+<li><a href="privacy.html"><img src="../navi_img/green/navi_icon03.gif" alt="個人情報保護"></a></li>
+<li><a href="access.html"><img src="../navi_img/green/navi_icon05.gif" alt="交通アクセス"></a></li>
+</ul>
+</div><!-- /snavi -->
+<div id="gnavi">
+<ul>
+<li><a href="http://www.kigusuri.com/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('n1','','../navi_img/type_green02/navi_kigusuri-over.gif',1)" target="_blank"><img src="../navi_img/type_green02/navi_kigusuri.gif" alt="漢方薬 漢方薬局 薬店のことなら きぐすり.com" name="n1" id="n1"></a></li>
+<li><a href="index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('n2','','../navi_img/type_green02/navi_home-over.gif',1)"><img src="../navi_img/type_green02/navi_home.gif" alt="ホームへ" name="n2" id="n2"></a></li>
+<li><a href="guide.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('n3','','../navi_img/type_green02/navi_shop-over.gif',1)"><img src="../navi_img/type_green02/navi_shop.gif" alt="店舗紹介" name="n3" id="n3"></a></li>
+<li><a href="support.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('n6','','../navi_img/type_green02/navi_support-over.gif',1)"><img src="../navi_img/type_green02/navi_support.gif" alt="相談方法" name="n6" id="n6"></a></li>
+<li><a href="faq.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('n7','','../navi_img/type_green02/navi_faq-over.gif',1)"><img src="../navi_img/type_green02/navi_faq.gif" alt="よくあるご質問" name="n7" id="n7"></a></li>
+</ul>
+</div><!-- /gnavi -->
+<!--▲ ヘッダーおわり　▲-->
+
+<div align="center">
+
+$rdata2
+
+</div>
+
+</td>
+<td class="sidecolor-g" width="1" rowspan="2"><img src="img/spacer.gif" width="1" height="10"></td>
+</tr>
+<tr>
+<td align="center" valign="bottom">
+
+<!-- ▼フッター始まり▼ -->
+<address>
+<script language="javascript" type="text/javascript">
+<!--
+var dates = new Date();
+var d = dates.getYear();
+var n = (d < 2000) ? d+1900 : d;
+document.write("Copyright"+"&copy; "+n+" YAKUSOEN PHARMACY. All Rights Reserved.");
+// --></script>
+</address>
+<noscript>
+<address>Copyright&copy; YAKUSOEN PHARMACY. All Rights Reserved.</address>
+</noscript>
+<!-- ▲フッター終わり▲ -->
+
+</tr>
+</table>
+</div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2810667-1";
+urchinTracker();
+</script>
+</body>
+</html>

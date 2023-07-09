@@ -1,0 +1,228 @@
+<?php
+  //共通
+  require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+  //メタディスクリプション
+  $description = '';
+
+  //メタキーワード
+  $keywords = '';
+
+  //Facebook　全ページ共通の場合は空白にしてください
+  $fbimage = '';
+
+  //タイトル
+  $title = '';
+
+  //css追加
+  $ex_tag_css = '<link rel="stylesheet" href="/member.shop/css/style.css"><link rel="stylesheet" href="/member.shop/css/template.css">';
+
+  //js追加
+  $ex_tag_js = '<script src="/member.shop/js/script.js"></script>';
+
+  //bodyID
+  $bodyID = 'mypage';
+
+?>
+
+  <?php include 'header.php'; ?>
+
+	<div class="contents-header">
+		<ul class="topicpath fbox">
+			<li><a href="{{ c.app.urlFor('pharmacy_mypage') }}">マイページ</a></li>
+            <li>回答履歴</li>
+        </ul>
+		<h1 class="header-ttl">回答履歴</h1>
+	</div>
+    <!-- /.contents-header -->
+
+  <div class="inner">
+
+    <div class="component-area">
+      <div class="m-tablearea01">
+        <div class="l-sp-inner">
+          <p class="m-tablearea01__num">これまでに回答いただいた<br class="sp-item">漢方相談の件数： <span class="m-tablearea01__cnt">{{ c.member.answer_cnt }}</span> 件</p>
+        </div>
+        <!-- /.l-sp-inner -->
+        <div class="m-tablearea01__heading">
+          <div class="m-heading02">
+            <p class="m-heading02__txt">絞り込み検索</p>
+          </div>
+          <!-- /.m-heading02 -->
+        </div>
+        <!-- /.m-tablearea01__heading -->
+        <div class="l-sp-inner">
+            <form method="get">
+            <div class="m-tablearea01__table">
+              <table class="m-table01 m-table01--type03">
+                <tr>
+                  <th><span class="m-table01__heading">カテゴリー</span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                      <select name='category_id'>
+                        <option value=''>カテゴリを選択してください</option>
+                        {% for k, v in c.config('question_categories') %}
+                        <option value='{{ k }}'>{{ v }}</option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                  </td>
+                </tr>
+                <tr>
+                  <th><span class="m-table01__heading">相談者の属性</span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                      <ul class="m-selectlist01">
+                        <li class="m-selectlist01__item m-selectlist01__item--sex">
+                          <p class="m-selectlist01__tit">性別</p>
+                          <div class="m-selectlist01__select">
+                            <select name='member_sex'>
+                              <option value=''>男女どちらも</option>
+                              <option value='男性'>男性</option>
+                              <option value='女性'>女性</option>
+                            </select>
+                          </div>
+                          <!-- /.m-selectlist01__select -->
+                        </li>
+                        <li class="m-selectlist01__item m-selectlist01__item--year">
+                          <p class="m-selectlist01__tit">年代</p>
+                          <div class="m-selectlist01__select">
+                            <select name='member_age'>
+                              <option value=''>-</option>
+                              <option value='0'>10歳未満</option>
+                              <option value='10'>10代</option>
+                              <option value='20'>20代</option>
+                              <option value='30'>30代</option>
+                              <option value='40'>40代</option>
+                              <option value='50'>50代</option>
+                              <option value='60'>60代</option>
+                              <option value='70'>70代</option>
+                              <option value='80'>80代</option>
+                              <option value='90'>90代</option>
+                              <option value='100'>100代以上</option>
+                            </select>
+                          </div>
+                          <!-- /.m-selectlist01__select -->
+                        </li>
+                        <li class="m-selectlist01__item m-selectlist01__item--pref">
+                          <p class="m-selectlist01__tit">都道府県</p>
+                          <div class="m-selectlist01__select">
+                            <select name='member_pref'>
+                                <option value=''>-</option>
+                                {% for pref in c.config('prefectures')%}
+                                <option value='{{ pref }}'>{{ pref }}</option>
+                                {% endfor %}
+                            </select>
+                          </div>
+                          <!-- /.m-selectlist01__select -->
+                        </li>
+                      </ul>
+                      <!-- /.m-selectlist -->
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                  </td>
+                </tr>
+                <tr>
+                  <th><span class="m-table01__heading">キーワード</span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                      <input type="text" name='keyword'>
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                  </td>
+                </tr>
+                <tr>
+                  <th><span class="m-table01__heading">状態</span></th>
+                  <td>
+                    <div class="m-table01__inputbox">
+                      <ul class="m-table01__radiolist clearfix">
+                        <li>
+                          <label>
+                            <input type="radio" name="dead_stat" value='' checked="checked">すべて</label>
+                        </li>
+                        <li>
+                          <label>
+                            <input type="radio" name="dead_stat"  value='1'  >解決済み</label>
+                        </li>
+                        <li>
+                          <label>
+                            <input type='checkbox' name='response' value='1'>相談者からのコメント有り 
+                            </label>
+                        </li>
+                      </ul>
+                      <!-- /.m-table01__radiolist -->
+                    </div>
+                    <!-- /.m-table01__inputbox -->
+                  </td>
+                </tr>
+              </table>
+              <!-- /.m-table01 -->
+            </div>
+            <!-- /.m-tablearea01__table -->
+            <div class="m-tablearea01__btn">
+              <button class="m-arrow-btn01">この条件で絞り込む<span class="m-arrow-btn01__icn"></span></button>
+            </div>
+          </form>
+        </div>
+        <!-- /.l-sp-inner -->
+      </div>
+      <!-- /.m-tablearea01 -->
+    </div>
+    <!-- /.component-area -->
+
+
+
+    <!--/////////////////相談履歴 start ///////////////////-->
+    <div class="component-area">
+
+      <div class="m-category01">
+        <p class="m-category01__total">検索結果： <span class="m-category01__totalbig">{{ pager.total_count }}</span> 件</p>
+        <div class="m-txt-area01__btmright">
+        <p class="m-txt-area01__clear"><a href="{{ c.app.urlFor('answer_history') }}">検索条件をクリアしてすべて表示</a></p>
+        
+        </div>
+
+        {% if list|length %}
+        <div class="m-category01__box">
+          <div class="m-category01__count">
+            <span class="m-category01__smallnum">{{ pager.total_count }}</span>件中 / <span class="m-category01__bignum">{{ pager.start_cnt }}〜{{ pager.end_cnt }}</span> 件表示
+          </div>
+          <!-- /.m-category01__count -->
+          <ul class="m-category01__bal-list">
+            {% include '/Front/Parts/question_list.twig' %}
+          </ul>
+
+          {% if pager.next or pager.prev %}
+          <!-- /.m-category01__bal-list -->
+          <ul class="m-category01__btn-list">
+            {% if pager.prev %}
+            <li><a href="{{ url }}&page={{ pager.prev}}" class="m-arrow-btn02 m-arrow-btn02--prev m-arrow-btn02--gray">前へ</a></li>
+            {% endif %}
+            {% if pager.next %}
+            <li><a href="{{ url }}&page={{ pager.next }}" class="m-arrow-btn02 m-arrow-btn02--next m-arrow-btn02--green">次へ</a></li>
+            {% endif %}
+          </ul>
+          <!-- /.m-category01__btn-list -->
+          {% endif %}
+
+        </div>
+        <!-- /.m-category01__box -->
+        {% else %}
+        <div class="m-category01__box">
+        <p class="atn-tx">お探しの検索条件は見つかりませんでした。</p>
+        </div>
+        <!-- /.m-category01__box -->
+        {% endif %}
+      </div>
+      <!-- /.m-category01 -->
+    </div>
+    <!-- /.component-area -->
+
+    <!--/////////////////相談履歴 end ///////////////////-->
+
+    {% include '/Front/Parts/pharmacy_support.twig' %}
+  </div>
+  <!-- /.inner -->
+  
+  <?php include 'footer.php'; ?>

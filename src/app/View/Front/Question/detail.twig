@@ -1,0 +1,269 @@
+<?php
+  //共通
+  require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+  //メタディスクリプション
+  $description = mb_substr($context['question']['content'],0,120);
+
+  //メタキーワード
+  $keywords = '';
+
+  //Facebook　全ページ共通の場合は空白にしてください
+  $fbimage = '';
+
+  //タイトル
+  $title = mb_substr(h($context['question']['content']),0,25).(mb_strlen($context['question']['content']) > 25 ? '...':'');
+
+  //css追加
+  $ex_tag_css = '<link rel="stylesheet" href="/consultation/css/style.css">
+  <link rel="stylesheet" href="/consultation/css/template.css">';
+
+  //js追加
+  $ex_tag_js = '<script src="/consultation/js/script.js"></script>
+    <script src="/common/js/jquery.transit.min.js"></script>
+    <script src="/common/js/readmore.min.js"></script>
+  ';
+
+  //bodyID
+  $bodyID = 'consultation';
+
+?>
+<?php include 'header.php'; ?>
+
+	<div class="contents-header">
+		<ul class="topicpath fbox">
+			<li><a href="/">トップページ</a></li>
+			<li><a href="/consultation/">みんなの漢方相談Q&amp;A</a></li>
+			<li>ご相談内容</li>
+		</ul>
+		<h1 class="header-ttl">ご相談内容</h1>
+	</div>
+    <!-- /.contents-header -->
+
+
+  <div class="inner">
+
+    {% set category = c.question_category(question['category_id'])  %}
+    <input type="hidden" name="like_answer_url" value="{{ c.app.urlFor('like_answer') }}">
+    <input type="hidden" name="{{csrf_key}}" value="{{csrf_token}}">
+    {% if myself %}
+    <input type="hidden" name="response_url" value="https://{{ c.app.request.getHost}}{{ c.app.urlFor('qa_response') }}">
+    <input type="hidden" name="response_delete_url" value="https://{{ c.app.request.getHost}}{{ c.app.urlFor('qa_response_delete') }}">
+    <input type='hidden' name='question_id' value='{{ question['id'] }}'>
+    {% endif %}
+
+    <div class="component-area">
+      <div class="l-sp-inner">
+        <div class="m-question01 {%if question.dead_stat == 1 %}m-question01--resolved{% endif %}">
+          <p class="m-question01__tit"><img src="/consultation/img/question01_tit.png" alt="ご相談内容"></p>
+          <div class="m-question01__balloon">
+            <div class="m-bal02">
+              <div class="m-bal02__inforow">
+                <p class="m-bal02__profile">
+                {% if question.member_sex == '男性' %}
+                <img src="/consultation/img/question01_icn_male.png" alt="">
+                {% else %}
+                <img src="/consultation/img/question01_icn_female.png" alt="">
+                {% endif %}
+                </p>
+                <div class="m-bal02__userdata">
+                  <p class="m-bal02__name">{{ question.member_nickname }}さん</p>
+                  <div class="m-bal02__midrow clearfix">
+                    <ul class="m-bal02__infolist m-bal01__info clearfix">
+                      <li>（{{ question.member_age | era }}・{{ question.member_sex }}）からの相談</li>
+                      <li>部位・症状: <a href="{{ c.app.urlFor('qa_list', {'search_type': 'category', 'q' : category })  }}">{{ category }}</a></li>
+
+                      {% if question.approval_stat == 0 %}
+                      <li class="m-bal01__flag m-bal01__flag--red"><span class="m-bal01__flagtxt">承認待ち</span></li>
+                      {% elseif question.dead_stat == 0 %}
+                      <li class="m-bal01__flag m-bal01__flag--orange"><span class="m-bal01__flagtxt">回答受付中</span></li>
+                      {% elseif question.dead_stat == 2 %}
+                      <li class="m-bal01__flag m-bal01__flag--gray"><span class="m-bal01__flagtxt">回答締切</span></li>
+                      {% endif %}
+
+                    </ul>
+                    <!-- /.m-bal02__infolist -->
+                    <p class="m-bal02__date">投稿日時: {{ question.created| date('Y/m/d H:i') }}</p>
+                  </div>
+                  <!-- /.m-bal02__midrow -->
+                </div>
+                <!-- /.m-bal02__userdata -->
+              </div>
+              <!-- /.m-bal02__inforow -->
+              <p class="m-bal02__txt autolink">
+                {{ question['content'] | nl2br }}
+              </p>
+              {% if myself %}
+              <p>
+                {% if question.answer_cnt > 0 %}
+                  <p class="request_delete_link"><a href="{{ c.app.urlFor('qa_delete', { 'question_id': question['id']})}}">この相談を削除する</a></p>
+                {% else %}
+                <p class="request_delete"><a href="{{ c.app.urlFor('qa_delete', { 'question_id': question['id']})}}">この相談を削除する</a></p>
+                {% endif %}
+              </p>
+              {% endif %}
+            </div>
+            <!-- /.m-bal02 -->
+          </div>
+          <!-- /.m-question01__balloon -->
+            {% if myself and question.dead_stat != 1 and question.answer_cnt > 0 %}
+                <p class="m-question01__resolve-btn"><a href="javascript:void(0)" url='https://{{ c.app.request.getHost}}{{ c.app.urlFor('qa_resolved')}}'>この相談を解決済みにする</a></p>
+                <p class="m-question01__resolved" style='display:none;'><img src="/consultation/img/question01_img_resolve.png" style='width:200px;opacity:0.4;' alt="解決済み"></p>
+            {% elseif question.dead_stat == 1 %}
+                <p class="m-question01__resolved"><img src="/consultation/img/question01_img_resolve.png" alt="解決済み"></p>
+            {% endif %}
+
+        </div>
+        <!-- /.m-question01 -->
+      </div>
+      <!-- /.l-sp-inner -->
+    </div>
+    <!-- /.component-area -->
+
+    {% if question.answer_cnt %}
+    <div class="component-area">
+      <div class="m-answer-area01">
+        <div class="m-answer-area01__titrow">
+          <p class="m-answer-area01__tit"><img src="/consultation/img/answer01_tit.png" alt="漢方薬局からの回答"></p>
+          <ul class="m-answer-area01__num-list">
+            <li>回答：<span class="m-answer-area01__num-big">{{ question.answer_cnt }}</span>件</li>
+            <li>参考になった：<span class="m-answer-area01__num-big">{{ question.like_cnt }}</span>件</li>
+          </ul>
+          <!-- /.m-answer-area01__num-list -->
+        </div>
+        <!-- /.m-answer-area01__titrow -->
+        <ul class="m-answer-area01__list">
+
+        {% for d in answers %}
+          <li>
+            <ul class="m-answer-area01__answer-box">
+              <li>
+                <div class="m-txt-area01 m-txt-area01--answer">
+                  <div class="m-txt-area01__toprow">
+                    {% if d.pharmacy_active %}
+                        {% if d.pharmacy_image %}
+                        <p class="m-txt-area01__icon"><img src="{{ d.pharmacy_image }}" alt=""></p>
+                        {% endif %}
+                        <p class="m-txt-area01__name">
+                            <a href="{{ c.app.urlFor('shop_detail',{'code': d.pharmacy_code }) }}">{{ d.pharmacy_name }}</a>
+                        </p>
+                    {% else %}
+                        <!-- 蘆田さん ここから -->
+                        <p class="m-txt-area01__icon"><img src="/common/img/thumb_commonshop.gif" alt=""></p>
+                        <p class="m-txt-area01__name2">{{ d.pharmacy_name }}</p>
+                        <!-- ここまでお願いします -->
+                    {% endif %}
+                  </div>
+                  <!-- /.m-txt-area01__toprow -->
+
+                  {% if myself == false and d.only_flg %}
+                  <p class="m-txt-area01__txt">この回答は非公開です。質問者のみご覧いただけます。</p>
+                  <div class="m-txt-area01__btmrow clearfix">
+                    <p class="m-txt-area01__date">回答日時: {{ d.answer_date | date('Y/m/d H:i') }}</p>
+                  </div>
+                  <!-- /.m-txt-area01__btmrow -->
+                  {% else %}
+                  <p class="m-txt-area01__txt autolink">
+                    {{ d.answer |trim | nl2br }}
+                  </p>
+                  <div class="m-txt-area01__btmrow clearfix">
+                    <p class="m-txt-area01__date">回答日時: {{ d.answer_date | date('Y/m/d H:i') }}</p>
+                    <div class="m-txt-area01__btmright">
+                      <div class="m-good-btn01 clearfix">
+                        <p class="m-good-btn01__cnt">{{ d.like_cnt }}</p>
+                        <p class="m-good-btn01__btn"><a href="javascript:void(0);" answer_id='{{ d.answer_id }}' class="m-good-btn01__btn-body {{ c.like_answer_clicked(d.answer_id) ? 'is-click': ''}}">参考になった!</a></p>
+                      </div>
+                        <!--<p class="m-good-btn01__btn"><input type="button" value="1回クリックした後、無効になります" onclick="disabled = true;"></p>-->
+                      <!-- /.m-good-btn01 -->
+                    </div>
+                    <!-- /.m-txt-area01__btmright -->
+                  </div>
+                  {% endif %}
+
+                  <!-- /.m-txt-area01__btmrow -->
+                </div>
+                <!-- /.m-txt-area01 -->
+              </li>
+
+              {% if d.only_flg == false and d.response_id or ( myself and question.dead_stat ==0 and question.response_limit == false) %}
+              <li>
+                <div class="m-txt-area01 m-txt-area01--comment">
+                  <div class="m-txt-area01__toprow">
+                    <p class="m-txt-area01__icon"><img src="/consultation/img/balloon01_icn_{{ question.member_sex == '男性' ? 'male' : 'female' }}01.png" alt=""></p>
+                    <p class="m-txt-area01__name">{{ d.member_nickname }}さんからのコメント</p>
+                  </div>
+                  <!-- /.m-txt-area01__toprow -->
+                  {% if d.response_id %}
+                    {% include '/Front/Parts/member_response.twig' with { msg : d , question: question} %}
+                  {% else %}
+                    {% include '/Front/Parts/member_response.twig' with { input : d} %}
+                  {% endif %}
+                </div>
+                <!-- /.m-txt-area01 -->
+              </li>
+              {% endif %}
+
+            </ul>
+            <!-- /.m-answer-area01__answer-box -->
+          </li>
+          <li>
+          {% endfor %}
+      </div>
+      <!-- /.m-answer-area01 -->
+    </div>
+    <!-- /.component-area -->
+    {% else %}
+    <div class="component-wait-tx">
+
+    {% if question.dead_stat == 0 %}
+    <p>回答がまだありません。薬局から回答があるまでしばらくお待ちください。</p>
+    {% endif %}
+
+    <div class="m-tablearea01__btn"><button class="m-arrow-btn01" type="button" onclick="location.href='/consultation/'">漢方相談Q&amp;Aトップ<br class="pc-item">に戻る<span class="m-arrow-btn01__icn"></span></button></div>
+    </div>
+    {% endif %}
+
+    {% if list|length %}
+    <div class="component-area">
+      <div class="m-newly01">
+        <p class="m-newly01__tit"><img src="/consultation/img/newly01_tit2.png" alt="こんな相談も寄せられています"></p>
+        <ul class="m-newly01__bal-list">
+            {% include '/Front/Parts/question_list.twig' %}
+        </ul>
+        <!-- /.m-newly01__bal-list -->
+      </div>
+      <!-- /.m-newly01 -->
+    </div>
+    <!-- /.component-area -->
+    {% endif %}
+
+    <div class="component-area">
+    {% include '/Front/Parts/search_form.twig' %}
+    </div>
+    <!-- /.component-area -->
+  </div>
+  <!-- /.inner -->
+
+  <!-- modal window -->
+          <div class="m-question01__modal">
+            <div class="m-modal01">
+              <div class="m-modal01__overlay"></div>
+              <div class="m-modal01__content">
+                <p class="m-modal01__close"><a href="#"><img src="/consultation/img/img_close01.png" alt=""></a></p>
+                <p class="m-modal01__tit">-</p>
+                <p class="m-modal01__detail">-</p>
+                <ul class="m-modal01__btn-list">
+                  <li><a href="#" class="m-btn01 m-btn01--green ok-btn">はい</a></li>
+                  <li><a href="#" class="m-btn01 m-btn01--gray cancel-btn">いいえ</a></li>
+                </ul>
+                <!-- /.m-modal01__btn-list -->
+              </div>
+              <!-- /.m-modal01__content -->
+            </div>
+            <!-- /.m-modal01 -->
+          </div>
+          <!-- /.m-question01__modal -->
+  <!--/ modal window -->
+
+
+<?php include 'footer.php'; ?>

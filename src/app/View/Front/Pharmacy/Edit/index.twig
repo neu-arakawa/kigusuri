@@ -1,0 +1,259 @@
+<?php
+  //共通
+  require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+  //メタディスクリプション
+  $description = '';
+
+  //メタキーワード
+  $keywords = '';
+
+  //Facebook　全ページ共通の場合は空白にしてください
+  $fbimage = '';
+
+  //タイトル
+  $title = '';
+
+  //css追加
+  $ex_tag_css = '<link rel="stylesheet" href="/member.shop/css/style.css"><link rel="stylesheet" href="/member.shop/css/template.css">';
+
+  //js追加
+  $ex_tag_js = '<script type="text/javascript" src="/member.shop/js/edit_operation.js"></script>';
+
+  //bodyID
+  $bodyID = 'mypage';
+
+?>
+<?php include 'header.php'; ?>
+
+<div class="contents-header">
+  <ul class="topicpath fbox">
+	<li><a href="{{ c.app.urlFor('pharmacy_mypage') }}">マイページ</a></li>
+    <li>会員情報変更</li>
+  </ul>
+  <h1 class="header-ttl">会員情報変更</h1>
+</div>
+<!-- /.contents-header -->
+
+<div class="inner">
+
+    {% set msg = c.app_session('pharmacy_edit') %}
+    {% if msg %}
+    <!--/////////////////汎用メッセージ start ///////////////////-->
+        <div class="m-panel01 m-panel01--blue">
+        <div class="l-sp-inner">
+          <div class="m-panel01__panel">
+            <p class="m-panel01__heading">変更完了しました</p>
+            <p class="m-panel01__txt">ご登録された内容を反映しました</p>
+          </div>
+          <!-- /.m-panel01__panel -->
+          </div>
+          <!-- /.l-sp-inner -->
+        </div>
+        <!-- /.m-panel01 -->
+    <!--/////////////////汎用メッセージ end ///////////////////-->
+    {{ c.app_session_clear('pharmacy_edit') }}
+    {% endif %}
+
+    {% if errors %}
+    <!--/////////////////エラーメッセージ start ///////////////////-->
+        <div class="m-panel01 m-panel01--red">
+     	 <div class="l-sp-inner">
+          <div class="m-panel01__panel">
+            <p class="m-panel01__heading">登録内容が正しく入力されていません。</p>
+            <p class="m-panel01__txt">もう一度ご確認のうえ、ご入力してください。</p>
+          </div>
+          <!-- /.m-panel01__panel -->
+          </div>
+          <!-- /.l-sp-inner -->
+        </div>
+        <!-- /.m-panel01 -->
+    <!--/////////////////エラーメッセージ end ///////////////////-->
+    {% endif %}
+    <div class="l-sp-inner">
+    
+    <div class="m-tablearea01">
+    <form method="post" enctype="multipart/form-data">
+    <input type="hidden" name="_METHOD" id="_METHOD" value="PUT"/>
+    <input type="hidden" name="{{csrf_key}}" value="{{csrf_token}}">
+      <div class="m-tablearea01__table">
+        <p class="m-tablearea01__leading">
+        店舗情報の修正などが必要な際にはこちらから変更手続きをお願い致します。<br>
+        <span class="m-tablearea01__penicn"></span> マークのある項目はこのページから変更していただけます。<br>
+        それ以外の項目で変更を希望される場合は、きぐすり.com事務局までお問い合わせください。<br>※<span class="m-tablearea01__lockicn"></span>マークのついた項目は、一般のお客さまには公開されません。
+            </p>
+     <table class="m-table01">
+      <tr>
+        <th><span class="m-table01__heading">店舗名</span></th>
+        <td><div class="m-table01__inputbox">
+            <p>{{ pharmacy.name }} （{{ pharmacy.kana }}）</p>
+          </div>
+          
+          <!-- /.m-table01__inputbox --></td>
+      </tr>
+      <tr>
+        <th><span class="m-table01__heading">住所</span></th>
+        <td><div class="m-table01__inputbox">
+            <p>〒{{ pharmacy.zip }}　{{ pharmacy.pref }}{{ pharmacy.addr1 }}{{ pharmacy.addr2 }}{{ pharmacy.addr3 }}</p>
+          </div>
+          
+          <!-- /.m-table01__inputbox --></td>
+      </tr>
+      <tr>
+        <th class="m-table01_cell--top"><span class="m-table01__heading">店舗外観<span class="m-tablearea01__penicn"></span><span class="m-table01__required">※必須</span></span></th>
+        <td>
+           
+          <div class="m-table01__filebox clearfix">
+            <p class="m-table01__fileimg"></p>
+            <p class="m-table01__fileinput">画像を変更する場合はこちらからファイルを選択してください。
+                <input value="ファイルを選択" type="file" name='_image1'/>
+            </p>
+          </div>
+          <p class="m-table01__delete"><a href="javascript:void(0);" class='deletePopupCkfinderImage'>この画像削除する</a> </p>
+
+          <input value="" type="hidden" name='image1' class='publicImages'/>
+          
+          <!-- /.m-table01__inputbox -->
+          
+            {% if errors.image1 %}
+            <p class="m-table01__error">{{ errors.image1 }}</p>
+            {% endif %}
+          
+          <!-- /.m-table01__inputbox --></td>
+      </tr>
+      <tr>
+        <th><span class="m-table01__heading">TEL</span></th>
+        <td><div class="m-table01__inputbox">
+            <p>{{ pharmacy.tel | nl2br }}</p>
+          </div>
+          
+          <!-- /.m-table01__inputbox --></td>
+      </tr>
+      <tr>
+        <th><span class="m-table01__heading">FAX</span></th>
+        <td><div class="m-table01__inputbox">
+            <p>{{ pharmacy.fax | nl2br }}</p>
+          </div>
+          
+          <!-- /.m-table01__inputbox --></td>
+      </tr>
+      <tr>
+        <th>営業時間</th>
+        <td>
+			<div class="shop-hours-wrap">
+
+                {% 
+                    set weeks = {
+                        'mon': '月',
+                        'tue': '火',
+                        'wed': '水',
+                        'thu': '木',
+                        'fri': '金',
+                        'sat': '土',
+                        'sun': '日',
+                    }
+                %}
+                {% for key, val in weeks %} 
+				<dl class="shop-hours">
+					<dt>{{ val }}</dt>
+					<dd>
+                    {% set opentimes = pharmacy[key] %}
+                    {% if opentimes |length and opentimes.0 != '' %}
+                    {% for timeopen in opentimes %}
+                    <span class="shop-hours-inner">{{ timeopen }}</span>
+                    {% if loop.last == false %} <br class="pc-item">{% endif %}
+                    {% endfor %} 
+                    {% else %}
+                    -
+                    {% endif %}
+                    </dd>
+				</dl>
+                {% endfor %}
+			</div>
+			<p class="shop-hours-info">{{ pharmacy.openhours_note | nl2br }}</p>
+          </td>
+      </tr>
+      <tr>
+        <th><span class="m-table01__heading">交通アクセス <span class="m-tablearea01__penicn"></span></span></th>
+        <td>
+          <div class="m-table01__inputbox access">
+            <textarea name='access[]'></textarea>
+            <textarea name='access[]'></textarea>
+            <textarea name='access[]'></textarea>
+            <textarea name='access[]'></textarea>
+            <textarea name='access[]'></textarea>
+          </div>
+          
+          <!-- /.m-table01__inputbox --></td>
+      </tr>
+
+      {% for i in 1..3 %}
+      <tr>
+        <th class="m-table01_cell--top"><span class="m-table01__heading">店舗イメージ<span class="m-tablearea01__penicn"></span><!--<span class="m-table01__required">※必須</span>--></span></th>
+        <td>
+           
+          <div class="m-table01__filebox clearfix">
+            <p class="m-table01__fileimg"></p>
+            <p class="m-table01__fileinput">画像を変更する場合はこちらからファイルを選択してください。
+                <input value="ファイルを選択" type="file" name='_image2_{{i}}_path'/>
+            </p>
+          </div>
+          <p class="m-table01__delete"><a href="javascript:void(0);" class='deletePopupCkfinderImage'>この画像削除する</a> </p>
+          
+         <input type="hidden" name="image2_{{i}}_path" class='publicImages'/>
+          <!-- /.m-table01__inputbox -->
+          
+          <div class="m-table01__optinputbox"> 備考
+            <input type="text" name='image2_{{i}}_caption' maxlength='15'>
+            ※15文字以内 </div>
+          
+          <!-- /.m-table01__inputbox --></td>
+      </tr>
+      {% endfor %}
+      <tr>
+        <th><span class="m-table01__heading">店舗からのコメント <span class="m-tablearea01__penicn"></span></span></th>
+        <td><p class="m-table01__txt"></p>
+          <div class="m-table01__inputbox">
+            <textarea name='word'></textarea>
+          </div>
+          
+          <!-- /.m-table01__inputbox --></td>
+      </tr>
+      <tr>
+        <th><span class="m-table01__heading">相談の多い分野・症状 <span class="m-tablearea01__penicn"></span></span></th>
+        <td><p class="m-table01__txt"></p>
+          <div class="m-table01__inputbox">
+            <textarea name='tags'></textarea>
+          </div>
+          <!-- /.m-table01__inputbox --></td>
+      </tr>
+      <tr>
+        <th><span class="m-table01__heading">通知用メールアドレス <span class="m-tablearea01__lockicn"></span><span class="m-table01__required">※必須</span></span></th>
+        <td><div class="m-table01__inputbox mail-text-area">
+            <input name='notice_email' type="text">
+          </div>
+          
+          <!-- /.m-table01__inputbox -->
+          {% if errors.email %}
+            <p class="m-table01__error">{{ errors.email }}</p>
+          {% endif %}
+        </td>
+      </tr>
+    </table>
+    <!-- /.m-table01 --> 
+  </div>
+  <!-- /.m-tablearea01__table -->
+            <div class="m-tablearea01__btn">
+              <button class="m-arrow-btn01">更新する<span class="m-arrow-btn01__icn"></span></button>
+            </div>
+  </form>
+  </div>
+  <!-- /.m-tablearea01 -->
+  
+    {% include '/Front/Parts/pharmacy_support.twig' %}
+</div>
+<!-- /.sp-inner -->
+</div>
+<!-- /.inner -->
+
+<?php include 'footer.php'; ?>

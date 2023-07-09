@@ -1,0 +1,9 @@
+				<dt>選択項目</dt>
+					<dd>（「-」で始まる行は空の値がセットされます。「選択して下さい」などに使用。）</dd>
+					<dd>（「+」で始まる行はグループ名になり、以降のリストがグループ化されます。）</dd>
+					<dd>
+{include file='../../template/ja/_mod_list_js.html'}
+					</dd>
+					<dd><textarea id="values" name="values" cols="40" rows="8">{$app.params.values}</textarea></dd>
+				<dt>フォーム右側に付ける単位</dt>
+					<dd><input type="text" id="suffix" name="suffix" size="10" value="{$app.params.suffix}" style="ime-mode: active;" /></dd>

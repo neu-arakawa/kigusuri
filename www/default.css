@@ -1,0 +1,16 @@
+BODY { color : #000000 ; background-color : #FFFFFF}
+A:link { color : #0024FF}
+A:visited { color : #0066CC}
+A:active { color : #F00000}
+A:hover { color : #F00000}
+
+.t10 { font-size: 11px}	
+.t11 { font-size: 12px}	
+.t14 { font-size: 14px}
+.t17 { font-size: 17px}	
+.border  {  border: 1px #CCCCCC solid; }
+.border02  {  border: 1px #ffCCff solid; }
+.t13 {
+	font-size: 13px;
+}
+.title_cap { font-size: 12px; font-weight: bolder; background-image: url(images/cap_back.gif); background-repeat: repeat-x; line-height: 160%; text-indent: 5px}

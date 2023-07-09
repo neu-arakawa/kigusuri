@@ -1,0 +1,137 @@
+@charset "utf-8";
+* {
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+	font-style: normal;
+	font-family: "ＭＳ Ｐゴシック", "ヒラギノ角ゴ Pro W3", Osaka, sans-serif;
+}
+body {
+	text-align: center;
+	color: #555;
+	background-color: #FFF;
+}
+form fieldset {
+	border-width: 0px;
+}
+form legend {
+	display: none;
+}
+form input,
+form textarea {
+	border: 1px solid #BBB;
+}
+form input {
+	vertical-align: middle;
+	height: 1.5em;
+	padding: 1px 3px 0px 3px;
+}
+form textarea {
+	padding: 3px;
+	font-family: "ＭＳ ゴシック", "Osaka－等幅", monospace;
+}
+form label {
+	cursor: pointer;
+}
+form label input {
+	border: 0px;
+}
+form optgroup option {
+	margin-left: 2.0em;
+}
+h1, h2, h3 {
+	margin: 20px 0px;
+}
+h1, h2 {
+	font-size: 18px;
+}
+em {
+	font-style: normal;
+}
+ul li {
+	margin-left: 16px;
+}
+ul, p {
+	margin: 10px 0px;
+}
+dl dd {
+	margin-left: 25px;
+	margin-bottom: 15px;
+}
+dt, dd, li, p {
+	line-height: 1.3em;
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+table tr td,
+table tr th {
+	padding: 7px 7px 6px 7px;
+	border: 1px solid #33CC66;
+}
+table td p {
+	margin: 2px 0px;
+}
+div#container {
+	width: 600px;
+	margin: 0px auto;
+	text-align: left;
+}
+div#contents table th {
+	width: 35%;
+	text-align: left;
+	font-weight: normal;
+	color: inherit;
+	background-color: #99FFCC;
+}
+div#contents table td,
+div#contents div.box {
+	color: inherit;
+	background-color: #FFFFFF;
+}
+div#contents div.box {
+	border: 1px solid #BBB;
+	padding: 0px 8px;
+}
+div#copyright {
+	text-align: center;
+	margin: 16px 0px;
+}
+input.button {
+	width: 6.5em;
+	height: 2.0em;
+	text-align: center;
+	background-color: #F0F0F0;
+}
+*.error {
+	color: #F60;
+	background-color: inherit;
+}
+em.error {
+	display: block;
+	margin: 1px 0px;
+}
+/* エラーフォームの背景色 IE7 */
+em.error + * {
+	color: inherit;
+	background-color: #FFE7D7;
+}
+em.required {
+	margin-left: 2px;
+	font-size: 11px;
+	color: #F60;
+	background-color: inherit;
+}
+em.example {
+	font-size: 10px;
+	color: #999;
+	background-color: inherit;
+}
+p.navi em {
+	text-decoration: underline;
+}
+p.navi span {
+	color: #AAA;
+	background-color: inherit;
+}

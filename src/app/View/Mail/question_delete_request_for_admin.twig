@@ -1,0 +1,26 @@
+【きぐすり.com】公開中の漢方相談に削除依頼がありました。
+
+ご相談者から投稿した質問の削除依頼がありました。
+
+・公開URL
+{{ c.app.request.getUrl() }}{{ c.app.urlFor('qa_detail', {'id': question.id})  }}
+
+━━━━━━━━━━━━━━━
+ユーザー情報
+━━━━━━━━━━━━━━━
+■会員番号： {{ c.member_id }}
+■ニックネーム： {{ c.member.nickname }}
+■性別： {{ c.member.sex }}
+■生年： {{ c.member.birthday }}
+■お住まい： {{ c.member.pref }}
+■メールアドレス： {{ c.member.email }}
+
+━━━━━━━━━━━━━━━
+削除理由
+━━━━━━━━━━━━━━━
+{{ reason }}
+
+確認後、非公開にするには下記のURLからお進み下さい。
+{{ c.app.request.getUrl() }}{{ c.app.urlFor('default', {'controller':'question','action':'index','id': question.id})  }}
+
+

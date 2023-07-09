@@ -1,0 +1,27 @@
+{% extends "layout.twig" %}
+
+{% block php %}
+{% php %}
+   
+    //タイトル
+    echo @$context['stash']['msg'];
+    
+{% endphp %}
+{% endblock %}
+
+{% block content %}
+
+{% if stash.errors %}
+{% for k, msg in stash.errors %}
+    <div class='error'>{{ msg }}</div>
+{% endfor %}
+{% endif %}
+<br>
+<form action='/test/edit' method="POST">
+<input type="hidden" name="{{csrf_key}}" value="{{csrf_token}}">
+
+名前: <input name='name' type='text'><br>
+パスワード: <input name='password' type='password'><br>
+<input type='submit' name='aa' value='送信'>
+</form>
+{% endblock %}

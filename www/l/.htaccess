@@ -1,0 +1,9 @@
+php_flag mbstring.encoding_translation off
+php_value default_charset "UTF-8"
+AddType application/x-httpd-php .html
+AddType application/x-httpd-php .htm
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^([0-9]+)+ index.php?u=$1

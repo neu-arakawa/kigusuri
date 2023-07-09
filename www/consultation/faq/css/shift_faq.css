@@ -1,0 +1,129 @@
+@charset "UTF-8";
+/* %icomoon
+----------------------------------------------------------*/
+/* %icomoon02
+----------------------------------------------------------*/
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+}
+/**
+ * 漢方 よくある質問（Q&A）
+ *
+ * 01. 画像のパス
+ * 02. Q&Aトップ
+ * 03. コメント
+ *
+ */
+/* ==========================================================================
+   01. 画像のパス
+   ========================================================================== */
+/* ==========================================================================
+   02. Q&Aトップ
+   ========================================================================== */
+/* 4-1.faq-list
+--------------------------------------------- */
+div#faq-box div#faq-list {
+  width: 676px; }
+
+div#faq-box div#faq-list div {
+  background-image: url(../img/question-mark.gif);
+  background-position: left top;
+  background-repeat: no-repeat; }
+
+div#faq-box div#faq-list div.ichiran-btn {
+  background-image: none; }
+
+div#faq-box div#faq-list div#faq-menu {
+  margin: 0 10px; }
+
+div#faq-box div#faq-list div#faq-menu h4 {
+  margin: 6px 5px 0;
+  background-color: #FFE3E3;
+  border-bottom: #999 dotted 1px;
+  border-top: 3px solid #F53C68;
+  font-weight: bold;
+  padding: 4px 30px;
+  background-image: url(../img/yajirushi.gif);
+  background-repeat: no-repeat;
+  background-position: left center; }
+
+div#faq-box div#faq-list span#ichiran a {
+  display: block; }
+
+div#faq-box div#faq-list span#ichiran {
+  margin: 0 0 0 8px;
+  padding: 0 0 0 4px;
+  font-weight: normal;
+  color: #444; }
+
+div#faq-box div#faq-list div#faq-menu div {
+  margin: 12px 5px 10px 8px;
+  padding: 0;
+  height: 80px;
+  border-bottom: 1px #999 solid; }
+
+div#faq-box div#faq-list div#faq-menu {
+  background-image: none; }
+
+div#faq-box div#faq-list div#faq-menu div p {
+  /*background-image:url(../img/menu-btn.gif);
+  background-repeat:no-repeat;
+  background-position:left top;*/
+  margin: 0 0 0 60px;
+  padding: 10px 0 16px 6px; }
+
+div#faq-box div#faq-list div#faq-menu div.ichiran-btn {
+  border: none;
+  margin: 6px 0 -24px 0;
+  padding: 0;
+  text-align: right; }
+
+div#faq-box div#faq-list div#faq-menu div.ichiran-btn span {
+  display: block;
+  background-image: url(../img/list-ichiran.gif);
+  background-repeat: no-repeat;
+  background-position: left center;
+  margin: 0 0 0 540px;
+  padding: 0 6px 0 0; }
+
+/* 4-4.お問合せ - info-index -
+--------------------------------------------- */
+div#faq-box div#info-index {
+  border-top: #999 dotted 1px;
+  margin: 0;
+  text-align: center; }
+
+div#faq-box div#info-index ul {
+  margin: 5em auto 2em;
+  width: 520px; }
+
+div#faq-box div#info-index ul li {
+  display: inline;
+  margin: 0 16px; }
+
+@media screen and (max-width: 767px) {
+  div#faq-box div#faq-list {
+    width: 100%; }
+
+  div#faq-box div#faq-list div#faq-menu {
+    margin: 0; }
+
+  div#faq-box div#faq-list span#ichiran {
+    display: block;
+    font-size: 12px;
+    font-size: 1.2rem; }
+
+  div#faq-box div#faq-list div#faq-menu div {
+    height: auto; }
+
+  div#faq-box div#info-index ul {
+    overflow: hidden;
+    width: 100%; }
+    div#faq-box div#info-index ul li {
+      display: block;
+      float: left;
+      margin: 0 2% 0 0;
+      width: 49%; }
+      div#faq-box div#info-index ul li:nth-child(2n) {
+        margin-right: 0; } }

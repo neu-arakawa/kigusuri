@@ -1,0 +1,142 @@
+/* CSS Document */
+#main{margin:0 22px 0 10px;}
+#categoryName{margin:20px 0;}
+
+#boxCaption {
+border-left: 5px solid #999999;
+padding-left: 10px;
+height: 80px;
+}
+#boxCaption p{font-weight:bold;color:ff9933;font-size:80%;}
+.point{color:#ff3366;}
+.author{text-align:right;background:#eee;font-size:80%;}
+.image{ margin: 0 0 0 7px;float:right;}
+
+
+
+/* contentsArea
+----------------------------------------------------------*/
+#contentsArea{
+margin:20px 15px;
+font-size:90%;
+line-height:160%;}
+
+#contentsArea .sectionH3 h3{
+margin:40px 0 10px;
+color:#333333;
+background:url(../medicine/img/cap_back.gif) repeat-x;
+line-height:160%;
+text-indent:5px;
+border-left:5px solid #ff6699;}
+#contentsArea h4{margin:12px 0;color:#444;}
+
+#contentsArea .galleryL{margin:10px 0;}
+#contentsArea .galleryL dl{margin:0 10px 0 0;padding:0;float:left;}
+#contentsArea .galleryL dt{margin:0;padding:0;text-align:center;}
+#contentsArea .galleryL dd{text-align:center;margin:0;padding:0;font-size:80%;}
+
+#contentsArea .galleryR{margin:10px 0;}
+#contentsArea .galleryR dl{margin:0 0 0 10px;padding:0;float:right;}
+#contentsArea .galleryR dt{margin:0;padding:0;text-align:center;}
+#contentsArea .galleryR dd{text-align:center;margin:0;padding:0;font-size:80%;}
+
+#contentsArea .galleryC{margin:10px auto;}
+#contentsArea .galleryC dl{margin:0;padding:0;}
+#contentsArea .galleryC dt{margin:5px 0;padding:0;text-align:center;}
+#contentsArea .galleryC dd{margin:0;padding:0;text-align:center;font-size:80%;}
+
+#contentsArea .galleryCO{margin:10px;padding:10px 8px;background:url(../images/bg_dot2.gif);}
+#contentsArea .galleryCO dl{margin:0;padding:5px 0;background:#fff;}
+#contentsArea .galleryCO dt{margin:5px 0;padding:0;text-align:center;}
+#contentsArea .galleryCO dd{margin:5px 0;padding:0;text-align:center;font-size:80%;}
+
+
+#contentsArea .galleryTL table td{font-size:80%;text-align:left;}
+#contentsArea .galleryTC table td{font-size:80%;text-align:center;}
+
+/* reference
+---------------------------------------------------------------*/
+.reference { margin:30px 20px; padding:0; text-align:left; border-bottom:1px solid #f69; background:#FFF5F3;}
+.reference h4 {margin:0; padding:0 0 0 5px; height:22px; background-image:url(../health/img/bg_title_word.gif); background-repeat:repeat-x; text-indent:-9999px;}
+.reference dl{ margin:15px 10px; padding:0 0 0 7px; border-left:4px solid #f69;}
+.reference dl dt { margin:0; padding:0; font-weight:bold;color:#f69; line-height:120%; font-size:100%;}
+.reference dl dd { margin:0; padding:0; line-height:120%; font-size:90%;}
+
+
+/* pagetop
+----------------------------------------------------------*/
+.pagetop{
+clear:both;
+font-size:70%;
+text-align:right;
+margin:15px 0 0;}
+.pagetop a{background:url(../images/bt_top.gif) no-repeat left;padding-left:20px;}
+
+
+/* summary
+----------------------------------------------------------*/
+.summary {
+	border-top: 1px solid #FF9999;
+	border-bottom: 1px solid #FF9999;
+	margin: 20px 0;
+	padding: 0 120px 0 10px;
+	color: #990000;
+	line-height:120%;
+	background-color:#FFECEC;
+	background-position:right center;
+	background-repeat:no-repeat;
+	background-image: url(../images/illust-woman3.gif);
+}
+
+
+
+/* categoryList
+----------------------------------------------------------*/
+#main .categoryList{margin: 10px 0 0 0;padding: 15px 0 0 0;background: url(../images/supplement/line_spacer.gif) no-repeat left top;}
+#main .categoryList table{border-collapse:collapse; border:none;font-size:80%;line-height:160%;width:580px;}
+#main .categoryList table th{padding:2px 0; text-align:left; vertical-align:top;}
+#main .categoryList table td{padding:2px 0; vertical-align:top;}
+
+#main .categoryList dl{ margin:20px 0; padding:0;}
+#main .categoryList dl dt{ margin:5px 0; padding:0; width:225px; float:left; clear:both;}
+#main .categoryList dl dd{ margin:5px 0; padding:0; width:357px; font-size:80%; float:left;}
+
+/* example
+----------------------------------------------------------*/
+#contentsArea .example{
+margin:20px 5px 0 5px;
+padding:5px;
+background:url(../images/bg_dotP.gif);
+font-size:90%;}
+#contentsArea .example h3{border:none;margin:0 0 15px 0;font-size:110%;color:#ff6699;}
+#contentsArea .example h4{font-size:110%;padding:2px 5px;margin:10px 0;color:#444;}
+#contentsArea .example h5{color:#ff6699;margin:10px 0 0 0;}
+#contentsArea .example .sectionH5{padding-left:10px;}
+#contentsArea .example p{margin:0;line-height:140%;}
+
+
+/* memo
+----------------------------------------------------------*/
+.memo{
+font-weight: bold;
+color: #666666;
+margin: 30px 0;
+background-image: url(../images/img_note.gif);
+background-repeat: no-repeat;
+background-position: left top;
+padding:0 0 0 100px;
+}
+.memo p{margin:7px 0;}
+
+/* notes
+----------------------------------------------------------*/
+.notes{border-collapse:collapse;font-size:90%;width:550px;}
+.notes caption{text-align:left;padding:0 0 10px 0;}
+.notes th{border:1px solid #cccccc;padding:5px;background:#FFF4FB;text-align:left;color:#444444;white-space:nowrap;font-weight:normal;}
+.notes td{border:1px solid #cccccc;padding:5px;background:#ffffff;}
+
+#boxMain {
+	width: 582px;
+	clear: both;
+	padding-left: 10px;
+}

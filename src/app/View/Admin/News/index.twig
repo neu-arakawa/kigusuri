@@ -1,0 +1,80 @@
+{% extends "Admin/layout.twig" %}
+
+{% block content %}
+
+<section class="content-header">
+	<h1>
+サイト更新情報
+		<small>一覧</small>
+	</h1>
+</section>
+
+
+<section class="content">
+
+
+{% if list|length %}
+
+    <div class="col-sm-5" style='margin:10px'>
+        {{ pager.total_count  }} 件中 {{ pager.start_cnt }} - {{ pager.end_cnt }} 件目を表示    </div>
+		<div class="box-body">
+<form id='frm' method="post" action="{{ c.app.urlFor('default',{'controller': 'news','action': 'del'})}}">
+<input type="hidden" name="{{csrf_key}}" value="{{csrf_token}}">
+<input type="hidden" name="_METHOD" value="DELETE"/>
+<input type="hidden" name="id" value="">
+			<table class="table table-striped">
+				<tr>
+					<th style="width: 100px">日付</th>
+					<th>タイトル</th>
+					<th style="width: 80px">公開状態</th>
+					<th style="width: 40px">編集</th>
+					<th style="width: 40px">削除</th>
+				</tr>
+
+                {% for data in list %}
+					<tr>
+						<td>{{data.date}}</td>
+						<td>{{data.title}}</td>
+						<td>{{ data.show_flg == 0 ? '非公開' : data.pub == 'before' ? '公開前'  : '公開中'}}</td>
+						<td><a href="{{ c.app.urlFor('default',{'controller': 'news','action': 'edit','id':data.id})}}" class="btn btn-xs btn-primary"><i class="fa fa-pencil"></i> 編集</a></td>
+						<td><a href='javascript:void(0);' my_label='{{data.title}}' onclick='$("[name=id]").val("{{data.id}}");' class="delete btn btn-xs btn-danger"><i class="fa fa-trash"></i> 削除</a></td>
+					</tr>
+                {% endfor %}
+			</table>
+</form>
+		</div>
+		<div class="box-footer clearfix">
+
+
+{% if pager.total_pages > 1 %}
+<ul class="pagination pull-right">
+
+{% if pager.prev %}
+  <li><a href="{{ c.app.urlFor('default',{'controller': 'news'})}}?page={{pager.prev}}">«</a></li>
+{% endif %}
+
+{% for page in pager.start_page .. pager.end_page %}
+{% if page == pager.curpage %}
+  <li class="active"><a href="#">{{ page }}</a></li>
+{% else %}
+    <li><a href="{{ c.app.urlFor('default',{'controller': 'news','action': 'index'})}}?page={{page}}">{{page}}</a></li>
+{% endif %}
+{% endfor %}
+{% if pager.next %}
+ <li><a href="{{ c.app.urlFor('default',{'controller': 'news'})}}?page={{pager.next}}">»</a></li>
+{% endif %}
+
+</ul>
+{% endif %}
+	<div class="col-sm-5">
+		{{ pager.total_count  }} 件中 {{ pager.start_cnt }} - {{ pager.end_cnt }} 件目を表示	</div>
+	</div>
+{% else %}
+<div class="well searchBox">
+該当する情報はありません。
+</div>
+
+{% endif %}
+</section>
+
+{% endblock %}

@@ -1,0 +1,597 @@
+@charset "UTF-8";
+/* %icomoon
+----------------------------------------------------------*/
+/* %icomoon02
+----------------------------------------------------------*/
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'icomoon02';
+  src: url("fonts/icomoon.eot?ctabv3");
+  src: url("fonts/icomoon.eot?ctabv3#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?ctabv3") format("truetype"), url("fonts/icomoon.woff?ctabv3") format("woff"), url("fonts/icomoon.svg?ctabv3#icomoon") format("svg"); }
+/* ==========================================================================
+   移行コンテンツ用
+   ========================================================================== */
+#main.shift-contents {
+  background: none;
+  border-left: none;
+  margin: 20px auto 0;
+  padding-bottom: 0;
+  width: 700px;
+  /*hajimete
+    -------------------------------------------------------*/
+  /*topics-13
+    -------------------------------------------------------*/
+  /*topics-14
+    -------------------------------------------------------*/
+  /* furusato/nextpage style
+    ------------------------------------------------*/
+  /* herbal/matsue-englishgarden style
+    ------------------------------------------------*/
+  /* furusato/olive style
+    ------------------------------------------------*/ }
+  #main.shift-contents img {
+    vertical-align: bottom; }
+  #main.shift-contents #contentsArea {
+    margin: 0 auto; }
+  #main.shift-contents table th img, #main.shift-contents table td img {
+    vertical-align: bottom; }
+  #main.shift-contents .imgL {
+    float: left; }
+  #main.shift-contents .imgR {
+    float: right; }
+  #main.shift-contents .main-head-description {
+    margin-bottom: 20px;
+    font-size: 12px;
+    font-size: 1.2rem; }
+  #main.shift-contents .t9 {
+    font-size: 9px; }
+  #main.shift-contents .t10 {
+    font-size: 10px; }
+  #main.shift-contents .t10b {
+    font-size: 10px;
+    font-weight: bold; }
+  #main.shift-contents .t11 {
+    font-size: 14px;
+    line-height: 160%; }
+  #main.shift-contents .t11b {
+    font-size: 12px;
+    line-height: 160%;
+    font-weight: bold; }
+  #main.shift-contents .t13 {
+    font-size: 13px; }
+  #main.shift-contents .t14 {
+    font-size: 14px;
+    line-height: 160%; }
+  #main.shift-contents .t14b {
+    font-size: 14px;
+    line-height: 160%;
+    font-weight: bolder; }
+  #main.shift-contents .caption01 {
+    font-size: 12px;
+    line-height: 160%;
+    color: #666666; }
+  #main.shift-contents .caption02 {
+    font-weight: bold;
+    text-align: left;
+    font-size: 14px;
+    padding-left: 15px;
+    color: #669900;
+    margin-bottom: 5px;
+    background-image: url(/kampo/images/bt_right.gif);
+    background-repeat: no-repeat;
+    background-position: left center; }
+  #main.shift-contents .osae01 {
+    font-size: 12px;
+    line-height: 160%;
+    color: #333333; }
+  #main.shift-contents .border {
+    border: 1px #CCCCCC solid; }
+  #main.shift-contents .border02 {
+    border: 1px #ffCCff solid; }
+  #main.shift-contents .osae02 {
+    font-weight: bold;
+    color: #CC3300;
+    font-size: 12px; }
+  #main.shift-contents .osae03 {
+    color: #FF6600;
+    font-size: 12px; }
+  #main.shift-contents .osae04 {
+    font-weight: bold;
+    color: #CC3300;
+    font-size: 14px; }
+  #main.shift-contents .osae05 {
+    font-weight: bold;
+    color: #333333;
+    font-size: 14px; }
+  #main.shift-contents .osae06 {
+    color: #CC9900; }
+  #main.shift-contents .osae07 {
+    color: #660000;
+    font-size: 14px; }
+  #main.shift-contents .osae08 {
+    color: #FF6600; }
+  #main.shift-contents .osae09 {
+    color: #9900CC;
+    font-size: 12px; }
+  #main.shift-contents .t20 {
+    font-size: 20px;
+    line-height: 160%; }
+  #main.shift-contents .t18 {
+    font-size: 18px;
+    line-height: 160%; }
+  #main.shift-contents .cap_org {
+    font-size: 12px;
+    line-height: 140%;
+    color: #ff6600;
+    background-color: #FFF3E1;
+    border: 1px dotted #ffa319; }
+  #main.shift-contents .cap_gre {
+    font-size: 12px;
+    line-height: 140%;
+    color: #006600;
+    background-color: #E8FFC8;
+    border: 1px dotted #99CC33;
+    padding-right: 5px;
+    padding-left: 5px; }
+  #main.shift-contents .cap_yel {
+    font-size: 12px;
+    line-height: 140%;
+    color: #996600;
+    background-color: #FFFFE8;
+    border: 1px dotted #FFCC66; }
+  #main.shift-contents .cap_whi {
+    border: 1px solid #999999;
+    padding: 3px; }
+  #main.shift-contents .fred {
+    font-size: 12px;
+    line-height: 160%;
+    color: #FF0000; }
+  #main.shift-contents ul {
+    margin-bottom: 0px;
+    margin-top: 0px; }
+  #main.shift-contents .cap_pnk {
+    padding: 5px;
+    font-size: 12px;
+    line-height: 160%;
+    color: #666666;
+    background: #FFF4F4;
+    border: 1px dotted #FF6699;
+    text-align: left;
+    text-indent: 5pt; }
+  #main.shift-contents .h_pnk {
+    font-weight: bold;
+    color: #FF6666;
+    padding: 5px;
+    font-size: 14px; }
+  #main.shift-contents .p_caption {
+    font-size: 12px;
+    font-weight: bold;
+    color: #FF9900;
+    line-height: 160%; }
+  #main.shift-contents .box_yel {
+    line-height: 160%;
+    color: #996600;
+    background-color: #FFFFE8;
+    border: 1px dotted #FFCC66;
+    width: 90%;
+    padding: 5px; }
+  #main.shift-contents .boxMemo {
+    display: block;
+    font-weight: bold;
+    color: #666666;
+    line-height: 160%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-image: url(/kampo/images/img_note.gif);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  #main.shift-contents .boxMemo2 {
+    color: #333333;
+    line-height: 160%;
+    margin: 20px 0px;
+    background-image: url(/kampo/images/img_note2.gif);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding: 5px 5px 5px 80px;
+    font-size: 12px;
+    background-color: #FFFEE8; }
+  #main.shift-contents .UL_brown {
+    display: inline;
+    border-bottom-width: 2px;
+    border-bottom-style: dotted;
+    border-bottom-color: #CC6633; }
+  #main.shift-contents .boxSummary {
+    background-color: #FFECEC;
+    border-top: 1px solid #FF9999;
+    border-bottom: 1px solid #FF9999;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 10px 10px 80px;
+    color: #990000;
+    background-image: url(/kampo/images/illust-man6.gif);
+    background-repeat: no-repeat;
+    background-position: left; }
+  #main.shift-contents .boxSummary2 {
+    background-color: #FFECEC;
+    border-top: 1px solid #FF9999;
+    border-bottom: 1px solid #FF9999;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    color: #990000;
+    line-height: 160%; }
+  #main.shift-contents .boxSummary3 {
+    background-color: #FFECEC;
+    border-top: 1px solid #FF9999;
+    border-bottom: 1px solid #FF9999;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0px 80px 0px 10px;
+    color: #990000;
+    background-image: url(/kampo/images/illust-man6.gif);
+    background-repeat: no-repeat;
+    background-position: right; }
+  #main.shift-contents .boxSummary4 {
+    background-color: #FFECEC;
+    border-top: 1px solid #FF9999;
+    border-bottom: 1px solid #FF9999;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 90px 10px 10px;
+    color: #990000;
+    background-image: url(/kampo/images/illust-woman7.gif);
+    background-repeat: no-repeat;
+    background-position: right; }
+  #main.shift-contents .boxSummary5 {
+    background-color: #FFECEC;
+    border-top: 1px solid #FF9999;
+    border-bottom: 1px solid #FF9999;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 90px 10px 10px;
+    color: #990000;
+    background-image: url(/kampo/images/illust-woman6.gif);
+    background-repeat: no-repeat;
+    background-position: right; }
+  #main.shift-contents .boxSummary6 {
+    background-color: #E8FFC8;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 100px 10px 10px;
+    color: #006600;
+    background-color: #E8FFC8;
+    border: 1px dotted #99CC33;
+    background-image: url(/kampo/images/illust-woman8.gif);
+    background-repeat: no-repeat;
+    background-position: right; }
+  #main.shift-contents .boxSummary7 {
+    background-color: #FFECEC;
+    border-top: 1px solid #FF9999;
+    border-bottom: 1px solid #FF9999;
+    margin: 20px 0px;
+    padding: 10px 110px 10px 10px;
+    color: #990000;
+    background-image: url(/kampo/images/illust-woman02.gif);
+    background-repeat: no-repeat;
+    background-position: right; }
+  #main.shift-contents .boxSummary8 {
+    background-color: #FFECEC;
+    border-top: 1px solid #FF9999;
+    border-bottom: 1px solid #FF9999;
+    margin: 20px 0px;
+    padding: 25px 120px 25px 10px;
+    color: #990000;
+    background-image: url(/kampo/images/illust-woman3.gif);
+    background-repeat: no-repeat;
+    background-position: right; }
+  #main.shift-contents .boxSummary9 {
+    background-color: #EEFFEE;
+    border-top: 1px solid #339999;
+    border-bottom: 1px solid #339999;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 100px 10px 10px;
+    color: #336666;
+    background-image: url(/kampo/images/illust-man10.gif);
+    background-repeat: no-repeat;
+    background-position: right; }
+  #main.shift-contents .boxSummary10 {
+    margin: 20px 0px;
+    padding: 0px 0px 0px 100px;
+    color: #333;
+    background: url(/kampo/images/illust-man11.gif) no-repeat left top; }
+  #main.shift-contents .summaryM01 {
+    color: #990000;
+    background: url(/kampo/images/illust-man2.gif) no-repeat right 8px;
+    background-color: #FFECEC;
+    border-top: 1px solid #FF9999;
+    border-bottom: 1px solid #FF9999;
+    padding: 0 120px 0 10px;
+    clear: both; }
+  #main.shift-contents .summaryM01 p {
+    margin: 7px 0; }
+  #main.shift-contents .box_brw {
+    background-color: #fff3f3;
+    border: 1px dotted #993300;
+    color: #990000; }
+  #main.shift-contents .box_whi {
+    background-color: #FFFFFF;
+    color: #333333;
+    width: 540px;
+    margin-left: 20px;
+    padding: 4px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 20px; }
+  #main.shift-contents .box_caution {
+    background-image: url(/kampo/images/mark-caution.gif);
+    background-repeat: no-repeat;
+    background-position: 7px center;
+    text-align: left;
+    padding-left: 60px;
+    font-size: 12px;
+    line-height: 160%; }
+  #main.shift-contents .doc_m {
+    background-image: url(/kampo/images/illust-man2.gif);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    padding-right: 120px;
+    height: 220px;
+    vertical-align: top;
+    margin-top: 10px; }
+  #main.shift-contents .emBlue {
+    color: #3366CC;
+    margin-right: 4px;
+    margin-left: 4px;
+    font-weight: bold; }
+  #main.shift-contents .table01 {
+    background-color: #FFFFFF;
+    font-size: 12px;
+    color: #000000;
+    line-height: 160%;
+    border-collapse: collapse; }
+  #main.shift-contents .table01 th {
+    font-weight: normal;
+    text-align: left;
+    background-color: #F0FFC4;
+    border: 1px solid #99cc00;
+    padding: 3px; }
+  #main.shift-contents .table01 td {
+    border: 1px solid #99CC00;
+    padding: 3px; }
+  #main.shift-contents .table01 h5 {
+    font-size: 16px;
+    color: #F69; }
+  #main.shift-contents .table02 {
+    background-color: #FFFFFF;
+    font-size: 12px;
+    color: #000000;
+    line-height: 160%;
+    border-collapse: collapse;
+    width: 500px;
+    margin: 0 0 0 20px; }
+  #main.shift-contents .table02 th {
+    font-weight: normal;
+    text-align: left;
+    background-color: #F0FFC4;
+    border: 1px solid #99cc00;
+    padding: 6px 3px;
+    font: 14px;
+    font-weight: bold; }
+  #main.shift-contents .table02 th span {
+    color: #690; }
+  #main.shift-contents .table02 td {
+    border: 1px solid #99CC00;
+    padding: 6px 12px; }
+  #main.shift-contents .table01 h5 {
+    font-size: 16px;
+    color: #F69; }
+  #main.shift-contents #jofuku-p {
+    text-align: left;
+    font-size: 14px;
+    padding-left: 15px;
+    margin-bottom: 5px;
+    background-image: url(/kampo/images/bt_right.gif);
+    background-repeat: no-repeat;
+    background-position: left center;
+    margin: 0 0 0 16px; }
+  #main.shift-contents .table-jofuku {
+    background-color: #FFFFFF;
+    font-size: 12px;
+    color: #000000;
+    line-height: 160%;
+    border-collapse: collapse; }
+  #main.shift-contents .table-jofuku th {
+    font-weight: normal;
+    text-align: center;
+    background-color: #F0FFC4;
+    border: 1px solid #99cc00;
+    padding: 3px; }
+  #main.shift-contents .table-jofuku td {
+    border: 1px solid #99CC00;
+    padding: 3px; }
+  #main.shift-contents .table-jofuku h5 {
+    font-size: 16px;
+    color: #F69; }
+  #main.shift-contents .link01 {
+    background-image: url(/kampo/images/img_marker.gif);
+    background-repeat: no-repeat;
+    background-position: left 0px;
+    padding-left: 15px; }
+  #main.shift-contents .link02 {
+    background-image: url(/kampo/images/bt_right.gif);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 15px; }
+  #main.shift-contents .tbl_cap {
+    font-weight: bold;
+    text-align: left;
+    font-size: 14px;
+    padding-left: 15px;
+    color: #669900;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-image: url(/kampo/images/bt_right.gif);
+    background-repeat: no-repeat;
+    background-position: left 13px; }
+  #main.shift-contents .ref {
+    background-image: url(/kampo/images/bt_right.gif);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 17px;
+    margin-left: 10px; }
+  #main.shift-contents .boxRef {
+    background-image: url(/kampo/images/reference.gif);
+    background-repeat: no-repeat;
+    background-position: left 5px;
+    padding-left: 90px;
+    font-size: 12px;
+    line-height: 160%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 50px;
+    margin-bottom: 10px; }
+  #main.shift-contents .boxRef3 {
+    background-color: #F2FBF7;
+    border: 1px solid #339966;
+    padding: 10px; }
+  #main.shift-contents .boxRef3 dt {
+    font-weight: bold;
+    line-height: 160%;
+    color: #339966; }
+  #main.shift-contents .boxRef3 dd {
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  #main.shift-contents .boxRef2 {
+    background: url(/kampo/images/reference2.gif) no-repeat left top;
+    padding-left: 100px;
+    margin: 50px 0px 10px;
+    color: #333;
+    font-size: 12px; }
+  #main.shift-contents .boxColumn {
+    background: #FFFFE6 url(/kampo/images/img_column.gif) no-repeat left 20px;
+    padding-left: 100px;
+    margin: 40px 0px;
+    color: #B05800;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 12px; }
+  #main.shift-contents .boxRef ul {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    list-style-type: none;
+    padding: 0px;
+    margin-left: 0px; }
+  #main.shift-contents .boxCaution {
+    background-image: url(/kampo/images/mark-caution.gif);
+    background-repeat: no-repeat;
+    background-position: 7px center;
+    text-align: left;
+    padding-left: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  #main.shift-contents #firsttime01 {
+    width: 540px;
+    text-align: center;
+    margin-left: 21px;
+    padding: 10px 0 10px 0; }
+  #main.shift-contents .first01_in1 {
+    margin-left: 10px;
+    margin-bottom: 30px;
+    width: 270px;
+    text-align: center;
+    padding: 10px 0 10px 0;
+    border-style: dotted dotted none none;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-color: #cccccc;
+    float: left; }
+  #main.shift-contents .first01_in2 {
+    width: 270px;
+    text-align: center;
+    padding: 10px 0 10px 0;
+    border-style: dotted none none none;
+    border-top-width: 1px;
+    border-color: #cccccc;
+    float: left; }
+  #main.shift-contents .icon_h {
+    margin: 5px 0px; }
+  #main.shift-contents .clear {
+    clear: both; }
+  #main.shift-contents .t_link_icon {
+    margin: 0 7px;
+    padding: 0 0 0 15px;
+    background-image: url(/kampo/images/common/arrowR02.gif);
+    background-repeat: no-repeat;
+    background-position: left center; }
+  #main.shift-contents .table14-01 {
+    background-color: #FFFFFF;
+    font-size: 12px;
+    color: #000000;
+    line-height: 160%;
+    border-collapse: collapse; }
+  #main.shift-contents .table14-01 th {
+    font-weight: normal;
+    text-align: left;
+    background-color: #f5f5f5;
+    border: 1px solid #cccccc;
+    padding: 3px; }
+  #main.shift-contents .table14-01 td {
+    border: 1px solid #cccccc;
+    padding: 3px; }
+  #main.shift-contents .nextpage {
+    font-size: 12px;
+    text-align: right;
+    margin: 10px 0 5px;
+    clear: both; }
+  #main.shift-contents .nextpage a {
+    background: url(/kampo/images/mark_triangle.gif) no-repeat left center;
+    padding: 0 0 0 15px; }
+  #main.shift-contents .photo_tb {
+    width: 530px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    padding-left: 15px;
+    color: #669900;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px; }
+  #main.shift-contents .olive {
+    color: #990000;
+    background-color: #FFECEC;
+    border-top: 1px solid #FF9999;
+    border-bottom: 1px solid #FF9999;
+    clear: both;
+    background-image: url(../../kampo/furusato/img/olive_06.jpg);
+    background-repeat: no-repeat;
+    background-position: right 8px;
+    padding-top: 0;
+    padding-right: 220px;
+    padding-bottom: 0;
+    padding-left: 10px; }
+
+#pagetop {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important; }
+  #pagetop a {
+    background: none !important; }
+
+@media screen and (max-width: 767px) {
+  #main.shift-contents {
+    overflow: auto;
+    margin: 0;
+    width: 100%; }
+    #main.shift-contents #contentsArea,
+    #main.shift-contents #main {
+      width: 100%; }
+    #main.shift-contents .imgL,
+    #main.shift-contents .imgR {
+      max-width: 50%; } }

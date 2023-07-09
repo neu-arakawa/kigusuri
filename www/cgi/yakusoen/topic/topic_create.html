@@ -1,0 +1,122 @@
+<br><br>
+
+<div align="center"><b><font size="4" color="#000000">トピックリスト作成 $disp{'no'}</font></b><hr width="550">
+※ 表示順序【 降順 】＝ 記事No.の大きいものから順に表示されます。</div>
+
+<br>
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="140"> </td>
+    <td align="left">
+		<font size="3" color="#000000">$msg</font>
+	</td>
+  </tr>
+</table>
+<br>
+
+<div align="center">
+		<form action="./topic_create.cgi" method="post">
+		<br><br>
+		<table cellpadding="0" cellspacing="0" width="0" border="0">
+<tr bgcolor="#333333">
+<td align="center">
+<table border="0" cellspacing="1" cellpadding="3" width="500">
+<tr>
+<td bgcolor="#caed54" width="120" align="center">記事 No.１</td>
+<td bgcolor="#ffffcc">記事番号:<input type="text" size="25" name="tpnum1" value="$in{'tpnum1'}"></td>
+</tr>
+<tr>
+<td bgcolor="#caed54" align="center">記事 No.２</td>
+<td bgcolor="#ffffcc">記事番号:<input type="text" size="25" name="tpnum2" value="$in{'tpnum2'}"></td>
+</tr>
+<tr>
+<td bgcolor="#caed54" align="center">記事 No.３</td>
+<td bgcolor="#ffffcc">記事番号:<input type="text" size="25" name="tpnum3" value="$in{'tpnum3'}"></td>
+</tr>
+<tr>
+<td bgcolor="#caed54" align="center">記事 No.４</td>
+<td bgcolor="#ffffcc">記事番号:<input type="text" size="25" name="tpnum4" value="$in{'tpnum4'}"></td>
+</tr>
+<tr>
+<td bgcolor="#caed54" align="center">記事 No.５</td>
+<td bgcolor="#ffffcc">記事番号:<input type="text" size="25" name="tpnum5" value="$in{'tpnum5'}"></td>
+</tr>
+<tr>
+<td bgcolor="#caed54" align="center">記事 No.６</td>
+<td bgcolor="#ffffcc">記事番号:<input type="text" size="25" name="tpnum6" value="$in{'tpnum6'}"></td>
+</tr>
+<tr>
+<td bgcolor="#caed54" align="center">記事 No.７</td>
+<td bgcolor="#ffffcc">記事番号:<input type="text" size="25" name="tpnum7" value="$in{'tpnum7'}"></td>
+</tr>
+<tr>
+<td bgcolor="#caed54" align="center">記事 No.８</td>
+<td bgcolor="#ffffcc">記事番号:<input type="text" size="25" name="tpnum8" value="$in{'tpnum8'}"></td>
+</tr>
+<tr>
+<td bgcolor="#caed54" align="center">記事 No.９</td>
+<td bgcolor="#ffffcc">記事番号:<input type="text" size="25" name="tpnum9" value="$in{'tpnum9'}"></td>
+</tr>
+<tr>
+<td bgcolor="#caed54" align="center">記事 No.10</td>
+<td bgcolor="#ffffcc">記事番号:<input type="text" size="25" name="tpnum10" value="$in{'tpnum10'}"></td>
+</tr>
+<tr>
+<td bgcolor="#caed54" align="center">記事 No.11</td>
+<td bgcolor="#ffffcc">記事番号:<input type="text" size="25" name="tpnum11" value="$in{'tpnum11'}"></td>
+</tr>
+<tr>
+<td bgcolor="#caed54" align="center">記事 No.12</td>
+<td bgcolor="#ffffcc">記事番号:<input type="text" size="25" name="tpnum12" value="$in{'tpnum12'}"></td>
+</tr>
+<tr>
+<td bgcolor="#caed54" align="center">記事 No.13</td>
+<td bgcolor="#ffffcc">記事番号:<input type="text" size="25" name="tpnum13" value="$in{'tpnum13'}"></td>
+</tr>
+<tr>
+<td bgcolor="#caed54" align="center">記事 No.14</td>
+<td bgcolor="#ffffcc">記事番号:<input type="text" size="25" name="tpnum14" value="$in{'tpnum14'}"></td>
+</tr>
+<tr>
+<td bgcolor="#caed54" align="center">記事 No.15</td>
+<td bgcolor="#ffffcc">記事番号:<input type="text" size="25" name="tpnum15" value="$in{'tpnum15'}"></td>
+</tr>
+<tr>
+<td bgcolor="#caed54" align="center">記事 No.16</td>
+<td bgcolor="#ffffcc">記事番号:<input type="text" size="25" name="tpnum16" value="$in{'tpnum16'}"></td>
+</tr>
+<tr>
+<td bgcolor="#caed54" align="center">記事 No.17</td>
+<td bgcolor="#ffffcc">記事番号:<input type="text" size="25" name="tpnum17" value="$in{'tpnum17'}"></td>
+</tr>
+<tr>
+<td bgcolor="#caed54" align="center">記事 No.18</td>
+<td bgcolor="#ffffcc">記事番号:<input type="text" size="25" name="tpnum18" value="$in{'tpnum18'}"></td>
+</tr>
+<tr>
+<td bgcolor="#caed54" align="center">記事 No.19</td>
+<td bgcolor="#ffffcc">記事番号:<input type="text" size="25" name="tpnum19" value="$in{'tpnum19'}"></td>
+</tr>
+<tr>
+<td bgcolor="#caed54" align="center">記事 No.20</td>
+<td bgcolor="#ffffcc">記事番号:<input type="text" size="25" name="tpnum20" value="$in{'tpnum20'}"></td>
+</tr>
+<tr style="font-size: 0.8em;">
+<td bgcolor="#ffffcc" align="center">表示順序</td>
+<td bgcolor="#ffffcc" align="center">【 降順 】＝ 記事No.の大きいものから順に表示されます。</td>
+</tr>
+</table>
+</td></tr>
+		</table>
+		<br>
+		<br>
+	
+		<input type="hidden" name="crdy" value="$in{crdy}"><input type="hidden" name="irno" value="$in{irno}"><input type="hidden" name="kjno" value="$in{kjno}">
+		<br><input type="hidden" name="fnamer" value="$in{fnamer}"><input type="hidden" name="authe_id" value="$in{authe_id}"><input type="hidden" name="authe_pwd" value="$in{authe_pwd}"><input type="hidden" name="mode" value="w">
+		<div align="center">
+			<input type="submit" value="　　送　信　　">　　　　<input type="reset" value="　　取　消　　">
+		</div>  
+		<br>
+		</form> 
+</div>
+<br><br>

@@ -1,0 +1,1403 @@
+@charset "utf-8";
+
+/*【表示フラグ】
+original.cssで設定。ない場合は、display: none;
+* 各種設定
+----------------------------------------------------*/
+
+/* フッタナビ */
+.index {}
+.guide {}
+.support {}
+.privacy {}
+.contact {}
+.product {}
+.howto {}
+.faq {}
+.topic {}
+.access {}
+.sitemap {}
+.plus {} /* 漢方プラス */
+.consultation {}/* ご相談例 */
+
+/* お客様の声 */
+.link-voice,
+.voice {}
+
+/* お店からのサービス情報 */
+.service {}
+
+/* 自社サイト */
+.link-site {}
+
+/* ブログ */
+.link-blog {}
+
+/* メールマガジン */
+.link-mag {}
+
+/* フェイスブックページ */
+.link-fb {}
+
+/* ツイッター */
+.link-tw {}
+
+
+/* 受け付けていない場合は、display: none; */
+
+/* 電話相談の有無 */
+.tel {}
+
+/* FAXの有無 */
+.fax {}
+
+/* メール相談フォームの有無 */
+.mail {}
+
+/* 予約受付の有無 */
+.reserve {}
+
+/* 予約TELの有無 */
+.tel-reserve {}
+
+/* 予約フォームの有無 */
+.mail-reserve {}
+
+/* 相談の流れ */
+#contents-flow {}
+
+/* おすすめ商品 */
+#contents-goods {}
+
+/* 健康トピックス */
+#contents-topics {}
+#contents-topics #topics-wrap {}
+
+/* 健康トピックスキーワード対応 */
+.topic-keyword {}
+
+/* お店からヒトコト スタッフ欄 */
+#hitokoto-staff {}
+
+/* 編集者のコメント */
+#contents-comment {}
+
+.category-list{}
+
+/* 行き方写真 */
+#contents-access-ikikata {}
+
+
+/* 相談はこちら */
+
+/* 男性の先生 */
+div.soudan_m {}
+
+/* 女性の先生 */
+div.soudan_w {}
+
+
+/* all
+----------------------------------------------------*/
+
+body,
+body #page-wrap {
+/*   font-family: "Lucida Grande","Hiragino Kaku Gothic ProN",Meiryo,sans-serif; */
+	font-family: "メイリオ",Meiryo,"ＭＳ Ｐゴシック","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",sans-serif;
+	background-color:#fbfaf6;
+	background-image: url("../../img/type_c/bg.jpg");
+	color:#9b5014;
+}
+
+a:link {
+	color:#c85237;
+}
+a:visited {
+}
+a:hover {
+	color:#990000;
+}
+a:active {
+}
+
+.fl-l{
+	float: left;
+}
+.fl-r{
+	float: right;
+}
+
+
+/* ulやolのリセットを削除するには、listクラスを与える*/
+
+ul.list{
+	padding-left:2em;
+}
+
+ul.list li{
+	list-style-type:disc;
+}
+
+ul.list li.nest{
+	list-style-type:none;
+}
+ul.list li.nest ul{
+	padding-left:0.5em;
+}
+ul.list li.nest ul li{
+	margin-left: 1em;
+	list-style-type:circle;
+}
+
+ol.list{
+	padding-left:2.5em;
+}
+
+ol.list li{
+	list-style-type:decimal;
+}
+
+.reserve a img:hover,
+.soudan_bn img:hover {
+    left: 1px;
+    position: relative;
+    top: 1px;
+}
+
+
+
+#page-wrap {
+	margin: 0;
+	position: relative;
+	width: 100%;
+    border-top: 5px solid #b55f16;
+}
+
+/* ヘッダ */
+#header-wrap {
+    margin: 0 auto;
+    width: 100%;
+}
+#header-center{
+    margin: 0 auto;
+    text-align: center;
+    width: 960px;
+}
+#header-h1{
+    display: block;
+    float: left;
+    height: 80px;
+/*     height: 100%; */
+}
+#header-right {
+    float: right;
+    margin: 6px 45px 0;
+/*
+	width: 310px;
+	width: 365px; */
+}
+#header-right #soudan_read {
+	background: url(../../img/type_c/soudan-read.png) no-repeat;
+    color: #ffffff;
+    font-size: 15px;
+    height: 22px;
+    padding: 0;
+	width: 308px;
+    text-align: center;
+}
+
+#header-right #header-telno {
+    padding: 0 0 0 2px;
+}
+
+#header-right a:hover img {
+    cursor: pointer;
+    opacity: 0.6;
+    margin: 0;
+}
+
+/*グローバルナビ */
+#gnav-wrap {
+    font-size: 107%;
+    margin: 0;
+    width: 100%;
+}
+#gnav-wrap ul#gnav {
+	clear: both;
+}
+#gnav-wrap ul#gnav li {
+	float: left;
+	list-style: none;
+}
+
+
+/* コンテンツ-wrap（フッタ含む） */
+#contents-wrap {
+    margin: 0;
+    width: 100%;
+}
+#contents-wrap div{
+	vertical-align: top;
+}
+/* absolute用 囲み */
+#contents-wrap .section{
+	position: relative;
+	padding-top: 20px;
+}
+#contents-wrap #contents-center {
+    display: block;
+    margin: 0 auto;
+	width: 920px;
+	/* width: 900px; */
+}
+#contents-wrap #contents-center h3{
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+
+/* カラムセット
+-----------------------------------------------------------------------*/
+#contents-wrap .column h5{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#contents-wrap .column p{
+	padding: 0.2em 1em 0.4em;
+}
+
+/* 1カラム */
+#contents-wrap .box_1col{
+	vertical-align: top;
+}
+#contents-wrap .box_1col .col1{
+	width: 100%;
+}
+
+#contents-wrap .box-1col{
+	vertical-align: top;
+}
+#contents-wrap .box-1col .column{
+}
+
+/* 2カラム */
+#contents-wrap .box-2col{
+	vertical-align: top;
+}
+
+#contents-wrap .box-2col .column{
+	float: left;
+	width: 427px;
+	margin-right: 40px;
+}
+/* .box_sdw 囲みあり */
+#contents-wrap .box-2col.box_sdw .column{
+    width: 410px;
+    margin-right: 20px;
+}
+#contents-wrap .box-2col .column:last-child{
+	margin-right: 0;
+}
+#contents-wrap .box-2col .col1{
+}
+#contents-wrap .box-2col .col2{
+}
+
+/* 3カラム */
+#contents-wrap .box-3col{
+	vertical-align: top;
+}
+#contents-wrap .box-3col .column{
+	float: left;
+	width: 289px;
+	margin-right: 11px;
+}
+
+/* .box_sdw 囲みあり */
+#contents-wrap .box-3col.box_sdw .column {
+    width: 289px;
+    margin-right: 11px;
+}
+#contents-wrap .box-3col .column:last-child{
+	margin-right: 0;
+}
+#contents-wrap .box-3col .col1{
+}
+#contents-wrap .box-3col .col2{
+}
+#contents-wrap .box-3col .col3{
+}
+
+/* 4カラム */
+#contents-wrap .box-4col{
+}
+
+#contents-wrap .box-4col .column{
+	float: left;
+	width: 212px;
+	margin-right: 11px;
+}
+
+/* .box_sdw 囲みあり */
+#contents-wrap .box-4col.box_sdw .column {
+    width: 200px;
+    margin-right: 12px;
+}
+#contents-wrap .box-4col .column:last-child{
+	margin-right: 0;
+}
+#contents-wrap .box-4col .col1{
+}
+#contents-wrap .box-4col .col2{
+}
+#contents-wrap .box-4col .col3{
+}
+#contents-wrap .box-4col .col4{
+}
+
+
+/* 「当店への漢方相談はこちらから」バナー */
+.column.soudan_bn img {
+    float: right;
+}
+
+/* フッタ */
+
+#contents-footer {
+	background-color: #a58b6a;
+/*     height: 100px; フッタ下が切れるのでOFF */
+	margin-top: 2em;
+	width: 100%;
+	text-align: center;
+}
+
+#contents-footer ul {
+    margin: 8px auto 36px;
+}
+
+#contents-footer ul li {
+    display: inline;
+    font-size: 92%;
+    color: #c85237;
+    color:#ececec;
+}
+#contents-footer ul li a:link {
+    font-weight: bold;
+    text-decoration: none;
+    color:#ffffff;
+}
+#contents-footer ul li a:visited {
+    color:#ffffff;
+}
+#contents-footer ul li a:hover {
+    text-decoration: none;
+    color: #990000;
+}
+#contents-footer ul li a:active {
+    color: #990000;
+}
+
+#contents-footer address {
+    margin: 0;
+    padding: 5px 5px 0 0;
+    text-align: center;
+    font-style: normal;
+    font-size: 0.8em;
+    color: #ffffff;
+}
+
+.smaller {
+    font-size: 80%;
+}
+.smaller_m {
+    font-size: 90%;
+    line-height: 110%;
+}
+.biger {
+    font-size: 105%;
+    line-height: 110%;
+}
+.biger_most {
+    font-size: 130%;
+    line-height: 120%;
+}
+
+/* 影付き背景クラス */
+.box_sdw{
+
+	background-color: #ffffff;
+	padding: 10px;
+	margin: 15px 3px;
+
+/* border */
+	border: solid 1px #cccccc;
+
+/* border-radius */
+border-radius: 3px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+
+/* box-shadow */
+box-shadow:rgba(113, 135, 164, 0.1) 0px 0px 2px 2px;
+-webkit-box-shadow:rgba(113, 135, 164, 0.) 0px 0px 2px 2px;
+-moz-box-shadow:rgba(113, 135, 164, 0.1) 0px 0px 2px 2px;
+}
+
+/*ページ見出し */
+body #page-wrap h2 {
+    height: 40px;
+    margin: 0;
+}
+.page-caption{
+	position:absolute;
+	top:36px;
+	left:180px;
+	font-size:13px;
+	color:#9b5014;
+}
+
+/* ページ内リンク */
+.category-list {
+	font-size:14px;
+    margin: 0;
+}
+.category-list ul {
+    margin: 0 0 0 40px;
+    /* padding: 8px 0 40px; */
+}
+.category-list ul li {
+    background: url(../../img/type_c/bt-right.png) no-repeat left center;
+    display: inline;
+    margin: 0;
+    padding: 1px 18px 0;
+}
+
+/* パンくずリスト */
+.topic-path {
+	font-size:12px;
+}
+.topic-path a:link {
+	text-decoration: underline;
+}
+
+
+
+/* index
+----------------------------------------------------*/
+
+/* お店からヒトコト */
+div#contents-hitokoto{
+	float:left;
+	width:400px;
+	overflow: hidden;
+	font-size:14px;
+}
+
+h3#hitokoto {
+	width: 385px;
+}
+
+#hitokoto > h4 {
+	padding-bottom: 8px;
+	font-size: 1.2em;
+	font-weight: bold;
+	color:#c47f1d;
+}
+#hitokoto #hitokoto-reserve{
+	color:#c85237;
+	font-size: 1.1em;
+}
+
+#hitokoto > p {
+	margin-bottom: 8px;
+}
+
+#hitokoto #hitokoto-staff .staff-name{
+	font-size: 1.1em;
+	line-height: 1.6;
+	font-weight: bold;
+	color:#944403;
+}
+#hitokoto #hitokoto-staff .photo{
+    float: left;
+    margin: 0 20px;
+}
+#hitokoto #hitokoto-staff .jobtype{
+	padding-top: 20px;
+}
+	
+
+
+/* 特徴 */
+#contents-feature.top {
+	margin: 20px 0;
+}
+
+#contents-feature.top div{
+	float:left;
+}
+
+/* 店舗写真 */
+div#contents-shopimg {
+	float:left;
+	margin: 15px 30px 0 0;
+	width: 470px;
+	overflow: hidden;
+}
+
+#shopimg-left{
+	background-color: #ffffff;
+	border: solid 1px #cccccc;
+	padding: 4px 0;
+	margin:0 10px 0 0
+}
+
+#shopimg-left li{
+	float: left;
+	color:#666666;
+	font-size: 0.1em;
+}
+
+#shopimg-left li img{
+	margin: 0 1px 5px 4px;
+}
+
+#shopimg-left li p,
+#shopimg-left p{
+	padding-left: 1em;
+	font-size: 14px;
+}
+
+/* 店頭相談のご予約が出来ます */
+#reserve{
+	margin:15px 0;
+}
+
+/* 店頭予約リンク */
+#yoyaku {
+	padding: 10px 0;
+}
+
+/* 各種バナー */
+ul.bnr {
+	margin: 15px 0;
+}
+ul.bnr li{
+	float:left;
+	margin-right: 15px;
+}
+
+/* ブログ */
+div.blog-box.box_sdw {
+    margin: 15px 0 15px 1px;
+    padding: 8px 5px 5px;
+}
+
+/* ブログ幅 */
+.link-blog .blog-box > dl {
+    width: 447px;
+}
+.link-blog .blog-box dl dt a {
+    background-image: url(../../img/type_c/bn-sns-blog.png);
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    padding-left: 90px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+.link-blog .blog-box dl dd {
+    font-size: 85%;
+    width: 447px;
+}
+
+/* おすすめ商品 */
+div#contents-goods.column .box_sdw p {
+    padding: 3px 5px 6px;
+}
+div#contents-goods dl#goods-osusume {
+    border-bottom: 1px dotted #ccc;
+    margin: 0 0 10px;
+    padding-top: 10px;
+}
+div#contents-goods dl#goods-osusume dt {
+    border-top: 1px dotted #ccc;
+    float: left;
+    font-weight: bold;
+    padding: 10px 0;
+}
+div#contents-goods dl#goods-osusume dt img {
+    border: 1px solid #ccc;
+    display: block;
+    margin-top: 6px;
+}
+div#contents-goods dl#goods-osusume dd {
+    border-top: 1px dotted #ccc;
+    margin: 0 0 0 90px;
+    padding: 10px 0 10px 10px;
+}
+div#contents-goods dl#goods-osusume span.osusume-price {
+    display: block;
+    font-weight: bold;
+}
+div#contents-goods dl#goods-osusume dd:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+/* おすすめ商品 見出し付きリンク */:
+div#contents-goods ul.goods_limark {
+}
+div#contents-goods ul.goods_limark li a{
+    background: url("../../img/type_c/bt-right.png") no-repeat scroll left center rgba(0, 0, 0, 0);
+    display: inline;
+    margin: 0;
+    padding: 1px 0 0 18px;
+}
+
+/**/
+div#contents-goods tr.goods-item{
+}
+div#contents-goods tr.goods-item th{
+	padding:8px 0;
+	border-top: 1px dotted #ccc;
+}
+div#contents-goods tr.goods-item td{
+	vertical-align: top;
+}
+div#contents-goods tr.goods-item td a img{
+	width:90px;
+	padding-bottom: 10px;"
+}
+div#contents-goods tr.goods-item td ul.goods_limark{
+	padding-bottom:10px;"
+}
+div#contents-goods tr.goods-item td ul.goods_limark li{
+	float: right;
+}
+
+
+
+/* 店舗のご案内 */
+
+#contents-shop {
+	
+}
+
+#contents-shop #shop-info{
+	float:left;
+	
+}
+/* 交通アクセスのDL */
+#shop-info dl {
+    margin: 0 0 4px;
+    padding: 0;
+}
+#shop-info dt {
+    border-top: 1px solid #d0c2b0;
+    border-bottom: 1px dotted #d0c2b0;
+    color: #9b5014;
+    font-weight: bold;
+    padding: 4px 0 0 4px;
+}
+#shop-info dd {
+    padding: 3px 0 3px 3px;
+    
+}
+#shop-info dd:last-child {
+     border-bottom: 1px solid #d0c2b0;
+}
+
+#contents-shop #shop-sns{
+	font-size: 14px;
+	float: right;
+	margin-top: 2px;
+}
+#contents-shop #shop-sns li{
+	float:left;
+	height: 35px;
+	vertical-align: bottom;
+}
+#contents-shop #shop-sns li img{
+}
+#contents-shop #shop-map{
+	float:left;
+}
+#contents-shop #shopinfo #cont-shopname {
+	position: relative;
+	width: 480px;
+}
+
+#contents-shop #shopinfo #cont-shopname h4{
+	float: left;
+	padding-left:12px;
+	background: url(../../img/type_c/icon-h4.png) no-repeat left top;
+	min-height: 34px;
+	line-height: 34px;
+	color:#cf831a;
+	font-size:18px;
+	font-weight: bold;
+}
+#contents-shop table#shop-info {
+	clear:left;
+	width: 480px;
+	border: none;
+	border-collapse: separate;
+	border-spacing: 1px;
+	font-size: 0.9em;
+}
+#contents-shop table#shop-info th {
+	padding: 2px 5px;
+	width: 6em;
+	background-color: #d0c2b0;
+	color:#ffffff;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 15px;
+}
+
+#contents-shop table#shop-info td {
+	padding: 8px;
+}
+#contents-shop table#shop-info td div.link-blog {
+	margin-left:4em;
+	text-indent:-4em;
+}
+#contents-center #contents-topics #topics-wrap{
+	height: 350px;
+	overflow-y: scroll;
+}
+
+
+/* guide
+----------------------------------------------------*/
+
+/* 特徴 */
+#contents-feature .box-2col.box_sdw,
+#contents-feature .box-3col.box_sdw,
+#contents-feature .box-4col.box_sdw {
+	margin-top: 10px;
+}
+#contents-feature .box-2col .col2{
+	margin-right: 0;
+}
+.box_sdw .column h4{
+	padding: 15px 0 0 15px;
+    min-height: 34px;
+    background: url(../../img/type_c/icon-h4.png) no-repeat left 0.9em;
+    line-height: 34px;
+    color: #cf831a;
+    font-size: 18px;
+    font-weight: bold;
+}
+.box_sdw .column h5{
+	padding: 8px 0 0 16px;
+}
+
+#contents-feature .column p{
+	line-height: 1.6;
+}
+
+/* 相談の多い症状・分野 */
+#contents-shoujou .box_sdw{
+	min-height: 150px;
+}
+#contents-shoujou .box_sdw a{
+	color:#c85237;
+	font-size:17px;
+}
+#contents-wrap #contents-shoujou .column.soudan_bn{
+/* 	clear: both;
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+ */
+width: 470px;
+float: right;
+ }
+
+
+
+/* 店内の様子*/
+#contents-tennai .gallery img {
+    margin: 0 20px 0 0;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+#contents-tennai .gallery th {
+}
+#contents-tennai .gallery td {
+	width:300px;
+	padding: 0.5em 30px 0.5em 22px;
+}
+
+#contents-tennai .gallery td.num1 {
+	background: url(../../img/type_c/num/no1.png) no-repeat left 0.6em;
+}
+#contents-tennai .gallery td.num2 {
+	background: url(../../img/type_c/num/no2.png) no-repeat left 0.6em;
+}
+#contents-tennai .gallery td.num3 {
+	background: url(../../img/type_c/num/no3.png) no-repeat left 0.6em;
+}
+#contents-tennai .gallery td.num4 {
+	background: url(../../img/type_c/num/no4.png) no-repeat left 0.6em;
+}
+#contents-tennai .gallery td.num5 {
+	background: url(../../img/type_c/num/no5.png) no-repeat left 0.6em;
+}
+#contents-tennai .gallery td.num6 {
+	background: url(../../img/type_c/num/no6.png) no-repeat left 0.6em;
+}
+#contents-tennai .gallery td.num7 {
+	background: url(../../img/type_c/num/no7.png) no-repeat left 0.6em;
+}
+#contents-tennai .gallery td.num8 {
+	background: url(../../img/type_c/num/no8.png) no-repeat left 0.6em;
+}
+#contents-tennai .gallery td.num9 {
+	background: url(../../img/type_c/num/no9.png) no-repeat left 0.6em;
+}
+#contents-tennai .gallery td.num10 {
+	background: url(../../img/type_c/num/no10.png) no-repeat left 0.6em;
+}
+
+/* スタッフ紹介 */
+#contents-wrap #contents-staff.box-2col .column{
+    margin-right: 10px;
+    width: 436px;
+}
+#contents-wrap #contents-staff .column .staff-wrap {
+	background: url("../../img/type_c/bg-staff.png");
+}
+#contents-wrap #contents-staff table td{
+	 vertical-align: top;
+	 font-size: 0.9em;
+}
+#contents-staff .photo img{
+	padding-right: 10px;
+}
+#contents-wrap #contents-staff .column .staff-wrap .info .jobtype{
+	color:#c57300;
+	padding:0.2em 0 0 0;
+}
+#contents-wrap #contents-staff .column .staff-wrap .info h4{
+	font-size:18px;
+	color:#944403;
+	padding:0 0.8em 0.4em;
+}
+#contents-wrap #contents-staff .column .staff-wrap .info h5{
+	color:#c85237;
+}
+
+#contents-staff dl.ryakureki dd{
+	padding-left: 1em;
+}
+
+
+
+/* support.php
+----------------------------------------------------*/
+
+/* 相談の流れ*/
+
+/* 相談の流れ 2カラム */
+#contents-flow.box-2col .column {
+    margin-right: 24px;
+    width: 410px;
+}
+
+/* 相談の流れ 3カラム */
+#contents-flow.box-3col .column {
+    width: 270px;
+}
+#contents-flow.box-3col .column .box_sdw img {
+    max-width: 200px;
+}
+
+/* 相談の流れ 4カラム */
+#contents-flow.box-4col .column{
+	width:195px;
+}
+#contents-flow .column h4{
+	margin:0.6em 0;
+	font-size: 1.1em;
+	color:#c57300;
+}
+
+#contents-flow.box-4col .column .box_sdw img{
+	max-width:150px;
+}
+
+#contents-flow .flow-arrow{
+	float: left;
+	margin: 100px 10px 0 -5px;
+}
+#contents-wrap #contents-flow .column p{
+	padding:0.2em 0 0.4em;
+}
+
+#contents-contact .box_sdw h4{
+
+}
+#contents-contact .box_sdw h4#shopinfo{
+    font-size: 25px;
+    padding: 16px 0 0 15px;
+}
+#contents-contact .box_sdw #box,
+#contents-contact .box_sdw #boxTel,
+#contents-contact .box_sdw #boxShop,
+#contents-contact .box_sdw #boxMail{
+	padding:0.5em 0 0 1em;
+}
+#contents-contact #boxMail .btnForm,
+#contents-contact .reservbox .btnForm{
+    margin: 0;
+    padding: 0;
+}
+
+#contents-contact .box_sdw .column hr{
+	margin: 10px 1em 0 0
+}
+
+#contents-contact .box_sdw .column .attention{
+	font-size:0.9em;
+	margin:5px 0;
+	padding-left: 2em;
+	text-indent: -1.3em;
+	text-align: left;
+}
+
+/* メールフォーム */
+/* /cgi-data/soudan/template/c_inquiry_form.tmpl.php */
+/* /cgi-data/soudan/template/c_inquiry_confirm.tmpl.php */
+
+#contents-contact .box_sdw #boxMail h5{
+    margin-top: 8px;
+    padding: 10px 3px 10px 10px;	
+    border-top: 2px solid #fff;
+	font-weight: bold;
+}
+
+#boxMail .colum {
+    margin: 0 15px 15px;
+}
+#boxMail .colum p {
+    margin-bottom: 0.5em;
+}
+
+#boxMail table.table-form{
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-collapse: collapse;
+    border-color: #cc9900 -moz-use-text-color;
+    border-image: none;
+    border-style: solid none;
+    border-width: 1px medium;
+    margin-bottom: 15px;
+    padding: 0;
+}
+#boxMail table.table-form td {
+    border-bottom: 1px solid #cc9900;
+    border-collapse: collapse;
+    padding: 5px;
+    vertical-align: middle;
+}
+#boxMail table.table-form th {
+    background-color: #faf5e7;
+    border-bottom: 1px solid #cc9900;
+    border-collapse: collapse;
+    font-weight: normal;
+    padding: 5px;
+    text-align: left;
+    vertical-align: top;
+    width: 9em;
+}
+.table-form input,
+.table-form select,
+.table-form textarea {
+    background-color: #ffc;
+    border: 1px solid #ccc;
+    margin-bottom: 0.8em;
+    padding: 5px;
+    vertical-align: middle;
+}
+#boxMail .table-form textarea {
+    width: 90%;
+}
+#boxMail .table-form td .f_rei {
+    color: #999;
+    font-size: 12px;
+}
+#boxMail .table-form th span {
+    color: #999;
+    font-size: 12px;
+}
+#boxMail .form_un {
+    margin-bottom: 15px;
+    padding-top: 15px;
+    text-align: center;
+}
+#boxMail .formset button {
+    border: 1px solid #f90;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    width: 8em;
+}
+#boxMail .formset .error_top,
+#boxMail .formset .error_in {
+    color: #f00;
+    font-size: 12px;
+}
+#boxMail .form_thanks {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #f90 -moz-use-text-color;
+    border-image: none;
+    border-style: solid none;
+    border-width: 1px medium;
+    color: #f60;
+    font-size: 22px;
+    margin-bottom: 15px;
+    padding: 30px 0;
+    text-align: center;
+}
+/* 予約フォーム */
+/* /cgi-data/soudan/template/c_reservation_form.tmpl.php */
+/* /cgi-data/soudan/template/c_reservation_confirm.tmpl.php */
+
+
+
+/* faq
+----------------------------------------------------*/
+.answer{
+	padding: 0.5em 0 0.5em 2em;
+}
+
+.box_sdw hr {
+	border: 0;
+	height: 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+/* 
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.5);
+
+ */
+}
+
+/* access
+----------------------------------------------------*/
+
+#contents-access .access-wrap table.shopGuide-g {
+    border: medium none;
+    border-collapse: separate;
+    border-spacing: 1px;
+    clear: left;
+	font-size: 0.9em;
+}
+#contents-access .access-wrap table.shopGuide-g th{
+    padding: 2px 5px;
+    vertical-align: middle;
+	width: 6.5em;
+	background-color: #d0c2b0;
+    text-align: center;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+}
+#contents-access .access-wrap table.shopGuide-g td{
+    padding: 8px;
+}
+#contents-access .access-wrap table.shopGuide-g ul,
+#contents-access .access-wrap ul.smaller{
+	padding-left:2em;
+    font-size: 12px;
+}
+
+#contents-access .access-wrap table.shopGuide-g ul li{
+}
+
+#contents-access-ikikata.column .box_sdw{
+	width:845px;
+}
+#contents-access-ikikata.column .box_sdw .ikikata-wrap table{
+	font-size: 0.9em;
+    margin-left: 16px;
+}
+#contents-access-ikikata.column .box_sdw h4{
+    padding: 5px 0 0 15px;
+    margin: 0 0 0.5em 1em;
+    min-height: 34px;
+    background: url("../../img/type_c/icon-h4.png") no-repeat scroll left bottom rgba(0, 0, 0, 0);
+    line-height: 34px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #cf831a;
+}
+#contents-access-ikikata.column .box_sdw .ikikata-wrap table{
+	font-size: 0.9em;
+    margin-left: 16px;
+}
+#contents-access-ikikata.column .box_sdw td {
+    width: 210px;
+}
+#contents-access-ikikata.column .box_sdw .ikikata-wrap table.w180 td {
+    width: 210px;
+}
+#contents-access-ikikata.column .box_sdw .ikikata-wrap table.w240 td {
+    width: 245px;
+}
+#contents-access .print{
+	display:none;
+}
+
+#contents-access-ikikata.column .box_sdw td img {
+}
+#contents-access-ikikata.column .box_sdw td.num1 {
+    padding: 0.5em 10px 0.5em 22px;
+    background: url("../../img/type_c/num/no1.png") no-repeat scroll left 0.6em rgba(0, 0, 0, 0);
+    text-align: left;
+}
+#contents-access-ikikata.column .box_sdw td.num2 {
+    padding: 0.5em 10px 0.5em 22px;
+    background: url("../../img/type_c/num/no2.png") no-repeat scroll left 0.6em rgba(0, 0, 0, 0);
+    text-align: left;
+}
+#contents-access-ikikata.column .box_sdw td.num3 {
+    padding: 0.5em 10px 0.5em 22px;
+    background: url("../../img/type_c/num/no3.png") no-repeat scroll left 0.6em rgba(0, 0, 0, 0);
+    text-align: left;
+}
+#contents-access-ikikata.column .box_sdw td.num4 {
+    padding: 0.5em 10px 0.5em 22px;
+    background: url("../../img/type_c/num/no4.png") no-repeat scroll left 0.6em rgba(0, 0, 0, 0);
+    text-align: left;
+}
+#contents-access-ikikata.column .box_sdw td.num5 {
+    padding: 0.5em 10px 0.5em 22px;
+    background: url("../../img/type_c/num/no5.png") no-repeat scroll left 0.6em rgba(0, 0, 0, 0);
+    text-align: left;
+}
+#contents-access-ikikata.column .box_sdw td.num6 {
+    padding: 0.5em 10px 0.5em 22px;
+    background: url("../../img/type_c/num/no6.png") no-repeat scroll left 0.6em rgba(0, 0, 0, 0);
+    text-align: left;
+}
+#contents-access-ikikata.column .box_sdw td.num7 {
+    padding: 0.5em 10px 0.5em 22px;
+    background: url("../../img/type_c/num/no7.png") no-repeat scroll left 0.6em rgba(0, 0, 0, 0);
+    text-align: left;
+}
+#contents-access-ikikata.column .box_sdw td.num8 {
+    padding: 0.5em 10px 0.5em 22px;
+    background: url("../../img/type_c/num/no8.png") no-repeat scroll left 0.6em rgba(0, 0, 0, 0);
+    text-align: left;
+}
+#contents-access-ikikata.column .box_sdw td.num9 {
+    padding: 0.5em 10px 0.5em 22px;
+    background: url("../../img/type_c/num/no9.png") no-repeat scroll left 0.6em rgba(0, 0, 0, 0);
+    text-align: left;
+}
+#contents-access-ikikata.column .box_sdw td.num10 {
+    padding: 0.5em 10px 0.5em 22px;
+    background: url("../../img/type_c/num/no10.png") no-repeat scroll left 0.6em rgba(0, 0, 0, 0);
+    text-align: left;
+}
+
+
+/* sitemap
+----------------------------------------------------*/
+#contents-sitemap.box_sdw .column h4{
+    padding: 15px 0 0 15px;
+    margin-left: 1em;
+    min-height: 34px;
+    background: url("../../img/type_c/icon-h4.png") no-repeat scroll left bottom rgba(0, 0, 0, 0);
+    line-height: 34px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #cf831a;
+}
+#contents-sitemap ul {
+    padding: 0.5em 0 0 3em;
+    margin-bottom: 1em;
+}
+
+/* privacy
+----------------------------------------------------*/
+
+#contents-privacy .column p{
+	margin: 1em 2em 0.5em;
+}
+
+#contents-privacy .column ul{
+	padding: 0.5em 3em;
+}
+
+#contents-privacy .column ul li{
+	list-style-type: disc
+}
+
+/* cart
+----------------------------------------------------*/
+
+#contents-product{
+	width:880px;
+}
+
+#contents-product .box_sdw{
+	
+}
+
+#contents-product .box_sdw td{
+	vertical-align: top;
+}
+
+#contents-product .box_sdw .main td{
+	padding: 0.5em;
+	border: 1px solid #9b5014;
+}
+
+#contents-product .orderf .main2 td{
+	padding: 0.5em;
+	border: 1px solid #9b5014;
+}
+
+#contents-product .box_sdw td .picture{
+	float: left;
+	padding: 0.5em 2em 0;
+}
+
+#contents-product .box_sdw td .comment {
+    border-bottom: 1px dotted #cccccc;
+    float: right;
+    margin: 0 0 1em;
+    padding: 0 1em 0.5em 0;
+    width: 570px;
+}
+#contents-product input{
+	padding: 10px 50px;
+}
+#contents-product .box_sdw input{
+	padding: 5px 30px;
+}
+#contents-product .box_sdw h4{
+    padding: 0 0 0 15px;
+    margin-bottom: 0.5em;
+    min-height: 34px;
+    background: url(../../img/type_c/icon-h4.png) no-repeat left top;
+    line-height: 34px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #cf831a;
+}
+#contents-product .box_price td {
+    text-align: right;
+    width: 850px;
+}
+
+#contents-product #footer-message{
+	width: 880px;
+	text-align: center
+}
+
+#contents-product #footer-message hr{
+	border: 0;
+	height: 0;
+	margin-right: 38px;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* 特定商取引に関する法律に基づく表示 */
+#contents-product .disp{
+	width: 860px;
+}
+#contents-product .disp th.header {
+	padding: auto;
+	width: 500px;
+	background: #d9ac75;
+	border: none;
+	font-weight: bold;
+	text-align: center;
+}
+#contents-product .disp tr th {
+	background: #ffeed8;
+}
+#contents-product .disp tr td {
+	border-top: 1px solid;
+	width: 350px;
+	padding: 4px 2px 2px 8px;
+}
+#contents-product .box_sdw.disp th{
+    padding: 3px;
+    border: 1px solid;
+    font-size: 90%;
+}
+#contents-product .box_sdw.disp td{
+    padding: 3px;
+    border: 1px solid;
+    font-size: 90%;
+}
+
+/* Topic
+----------------------------------------------------*/
+.voice_cont .boxTopic.box_sdw .boxTopicTitle h4.article-title {
+    background-image: none;
+}
+
+.boxTopic.box_sdw .boxTopicTitle.column h4.article-title {
+	padding: 22px 0 0 15px;
+}
+
+/* 
+----------------------------------------------------*/
+
+
+/*
+色情報
+テキスト色	#944403
+
+#c47f1d
+お店からのヒトコト 見出し黄色文字
+
+特徴の文字色
+リンク色？
+商品価格赤めの強調色	#c85237
+
+見出しの赤めの文字色
+見出しの下線	#9c4803
+
+
+相談の多い症状・分野のエンジ文字	#990000
+相談の予約が出来ますの黄色のボタン色	#de8f21
+
+健康トピックス黄色めの日付	#d49844
+一番上の茶ライン	#b55f16
+フッタの茶背景	#a58b6a
+
+th	#d0c2b0
+
+
+【カラム設定】
+.box_coln
+	.col1～coln
+個別のサイズにする場合は、.box-colnのdivにidを振り、
+それぞれの.colnにoriginal.cssでwidthを設定する。
+
+
+*/
+
+

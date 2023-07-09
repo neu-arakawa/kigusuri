@@ -1,0 +1,25 @@
+<HTML><HEAD><style type="text/css"><!-- .main {font-size: 14px; line-height: 18px}  .main2 {font-size: 14px}--></style>
+<TITLE></TITLE><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=x-sjis">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	function winOpen(winName,url,W,H){
+		//サブウインドウオープン
+  		var WinD11=window.open(url,winName,'scrollbars=1,width='+W+',height='+H+'');
+  		WinD11.document.close()
+	}
+//-->
+</SCRIPT></HEAD>
+<body>
+<CENTER><br>
+<b>$name</b><br><IMG SRC="common/line_600.gif" WIDTH=340 HEIGHT=11 BORDER=0><BR>
+<TABLE CELLPADDING=2 CELLSPACING=0 WIDTH=0 BORDER=1>
+<TR class=main>
+<TD valign="top" align="left">
+$help
+</TD>
+</TR>
+</TABLE>
+<form><INPUT type="button" value="　閉じる　" CLASS="cls2" onClick="self.close()"></FORM>
+</center><BR>
+</BODY></HTML>

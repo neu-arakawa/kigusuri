@@ -1,0 +1,273 @@
+/* common style
+-------------------------------------------*/
+body {padding: 0px;	margin: 0px;}
+h1,h2,h3,h4 {margin:0;font-size:1.0em;}
+.font_s {font-size: 0.8em;}
+.emPink {color: #ff6699;}
+.emGre {color: #390;}
+.emBlu {color: #0066CC;}
+.emRed {color: #f30;}
+th {font-weight: normal;}
+ul {
+margin-bottom: 0px;
+margin-left: 14px;
+padding: 7px;
+margin-top: 0px;
+}
+.clear{ clear:both; line-height:0;}
+
+.pdf{ margin:5px 0;}
+.pdf a{ padding-left:18px; background-image:url(../images/common/icon_pdf.gif); background-repeat:no-repeat; background-position:left top;}
+.pdf span{ font-size:80%; color:#c30; margin-left:10px;}
+.btnPdf{ margin:10px 0; text-align:right;}
+
+img{border:none;}
+.imgL{ float:left; margin-right:10px;}
+
+a { text-decoration: none;  color:0033CC; } 
+a:hover { text-decoration: underline; color:FF6600; } 
+
+/* sideline style
+-------------------------------------------*/
+.sidecolor-g{background-color:#669900;}
+.sidecolor-b{background-color:#006699;}
+.sidecolor-r{background-color:#990000;}
+
+#container{ width:800px; height:100%;
+border-right-top: 0px; 
+border-right-bottom: 0px;  
+border-right-width: 1px; 
+border-left-width: 1px;  
+border-color: #669900; 
+border-style: solid; 
+}
+
+/* ÉwÉbÉ_Å[ */
+#header{ width:800px; height:90px;}
+#logo{ margin:0; float:left;}
+#pn{ margin:12px 10px 0 10px; float:right;}
+
+#snavi{ width:800px; margin:-24px 0; padding:0; float:right; clear:both;}
+#snavi ul{margin:0; padding:0; list-style-type:none;}
+#snavi li{margin:0 4px 0 0; padding:0; float:right;}
+
+#gnavi{ width:800px; margin:0 0 25px 0; clear:both;}
+#gnavi ul{margin:0; padding:0; list-style-type:none;}
+#gnavi li{margin:0; padding:0; float:left;}
+
+/* íòçÏå†èÓïÒ */
+address{margin:0; padding:5px 5px 0 0; font-size: 70%; text-align: right; font-style: normal;}
+
+/* Ç®îÉÇ¢ï®ï˚ñ@green */
+.table01 th {
+	font-weight: normal;
+	background-color: #CCFFCC;
+	text-align: left;
+	padding: 3px 7px;
+}
+.table01 td {
+	background-color: #f5f5f5;
+	padding-top: 3px;
+	padding-right: 7px;
+	padding-bottom: 3px;
+	padding-left: 7px;
+}
+/* Ç®îÉÇ¢ï®ï˚ñ@blue */
+.table01_b th {
+	font-weight: normal;
+	background-color: #CCFFFF;
+	text-align: left;
+	padding: 3px 7px;
+}
+.table01_b td {
+	background-color: #f5f5f5;
+	padding-top: 3px;
+	padding-right: 7px;
+	padding-bottom: 3px;
+	padding-left: 7px;
+}
+/* Ç®îÉÇ¢ï®ï˚ñ@red */
+.table01_r th {
+	font-weight: normal;
+	background-color: #CCFFCC;
+	text-align: left;
+	padding: 3px 7px;
+}
+.table01_r td {
+	background-color: #f5f5f5;
+	padding-top: 3px;
+	padding-right: 7px;
+	padding-bottom: 3px;
+	padding-left: 7px;
+}
+
+.table02 {
+	font-size:0.8em;
+	color: #333333;
+	border-collapse:collapse;
+}
+.table02 th {
+	background-color: #FFFFCC;
+	border: 1px solid #666666;
+	padding: 2px;
+}
+.table02 td {
+	border: 1px solid #666666;
+	padding: 2px;
+}
+
+.table03 {border-collapse:collapse;}
+.table03 th {font-size: 0.8em;background-color: #eeeeee;border: 1px solid #999999;padding: 3px;white-space:nowrap;}
+.table03 td {font-size: 0.8em;border: 1px solid #999999;padding: 3px;background:#fff;}
+
+.osusume {font-weight: bold;color: #0000FF;text-decoration: underline;}
+
+/* service style
+-------------------------------------------*/
+
+.service {
+	color: #FF9900;
+	border: 1px dotted #FF9900;
+	font-weight: bold;
+	line-height: 140%;
+	background-color: #FFFCE6;
+	padding: 8px;
+	text-align: left;
+	margin-right: 0px;
+	margin-left: 0px;
+}
+.infoBox {
+	border: 1px solid #FF9900;
+	background-color: #FFFCE6;
+	padding: 3px;
+	width: 90%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+/* contact
+-------------------------------------------*/
+.contact dl{margin:0;}
+.contact dl dt{margin:5px 0;}
+.contact dl dd{margin:5px 0 5px 15px;}
+
+.contactTel{
+background:url(img/ico_tel.gif) no-repeat 5px center;
+font-weight:bold;
+padding:5px 5px 5px 30px;
+font-size:1.1em;
+color:#666;
+}
+.contactMail{
+background:url(img/ico_mail.gif) no-repeat 5px center;
+font-weight:bold;
+padding:5px 5px 5px 30px;
+font-size:1.1em;
+color:#666;
+}
+/* intro
+-------------------------------------------*/
+.intro{margin:0 25px;text-align:left;padding:0;}
+
+/* inquiry
+----------------------------------------------------------------------*/
+.inquiry{margin:20px 0;}
+.inquiry a{ margin:0; padding:0 0 0 35px; background-image:url(img/icon_male.gif); background-position:left; background-repeat:no-repeat;}
+
+/* ÉwÉbÉ_Å[îwåi green */
+.amadokoro{background-image: url(img/bg/green/amadokoro.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.sakura{background-image: url(img/bg/sakura.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.momo{background-image: url(img/bg/momo.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.gerbera{background-image: url(img/bg/gerbera.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.lavender{background-image: url(img/bg/lavender.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.dokudami{background-image: url(img/bg/dokudami.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.shakuyaku{background-image: url(img/bg/shakuyaku.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.touki{background-image: url(img/bg/touki.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.matatabi{background-image: url(img/bg/matatabi.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.yuri_01{background-image: url(img/bg/yuri_01.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.yuri_02{background-image: url(img/bg/yuri_02.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.yuri_03{background-image: url(img/bg/yuri_03.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.yuri_04{background-image: url(img/bg/yuri_04.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.tanpopo{background-image: url(img/bg/tanpopo.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.kikara{background-image: url(img/bg/kikara.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.cho{background-image: url(img/bg/cho.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.kuko{background-image: url(img/bg/kuko.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.nira{background-image: url(img/bg/nira.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.kiku{background-image: url(img/bg/kiku.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.senburi{background-image: url(img/bg/senburi.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.masyumaro{background-image: url(img/bg/masyumaro.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.himawari{background-image: url(img/bg/himawari.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+
+.indigo_blue{background-image: url(img/bg/indigo_blue.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.pale_purple{background-image: url(img/bg/pale_purple.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.winered{background-image: url(img/bg/winered.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.green{background-image: url(img/bg/green.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.blue{background-image: url(img/bg/blue.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.water{background-image: url(img/bg/water.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.gray{background-image: url(img/bg/gray.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.verdant_green{background-image: url(img/bg/verdant_green.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.orange{background-image: url(img/bg/orange.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.pink{background-image: url(img/bg/pink.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.ai_01{background-image: url(img/bg/ai_01.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+
+/* ÉwÉbÉ_Å[îwåi blue */
+.yuri_01_b{background-image: url(img/bg/blue/yuri_01.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.yuri_02_b{background-image: url(img/bg/blue/yuri_02.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.yuri_03_b{background-image: url(img/bg/blue/yuri_03.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.yuri_04_b{background-image: url(img/bg/blue/yuri_04.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.tanpopo_b{background-image: url(img/bg/blue/tanpopo.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.kikara_b{background-image: url(img/bg/blue/kikara.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.cho_b{background-image: url(img/bg/blue/cho.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.kuko_b{background-image: url(img/bg/blue/kuko.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.nira_b{background-image: url(img/bg/blue/nira.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.kiku_b{background-image: url(img/bg/blue/kiku.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.senburi_b{background-image: url(img/bg/blue/senburi.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.masyumaro_b{background-image: url(img/bg/blue/masyumaro.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+
+.indigo_blue_b{background-image: url(img/bg/blue/indigo_blue.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.pale_purple_b{background-image: url(img/bg/blue/pale_purple.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.winered_b{background-image: url(img/bg/blue/winered.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.green_b{background-image: url(img/bg/blue/green.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.blue_b{background-image: url(img/bg/blue/blue.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.water_b{background-image: url(img/bg/blue/water.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.gray_b{background-image: url(img/bg/blue/gray.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.verdant_green_b{background-image: url(img/bg/blue/verdant_green.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.orange_b{background-image: url(img/bg/blue/orange.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.pink_b{background-image: url(img/bg/blue/pink.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.ai_01_b{background-image: url(img/bg/blue/ai_01.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+
+/* ÉwÉbÉ_Å[îwåi red */
+.yuri_01_r{background-image: url(img/bg/red/yuri_01.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.yuri_02_r{background-image: url(img/bg/red/yuri_02.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.yuri_03_r{background-image: url(img/bg/red/yuri_03.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.yuri_04_r{background-image: url(img/bg/red/yuri_04.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.tanpopo_r{background-image: url(img/bg/red/tanpopo.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.kikara_r{background-image: url(img/bg/red/kikara.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.cho_r{background-image: url(img/bg/red/cho.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.kuko_r{background-image: url(img/bg/red/kuko.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.nira_r{background-image: url(img/bg/red/nira.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.kiku_r{background-image: url(img/bg/red/kiku.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.senburi_r{background-image: url(img/bg/red/senburi.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.masyumaro_r{background-image: url(img/bg/red/masyumaro.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+
+.indigo_blue_r{background-image: url(img/bg/red/indigo_blue.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.pale_purple_r{background-image: url(img/bg/red/pale_purple.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.winered_r{background-image: url(img/bg/red/winered.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.green_r{background-image: url(img/bg/red/green.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.blue_r{background-image: url(img/bg/red/blue.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.water_r{background-image: url(img/bg/red/water.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.gray_r{background-image: url(img/bg/red/gray.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.verdant_green_r{background-image: url(img/bg/red/verdant_green.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.orange_r{background-image: url(img/bg/red/orange.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.pink_r{background-image: url(img/bg/red/pink.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.ai_01_r{background-image: url(img/bg/red/ai_01.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+
+/* ÉwÉbÉ_Å[îwåiìXï‹ÉIÉäÉWÉiÉã */
+.kimiidera{background-image: url(img/bg/original/kimiidera.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.gradation_g{background-image: url(img/bg/gradation_green.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+#logo_yoko {
+float:left;
+margin:3px 0 0 52px;
+}

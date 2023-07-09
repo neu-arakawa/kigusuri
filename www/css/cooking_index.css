@@ -1,0 +1,242 @@
+@charset "utf-8";
+.doc_f {
+	background-image: url(../images/illust-woman3.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+	padding-right: 120px;
+	font-size: 12px;
+	line-height: 160%;
+	vertical-align: top;
+	height: 130px;
+}
+.doc_m {
+	background-image: url(../images/illust-man2.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+	padding-right: 120px;
+	font-size: 12px;
+	line-height: 160%;
+	height: 240px;
+	vertical-align: top;
+}
+.doc_f2 {
+	background-image: url(../images/illust-woman.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+	padding-right: 120px;
+	font-size: 12px;
+	line-height: 160%;
+	height: 160px;
+	vertical-align: top;
+}
+#pagetop {
+	font-size: 10px;
+	text-align: right;
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+#pagetop a{
+	background-image: url(../images/bt_top.gif);
+	background-position: left;
+	padding-left: 20px;
+	background-repeat: no-repeat;
+}
+#route {
+	font-size: 10px;
+	color: #666666;
+	margin-top: 18px;
+	width: 582px;
+	margin-left: 10px;
+}
+#boxMain {
+	width: 582px;
+	margin-left: 10px;
+	font-size: 12px;
+	line-height: 160%;
+}
+
+
+/* contentesArea */
+#contentsArea {
+	width: 582px;
+	margin-left: 10px;
+	font-size:13px;
+	line-height: 160%;
+	}
+#contentsArea #pankuzu{
+	margin:18px 0 0 0;
+	font-size:80%;
+	color:#333;
+	line-height:100%;}
+#contentsArea #pankuzu strong{
+	color:#666;
+	}
+
+#contentsArea #description{
+	color:#666;
+	}
+
+#contentsArea h2{
+	margin:15px 0;
+	}
+
+.sectionH4{
+	margin:10px 0;
+	padding:0;
+	background-image: url("../kampo-care/img/index/bgSecH401.gif");
+	background-repeat:repeat-y;
+	z-index:inherit;
+	line-height:120%;
+}
+.sectionH4 h4{
+	padding:18px 20px 5px 30px;
+	background-image: url("../kampo-care/img/index/roundTop01.gif");
+	background-repeat:no-repeat; background-position:left top;}
+.sectionH4 p{
+	margin:5px 40px 10px 40px;
+	font-size:100%;
+	}
+.sectionH4 hr{
+	margin:0 10px;
+	width:530px;
+	}
+.sectionH4 .roundBottom{
+	margin:0;
+	padding:0 0 10px 0;
+	background-image: url("../kampo-care/img/index/roundBottom01.gif");
+	background-repeat:no-repeat;
+	background-position: bottom left;
+	}
+.roundBottom table{
+	margin:0 0 0 20px;
+	font-size:12px;
+	line-height:18px;}
+.roundBottom ul{margin:0; padding:0 0 0 20; list-style:none;}
+.roundBottom li{
+	margin:0;
+	padding:0 0 0 10px;
+	background-image:url("../kampo-care/img/icon-list.gif"); 
+	background-position:left center; 
+	background-repeat:no-repeat;}
+
+.sectionH4 #intro{ margin:10px 0; font-size:100%; line-height:140%;}
+.sectionH4 h5{ margin:5px 0 5px 20px;}
+.nextdisplay{ margin:0 0 0 40px; font-size:100%;}
+.nextdisplay2{ margin:54 0 0 444px; font-size:100%; display:block;}
+#kensaku{display:block; margin:0 0 10 40px; float:left;}
+/* profile */
+#contentsArea #profile {margin:20px 0;}
+#contentsArea #profile h3{ margin:10px 0; background-color:#fc0;}
+
+#contentsArea #profile .areaP{ margin-right:10px;width:150px; text-align:center; float:left;}
+#contentsArea #profile .areaT{ }
+
+
+/* column */
+.column{ margin:40px 20px 20px 20px; padding:10px 0 10px 100px; background-image:url(../images/img_column.gif); background-repeat:no-repeat; background-position: left 10px;}
+.column h4{ font-size:120%; padding:0 0 0 12px; background-image:url(../images/common/arrowR03.gif); background-repeat:no-repeat; background-position: left;}
+.column p{ margin:5px 0;}
+
+.column_2{ margin:40px 40px 20px 50px; padding:10px 0 10px 100px; background-image:url(../images/img_column.gif); background-repeat:no-repeat; background-position: left 10px;}
+.column_2 h4{ font-size:120%; padding:0 0 0 12px; background-image:url(../images/common/arrowR03.gif); background-repeat:no-repeat; background-position: left;}
+.column_2 p{color:#000000;
+background-color:#ffffff;
+border-top:1px solid #ccccff;
+border-right:1px solid #ccccff;
+border-left:1px solid #ccccff;
+border-bottom:1px solid #ccccff;
+padding:10px;
+clear:both;}
+
+/* image style */
+.imgR{ margin:0 5px; float:right;}
+
+.imgRindex{ margin:0 25px 0 5px; float:right;}
+
+table{font-size:12px;}
+
+table td.bg-boxt{
+	background-image: url("../images_2009/cooking/bg-box01t.gif");
+	background-repeat:no-repeat;
+	height:6px;}
+
+table td.bg-boxb{
+	background-image: url("../images_2009/cooking/bg-box01b.gif");
+	background-repeat:no-repeat;
+	height:20px;
+	text-align:right;
+}
+	
+.box01 {
+	background-image: url("../images_2009/cooking/bg-box01.gif");
+	background-repeat: repeat-y;
+	margin: 0px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 0px;
+	font-size: 12px;
+	line-height: 160%;
+}
+
+.pickup {
+	background-color: #ffc;
+	border:solid 1px #d7d7d7;
+	padding:5px 0;
+}
+
+.box01 li a {
+	color: #030;
+	text-decoration: none;
+}
+
+.box01 li a:hover {
+	color: #f30;
+	text-decoration: underline;
+}
+
+.box01 h4 a, .pickup a {
+	color: #008800;
+	text-decoration: none;
+}
+
+.box01 h4 a:hover, .pickup a:hover {
+	color: #f90;
+	text-decoration: underline;
+}
+
+.box01 h4 {
+	font-size: 21px;
+	padding-bottom: 3px;
+	border-bottom: solid 2px #d4d4d4;
+}
+
+.box01 ul {
+	margin-left: 2px;
+	padding-left: 20px;
+}
+
+.box01 ul li {
+	list-style: url(../images_2009/cooking/listmark.png);
+	font-size: 14px;
+	margin-top:0.8em;
+	
+}
+
+#boxMain {
+	width: 582px;
+	text-align: left;
+	font-size: 14px;
+	line-height: 140%;
+	margin-top: 40px;}
+	
+.title_cap {
+	font-weight: bold;
+	line-height: 160%;
+	text-indent: 5px;
+	color: #333333;
+	background-color: #e9e9e9;
+	border-left-width: 5px;
+	border-left-style: solid;
+	border-left-color: #C6EC4C;
+}

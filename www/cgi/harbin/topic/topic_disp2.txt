@@ -1,0 +1,28 @@
+<a name="$kjno"><br><br></a>
+<table bgcolor="#333333" cellpadding="0" cellspacing="0" border="0" width="560">
+<tr>
+<td>
+<table cellpadding="1" cellspacing="1" border="0" width="100%">
+<tr class="main2" bgcolor="#caed54">
+<td style="padding:0 0.5em;"><b style="line-height:1.6;">$tpname</b></td></tr>
+<tr class="main2" bgcolor="#ffffcc">
+<td>
+<table border="0" style="line-height:1.4;width:100%;padding:0.5em;">
+<tr>
+<td>
+$tptext
+<div style="border-top: dotted 1px #666666; margin-top:10px; padding-top:12px; text-align:center;">お問い合わせ・ご相談は、<b><a href="http://www.kigusuri.com/shop/harbin/">哈爾濱漢方薬局</a></b> まで<br /><span style="font-size:0.9em;">〒950-0916　新潟県新潟市中央区米山5丁目14番13号 北越高校通り</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr class="main2" bgcolor="#ffffcc">
+<td style="padding:0 0.5em;text-align:right;">更新日：$crdy</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<br><br>

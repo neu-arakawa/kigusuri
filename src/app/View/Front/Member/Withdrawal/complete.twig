@@ -1,0 +1,65 @@
+<?php
+  //共通
+  require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+  //メタディスクリプション
+  $description = '';
+
+  //メタキーワード
+  $keywords = '';
+
+  //Facebook　全ページ共通の場合は空白にしてください
+  $fbimage = '';
+
+  //タイトル
+  $title = '退会';
+
+  //css追加
+  $ex_tag_css = '<link rel="stylesheet" href="/member/css/style.css"><link rel="stylesheet" href="/member/css/template.css">';
+
+  //js追加
+  $ex_tag_js = '<script src="/member/js/script.js"></script>';
+
+  //bodyID
+  $bodyID = 'member';
+
+?>
+<?php include 'header.php'; ?>
+
+
+
+	<div class="contents-header">
+		<ul class="topicpath fbox">
+			<li><a href="/">トップページ</a></li>
+			<li>退会</li>
+		</ul>
+		<h1 class="header-ttl">退会</h1>
+	</div>
+    <!-- /.contents-header -->
+
+
+  <div class="inner">
+
+    <!--/////////////////退会完了メッセージ start ///////////////////-->
+        <div class="m-panel01 m-panel01--blue">
+          <div class="m-panel01__panel">
+            <p class="m-panel01__heading">退会が完了しました</p>
+          </div>
+          <!-- /.m-panel01__panel -->
+        </div>
+        <!-- /.m-panel01 -->
+    <!--/////////////////退会完了メッセージ end ///////////////////-->
+
+
+<!--please wait comment start-->
+<div class="component-wait-tx mb40">
+<p>きぐすり.comをご利用いただき、ありがとうございました。<br>また機会があれば是非ご利用ください。</p>
+</div>
+<div class="m-tablearea01__btn"><a href="/" class="m-arrow-btn01">トップページに戻る<span class="m-arrow-btn01__icn"></span></a></div>
+<!--please wait comment end-->
+
+
+  </div>
+  <!-- /.inner -->
+
+<?php include 'footer.php'; ?>

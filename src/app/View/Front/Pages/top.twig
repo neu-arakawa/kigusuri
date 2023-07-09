@@ -1,0 +1,221 @@
+ {% php %}
+	//共通
+	require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+	
+	//メタディスクリプション
+	$description = '';
+	
+	//メタキーワード
+	$keywords = '';
+	
+	//Facebook　全ページ共通の場合は空白にしてください
+	$fbimage = '';
+	
+	//タイトル
+	$title = '';
+	
+	//css追加
+	$ex_tag_css = '<link rel="stylesheet" href="/common/css/top.css">';
+	
+	//js追加
+	$ex_tag_js = '';
+	
+	//bodyID
+	$bodyID = 'top';
+	
+    include 'header.php';
+
+{% endphp %}
+
+	<article id="main">
+	
+		<div id="main-visual">
+			<div class="main-visual-inner inner relative">
+				<h2 id="main-visual-ttl" class="pc-item"><img src="img/main_logo.png" alt="カラダ ヨロコブ 漢方のチカラ。漢方薬のきぐすり.com" width="450" height="218"></h2>
+				<h2 id="main-visual-ttl" class="sp-item"><img src="img/main_logo_sp.png" alt="カラダ ヨロコブ 漢方のチカラ。漢方薬のきぐすり.com" width="450" height="218"></h2>
+				<p id="main-visual-copy"><img src="img/main_copy.png" alt="漢方薬、女性の健康、サプリメント、ハーブの情報を専門家がやさしく解説。全国の漢方薬局も探せる！" width="564" height="98"></p>
+			</div>
+
+			<div class="top-cont-boxwrap inner">
+        <a href="/consultation/" class="top-cont-box-link">
+				<section class="top-cont-box consultation-box">
+					<h3 class="top-cont-ttl"><img src="img/consultation_ttl.png" alt="先生に相談する" width="122" height="122"></h3>
+					<p class="top-cont-copy">あなたのお悩みに<br>漢方薬局・薬店がお答えします。</p>
+					<p class="top-cont-img"><img src="img/consultation_img.png" width="144" alt=""></p>
+					<p class="top-cont-lead">みなさまのこころと体のお悩みをQ&A形式で解決します。過去の症例もご覧いただけます。</p>
+					<p class="top-cont-btn"><div class="btn05 top-cont-btn-in"><span class="icon-arrow01">相談する</span></div></p>
+				</section>
+        </a>
+        <a href="/shop/" class="top-cont-box-link">
+				<section class="top-cont-box srch-box">
+					<h3 class="top-cont-ttl"><img src="img/search_ttl.png" alt="漢方薬局を探す" width="122" height="122"></h3>
+					<p class="top-cont-copy">日本全国、あなたにあった<br>漢方薬局・薬店を探せます。</p>
+					<p class="top-cont-img"><img src="img/search_img.png" width="144" alt=""></p>
+          <p class="count-wrap">現在の登録数<br class="pc-item"><span class="count-num" max={{ pharmacy_count }}>0</span>店</span></p>
+					<p class="top-cont-lead">営業時間や地図などをご覧いただけます。<br>お近くの漢方薬局へ是非足をお運びください。</p>
+					<p class="top-cont-btn"><div class="btn02 top-cont-btn-in"><span class="icon-arrow01">漢方薬局を探す</span></div></p>
+				</section>
+        </a>
+        <a href="/kampo/" class="top-cont-box-link">
+				<section class="top-cont-box about-box">
+					<h3 class="top-cont-ttl"><img src="img/about_ttl.png" alt="漢方を知る" width="122" height="122"></h3>
+					<p class="top-cont-copy">漢方薬・生薬大辞典<br>
+					<span class="text12">症状別・50音別</span></p>
+					<p class="top-cont-img"><img src="img/about_img.png" width="144" alt=""></p>
+					<p class="top-cont-lead">漢方薬には多くの種類があります。漢方薬の処方と漢方薬を構成する生薬を解説します。</p>
+					<p class="top-cont-btn"><div class="btn04 top-cont-btn-in"><span class="icon-arrow01">漢方を調べる</span></div></p>
+				</section>
+        </a>
+			
+			
+			<!--//.cont-boxwrap--></div>
+			
+		<!--//#main-visual--></div>
+
+<!--
+<div class="top-bnr-wrap main">
+	<section class="inner relative">
+		<ul class="top-bnr-list fadeover">
+			<li>
+				<a href="/kampo/showyaku/show01.html"><img src="/kampo/images/bnr_img_showyakugaku.jpg" alt="『あーだ・こうだの笑薬学のすゝめ』　笑涯学習でがっちり健康長寿" width="480"></a>
+			</li>
+			<li>
+				<a href="/kampo/kampo-care/"><img src="/kampo/images/bnr_img_kampo.jpg" alt="病気の悩みを漢方で" width="480"></a> 			</li>
+		</ul>
+	</section>
+</div>
+-->
+
+ {% if questions|length %}	
+  <!--QA start-->
+     <div class="component-area">
+     <div class="m-newly01">
+     <div class="component-wrap">
+<!--        <p class="m-newly01__illust pc-item"><img src="/img/qa-illust-pc.png" alt="ネットで気軽に相談！談"></p>
+-->        
+      <p class="m-newly01__tit pc-item"><img src="/img/top_newly01_tit.png" alt="漢方薬局・薬店からの新着回答"></p>
+      <p class="m-newly01__tit sp-item"><img src="/img/top_newly01_tit_sp.png" alt="漢方薬局・薬店からの新着回答"></p>
+      <div class="component-in">
+        <ul class="m-newly01__bal-list">
+        {% include '/Front/Parts/question_list.twig' with {'list': questions}%}
+        </ul>
+        <!-- /.m-newly01__bal-list -->
+      </div>
+    <!-- /.component-in -->
+    </div>
+    <!-- /.component-wrap -->
+	<a href="/consultation/list/?filter=has_answer&order=answer_date" class="btn05 top-btn-more"><span class="icon-arrow01">新着回答一覧</span></a>
+    </div>
+    <!-- /.m-newly01 -->
+    </div>
+    <!-- /.component-area -->
+  <!--QA end-->
+  {% endif %} 
+  
+  
+  
+  
+	
+		<!--//////////////////// トピックス、サイト更新情報 start-->
+		<div class="info-wrap">
+			<div class="info-wrap-inner inner">
+
+				<section class="update-wrap info-box">
+                    <h3 class="topics-ttl info-ttl">漢方薬局トピックス<span>漢方薬局からのお役立ち情報</span></h3>
+                    <div class="info-list-scroll">
+                        <ul class="info-list">
+                        {% for n in pharmacy_news %}
+                            <li><span class="info-data">{{ n.date |date("m/d")}}</span>
+                            <a href="{{ n.link }}" target="_blank"><span class="info-text">{% if n.title !='タイトルなし' %}{{ n.title }}{% endif %} {{ n.pharmacy_name }}({{ n.pref }})</span></a></li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+				</section>
+			
+				<section class="update-wrap info-box">
+					<h3 class="update-ttl info-ttl">サイト更新情報</h3>
+                    <div class="info-list-scroll">
+					    <ul class="info-list">
+                        {% for n in news %}
+					    	<li><span class="info-data">{{ n.date |date("m/d") }}</span>
+                            {% if n.url %}
+					    	<a href="{{ n.url }}" {% if n.blank_flg %}target="_blank"{% endif %}><span class="info-text">{{ n.title }}</span></a></li>
+                            {% else %}
+                            {{ n.title }}
+                            {% endif %}
+                        {% endfor %}
+					    </ul>
+                    </div>
+				</section>
+				
+			</div>
+			
+		<!--//.info-wrap--></div>
+		<!--//////////////////// トピックス、サイト更新情報 end-->
+		
+		
+	
+	
+		<!--//////////////////// お役立ちコラム start-->
+		<div class="column-wrap">
+			<section class="inner">
+				<h3 class="column-ttl"><span>お役立ちコラム</span></h3>
+				
+				<div class="column-wrap-inner">
+					
+					<a href="/kampo/health/" class="column-box">
+						<div class="column-box-inner">
+							<span class="column-img"><img src="img/column_img01.jpg" width="457" height="205" alt=""></span>
+							<dl>
+								<dt><span class="icon-arrow01">女性の生活と健康</span></dt>
+								<dd>漢方医療現場の女性ドクターが解説</dd>
+							</dl>
+						</div>
+					</a>
+
+					<a href="/kampo/faq/" class="column-box">
+						<div class="column-box-inner">
+							<span class="column-img"><img src="img/column_img02.jpg" width="457" height="205" alt=""></span>
+							<dl>
+								<dt><span class="icon-arrow01">漢方 よくある質問</span></dt>
+								<dd>お客様からのご質問に、<br>漢方薬局・薬店のスタッフがお答えします。</dd>
+							</dl>
+						</div>
+					</a>
+
+					<a href="/kampo/support/" class="column-box">
+						<div class="column-box-inner">
+							<span class="column-img"><img src="img/column_img03.jpg" width="457" height="205" alt=""></span>
+							<dl>
+								<dt><span class="icon-arrow01">薬局・薬店の先生による<br>健康サポート</span></dt>
+								<dd>経験豊かな先生方による健康アドバイス</dd>
+							</dl>
+						</div>
+					</a>
+
+				</div>
+				
+			</section>
+		<!--//.column-wrap--></div>
+		<!--//////////////////// お役立ちコラム end-->
+		
+		
+	
+	
+		<!--//////////////////// バナー start-->
+		<div class="top-bnr-wrap">
+			<section class="inner relative">
+				<h2 class="top-bnr-ttl">漢方のお役立ち知識が盛りだくさん！</h2>
+				<ul class="top-bnr-list fadeover">
+					<li><a href="https://kigusuri.blog32.fc2.com/" target="_blank"><img src="img/bnr_blog.jpg" alt="漢方ブログ 自然のチカラ大事典" width="290" height="80"></a></li>
+					<li><a href="https://twitter.com/kigusuri" target="_blank"><img src="img/bnr_twitter.jpg" alt="漢方薬のきぐすり.com 公式Twitter" width="290" height="80"></a></li>
+					<li><a href="https://www.facebook.com/kigusuri" target="_blank"><img src="img/bnr_facebook.jpg" alt="漢方薬のきぐすり.com 公式Facebookページ" width="290" height="80"></a></li>
+				</ul>
+			</section>
+		</div>
+		<!--//////////////////// バナー end-->
+
+
+	</article>
+	
+{% php %} include 'footer.php'; {% endphp %}

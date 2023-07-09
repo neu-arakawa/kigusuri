@@ -1,0 +1,59 @@
+	<div align="center">
+	<br>
+	<TABLE BGCOLOR=333333 CELLPADDING=0 CELLSPACING=0 WIDTH=500 BORDER=0>
+	<TR>
+	<TD>
+		<table width="720" border="0" cellspacing="1" cellpadding="1">
+		  		<tr>
+					<td width="80"  bgcolor="#CAED54" align="center"><font size="2" color="#000000">商品番号</font></td>
+		    		<td bgcolor="#ffffcc" colspan="3">$num</td>
+					<td width="90" align="center" bgcolor="#5555ff" valign="middle" rowspan="6">
+						<form action="$cgifile" method="post">
+							<input type="hidden" name="open_file" value="$open_file">
+							<input type="hidden" name="edit" value="$num">
+							<input type="hidden" name="display2" value="$display2">
+							<input type="hidden" name="disp" value="$display3">
+							<input type="hidden" name="display3" value="$display3">
+							<input type="hidden" name="pass" value="$pass">
+							<input type="submit" value="編集">
+						</form>
+					</td>
+					<td width="90" align="center" bgcolor="#ff5555" valign="middle"  rowspan="6">
+						<form action="$cgifile" method="post">
+							<input type="hidden" name="open_file" value="$open_file">
+							<input type="hidden" name="del" value="$num">
+							<input type="hidden" name="display2" value="$display2">
+							<input type="hidden" name="disp" value="$display3">
+							<input type="hidden" name="display3" value="$display3">
+							<input type="hidden" name="pass" value="$pass">
+							<input type="submit" value="削除">
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td bgcolor="#CAED54" align="center"><font size="2" color="#000000">商品名</font></td>
+		    		<td bgcolor="#ffffcc" colspan="3"><font size="3" color="#000000">$name</font></td>
+				</tr>
+				<tr>
+					<td bgcolor="#CAED54" align="center"><font size="2" color="#000000">単価</font></td>
+		    		<td bgcolor="#ffffcc"><font size="3" color="#000000">$price</font></td>
+					<td bgcolor="#CAED54" align="center"><font size="2" color="#000000">商品表示</font></td>
+		    		<td bgcolor="#ffffcc"><font size="3" color="#000000">$ZaikoSelected</font></td>
+				</tr>
+				<tr>
+					<td bgcolor="#CAED54" align="center"><font size="2" color="#000000">画像名</font></td>
+		    		<td bgcolor="#ffffcc" colspan="3"><font size="3" color="#000000">$pic_name</font></td>
+				</tr>
+				<tr>
+					<td bgcolor="#CAED54" align="center"><font size="2" color="#000000">商品紹介文</font></td>
+		    		<td bgcolor="#ffffcc" colspan="3">
+					<font size="3" color="#000000">$comment</font>
+					</td>
+		    	</tr>
+				</table>
+		
+		
+</TD>
+</TR>
+</TABLE>
+</div>

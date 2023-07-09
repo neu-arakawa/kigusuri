@@ -1,0 +1,13 @@
+<div style="border: 3px solid #c00; padding: 0.3em 0.5em; background-color: #fff; width: 540px; text-align:left;line-height:1.5em;"><b>使用期限について：</b>
+医薬品の使用期限は使用期限終了まで90日以上の商品をご用意いたします。</div>
+
+<a href="set/disp_shop.html" target="_blank">【 医薬品の特定販売に関する表示 】</a>　|　<a href="set/disp.html" target="_blank">【 特定商取引に関する法律に基づく表示 】</a>
+
+また、商品に関しては、電話、FAX、メールにてお問い合わせ下さい。
+親切・丁寧に対応させて頂きます。
+
+<!-- 
+<strong>※ 第1類、第2類医薬品の通信販売（インターネット含む）は<br>お受けいたしておりません。予めご了承下さい。 </strong>
+-->
+
+<div style="margin-left:2em; font-size:90%; text-align:left;"><a href="cart_list.cgi">▲ 商品案内 一覧へ戻る</a></div>

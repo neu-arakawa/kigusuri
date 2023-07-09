@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<title>大阪市阿倍野区 天王寺 漢方専門 $UserDispName | 健康トピックス</title>
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="description" content="近鉄阿倍野店薬局が発信する健康情報。漢方薬、ハーブティー、健康食品など。">
+<meta name="Keywords" content="漢方薬,漢方,漢方薬局,漢方相談,周期療法,不妊症,婦人科疾患,中医師,大阪市,阿倍野区,天王寺,近鉄阿倍野店薬局">
+<script type="text/javascript" src= "common.js" language="JavaScript"></script>
+<link href="../shop.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="MM_preloadImages('navi_img/navi_kigusuri-over.gif','navi_img/navi_home-over.gif','navi_img/navi_shop-over.gif','navi_img/navi_product-over.gif','navi_img/navi_howto-over.gif','navi_img/navi_staff-over.gif','navi_img/navi_voice-over.gif')">
+<div align="center">
+<table width="802" border="0" cellspacing="0" cellpadding="0" height="100%">
+<tr>
+<td bgcolor="#669900" width="1" rowspan="2"><img src="img/spacer.gif" width="1" height="10"></td>
+<td valign="top" align="center">
+<!-- #BeginLibraryItem "/Library/header_abeno.lbi" --><table width="800" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="296" valign="bottom"><table width="100%" border="0" cellspacing="0" cellpadding="0" height="68">
+<tr>
+<td><img src="img/img_logo.gif" hspace="10" alt="近鉄阿倍野店薬局 大阪市阿倍野区 天王寺"></td>
+</tr>
+<tr>
+<td height="10"><img src="../img/bg_headder01.gif" width="296" height="10"></td>
+</tr>
+</table></td>
+<td width="504" valign="top"><table width="2" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td colspan="2"><img src="img/bg_headder02.gif" width="504" height="44" alt="近鉄阿倍野店薬局にようこそ"></td>
+</tr>
+<tr>
+<td width="75"><img src="img/bg_headder03.gif" width="75" height="24"></td>
+<td width="429" bgcolor="#99CC33" align="right" background="../navi_img/bg_navi.gif">
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="91"><a href="sitemap.html"><img src="../navi_img/navi_icon02.gif" alt="サイトマップ"></a></td>
+<td width="130"><a href="privacy/index.html"><img src="../navi_img/navi_icon03.gif" alt="プライバシーポリシー"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table></td>
+</tr>
+</table>
+<!-- BEGIN NAVIGATION  -->
+<table width="800" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td><a href="http://www.kigusuri.com/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('n1','','../navi_img/navi_kigusuri-over.gif',1)" target="_blank"><img src="../navi_img/navi_kigusuri.gif" alt="漢方薬 漢方薬局 薬店のことなら きぐすり.com" name="n1"></a></td>
+<td><a href="index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('n2','','../navi_img/navi_home-over.gif',1)"><img src="../navi_img/navi_home.gif" alt="ホームへ" name="n2"></a></td>
+<td><a href="guide/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('n3','','../navi_img/navi_shop-over.gif',1)"><img src="../navi_img/navi_shop.gif" alt="店舗紹介" name="n3"></a></td>
+<td><a href="product/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('n4','','../navi_img/navi_product-over.gif',1)"><img src="../navi_img/navi_product.gif" alt="商品案内" name="n4"></a></td>
+<td><a href="howto/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('n5','','../navi_img/navi_howto-over.gif',1)"><img src="../navi_img/navi_howto.gif" alt="お買い物方法" name="n5"></a></td>
+<td><a href="support/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('n6','','../navi_img/navi_mail4-over.gif',1)"><img src="../navi_img/navi_mail4.gif" alt="相談方法" name="n6"></a></td>
+<td><a href="faq/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('n7','','../navi_img/navi_faq-over.gif',1)"><img src="../navi_img/navi_faq.gif" alt="よくあるご質問" name="n7"></a></td>
+</tr>
+<tr>
+<td colspan="7" width="800" height="25">&nbsp;</td>
+</tr>
+</table><!-- #EndLibraryItem -->
+
+$rdata2
+
+
+</td>
+<td bgcolor="#669900" width="1" rowspan="2"><img src="img/spacer.gif" width="1" height="10"></td>
+</tr>
+<tr>
+<td align="center" valign="bottom">
+<!-- #BeginLibraryItem "/Library/SHOP FOOTER.lbi" --><!-- BEGIN FOOTER  -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td align="right">&nbsp;</td>
+</tr>
+<tr>
+<td align="right"><font size="1">$UserCopy</font></td>
+</tr>
+</table><!-- #EndLibraryItem --></td>
+</tr>
+</table>
+</div>
+ 
+
+</body>
+</html>

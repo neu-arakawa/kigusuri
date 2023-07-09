@@ -1,0 +1,22 @@
+【きぐすり.com】ご相談内容承認不可のご連絡
+
+{{ question.member_nickname }} 様
+
+いつも漢方薬のきぐすり.comをご利用いただき、ありがとうございます。
+先日きぐすり.comにお寄せいただいた漢方相談ですが、
+当サイト利用規定に反する内容のため、承認されませんでした。
+
+利用規約
+http://www.kigusuri.com/terms/
+
+何卒ご理解、ご容赦のほど、よろしくお願いいたします。
+
+【相談内容】
+■分野 {{ categories[question.category_id] }}
+
+■相談内容詳細
+{{ question.content | raw }}
+
+今後とも、漢方薬のきぐすり.comをよろしくお願い申し上げます。
+
+{% include '/Mail/signature.twig' %}

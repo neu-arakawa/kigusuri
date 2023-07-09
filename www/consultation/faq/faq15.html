@@ -1,0 +1,101 @@
+<?php
+	//共通
+	require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+	//メタディスクリプション
+	$description = '';
+
+	//メタキーワード
+	$keywords = '漢方,漢方薬,漢方薬局,よくある質問,FAQ,Q&A,相談,本人';
+
+	//Facebook　全ページ共通の場合は空白にしてください
+	$fbimage = '';
+
+	//タイトル
+	$title = '本人が相談に行かなくてはいけませんか？ | 漢方 よくある質問（Q&amp;A） | 漢方相談（Q&amp;A）';
+
+	//css追加
+	$ex_tag_css = '<link rel="stylesheet" href="/common/css/shift.css">
+<link rel="stylesheet" href="css/faq.css">
+<link rel="stylesheet" href="css/faq-list.css">
+<link rel="stylesheet" href="css/faq-kampo.css">
+<link rel="stylesheet" href="css/shift_faq.css">
+<link rel="stylesheet" href="css/shift_faq-list.css">
+<link rel="stylesheet" href="css/shift_faq-kampo.css">
+<link rel="stylesheet" href="/consultation/css/style.css">';
+
+	//js追加
+	$ex_tag_js = '<script src="/common/js/shift_common.js"></script>';
+
+	//bodyID
+	$bodyID = 'consultation';
+
+?>
+<?php include 'header.php'; ?>
+
+	<div class="contents-header">
+		<ul class="topicpath fbox">
+			<li><a href="/">トップページ</a></li>
+			<li><a href="/consultation/">漢方相談（Q&amp;A）</a></li>
+			<li><a href="/consultation/faq/">漢方 よくある質問（Q&amp;A）</a></li>
+			<li>本人が相談に行かなくてはいけませんか？</li>
+		</ul>
+		<p class="header-ttl">漢方相談Q&amp;A</p>
+	</div>
+
+
+	<article id="main" class="inner fbox shift-contents">
+
+		<section class="fbox kampo-sct">
+			<p class="main-head-description">きぐすり.com は、<strong>漢方薬、女性の健康、サプリメント、ハーブ</strong>の情報を専門家がやさしく解説しています。</p>
+			<h1 class="ttl01">病気の悩みを漢方で</h1>
+
+
+			<!--//////////////////// 移行コンテンツ start-->
+
+
+			<div id="faq-box">
+ <div id="faq-list">
+  <div id="faq-kampo">
+   <h4 id="kaito"><span>ご質問に対するご回答</span></h4>
+   <div id="answer">
+    <div id="answer-h">
+     <h4>本人が相談に行かなくてはいけませんか？</h4>
+    </div>
+    <div id="answer-txt">
+     <div id="answer-01">
+      <p>ご本人にお出いただくのが一番良いのですが、お出になれない場合は、ご家族など代理の方でも構いません。</p>
+      <p>ご本人のお身体のことや服用薬、検査結果などをお伺いしたいと思いますので、お薬手帳や検査記録などをお持ちいただけると良いです。</p>
+      <p class="pharmacy-w"><a href="../shop/harbin/index.html" target="_blank">哈爾濱漢方薬局　西山　淳子先生</a></p>
+     </div>
+    </div>
+    <div class="clearfix" id="next-faq">
+     <p id="front-move"><span>前の質問</span><a href="faq14.html">&laquo; 「急性の病気（風邪など）に、漢方薬は効きますか？」</a></p>
+     <p id="back-move"><span>次の質問</span><a href="faq16.html">「薬局へ行けません。送って…。」 &raquo;</a></p>
+    </div>
+   </div>
+  </div>
+ </div>
+ <!-- #BeginLibraryItem "/Library/list_faq-info.lbi" -->
+ <div class="faq-index">
+  <div class="highlight" id="info-index">
+   <ul>
+    <li><a href="../kensaku.html"><img alt="あなたの街の漢方薬局・薬店へ" height="83" src="img/pharmacy-btn.gif" width="223" /></a></li>
+    <li><a href="../mail-soudan.html"><img alt="メールで漢方相談" height="82" src="img/mail-btn.gif" width="223" /></a></li>
+   </ul>
+  </div>
+ </div>
+ <!-- #EndLibraryItem -->
+ 
+</div>
+
+
+			<!--//////////////////// 移行コンテンツ end-->
+
+
+		</section>
+
+
+	</article>
+
+<?php include 'footer.php'; ?>

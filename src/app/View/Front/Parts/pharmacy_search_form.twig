@@ -1,0 +1,166 @@
+        <!--//////////////////// タブエリア start-->
+        
+        {% if type == '' %}
+            <div id="shop-tab-wrap" class="main-inner">
+                <ul class="shop-tab-nav fbox">
+                    <li class="active"><a href="#srch-category">都道府県・お悩みの<br class="sp-item">症状・分野から探す</a></li>
+                    <li><a href="#srch-keyword">キーワードから探す</a></li>
+                </ul>
+        {% else %}
+            <div class="main-inner">
+        {% endif %} 
+            
+
+        {% if type == '' or type == 'feature' %}
+                <!--///// 都道府県・お悩みの症状・分野から探す start-->
+                <section id="srch-category" class="tab-body">
+                    <form action="{{ c.app.urlFor('shop_search_feature') }}" method="GET">
+                    <div class="tab-inner-wrap">
+
+                        <!--///// 都道府県 start-->
+                        <div class="srch-category-box type-pref fbox">
+                            <h2 class="srch-category-ttl">都道府県</h2>
+                            <select name='pref' class="srch-pref srch-custom custom-field pref01">
+                                <option value="">都道府県を選択</option>
+                                <optgroup label="北海道・東北地方">
+                                    <option value="北海道">北海道</option>
+                                    <option value="青森県">青森県</option>
+                                    <option value="岩手県">岩手県</option>
+                                    <option value="宮城県">宮城県</option>
+                                    <option value="秋田県">秋田県</option>
+                                    <option value="山形県">山形県</option>
+                                    <option value="福島県">福島県</option>
+                                </optgroup>
+                                <optgroup label="関東地方">
+                                    <option value="茨城県">茨城県</option>
+                                    <option value="栃木県">栃木県</option>
+                                    <option value="群馬県">群馬県</option>
+                                    <option value="埼玉県">埼玉県</option>
+                                    <option value="千葉県">千葉県</option>
+                                    <option value="東京都">東京都</option>
+                                    <option value="神奈川県">神奈川県</option>
+                                </optgroup>
+                                <optgroup label="中部地方">
+                                    <option value="新潟県">新潟県</option>
+                                    <option value="富山県">富山県</option>
+                                    <option value="石川県">石川県</option>
+                                    <option value="福井県">福井県</option>
+                                    <option value="山梨県">山梨県</option>
+                                    <option value="長野県">長野県</option>
+                                    <option value="岐阜県">岐阜県</option>
+                                    <option value="静岡県">静岡県</option>
+                                    <option value="愛知県">愛知県</option>
+                                </optgroup>
+                                <optgroup label="近畿地方">
+                                    <option value="三重県">三重県</option>
+                                    <option value="滋賀県">滋賀県</option>
+                                    <option value="京都府">京都府</option>
+                                    <option value="大阪府">大阪府</option>
+                                    <option value="兵庫県">兵庫県</option>
+                                    <option value="奈良県">奈良県</option>
+                                    <option value="和歌山県">和歌山県</option>
+                                </optgroup>
+                                <optgroup label="中国地方">
+                                    <option value="鳥取県">鳥取県</option>
+                                    <option value="島根県">島根県</option>
+                                    <option value="岡山県">岡山県</option>
+                                    <option value="広島県">広島県</option>
+                                    <option value="山口県">山口県</option>
+                                </optgroup>
+                                <optgroup label="四国地方">
+                                    <option value="徳島県">徳島県</option>
+                                    <option value="香川県">香川県</option>
+                                    <option value="愛媛県">愛媛県</option>
+                                    <option value="高知県">高知県</option>
+                                </optgroup>
+                                <optgroup label="九州,沖縄地方">
+                                    <option value="福岡県">福岡県</option>
+                                    <option value="佐賀県">佐賀県</option>
+                                    <option value="長崎県">長崎県</option>
+                                    <option value="熊本県">熊本県</option>
+                                    <option value="大分県">大分県</option>
+                                    <option value="宮崎県">宮崎県</option>
+                                    <option value="鹿児島県">鹿児島県</option>
+                                    <option value="沖縄県">沖縄県</option>
+                                </optgroup>
+                          </select>                         
+                        <!--//.srch-category-box--></div>
+                        <!--///// 都道府県 end-->
+                        
+
+
+                        <!--///// 市区町村 start-->
+                        <div class="srch-category-box type-pref fbox">
+                            <h2 class="srch-category-ttl">市区町村</h2>
+                            <select name='addr1' id='addr1' class="srch-pref srch-custom custom-field pref02" data-param="{{ cities|json_encode()  }}">
+                                <option value=''></option>
+                                {% for city in cities[query.pref] %}
+                                <option value='{{city.addr1}}'>{{city.addr1}}({{city.cnt}})</option>
+                                {% endfor %}
+                            </select>
+                        <!--//.srch-category-box--></div>
+                        <!--///// 市区町村 end-->
+                        
+
+
+
+                        <!--///// お悩みの症状・分野 start-->
+                        <div class="srch-category-box type-field fbox" style='display:none'>
+                            <h2 class="srch-category-ttl">お悩みの症状・分野<span class="ttl-sub sp-block">※各店舗で相談実績の多い症状や分野からお探しいただけます。</span></h2>
+                            <ul class="input-list checkbox-list">
+                                <li><input name="a" type="checkbox" value="皮膚病" id="field01"><label for="field01">皮膚病</label></li>
+                                <li><input name="a" type="checkbox" value="不妊症" id="field02"><label for="field02">不妊症</label></li>
+                                <li><input name="a" type="checkbox" value="テキスト" id="field03"><label for="field03">テキスト</label></li>
+                                <li><input name="a" type="checkbox" value="テキストテキストテキストテキスト" id="field04"><label for="field04">テキストテキストテキストテキスト</label></li>
+                                <li><input name="a" type="checkbox" value="テキスト" id="field05"><label for="field05">テキスト</label></li>
+                                <li><input name="a" type="checkbox" value="テキスト" id="field06"><label for="field06">テキスト</label></li>
+                                <li><input name="a" type="checkbox" value="テキスト" id="field07"><label for="field07">テキスト</label></li>
+                            </ul>
+                        <!--//.srch-category-box--></div>
+                        <!--///// お悩みの症状・分野 end-->
+                        
+
+
+
+                        <!--///// 店舗の特長 start-->
+                        <div class="srch-category-box type-field fbox">
+                            <h2 class="srch-category-ttl">店舗の特長</h2>
+                            <ul class="input-list checkbox-list">
+                                {% set features = c.config('pharmacy_feature') %}
+                                {% for key ,val in features %}
+                                <li><input name="{{ key }}" type="checkbox" value="{{ val }}" id="other{{ loop.index }}"><label for="other{{ loop.index }}">{{ val }}</label></li>
+                                {% endfor %}
+                            </ul>
+                        <!--//.srch-category-box--></div>
+                        <!--///// 店舗の特長 end-->
+                        
+                        <div class="btn-area">
+                             <button class="btn-submit btn-custom"><span class="icon-srch">検索する</span></button>
+                        </div>
+
+                        
+                    </div>
+                    </form>
+                </section>
+                <!--///// 都道府県・お悩みの症状・分野から探す end-->
+                {% endif %} 
+                
+                
+                {% if type == '' or type == 'keyword' %}
+                <!--///// メーカーから探す start-->
+                <section id="srch-keyword" class="tab-body">
+                    <form action="{{ c.app.urlFor('shop_search_keyword') }}" method="GET">
+                    <div class="tab-inner-wrap">
+                        <input name="q" type="text" class="input-keyword text-custom">
+                        <button class="btn-submit btn-custom"><span class="icon-srch">検索する</span></button>
+                    </div>
+                    </form>
+                </section>
+                <!--///// メーカーから探す end-->
+                {% endif %} 
+                
+        
+            <!--//#shop-tab-wrap--></div>
+
+        <!--//////////////////// タブエリア end-->
+

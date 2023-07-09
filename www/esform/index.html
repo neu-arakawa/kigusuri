@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>PHP メールフォーム管理ウェア ES-FORM</title>
+</head>
+
+<body>
+
+<h1>PHP メールフォーム管理ウェア ES-FORM</h1>
+<hr />
+
+<h2>項目一覧</h2>
+<ul>
+	<li><a href="#start">開始する</a></li>
+	<li><a href="#feature">特徴</a></li>
+	<li><a href="#mobile">携帯用フォームの注意点</a></li>
+	<li><a href="#server">推奨動作環境</a></li>
+	<li><a href="#phpini">PHP設定</a></li>
+	<li><a href="#backup">バックアップ</a></li>
+	<li><a href="#pwdlost">パスワード再発行</a></li>
+	<li><a href="#thanks">謝辞</a></li>
+	<li><a href="#copyright">著作権</a></li>
+</ul>
+<hr />
+
+<h2 id="start">開始する</h2>
+<p>ファイルをアップロード後に「esform」ディレクトリ、「app」ディレクトリ内の「data, log（任意）, tmp」ディレクトリに書き込み権限（757or707）を与えて下さい。
+基本設定が完了すれば使用可能となります。</p>
+<p><a href="./setup.php">./setup.php</a></p>
+<hr />
+
+<h2 id="feature">特徴</h2>
+<p>管理画面からフォームを素早く作成できます。
+設定内容をすべてテンプレート化するので、フォームをグループ化したり変則的なレイアウトにする事も比較的容易にできます。
+また、PCと携帯で別々のテンプレートを作成でき、両方作成した場合には、アクセス時の振り分けを自動的に行う事もできます。</p>
+<hr />
+
+<h2 id="mobile">携帯用フォームの注意点</h2>
+<ul>
+	<li>ファイル選択フォームを使えない機種があります。</li>
+	<li>UTF-8に対応していない旧型機種ではご利用頂けない場合があります。</li>
+	<li>PC用テンプレートだけを作成して携帯と共有する場合、AU端末にて文字化けする可能性があります。</li>
+</ul>
+<hr />
+
+<h2 id="server">推奨動作環境</h2>
+<ul>
+	<li>PHP4.3以上推奨 </li>
+	<li>セーフモードでなく、マルチバイト関数が有効である事</li>
+</ul>
+<hr />
+
+<h2 id="phpini">PHP設定</h2>
+<p>PHPの設定を変更したい場合は、「.htaccess」「php.ini」のどちらかを使って変更できます。<br />
+（対応していないファイルを配置した場合には、500エラーが出るかもしれません。）<br />
+サーバによって最適な方法が異なりますので、詳しくは運営会社のホームページをご覧下さい。</p>
+<hr />
+
+<h2 id="backup">バックアップ</h2>
+<p>データのバックアップは「./app/data」ディレクトリをダウンロードしておく事で完了します。反映させる場合はアップロードして、書き込み権限を与えておいて下さい。</p>
+<hr />
+
+<h2 id="pwdlost">パスワード再発行</h2>
+<p>「./app/data/config.cgi」にパスワードが記録されていますので、これを削除すると、初期設定画面から再度設定できます。</p>
+<hr />
+
+<h2 id="thanks">謝辞</h2>
+<p>本スクリプトで使用しているライブラリ。開発に携わった方々に感謝いたします。</p>
+<ul>
+	<li><a href="http://ethna.jp/">Ethna</a></li>
+	<li><a href="http://sunset.freespace.jp/smarty/">Smarty</a></li>
+</ul>
+<hr />
+
+<h2 id="copyright">著作権</h2>
+<p>Copyright (c) <a href="http://www.mt312.com/">http://www.mt312.com/</a></p>
+<hr />
+
+</body>
+</html>

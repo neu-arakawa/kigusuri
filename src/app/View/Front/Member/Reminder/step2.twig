@@ -1,0 +1,60 @@
+<?php
+  //共通
+  require_once substr($_SERVER['SCRIPT_FILENAME'], 0, -strlen($_SERVER['SCRIPT_NAME'])).'/common/includes/init.php';
+
+  //メタディスクリプション
+  $description = '';
+
+  //メタキーワード
+  $keywords = '';
+
+  //Facebook　全ページ共通の場合は空白にしてください
+  $fbimage = '';
+
+  //タイトル
+  $title = 'パスワードをお忘れの方';
+
+  //css追加
+  $ex_tag_css = '<link rel="stylesheet" href="/member/css/style.css"><link rel="stylesheet" href="/member/css/template.css">';
+
+  //js追加
+  $ex_tag_js = '<script src="/member/js/script.js"></script>';
+
+  //bodyID
+  $bodyID = 'member';
+
+?>
+<?php include 'header.php'; ?>
+
+
+	<div class="contents-header">
+		<ul class="topicpath fbox">
+			<li><a href="/">トップページ</a></li>
+			<li><a href="#">会員情報の編集</a></li>
+			<li>パスワードの変更</li>
+		</ul>
+		<h1 class="header-ttl">パスワードをお忘れの方</h1>
+	</div>
+    <!-- /.contents-header -->
+
+
+  <div class="inner">
+
+    <div class="m-panel01 m-panel01--blue">
+      <div class="m-panel01__panel">
+        <p class="m-panel01__heading">{{ query['email']  }}</p>
+        <p class="m-panel01__txt">上記メールアドレスへパスワード再設定ページへのURLを送信しました。</p>
+      </div>
+      <!-- /.m-panel01__panel -->
+    </div>
+    <!-- /.m-panel01 -->
+
+    <div class="component-area">
+    <p>本文中のURLをクリックし、パスワード設定手続きを行ってください。</p>
+    <p style='color:red'>※URLの有効期限はメール送信後24時間です。</p>
+    </div>
+    <!-- /.component-area -->
+  </div>
+  <!-- /.inner -->
+
+<?php include 'footer.php'; ?>

@@ -1,0 +1,446 @@
+.clear{	clear:both;}
+.space{	clear:both;	margin:0 0 0 0;}
+.new{ padding-right:25px; background-image:url(images/new.gif); background-position:right top; background-repeat:no-repeat;}
+
+#index {
+width:800px;
+padding:0;
+margin:auto;
+}
+#index h1{
+line-height:150%;
+font-size:10px;
+font-weight:normal;
+margin:0;
+}
+#index h2,#index h3,#index h4,#index h5,#index h6{
+line-height:150%;
+font-weight:normal;
+margin:0;
+}
+#center{
+background:#fff url("images/back.gif") repeat-y;
+float:left;
+}
+
+
+/* header */
+#header{
+background-image: url(images/bg_header.gif);
+background-repeat: no-repeat;
+float:left;
+}
+#header .left{
+float:left;
+width:385px;
+margin:0;
+padding:0;
+font-size:0;
+line-height:0;
+}
+#header .right {
+float:right;
+width:333px;
+text-align:right;
+font-size:0;
+}
+#header form{
+font-size:1pt;
+line-height:0em;
+margin:0;
+padding:0;
+}
+#header input.text{
+margin:0 4px 0 0;
+}
+img.vspace10{
+margin:10px 10px 10px 0;
+}
+img.space{
+margin:0 10px 0 0;
+}
+#header .sub {
+float:left;
+padding:4px 0 0 0;
+width:158px;
+}
+#header .search{float:right;padding:0 10px 0 0;}
+#description{ margin:0; padding:0 0 0 5px; border:0;}
+#description h1{ padding:0 5px;color:#333; letter-spacing:2px; }
+
+
+
+/*---ContentsBody---*/
+#contentmain {
+width:614px;
+margin:0;
+padding:0;
+float:left;
+}
+#contentmain .search{float:left;padding:0 9px 0 0;}
+.seasonTitle {
+font-size: 14px;
+color: #FF6633;
+font-weight: bold;
+line-height: 140%;
+}
+.area{	float:left;}
+
+
+#boxSeason {
+font-size: 12px;
+line-height: 160%;
+float:right;
+width:290px;
+}
+#boxSeason ul {
+list-style-type: none;
+margin: 15px 0px 0px;
+padding-top: 0px;
+padding-right: 0px;
+padding-bottom: 0px;
+padding-left: 5px;
+
+}
+#boxSeason li {
+padding: 0px;
+margin-top: 15px;
+margin-right: 0px;
+margin-bottom: 15px;
+margin-left: 0px;
+border-bottom-width: 1px;
+border-bottom-style: dotted;
+border-bottom-color: #666666;
+}
+.seasonTitle {
+font-size: 14px;
+color: #FF6633;
+font-weight: bold;
+line-height: 140%;
+}
+
+/*Å@ñÚç‹étÇ™åµëIÅIàÍâüÇµè§ïiÅ@*/
+#boxGoods {
+float:left;
+width:290px;
+margin-top: 10px;
+margin-bottom: 10px;
+line-height:140%;
+}
+#boxGoods h4{
+font-size: 14px;
+font-weight: bold;
+background: url(images/mark_triangle.gif) no-repeat left 5px;
+padding-left: 15px;
+}
+#boxGoods .explain{ width:200px; float:right;}
+#boxGoods .explain2{ width:190px; float:right;}
+#boxGoods p{margin:5px 0;}
+#boxGoods .btn{text-align:right;margin:0;}
+#boxGoods ul{ margin:20px 0 0 0; padding:0;}
+#boxGoods ul li{ margin:0 20px 0 0; padding:0; display:inline; list-style-type:none;}
+
+.lsumb{	float:left;	padding:0 10px 0 0;}
+.rsumb{	float:left;	padding:0 0 0 0;}
+
+.boxtitle{margin:18px 0;}
+.infoPresent a{ margin:0; padding:2px 5px; background-color:#FF6600; color:#fff; font-size:80%; display:inline;}
+
+
+/* Support */
+#boxSupport {
+float:right;
+width:290px;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+#boxSupport .explain{ float:right; width:200px;}
+#boxSupport .explain p{margin:7px 0 15px 0;}
+#boxSupport h4{
+font-size: 14px;
+line-height: 140%;
+font-weight: bold;
+background: url(images/mark_triangle.gif) no-repeat left 5px;
+padding-left: 15px;
+}
+#boxSupport .btn{text-align:right;margin:0;}
+#boxSupport .s_photo{ width:80px; height:96px; margin-right:10px; background-image:url(support/img/th_yanoma_da.jpg); background-repeat:no-repeat; float:left;}
+#boxSupport ul{ margin:20px 0 0 0; padding:0;}
+#boxSupport ul li{ margin:0 20px 0 0; padding:0; display:inline; list-style-type:none;}
+
+
+
+#boxNew {
+font-size: 12px;
+line-height: 140%;
+margin: 0px;
+padding-top: 0px;
+padding-bottom: 0px;
+float:right;
+width:290px;
+}
+
+.lcontents{
+float:left;
+width:284px;
+}
+.lcontents_bo{
+float:left;
+width:170px;
+padding-right:23px;
+}
+.rcontents{
+float:right;
+width:284px;
+}
+.rcontents_bo{
+float:right;
+width:170px;
+padding-right:10px;
+}
+
+#boxNew ul {
+list-style-type: none;
+padding-left: 5px;
+margin: 10px 0px 0px;
+padding-top: 0px;
+}
+#boxNew li {
+margin: 0px 0px 5px;
+padding: 0px;
+border-bottom-width: 1px;
+border-bottom-style: dotted;
+border-bottom-color: #666666;
+}
+#boxNew .btn{text-align:right;margin:15px 0;padding:0;}
+
+/*---------------- êVíÖèÓïÒnew.htmlópcss -------------------------*/
+#boxNew-text {
+font-size: 12px;
+line-height: 140%;
+margin: 0px;
+padding-top: 0px;
+padding-bottom: 0px;
+float:left;
+width:280px;
+}
+#boxNew-text ul {
+list-style-type: none;
+padding-left: 5px;
+margin: 10px 0px 0px;
+padding-top: 0px;
+}
+#boxNew-text li {
+margin: 0px 0px 5px;
+padding: 0px;
+border-bottom-width: 1px;
+border-bottom-style: dotted;
+border-bottom-color: #666666;
+}
+#boxNew-text .btn{text-align:right;margin:15px 0;padding:0;}
+
+/*---------------- Kaisetsu -------------------------*/
+#boxKaisetsu {
+margin:0 14px 0 0;
+padding: 0px;
+float:left;
+width:290px;
+}
+#boxKaisetsu ul {
+list-style-type: none;
+margin: 10px 0px 0px;
+padding: 0px;
+}
+#boxKaisetsu li {
+margin-bottom: 10px;
+padding: 0px;
+}
+.lee{
+width:280px; 
+height:80px; 
+background-image:url(images/banner_lee.gif); 
+background-repeat:no-repeat; 
+}
+.mikage{
+width:280px; 
+height:80px; 
+background-image:url(images/banner_mikage.gif); 
+background-repeat:no-repeat; 
+} 
+.kouda{ 
+width:280px; 
+height:80px; 
+background-image:url(images/banner_kouda.gif); 
+background-repeat:no-repeat; 
+} 
+.nikaido{
+width:280px; 
+height:80px; 
+background-image:url(images/banner_nikaido.gif); 
+background-repeat:no-repeat; 
+} 
+.terada{
+width:280px; 
+height:80px; 
+background-image:url(images/index/banner_terada.gif); 
+background-repeat:no-repeat; 
+}
+.asano{
+width:280px; 
+height:80px; 
+background-image:url(images/index/banner_asano.gif); 
+background-repeat:no-repeat; 
+} 
+/*---------------- Kaisetsu Ç±Ç±Ç‹Ç≈-------------------------*/
+
+#boxTopics {
+font-size: 12px;
+line-height: 160%;
+width:290px;
+float:left;
+}
+#boxTopics p {
+background-image: url(images/heart.gif);
+background-repeat: no-repeat;
+background-position: left center;
+padding:0 0 0 90px;
+margin:7px 0;
+}
+#boxTopics .btn{text-align:right;margin:0;padding:0 5px;}
+
+#contsArea {
+background-color: #FCFBEE;
+border-right-width: 1px;
+border-left-width: 1px;
+border-right-style: solid;
+border-left-style: solid;
+border-right-color: #99cc33;
+border-left-color: #99cc33;
+margin: 0px;
+padding: 0px 5px;
+border-top-style: none;
+border-bottom-style: none;
+line-height:1em;
+}
+#boxContents {
+background-color: #fcfbee;
+margin: 10px 0px 20px;
+padding: 0px;
+background-repeat: no-repeat;
+}
+#contentsTop {
+margin: 0px;
+background-image: url(images/contents_head.gif);
+background-repeat: no-repeat;
+background-position: top;
+height: 38px;
+padding: 0px;
+text-indent: -9999px;
+}
+#contentsBottom {
+background-image: url(images/contents_foot.gif);
+background-repeat: no-repeat;
+background-position: bottom;
+
+}
+#contentsMiddle {
+border-right:1px solid #99cc33;
+border-left:1px solid #99cc33;
+padding-top: 10px;
+margin: 0px;
+padding-right: 12px;
+padding-left: 12px;
+float:left;
+}
+.engHerb {
+font-size: 10px;
+line-height: 140%;
+color: #669900;
+}
+.engSupple {
+font-size: 10px;
+line-height: 140%;
+color: #333399;
+}
+.engHealth {
+font-size: 10px;
+line-height: 140%;
+color: #ff6699;
+}
+.engMed {
+font-size: 10px;
+line-height: 140%;
+color: #990000;
+}
+.engbyoki {
+font-size: 10px;
+line-height: 140%;
+color: #EB6100;
+}
+#boxFurusato {
+font-size: 12px;
+line-height: 160%;
+width:290px;
+margin: 0;
+float:right;
+}
+#boxFurusato p {padding:0 5px;margin:7px 0;}
+#boxFurusato .btn{text-align:right;margin:0;padding:0 5px;}
+
+/*gnavi topÇÃÇ›*/
+#gnavi{
+float:right;
+width:184px;
+background:none;
+line-height:110%;
+padding:10px 0 0 0;
+margin:0;
+font-size:120%;
+}
+.indexgreen{
+color:#006600;
+padding:10px 0 0 15px;
+line-height:110%;
+margin:0;
+}
+#boxIntro {
+font-size: 14px;
+line-height: 160%;
+background-image: url(images/bg_intro.gif);
+background-repeat: no-repeat;
+margin: 0px;
+height: 55px;
+padding-top: 15px;
+padding-right: 10px;
+padding-left: 240px;
+color: #666666;
+}
+#main {
+margin-left: 10px;
+padding: 0px;
+margin-right: 10px;
+font-size: 12px;
+margin-bottom: 60px;
+width: 594px;
+}
+.date {
+font-size: 11px;
+color: #666666;
+font-family: "ÇlÇr ÇoÉSÉVÉbÉN", "Osaka";
+margin-right: 5px;
+font-weight: normal;
+}
+.pageTitle {
+display:block;
+font-size: 14px;
+line-height: 140%;
+font-weight: bold;
+background-image: url(images/mark_triangle.gif);
+background-repeat: no-repeat;
+background-position: left 5px;
+padding-left: 15px;
+}
+.calendar{float:right; margin-right:5px;}
+/* comment
+---------------------------------------------*/
+#main #comment{ margin:2px 0 2px; padding:5px 0 5px 10px; color:#363; font-size:100%; background-image:url(images/arrow3.gif); background-repeat:no-repeat; background-position:left center;}
