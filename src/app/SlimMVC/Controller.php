@@ -187,9 +187,10 @@ class Controller
             return true;
         }
     }
-    protected function app_session($data=null)
+    public function app_session($key, $value=null)
     {
-        $key = $this->controller;
+        if( empty($key) )
+            $key = $this->controller;
         if($data){
             $_SESSION['app'][$key] = $data;
         }
@@ -210,9 +211,7 @@ class Controller
     }
     protected function app_session_clear($key=null)
     {
-        if(!$key){
-            $key = $this->controller;
-        }
+        if( empty($key) ) $key = $this->controller;
         unset($_SESSION['app'][$key]);
     }
     // public function message($msg=null, $level='info'){

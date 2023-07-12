@@ -183,6 +183,7 @@ $(function() {
         })
         .fail(function(jqXHR) {
             alert("コメント送信中にエラーが発生しました。\n\n再度、ページを読み込みしてください。");
+            console.log(jqXHR)
             // document.head.innerHTML = "";
             // document.body.innerHTML = jqXHR.responseText;
         })

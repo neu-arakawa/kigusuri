@@ -47,8 +47,8 @@
     <input type="hidden" name="like_answer_url" value="{{ c.app.urlFor('like_answer') }}">
     <input type="hidden" name="{{csrf_key}}" value="{{csrf_token}}">
     {% if myself %}
-    <input type="hidden" name="response_url" value="https://{{ c.app.request.getHost}}{{ c.app.urlFor('qa_response') }}">
-    <input type="hidden" name="response_delete_url" value="https://{{ c.app.request.getHost}}{{ c.app.urlFor('qa_response_delete') }}">
+    <input type="hidden" name="response_url" value="{{ c.app.request.getScheme}}://{{ c.app.request.getHost}}{{ c.app.urlFor('qa_response') }}">
+    <input type="hidden" name="response_delete_url" value="{{ c.app.request.getScheme}}://{{ c.app.request.getHost}}{{ c.app.urlFor('qa_response_delete') }}">
     <input type='hidden' name='question_id' value='{{ question['id'] }}'>
     {% endif %}
 
@@ -107,7 +107,7 @@
           </div>
           <!-- /.m-question01__balloon -->
             {% if myself and question.dead_stat != 1 and question.answer_cnt > 0 %}
-                <p class="m-question01__resolve-btn"><a href="javascript:void(0)" url='https://{{ c.app.request.getHost}}{{ c.app.urlFor('qa_resolved')}}'>この相談を解決済みにする</a></p>
+                <p class="m-question01__resolve-btn"><a href="javascript:void(0)" url='{{ c.app.request.getScheme}}://{{ c.app.request.getHost}}{{ c.app.urlFor('qa_resolved')}}'>この相談を解決済みにする</a></p>
                 <p class="m-question01__resolved" style='display:none;'><img src="/consultation/img/question01_img_resolve.png" style='width:200px;opacity:0.4;' alt="解決済み"></p>
             {% elseif question.dead_stat == 1 %}
                 <p class="m-question01__resolved"><img src="/consultation/img/question01_img_resolve.png" alt="解決済み"></p>

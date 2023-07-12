@@ -177,7 +177,7 @@ class Admin extends \SlimMVC\Controller
     public function search()
     {
        $this->action = 'index';
-       $this->app_session($this->query);
+       $this->app_session($this->controller, $this->query);
        $this->action('index'); 
     }
     public function del()
@@ -213,7 +213,7 @@ class Admin extends \SlimMVC\Controller
             $this->render('input');
         }
         else if($query['next'] === 'back'){
-            $this->query = $this->app_session();
+            $this->query = $this->app_session($this->controller);
             if(empty($query)){
                 $this->message('error','データが失われました');
                 $app->redirect(ADMIN_URL.'/'.mb_strtolower($this->controller));
@@ -224,7 +224,7 @@ class Admin extends \SlimMVC\Controller
             $this->query['files'] = $this->tmp_upload( $this->upload_files );
             $error_list = $this->check($this->query);
             if (empty($error_list)) {
-                $this->app_session($this->query);
+                $this->app_session($this->controller, $this->query);
                 $this->render('preview');
             }
             else {
@@ -258,7 +258,7 @@ class Admin extends \SlimMVC\Controller
         else {
             $model = $this->controller;
         }
-        $query = $this->app_session();
+        $query = $this->app_session($this->controller);
         if(empty($query)){
             $this->message('error','データが失われました');
             $this->redirect_index_page();

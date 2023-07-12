@@ -2,7 +2,9 @@
 
 require_once __DIR__.'/shell.php';
 
-$app = new AppByShell();
+$config_file = null;
+if( !empty($argv[1]) ) $config_file = $argv[1];
+$app = new appbyshell($config_file);
 
 $answers = $app->model('Question_Answer')->find('list',array(
     'conditions'   => array(

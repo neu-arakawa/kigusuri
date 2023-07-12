@@ -14,23 +14,23 @@ AddType application/x-httpd-php .html
 RewriteEngine On
 RewriteBase /
 
-# Required SSL access
-RewriteCond %{REQUEST_URI} ^/admin [OR]
-RewriteCond %{REQUEST_URI} ^/member [OR]
-RewriteCond %{REQUEST_URI} ^/contact_shop [OR]
-RewriteCond %{REQUEST_URI} .*/form.html*$
-RewriteCond %{SERVER_PORT} 80
-RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R,QSA]
-#
-## Required Non SSL access
-RewriteCond %{REQUEST_URI} !^/index.php
-RewriteCond %{REQUEST_URI} !^/admin
-RewriteCond %{REQUEST_URI} !^/member
-RewriteCond %{REQUEST_URI} !^/contact_shop
-RewriteCond %{REQUEST_URI} !.*/form.html*$
-RewriteCond %{REQUEST_URI} !.(gif|jpg|jpeg|png|swf|css|js|ico|ttf|woff|svg)$
-RewriteCond %{SERVER_PORT} 443
-RewriteRule ^.*$ http://%{HTTP_HOST}%{REQUEST_URI} [L,R,QSA]
+# # Required SSL access
+# RewriteCond %{REQUEST_URI} ^/admin [OR]
+# RewriteCond %{REQUEST_URI} ^/member [OR]
+# RewriteCond %{REQUEST_URI} ^/contact_shop [OR]
+# RewriteCond %{REQUEST_URI} .*/form.html*$
+# RewriteCond %{SERVER_PORT} 80
+# RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R,QSA]
+# #
+# ## Required Non SSL access
+# RewriteCond %{REQUEST_URI} !^/index.php
+# RewriteCond %{REQUEST_URI} !^/admin
+# RewriteCond %{REQUEST_URI} !^/member
+# RewriteCond %{REQUEST_URI} !^/contact_shop
+# RewriteCond %{REQUEST_URI} !.*/form.html*$
+# RewriteCond %{REQUEST_URI} !.(gif|jpg|jpeg|png|swf|css|js|ico|ttf|woff|svg)$
+# RewriteCond %{SERVER_PORT} 443
+# RewriteRule ^.*$ http://%{HTTP_HOST}%{REQUEST_URI} [L,R,QSA]
 
 # Redirect
 RewriteRule ^index.htm / [R,L]

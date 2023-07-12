@@ -71,8 +71,8 @@ class HTML_FillInForm {
     * @access public
     * @return object HTML_FillInFormオブジェクト
     */
-    function HTML_FillInForm () {
-    }
+    // function HTML_FillInForm () {
+    // }
     
     /**
     * $htmlに含まれるHTMLフォームを埋めます

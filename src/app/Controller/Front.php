@@ -112,7 +112,8 @@ class Front extends \SlimMVC\Controller
                null : $_SESSION[$this->session_group]['app'][$key];
     }
 
-    public function app_session_clear($key){
+    public function app_session_clear($key=null){
+        if( empty($key) ) $key = $this->controller;
         unset($_SESSION[$this->session_group]['app'][$key]);
     }
 
