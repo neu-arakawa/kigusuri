@@ -188,24 +188,45 @@ class CKFinder_Connector_Utils_Misc
      * @param string $val
      * @return int
      */
+    //public static function returnBytes($val) {
+    //    $val = trim($val);
+    //    if (!$val) {
+    //        return 0;
+    //    }
+    //    $last = strtolower($val[strlen($val)-1]);
+    //    switch($last) {
+    //        // The 'G' modifier is available since PHP 5.1.0
+    //        case 'g':
+    //            $val *= 1024;
+    //        case 'm':
+    //            $val *= 1024;
+    //        case 'k':
+    //            $val *= 1024;
+    //    }
+    //    return $val;
+    //}
     public static function returnBytes($val) {
-        $val = trim($val);
-        if (!$val) {
-            return 0;
-        }
-        $last = strtolower($val[strlen($val)-1]);
-        switch($last) {
-            // The 'G' modifier is available since PHP 5.1.0
-            case 'g':
-                $val *= 1024;
-            case 'm':
-                $val *= 1024;
-            case 'k':
-                $val *= 1024;
-        }
-
-        return $val;
+    $val = trim($val);
+    if (!$val) {
+        return 0;
     }
+    $last = strtolower($val[strlen($val)-1]);
+
+    // fix
+    $val = preg_replace('~\D~', '', $val);
+
+    switch($last) {
+        // The 'G' modifier is available since PHP 5.1.0
+        case 'g':
+            $val *= 1024;
+        case 'm':
+            $val *= 1024;
+        case 'k':
+            $val *= 1024;
+    }
+
+    return $val;
+}
 
     /**
     * Checks if a value exists in an array (case insensitive)
