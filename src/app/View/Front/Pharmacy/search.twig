@@ -74,7 +74,7 @@
 		<div class="search-header">
 			<p class="result-count">該当店舗<span>{{ pager.total_count }}</span>件</p>
 			<p class="btn-research pc-item smooth"><a href="#shop-tab-wrap" class="btn01 icon-arrow01">条件を変えて再検索</a></p>
-            {% if params.search_type == 'prefectures' and cities[params.pref]|length and pager.curpage==1 %}
+            {% if params.search_type == 'prefectures' and cities[params.pref] is not empty and pager.curpage==1 %}
 			<ul class="result-area">
                 {% for city in cities[params.pref] %}
 				<li><a href="{{ c.app.urlFor('shop_search_prefectures',{'pref': params.pref|url_encode,'addr1': city.addr1|url_encode}) }}">
